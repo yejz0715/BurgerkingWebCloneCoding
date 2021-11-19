@@ -2,7 +2,7 @@
 <%@ include file="header.jsp"%>
 
 <article>
-	test1
+	예지
 </article>
 <%@ include file="undermenu.jsp" %>
 <%@ include file="footer.jsp" %>
