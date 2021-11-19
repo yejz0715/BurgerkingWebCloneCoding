@@ -5,6 +5,7 @@ import com.burger.controller.action.IndexAction;
 import com.burger.controller.action.LegalAction;
 import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.TermsAction;
+import com.burger.controller.action.VideoPolicyAction;
 
 public class ActionFactory {
 	private ActionFactory() {}
@@ -18,6 +19,7 @@ public class ActionFactory {
 		else if(command.equals("terms")) ac = new TermsAction();
 		else if(command.equals("privacy")) ac = new PrivacyAction();
 		else if(command.equals("legal")) ac = new LegalAction();
+		else if(command.equals("videoPolicy")) ac = new VideoPolicyAction();
 		
 		return ac;
 	}
