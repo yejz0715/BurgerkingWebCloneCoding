@@ -5,8 +5,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>버거킹</title>
 		<link href="css/burger.css" rel="stylesheet">
+		<link rel="icon" href="image/icon.PNG">
 		
 	</head>
 	<body>
