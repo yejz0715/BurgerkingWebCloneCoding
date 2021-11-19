@@ -20,7 +20,7 @@
 				<span><input class="btn_c1" type="button" style="width: 185px;" 
 				onclick="location.href='burger.do?command=privacy'" value="개인정보처리방침"></span>
 				<span><input class="btn_c1" type="button" style="background-color: #292929; width: 292px;"  
-				onclick="location.href='burger.do?command=videoPolicy'" value="영상정보처리기기운영관리방칙"></span>
+				onclick="location.href='burger.do?command=videoPolicy'" value="영상정보처리기기운영관리방침"></span>
 		</div>
 		
 		<div class="textarea">
