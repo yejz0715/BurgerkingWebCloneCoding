@@ -15,6 +15,7 @@
 			<li><span><a href="burger.do?command=legal" style="color: red; text-decoration: underline;">법적고지</a></span></li>
 		</ul>
 		<h1 class="big_h1">이용약관 및 정책</h1>
+		<div class="btnarea">	</div>
 		<div class="textarea">
 			<%@ include file="text3.jsp" %>
 		</div>

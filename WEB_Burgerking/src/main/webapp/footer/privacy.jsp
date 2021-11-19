@@ -15,6 +15,14 @@
 			<li><span><a href="burger.do?command=legal">법적고지</a></span></li>
 		</ul>
 		<h1 class="big_h1">이용약관 및 정책</h1>
+		
+		<div class="btnarea">
+				<span><input class="btn_c1" type="button" style="background-color: #292929; width:185px;"
+				 onclick="location.href='burger.do?command=privacy'" value="개인정보처리방침"></span>
+				<span><input class="btn_c1" type="button" style="width: 292px;"
+				onclick="location.href='burger.do?command=videoPolicy'" value="영상정보처리기기운영관리방칙"></span>
+		</div>
+		
 		<div class="textarea">
 			<%@ include file="text2.jsp" %>
 		</div>
