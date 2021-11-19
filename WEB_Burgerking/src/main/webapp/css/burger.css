@@ -115,3 +115,9 @@ footer #copy a{
 	background-color: #fff;
 	overflow: scroll;
 }
+.textarea h1{
+	font-size: 1.8em;
+}
+.textarea h2, p{
+	font-size: 1.3em;
+}
