@@ -8,6 +8,9 @@
 		<title>버거킹</title>
 		<link href="css/burger.css" rel="stylesheet">
 		<link rel="icon" href="image/icon.PNG">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
 		
 	</head>
 	<body>
