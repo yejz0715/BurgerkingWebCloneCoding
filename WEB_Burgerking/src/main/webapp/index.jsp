@@ -4,5 +4,6 @@
 <article>
 	김우진
 </article>
+
 <%@ include file="undermenu.jsp" %>
-<%@ include file="footer.jsp" %>
+<%@ include file="footer/footer.jsp" %>
