@@ -1,26 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
- <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="css/burger.css" rel="stylesheet">
-</head>
-<body>
+<div class="clear"></div>
 <div class="sitemap">
 <div class="undermenu">
 	<ul class="menu">
 		<li>
 			<a><span>메뉴</span></a>
 			<ul class="submenu">
-				<li><a href="burger.do?command=menuListForm"><span>스페셜&amp;할인팩</span></a></li>
-				<li><a href="burger.do?command=menuListForm"><span>프리미엄</span></a></li>
-				<li><a href="burger.do?command=menuListForm"><span>와퍼</span></a></li>
-				<li><a href="burger.do?command=menuListForm"><span>주니어&amp;버거</span></a></li>
-				<li><a href="burger.do?command=menuListForm"><span>올데이킹&amp;치킨버거</span></a></li>
-				<li><a href="burger.do?command=menuListForm"><span>사이드</span></a></li>
-				<li><a href="burger.do?command=menuListForm"><span>음료&amp;디저트</span></a></li>
-				<li><a href="burger.do?command=menuListForm"><span>독퍼</span></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=1"><span>스페셜&amp;할인팩</span></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=2"><span>프리미엄</span></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=3"><span>와퍼</span></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=4"><span>주니어&amp;버거</span></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=5"><span>올데이킹&amp;치킨버거</span></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=6"><span>사이드</span></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=7"><span>음료&amp;디저트</span></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=8"><span>독퍼</span></a></li>
 			</ul>
 		</li>
 		<li>
@@ -46,5 +39,4 @@
 	</ul>
 </div>
 </div>
-</body>
-</html>
+

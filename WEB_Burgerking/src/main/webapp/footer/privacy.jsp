@@ -29,6 +29,6 @@
 	</div>
 	
 </article>
-
+<div class="clear"></div>
 <%@ include file="/undermenu.jsp" %>
 <%@ include file="/footer/footer.jsp" %>
