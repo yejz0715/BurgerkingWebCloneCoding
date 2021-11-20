@@ -8,18 +8,18 @@
 	<div class="menuarea">
 		<ul>
 			<c:forEach var="productVO" items="${ProductList}">
-				<li>
+				<li><a href="burger.do?command=menudetailForm">
 					<div class=".menuImgdiv">
 						<img class="menuImg" src="image/menu/premier/${productVO.image}">					
 					</div>
 					<div class=".menuContdiv">
 						<p>${productVO.pname}</p>
 					</div>
-				</li>
+				</a></li>
 			</c:forEach>
 		</ul>
 	</div>
-	
+	<!-- DB구조 변동에 따라 위 코드는 변경가능성 존재 -->
 	
 </article>
 

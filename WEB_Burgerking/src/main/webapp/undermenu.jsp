@@ -19,21 +19,21 @@
 		<li>
 			<a><span>이벤트</span></a>
 			<ul class="submenu">
-				<li><a><span>이벤트</span></a></li>
+				<li><a href="burger.do?command=eventListForm"><span>이벤트</span></a></li>
 			</ul>
 		</li>
 		<li>
 			<a><span>브랜드스토리</span></a>
 			<ul class="submenu">
-				<li><a><span>버거킹 스토리</span></a></li>
+				<li><a href="burger.do?command=brandStroyForm"><span>버거킹 스토리</span></a></li>
 			</ul>
 		</li>
 		<li>
 			<a><span>고객센터</span></a>
 			<ul class="submenu">
-				<li><a><span>FAQ</span></a></li>
-				<li><a><span>문의</span></a></li>
-				<li><a><span>버거킹 앱 이용안내</span></a></li>
+				<li><a href="burger.do?command="><span>FAQ</span></a></li>
+				<li><a href="burger.do?command="><span>문의</span></a></li>
+				<li><a href="burger.do?command="><span>버거킹 앱 이용안내</span></a></li>
 			</ul>
 		</li>
 	</ul>
