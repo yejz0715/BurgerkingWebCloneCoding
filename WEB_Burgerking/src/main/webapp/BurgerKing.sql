@@ -24,7 +24,7 @@ DROP TABLE qna CASCADE CONSTRAINTS;
 DROP TABLE member CASCADE CONSTRAINTS;
 DROP TABLE non_member CASCADE CONSTRAINTS;
 DROP TABLE order_detail CASCADE CONSTRAINTS;
-DROP TABLE order CASCADE CONSTRAINTS;
+DROP TABLE orders CASCADE CONSTRAINTS;
 DROP TABLE product CASCADE CONSTRAINTS;
 DROP TABLE sub_product CASCADE CONSTRAINTS;
 
@@ -109,7 +109,7 @@ CREATE TABLE event
 
 CREATE TABLE member
 (
-	mseq number(100) NOT NULL,
+	mseq number(10) NOT NULL,
 	id varchar2(50) NOT NULL UNIQUE,
 	pwd varchar2(20) NOT NULL,
 	phone varchar2(13) NOT NULL,
@@ -123,7 +123,7 @@ CREATE TABLE member
 
 CREATE TABLE Myaddress
 (
-	mseq number(100) NOT NULL,
+	mseq number(10) NOT NULL,
 	address varchar2(100) NOT NULL,
 	aname varchar2(10) NOT NULL,
 	zip_num varchar2(7),
@@ -199,7 +199,7 @@ CREATE TABLE sub_product
 	spseq number(10) NOT NULL,
 	sname varchar2(10) NOT NULL,
 	kind1 number(5),
-	kind2 varchar2(3) DEFAULT '''0-0''',
+	kind2 varchar2(3) DEFAULT '0-0',
 	addprice number(5) NOT NULL,
 	image varchar2(50),
 	PRIMARY KEY (spseq)
@@ -229,7 +229,7 @@ ALTER TABLE qna
 
 ALTER TABLE order_detail
 	ADD FOREIGN KEY (oseq)
-	REFERENCES order (oseq)
+	REFERENCES orders (oseq)
 ;
 
 
