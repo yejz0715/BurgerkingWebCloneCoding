@@ -13,14 +13,14 @@
 		<li>
 			<a><span>메뉴</span></a>
 			<ul class="submenu">
-				<li><a><span>스페셜&amp;할인팩</span></a></li>
-				<li><a><span>프리미엄</span></a></li>
-				<li><a><span>와퍼</span></a></li>
-				<li><a><span>주니어&amp;버거</span></a></li>
-				<li><a><span>올데이킹&amp;치킨버거</span></a></li>
-				<li><a><span>사이드</span></a></li>
-				<li><a><span>음료&amp;디저트</span></a></li>
-				<li><a><span>독퍼</span></a></li>
+				<li><a href="burger.do?command=menuListForm"><span>스페셜&amp;할인팩</span></a></li>
+				<li><a href="burger.do?command=menuListForm"><span>프리미엄</span></a></li>
+				<li><a href="burger.do?command=menuListForm"><span>와퍼</span></a></li>
+				<li><a href="burger.do?command=menuListForm"><span>주니어&amp;버거</span></a></li>
+				<li><a href="burger.do?command=menuListForm"><span>올데이킹&amp;치킨버거</span></a></li>
+				<li><a href="burger.do?command=menuListForm"><span>사이드</span></a></li>
+				<li><a href="burger.do?command=menuListForm"><span>음료&amp;디저트</span></a></li>
+				<li><a href="burger.do?command=menuListForm"><span>독퍼</span></a></li>
 			</ul>
 		</li>
 		<li>

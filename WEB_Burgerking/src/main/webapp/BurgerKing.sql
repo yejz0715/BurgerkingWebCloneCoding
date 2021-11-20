@@ -170,7 +170,7 @@ CREATE TABLE product
 	price2 number(10) NOT NULL,
 	price3 number(10) NOT NULL,
 	kind1 varchar2(5) NOT NULL,
-	kind2 varchar2(3) DEFAULT '0-0',
+	kind2 varchar2(3) NOT NULL,
 	indate  date DEFAULT sysdate NOT NULL,
 	content varchar2(100),
 	image varchar2(50),
@@ -339,5 +339,6 @@ END;
 /
 
 
-
+insert into product(pseq, pname, price1, price2, price3, kind1, kind2, image, content, useyn)
+values(SEQ_product_pseq.nextVal, '더블화이트갈릭와퍼라지세트', 15000, 0, 0, '2', '1', '', '더블화이트갈릭와퍼+프렌치프라이L+콜라L', 1);
 
