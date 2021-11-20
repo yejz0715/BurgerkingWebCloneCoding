@@ -11,37 +11,6 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
-		<style type="text/css">
-		.menuarea{
-	position:relative;
-	width: 1200px; height: 600px;
-	margin: 0 auto;
-	border: 1px solid black;
-}
-
-.menuarea ul{
-	width: 1200px; height: 600px;
-	list-style: none;
-}
-
-.menuarea ul li{
-	width: 220px; height: 300px;
-	margin: 0 40px;
-	float: left;
-}
-
-.menuImgdiv{
-	width: 100%; height: 144px;
-}
-
-.menuContdiv{
-	width: 100%; height: 121px;
-}
-
-.menuImg{
-	width: 220px; height: 144px;
-} 
-		</style>
 	</head>
 	<body>
 		<div id="header_container">
