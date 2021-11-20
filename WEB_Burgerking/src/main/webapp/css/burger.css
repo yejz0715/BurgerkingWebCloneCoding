@@ -16,5 +16,33 @@ footer #copy{
 	width: 60%;
 }
 
+ul {list-style: none;display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;}
+
+ul.menu{margin-top: 15px;}
+
+.sitemap{height: 585px;background-image: url(../image/main/bg_botmenu.jpg) ; margin:0 auto;}
+.undermenu{max-width: 1100px; margin: 0 auto; padding: 0 20px;}
+
+.sitemap ul menu{padding-top: 50px;}
+.sitemap ul.menu>li {position: relative;float: left;width: 20%;}
+.sitemap ul.menu>li:first-child a{padding-left:0;}
+.sitemap ul.menu>li:first-child{border:0px;}
+.sitemap ul.menu>li a {display: block; height: 28px; padding-left:24px;
+font-weight: 700; font-size: 1.5rem; color: #89513a;line-height: 28px;}
+
+.sitemap ul.menu .submenu{margin-top:15px; padding:0px; }
+.sitemap ul.menu .submenu a{height:32px;font-size:1rem;line-height:32px}
+ 
+
+.sitemap ul.menu>li:before {content: ""; position: absolute; left: 0; top: 0; 
+height: 338px; border-left: 1px dashed #d9c8be;}
+
+
+
 
 
