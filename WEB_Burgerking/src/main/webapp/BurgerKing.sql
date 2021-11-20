@@ -165,7 +165,7 @@ CREATE TABLE order_detail
 CREATE TABLE product
 (
 	pseq number(10) NOT NULL,
-	pname varchar2(20) NOT NULL,
+	pname varchar2(100) NOT NULL,
 	price1 number(10) NOT NULL,
 	price2 number(10) NOT NULL,
 	price3 number(10) NOT NULL,
