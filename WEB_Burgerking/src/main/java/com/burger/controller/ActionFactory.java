@@ -1,6 +1,8 @@
 package com.burger.controller;
 
 import com.burger.controller.action.Action;
+import com.burger.controller.action.BrandStroyFormAction;
+import com.burger.controller.action.EventListFormAction;
 import com.burger.controller.action.IndexAction;
 import com.burger.controller.action.LegalAction;
 import com.burger.controller.action.MenuListFormAction;
@@ -22,6 +24,8 @@ public class ActionFactory {
 		else if(command.equals("legal")) ac = new LegalAction();
 		else if(command.equals("videoPolicy")) ac = new VideoPolicyAction();
 		else if(command.equals("menuListForm")) ac = new MenuListFormAction();
+		else if(command.equals("eventListForm")) ac = new EventListFormAction();
+		else if(command.equals("brandStroyForm")) ac = new BrandStroyFormAction();
 		return ac;
 	}
 }
