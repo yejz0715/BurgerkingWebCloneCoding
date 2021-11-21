@@ -338,4 +338,21 @@ END;
 
 /
 
+create table shortproduct(
+	spseq number(10),
+	pname varchar2(100),
+	kind1 varchar2(5),
+	kind2 varchar2(3),
+	image varchar2(50),
+	useyn varchar2(1)
+);
+
+
+insert into product(pseq, pname, price1, price2, price3, kind1, kind2, image, content, useyn)
+values(SEQ_product_pseq.nextVal, '더블화이트갈릭와퍼라지세트', 15000, 0, 0, '2', '1', '', '더블화이트갈릭와퍼+프렌치프라이L+콜라L', 1);
+insert into product(pseq, pname, price1, price2, price3, kind1, kind2, image, content, useyn)
+values(SEQ_product_pseq.nextVal, '더블화이트갈릭와퍼세트', 12000, 0, 0, '2', '2', '', '더블화이트갈릭와퍼+프렌치프라이R+콜라R', 1);
+insert into product(pseq, pname, price1, price2, price3, kind1, kind2, image, content, useyn)
+values(SEQ_product_pseq.nextVal, '더블화이트갈릭와퍼', 8000, 0, 0, '2', '3', 'doublewhitegarlic.png', '단품', 1);
+
 select * from product;
