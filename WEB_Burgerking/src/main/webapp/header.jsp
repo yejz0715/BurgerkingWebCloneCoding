@@ -8,29 +8,53 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 		<link href="css/burger.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="script/burger.js"></script>
 		<link rel="icon" href="image/icon.PNG">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div id="header_container">
-			<header id="web_container">
+		<div class="header_container">
+			<header>
+			<div id="web_container">
 				<a id="logo" href="burger.do?command=index"> <img
 					src="image/main/burgerkinglogo.png" width="83" height="82" />
 				</a>
 	
-				<nav id="top_menu">
+				<div class="top_menu">
 					<ul>
-						<li class="menu_item"><span>메뉴소개</span></li>
-						<li class="menu_item"><span>이벤트</span></li>
-						<li class="menu_item"><span>브랜드스토리</span></li>
+						<li class="menu_item"><span>메뉴소개</span>
+					    <ul class="header_submenu">
+						<li><a><span>스페셜&amp;할인팩</span></a></li>
+						<li><a><span>프리미엄</span></a></li>
+						<li><a><span>와퍼</span></a></li>
+						<li><a><span>주니어&amp;버기</span></a></li>
+						<li><a><span>올데이킹&amp;치킨버거</span></a></li> 
+						<li><a><span>사이드</span></a></li>
+						<li><a><span>음료&amp;디저트</span></a></li>
+						<li><a><span>독퍼</span></a></li>
+						</ul> 
+						</li>
+						<li class="menu_item"><span>이벤트</span>
+						<ul class="header_submenu">
+						<li><a><span>이벤트</span></a></li>
+						</ul>
+						</li>
+						
+						<li class="menu_item"><span>브랜드스토리</span>
+						<ul class="header_submenu">
+						<li><a><span>버거킹스토리</span></a></li>
+						</ul>
+						</li>
 					</ul>
 	
 					<a id="order_btn" href="burger?command=Delivery/delivery"> <img
 						src="image/main/delivery1.png" width="160" height="50" />
 					</a>
 	
-				</nav>
+				</div>
+			 </div>	
 			</header>
 		</div>
