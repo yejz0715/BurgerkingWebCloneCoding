@@ -4,9 +4,16 @@
 <div class="clear"></div>
 
 <article>
+<<<<<<< HEAD
 김우진
 유창대
+
+	
+
 </article>
 
 <%@ include file="undermenu.jsp" %>
+
 <%@ include file="footer/footer.jsp" %>
+
+
