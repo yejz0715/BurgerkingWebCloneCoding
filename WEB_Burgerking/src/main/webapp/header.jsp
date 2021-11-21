@@ -4,7 +4,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
@@ -31,44 +30,44 @@
 	<body>
 		<div class="header_container">
 			<header>
-			<div id="web_container">
-				<a id="logo" href="burger.do?command=index"> <img
-					src="image/main/burgerkinglogo.png" width="83" height="82" />
-				</a>
-	
-				<div class="top_menu">
-					<ul onmouseover="sizeup()" onmouseleave="sizedown()" id="ul1">
-						<li class="menu_item"><span>메뉴소개</span>
-					    <ul class="header_submenu">
-						<li><a><span>스페셜&amp;할인팩</span></a></li>
-						<li><a><span>프리미엄</span></a></li>
-						<li><a><span>와퍼</span></a></li>
-						<li><a><span>주니어&amp;버기</span></a></li>
-						<li><a><span>올데이킹&amp;치킨버거</span></a></li> 
-						<li><a><span>사이드</span></a></li>
-						<li><a><span>음료&amp;디저트</span></a></li>
-						<li><a><span>독퍼</span></a></li>
-						</ul> 
-						</li>
-						<li class="menu_item"><span>이벤트</span>
-						<ul class="header_submenu">
-						<li><a><span>이벤트</span></a></li>
-						</ul>
-						</li>
-						
-						<li class="menu_item"><span>브랜드스토리</span>
-						<ul class="header_submenu">
-						<li><a><span>버거킹스토리</span></a></li>
-						</ul>
-						</li>
-					</ul>
-	
-					<a id="order_btn" href="burger?command=Delivery/delivery"> <img
-						src="image/main/delivery1.png" width="160" height="50" />
+				<div id="web_container">
+					<a id="logo" href="burger.do?command=index"> <img
+						src="image/main/burgerkinglogo.png" width="83" height="82" />
 					</a>
-	
-				</div>
-			 </div>	
+		
+					<div class="top_menu">
+						<ul onmouseover="sizeup()" onmouseleave="sizedown()" id="ul1">
+							<li class="menu_item"><span>메뉴소개</span>
+						    <ul class="header_submenu">
+								<li><a><span>스페셜&amp;할인팩</span></a></li>
+								<li><a><span>프리미엄</span></a></li>
+								<li><a><span>와퍼</span></a></li>
+								<li><a><span>주니어&amp;버기</span></a></li>
+								<li><a><span>올데이킹&amp;치킨버거</span></a></li> 
+								<li><a><span>사이드</span></a></li>
+								<li><a><span>음료&amp;디저트</span></a></li>
+								<li><a><span>독퍼</span></a></li>
+							</ul> 
+							</li>
+							<li class="menu_item"><span>이벤트</span>
+								<ul class="header_submenu">
+									<li><a><span>이벤트</span></a></li>
+								</ul>
+							</li>
+							
+							<li class="menu_item">
+								<span>브랜드스토리</span>
+								<ul class="header_submenu">
+									<li><a><span>버거킹스토리</span></a></li>
+								</ul>
+							</li>
+						</ul>
+		
+						<a id="order_btn" href="burger?command=Delivery/delivery"> <img
+							src="image/main/delivery1.png" width="160" height="50" />
+						</a>
+					</div>
+				</div>	
 			</header>
 		</div>
 
