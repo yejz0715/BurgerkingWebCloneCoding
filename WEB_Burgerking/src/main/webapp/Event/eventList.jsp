@@ -2,7 +2,13 @@
 <%@ include file="../header.jsp"%>
 
 <article>
-
+	<div class="location">
+		<ul>
+			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
+			<li>이벤트&nbsp;>&nbsp;</li>
+			<li>전체</li>
+		</ul>
+	</div>
 </article>
 
 <%@ include file="/undermenu.jsp" %>
