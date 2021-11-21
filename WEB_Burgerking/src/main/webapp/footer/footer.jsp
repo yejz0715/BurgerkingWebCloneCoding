@@ -7,9 +7,9 @@
 				<img src="image/main/bottom_logo.png"><br><br>
 				
 				<ul>
-					<li style="border-right:1px solid gray"><span><a href="burger.do?command=terms">이용약관</a></span></li>
-					<li style="border-right:1px solid gray"><span><a href="burger.do?command=privacy">개인정보취급방침</a></span></li>
-					<li><span><a href="burger.do?command=legal">법적고지</a></span></li>
+					<li style="border-right:1px solid gray"><span><a class="footer_a" href="burger.do?command=terms">이용약관</a></span></li>
+					<li style="border-right:1px solid gray"><span><a class="footer_a" href="burger.do?command=privacy">개인정보취급방침</a></span></li>
+					<li><span><a class="footer_a" href="burger.do?command=legal">법적고지</a></span></li>
 				</ul>
 				
 				<div id="text_container">
@@ -19,8 +19,8 @@
 				</div><br>
 				
 				<div id="bottom_img">
-					<a class="footer_a" href="https://www.facebook.com/burgerkingkorea" target="_blank"><img src="image/main/bottom_image02.png"></a>
-					<a class="footer_a" href="https://www.instagram.com/burgerkingkorea" target="_blank"><img src="image/main/bottom_image03.png"></a>
+					<a href="https://www.facebook.com/burgerkingkorea" target="_blank"><img src="image/main/bottom_image02.png"></a>
+					<a href="https://www.instagram.com/burgerkingkorea" target="_blank"><img src="image/main/bottom_image03.png"></a>
 				</div>
 			</div>
 		</footer>
