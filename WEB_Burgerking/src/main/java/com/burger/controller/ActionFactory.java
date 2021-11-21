@@ -7,6 +7,7 @@ import com.burger.controller.action.BrandStroyFormAction;
 import com.burger.controller.action.DeliveryFormAction;
 import com.burger.controller.action.EventListFormAction;
 import com.burger.controller.action.IndexAction;
+import com.burger.controller.action.JoinFormAction;
 import com.burger.controller.action.LegalAction;
 import com.burger.controller.action.LoginFormAction;
 import com.burger.controller.action.MenuListFormAction;
@@ -36,6 +37,7 @@ public class ActionFactory {
 		else if(command.equals("qnaForm")) ac = new QnaFormAction();
 		else if(command.equals("faqForm")) ac = new FaqFormAction();
 		else if(command.equals("appGuideForm")) ac = new AppGuideFormAction();
+		else if(command.equals("joinForm")) ac = new JoinFormAction();
 		return ac;
 	}
 }
