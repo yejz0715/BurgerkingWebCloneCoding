@@ -269,3 +269,36 @@ ul {
 .menuImg{
 	width: 220px; height: 144px;
 } 
+
+/* DeliveryHeader-------------------------------------------------------*/
+.web_container{
+	max-width: 1184px;
+	position: relative;
+	margin: 0 auto;
+	height: 120px;
+    padding-top: 48px;
+}
+.WEB_logo{
+	display: inline-block;
+    position: static;
+    width: auto;
+    height: 120px;
+    padding-left: 80px;
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #fff;
+    text-indent: 0;
+    line-height: 120px;
+    cursor: pointer;
+	background: url(https://www.burgerking.co.kr/dist/img/logo_delivery.26d1d682.png) no-repeat 0; 
+}
+.utilWrap {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    overflow: hidden;
+}
+
+
+
