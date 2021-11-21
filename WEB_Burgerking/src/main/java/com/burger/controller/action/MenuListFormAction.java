@@ -12,12 +12,13 @@ import com.burger.dto.ProductVO;
 
 public class MenuListFormAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		String url = "Product/menuList.jsp";
 		String kind1 = request.getParameter("kind1");
 		
 		ProductDao pdao = ProductDao.getInstance();
 		ArrayList<ProductVO> list = pdao.getProduct(kind1);
-		
+
 		request.setAttribute("ProductList", list);
 		request.getRequestDispatcher(url).forward(request, response);
 	}

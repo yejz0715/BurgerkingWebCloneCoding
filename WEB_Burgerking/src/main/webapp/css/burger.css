@@ -7,11 +7,13 @@ html, body{
 
 body{
 	background-color: #f2ebe6;
+	margin-top: 120px;
 }
 
 article{
 	position:relative;
-	top:120px; height: 1050px;
+	overflow: auto;
+	margin-bottom: 50px;
 }
 
 .clear {
@@ -19,7 +21,7 @@ article{
 }
 /* footer-------------------------------------------------------------------------------------------------------------------------------- */
 footer{
-	position:relative;
+	position:absolute;
 	width: 100%; height: 272px; 
 	font-size: .875rem; 
 	color:#6a6a6a;
@@ -81,14 +83,14 @@ footer #copy a{
 }
 /* ------------------------------------------------------------------------------------------------------------------------------------------ */
 .wrap{
-	width: 60%; height: 800px;
+	width: 60%;
 	margin: 0 auto;
 	background-color: #f2ebe6;
 }
 
 #terms_wrap_ul{
 	position: absolute;
-	right: 400px; top:130px;
+	right: 400px;
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
@@ -111,7 +113,7 @@ footer #copy a{
 
 .textarea{
 	position:relative;
-	padding: 40px; height: 507px;
+	padding: 40px; height:600px;
 	background-color: #fff;
 	overflow: scroll;
 }
@@ -165,7 +167,7 @@ ul.menu{margin-top: 15px;}
 font-weight: 700; font-size: 1.5rem; color: #89513a;line-height: 28px;}
 
 .sitemap ul.menu .submenu{margin-top:15px; padding:0px; }
-.sitemap ul.menu .submenu a{height:32px;font-size:1rem;line-height:32px}
+.sitemap ul.menu .submenu a{height:32px;font-size:1rem;line-height:32px; text-decoration: none;}
  
 
 .sitemap ul.menu>li:before {content: ""; position: absolute; left: 0; top: 0; 
@@ -226,3 +228,44 @@ ul {
 	right: 0;
 	top: 20px;
 }
+
+/*menuList.jsp------------------------------------------------------------------------------------------*/
+.menuarea{
+	position:relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.menuarea ul{
+	width: 1200px;
+	list-style: none;
+}
+
+.menuarea ul li{
+	width: 220px; height: 300px;
+	margin: 0 40px;
+	float: left;
+}
+
+.menuarea ul li a{
+	width: 220px; height: 300px;
+	margin: 0 40px;
+	float: left;
+	text-decoration: none;
+	color: #292929;
+	font-family: 'Do Hyeon', sans-serif; 
+	font-size: 20px;
+	text-align: center;
+}
+
+.menuImgdiv{
+	width: 100%; height: 144px;
+}
+
+.menuContdiv{
+	width: 100%; height: 121px;
+}
+
+.menuImg{
+	width: 220px; height: 144px;
+} 

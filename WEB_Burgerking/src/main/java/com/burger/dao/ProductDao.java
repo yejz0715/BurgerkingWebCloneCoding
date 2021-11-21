@@ -25,7 +25,7 @@ public class ProductDao {
 		
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, Integer.parseInt(kind1));
+			pstmt.setString(1, kind1);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
@@ -41,7 +41,6 @@ public class ProductDao {
 				pvo.setIndate(rs.getTimestamp("indate"));
 				pvo.setUseyn(rs.getString("useyn"));
 				pvo.setImage(rs.getString("image"));
-				
 				list.add(pvo);
 			}
 		}catch(SQLException e) {

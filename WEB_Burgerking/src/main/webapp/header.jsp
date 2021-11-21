@@ -1,12 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>버거킹</title>
 		<link href="css/burger.css" rel="stylesheet">
 		<link rel="icon" href="image/icon.PNG">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +25,19 @@
 						<li class="menu_item"><span>이벤트</span></li>
 						<li class="menu_item"><span>브랜드스토리</span></li>
 					</ul>
-	
-					<a id="order_btn" href="burger?command=Delivery/delivery"> <img
-						src="image/main/delivery1.png" width="160" height="50" />
-					</a>
+					
+					<c:choose>
+						<c:when test="${empty loginUser}">
+							<a id="order_btn" href="burger.do?command=loginForm"> 
+								<img	src="image/main/delivery1.png" width="160" height="50" />
+							</a>
+						</c:when>
+						<c:otherwise>
+							<a id="order_btn" href="burger.do?command=deliveryForm"> 
+								<img	src="image/main/delivery1.png" width="160" height="50" />
+							</a>
+						</c:otherwise>
+					</c:choose>
 	
 				</nav>
 			</header>
