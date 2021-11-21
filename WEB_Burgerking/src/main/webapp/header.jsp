@@ -62,13 +62,14 @@
 								</ul>
 							</li>
 						</ul>
-		
-						<a id="order_btn" href="burger?command=Delivery/delivery"> <img
-							src="image/main/delivery1.png" width="160" height="50" />
-						</a>
 					</div>
+					<a id="order_btn" href="burger.do?command=loginForm"> <img
+							src="image/main/delivery1.png" width="160" height="50" />
+					</a>
 				</div>	
 			</header>
 		</div>
+
+
 
 
