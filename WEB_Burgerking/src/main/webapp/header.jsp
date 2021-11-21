@@ -15,6 +15,18 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
+		<script type="text/javascript">
+			function sizeup(){
+				var ul1 = document.getElementById('ul1');
+				var con = ul1.parentNode.parentNode.parentNode;
+				con.style.height = '442px';
+			}
+			function sizedown(){
+				var ul1 = document.getElementById('ul1');
+				var con = ul1.parentNode.parentNode.parentNode;
+				con.style.height = '120px';
+			}
+		</script>
 	</head>
 	<body>
 		<div class="header_container">
@@ -25,7 +37,7 @@
 				</a>
 	
 				<div class="top_menu">
-					<ul>
+					<ul onmouseover="sizeup()" onmouseleave="sizedown()" id="ul1">
 						<li class="menu_item"><span>메뉴소개</span>
 					    <ul class="header_submenu">
 						<li><a><span>스페셜&amp;할인팩</span></a></li>
