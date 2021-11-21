@@ -63,9 +63,19 @@
 							</li>
 						</ul>
 					</div>
-					<a id="order_btn" href="burger.do?command=loginForm"> <img
-							src="image/main/delivery1.png" width="160" height="50" />
-					</a>
+					
+					<c:choose>
+						<c:when test="${empty loginUser}">
+							<a id="order_btn" href="burger.do?command=loginForm"> 
+								<img	src="image/main/delivery1.png" width="160" height="50" />
+							</a>
+						</c:when>
+						<c:otherwise>
+							<a id="order_btn" href="burger.do?command=deliveryForm"> 
+								<img src="image/main/delivery1.png" width="160" height="50" />
+							</a>
+						</c:otherwise>
+					</c:choose>
 				</div>	
 			</header>
 		</div>
