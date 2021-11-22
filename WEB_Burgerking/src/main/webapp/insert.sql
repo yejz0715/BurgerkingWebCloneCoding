@@ -787,7 +787,7 @@ values(pseq.nextVal, '리얼 독퍼', 2900, 0, 0, '8', '1','3', 'realdogper.png'
 '반려견에게 Real Dogpper를 선물하세요!', 1);
 
 
-
-
 select * from PRODUCT;
 select * from SHORTPRODUCT;
+
+
