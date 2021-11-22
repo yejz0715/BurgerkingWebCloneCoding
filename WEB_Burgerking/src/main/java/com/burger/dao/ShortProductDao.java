@@ -36,6 +36,7 @@ public class ShortProductDao {
 				spvo.setKind1(rs.getInt("kind1"));
 				spvo.setKind2(rs.getInt("kind2"));
 				spvo.setUseyn(rs.getInt("useyn"));
+				list.add(spvo);
 			}
 		} catch (SQLException e) {e.printStackTrace();
 		}finally {

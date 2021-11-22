@@ -19,7 +19,6 @@ insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, im
 values(pseq.nextVal, '화이트갈릭팩3', 20600, 0, 0, '1', '3', '1', 'set3.png',
 '화이트갈릭와퍼+몬스터와퍼+프렌치프라이L+너겟킹4조각+콜라R2', 1);
 
-update product set kind2='3' where pname='화이트갈릭팩3'
 
 insert into shortproduct(spseq, pname, kind1, kind2, image, useyn)
 values(spseq.nextVal, '더블화이트갈릭와퍼', '2', '1', 'doublewhitegarlic.png', 1);
@@ -48,7 +47,7 @@ values(pseq.nextVal, '화이트갈릭와퍼', 7900, 0, 0, '2', '2', '1', 'whiteg
 '단품', 1);
 
 insert into shortproduct(spseq, pname, kind1, kind2, image, useyn)
-values(spseq.nextVal, '몬스터X', '2', '3', 'set3.png', 1);
+values(spseq.nextVal, '몬스터X', '2', '3', 'monsterx.png', 1);
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
 values(pseq.nextVal, '몬스터X 라지세트', 10900, 0, 0, '2', '3','3', 'monsterxls.png',
