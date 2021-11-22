@@ -8,6 +8,7 @@ html, body{
 body{
 	background-color: #f2ebe6;
 	margin-top: 120px;
+	min-width:1000px;
 }
 
 article{
@@ -293,6 +294,12 @@ ul {
     cursor: pointer;
 	background: url(https://www.burgerking.co.kr/dist/img/logo_delivery.26d1d682.png) no-repeat 0; 
 }
+
+.WEB_logo a{
+	text-decoration: none;
+	color: #fff;
+}
+
 .utilWrap {
     position: absolute;
     right: 20px;
@@ -300,5 +307,124 @@ ul {
     overflow: hidden;
 }
 
+.utilWrap a {
+    position: relative;
+    display: block;
+    float: left;
+    height: 48px;
+    padding: 0 14px;
+    font-size: .875rem;
+    line-height: 48px;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
 
+.utilWrap a span:after {content: ""; position: absolute; left: 0; top: 18px;
+height: 15px; border-left: 1px solid #e84e47;}
 
+.utilWrap a:first-child span:after {content: ""; position: absolute; left: 0; top: 18px;
+height: 15px; border-left: 0px;}
+
+/* header------------------------------------------------------------------------------------*/
+.header_container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 50;
+	background-color: #fff;
+}
+
+#web_container {
+	max-width: 1184px;
+	height: 120px;
+	position: relative;
+	margin: 0 auto;
+	line-height: 120px;
+}
+
+#logo {
+	line-height: 120px;
+}
+
+.top_menu {
+	position: relative;
+	margin-left: 15%;
+}
+
+.top_menu ul {
+	float: left;
+	width: 94%;
+	max-width: 768px;
+	margin-left: 96px; 
+}
+
+.top_menu:hover .header_submenu{
+	height: 322px;
+	z-index: 101;
+	margin-left: 0px; 
+}
+
+d, dl, dt, em, figure, h1, h2, h3, h4, h5, h6, li, ol, p, ul {
+	margin: 0;
+	padding: 0;
+}
+
+.menu_item {
+	position: relative;
+	float: left;
+	width: 25%;
+	z-index: 11;
+	font-weight: 700;
+	font-size: 1.5rem;
+	text-align: left;
+	cursor: default;
+}
+
+#order_btn {
+	right: 0;
+}
+
+.header_submenu {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	min-width: 100%;
+	height: 0;
+	overflow: hidden;
+	z-index: 100;
+	list-style: none;
+}
+
+.header_submenu li {
+	margin-bottom: 5px;
+	line-height: 0px;
+}
+
+.header_submenu a {
+	height: 125px;
+	font-size: .875rem;
+	line-height: 25px;
+}
+
+.footer_a{
+	color: #000;
+	cursor: pointer;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.header_submenu li a {
+	font-size: 14px;
+	text-decoration: none;
+	color: #292929;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+#delivery_Signup_btn img{
+	float: right;
+	margin-top:40px;
+	vertical-align: middle;
+}

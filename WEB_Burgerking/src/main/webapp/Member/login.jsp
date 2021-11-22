@@ -5,7 +5,7 @@
 	<div class="location">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
-			<li>로그인</li>
+			<li><a href="burger.do?command=loginForm">로그인</a></li>
 		</ul>
 	</div>
 </article>
