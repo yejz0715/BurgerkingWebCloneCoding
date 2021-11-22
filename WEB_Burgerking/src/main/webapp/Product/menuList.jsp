@@ -4,7 +4,12 @@
 <div class="clear"></div>
 
 <article>
-	
+	<div class="location">
+		<ul>
+			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
+			<li>메뉴소개</li>
+		</ul>
+	</div>
 	<div class="menuarea">
 		<ul>
 			<c:forEach var="productVO" items="${ProductList}">

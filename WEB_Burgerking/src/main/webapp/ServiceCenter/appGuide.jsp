@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../header.jsp"%>
+<%@ include file="/header.jsp"%>
 
 <article>
 	<div class="location">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
-			<li>이벤트&nbsp;>&nbsp;</li>
-			<li>전체</li>
+			<li>고객센터 &nbsp;>&nbsp;</li>
+			<li>버거킹앱 이용안내</li>
 		</ul>
 	</div>
+	appGuide
 </article>
 
 <%@ include file="/undermenu.jsp" %>
