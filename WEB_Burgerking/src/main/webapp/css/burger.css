@@ -428,3 +428,210 @@ d, dl, dt, em, figure, h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 	margin-top:40px;
 	vertical-align: middle;
 }
+
+
+/* serviceCenter--------------------------------------------------------- */
+.page_tit {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    line-height: 100%;
+}
+
+.subtitWrap {
+    position: relative;
+    margin-bottom: 26px;
+    margin: 0 auto;
+    max-width: 1184px;
+}
+.web_container1 {
+    max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sc_table_thead{
+	border-top: 2px solid black;
+}
+.sc_table_header{
+	font-size: 25px;	
+	background-color: #efefef;
+	height: 50px;
+}
+
+.faq_category {
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.faq_category label {
+    float: left;
+    margin-right: 9px;
+}
+
+.switch01 {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.switch01 input:checked+* {
+    background: #2e2e2e;
+}
+.switch01 input+* {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+    background: #8d8d8d;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+label, label>span {
+    vertical-align: middle;
+}
+
+.switch01 input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+input[type=checkbox], input[type=radio] {
+    position: absolute;
+    margin: 0;
+    vertical-align: middle;
+    font-size: 1em;
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    opacity: 0;
+}
+
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+
+input {
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+.tlist01.acc_type {
+    table-layout: fixed;
+}
+.tlist01 {
+    border-bottom: 2px solid #000;
+    border-top: 3px solid #000;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.tlist01 tbody td, .tlist01 tbody th {
+    height: 54px;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
+}
+
+.tlist01 tbody td:last-child{
+    height: 0px;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+button, table td, table th {
+    padding: 0;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.acc_cont td .text_area{
+	background-color: #e5e5e5;
+	height: 54px;
+}
+
+.acc_cont {
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    opacity: 1;
+    -webkit-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+    background-color: #e6e6e6;
+}
+
+.btn_acc{
+	width: 20px; height: 20px;
+	background-color: black;
+	border: 1px solid gray;
+	float: right;
+	color: #fff;
+}
+
+.open .btn_acc:after {
+    -webkit-transform: rotate(
+180deg);
+    transform: rotate(
+180deg);
+}
+
+.tlist01.acc_type .acc_tit {
+    padding-right: 30px;
+    text-align: left;
+}
