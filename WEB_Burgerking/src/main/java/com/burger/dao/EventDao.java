@@ -3,6 +3,12 @@ package com.burger.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+
+import com.burger.dto.EventVO;
+import com.burger.util.DBman;
 
 public class EventDao {
 	private EventDao() { }
@@ -12,4 +18,33 @@ public class EventDao {
 	Connection con = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
+	
+	public ArrayList<EventVO> getevent() {
+		ArrayList<EventVO> list=new ArrayList<EventVO>();
+		String sql =" select * from event";
+		con = DBman.getConnection();
+		
+		 
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+			EventVO evo = new EventVO();
+			evo.setEseq(rs.getInt("eseq"));
+			evo.setSubject(rs.getString("subject"));
+			evo.setContent(rs.getString("content"));
+			evo.setImage(rs.getString("image"));
+			evo.setStartdate(rs.getTimestamp("startdate"));
+			evo.setEnddate(rs.getTimestamp("enddate"));
+			evo.setState(rs.getInt("states"));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}				
+		return list;
+	}
+			
 }

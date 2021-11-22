@@ -37,6 +37,7 @@ public class ProductDao {
 				pvo.setPrice3(rs.getInt("price3"));
 				pvo.setKind1(rs.getString("kind1"));
 				pvo.setKind2(rs.getString("kind2"));
+				pvo.setKind3(rs.getString("kind3"));
 				pvo.setContent(rs.getString("content"));
 				pvo.setIndate(rs.getTimestamp("indate"));
 				pvo.setUseyn(rs.getString("useyn"));
