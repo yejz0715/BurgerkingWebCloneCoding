@@ -2,7 +2,7 @@ package com.burger.dto;
 
 import java.sql.Timestamp;
 
-public class eventVO {
+public class EventVO {
 	private int eseq;
 	private String subject;
 	private String content;
