@@ -15,7 +15,7 @@
 			<c:forEach var="productVO" items="${ProductList}">
 				<li><a href="burger.do?command=menudetailForm">
 					<div class=".menuImgdiv">
-						<img class="menuImg" src="image/menu/premier/${productVO.image}">					
+						<img class="menuImg" src="image/menu/${productVO.kind1}/${productVO.image}">					
 					</div>
 					<div class=".menuContdiv">
 						<p>${productVO.pname}</p>
