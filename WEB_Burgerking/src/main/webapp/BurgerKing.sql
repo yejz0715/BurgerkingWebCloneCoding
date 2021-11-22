@@ -345,8 +345,4 @@ create table shortproduct(
 );
 
 
-drop table product
-
-
-
 select * from product;
