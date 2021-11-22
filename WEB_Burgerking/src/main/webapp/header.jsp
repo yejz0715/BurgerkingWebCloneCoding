@@ -33,12 +33,9 @@
 		<div class="header_container">
 			<header>
 				<div id="web_container">
-					<a id="logo" href="burger.do?command=index"> 
-					<img src="image/main/burgerkinglogo.png" style="vertical-align: middle; width:83; height:82;"/>
 					<a id="logo" href="burger.do?command=index"> <img
 						src="image/main/burgerkinglogo.png" width="83" height="82" />
 					</a>
-		
 					<div class="top_menu">
 						<ul onmouseover="sizeup()" onmouseleave="sizedown()" id="ul1">
 							<li class="menu_item"><span>메뉴소개</span>
