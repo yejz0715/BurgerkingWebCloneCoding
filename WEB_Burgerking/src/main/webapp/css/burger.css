@@ -995,3 +995,51 @@ font-size: 1.5rem;
     overflow: hidden;
 }
 
+.prd_intro {
+    height: 400px;
+    color: #fff;
+    background: #130101 url(../image/main/bg_prd_detailintro.png) no-repeat 50%;
+}
+
+
+.prd_intro .intro_txt {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    width: 55%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    word-wrap: normal;
+    word-break: keep-all;
+}
+
+.prd_intro .intro_txt .tit {
+    display: block;
+    font-size: 3.75rem;
+    line-height: 100%;
+}
+
+.prd_intro .intro_txt .subtxt {
+    margin-top: 14px;
+    font-size: 1.375rem;
+}
+
+.prd_intro .prd_img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 504px;
+    height: 330px;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -165px;
+    text-align: right;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}

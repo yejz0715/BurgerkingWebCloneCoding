@@ -12,6 +12,7 @@ import com.burger.controller.action.JoinFormAction;
 import com.burger.controller.action.LegalAction;
 import com.burger.controller.action.LoginFormAction;
 import com.burger.controller.action.MenuListFormAction;
+import com.burger.controller.action.MenudetailFormAction;
 import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.QnaFormAction;
 import com.burger.controller.action.LegalAction;
@@ -49,6 +50,8 @@ public class ActionFactory {
 		else if(command.equals("menuListForm")) ac = new MenuListFormAction();
 		else if(command.equals("eventListForm")) ac = new EventListFormAction();
 		else if(command.equals("brandStroyForm")) ac = new BrandStroyFormAction();
+		else if(command.equals("menudetailForm")) ac = new MenudetailFormAction();
+		
 		return ac;
 	}
 }

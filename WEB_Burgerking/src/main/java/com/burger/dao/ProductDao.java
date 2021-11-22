@@ -21,14 +21,12 @@ public class ProductDao {
 	
 	public ArrayList<ProductVO> getProduct(String kind1) {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
-		String sql = "select * from product where kind1 = ?";
+		String sql = "select * from product where kind1=?";
 		con = DBman.getConnection();
-		
 		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, kind1);
 			rs = pstmt.executeQuery();
-			
 			while(rs.next()) {
 				ProductVO pvo = new ProductVO();
 				pvo.setPseq(rs.getInt("pseq"));
@@ -50,12 +48,9 @@ public class ProductDao {
 		}finally {
 			DBman.close(con, pstmt, rs);
 		}
-		
-		
+
 		return list;
 	}
-
-
 	
 }
 
