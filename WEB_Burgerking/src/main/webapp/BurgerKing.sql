@@ -32,30 +32,27 @@ DROP TABLE sub_product CASCADE CONSTRAINTS;
 
 /* Drop Sequences */
 
-DROP SEQUENCE SEQ_cart_cseq;
-DROP SEQUENCE SEQ_event_eseq;
-DROP SEQUENCE SEQ_Member_membernum;
-DROP SEQUENCE SEQ_member_mseq;
-DROP SEQUENCE SEQ_order_detail_odseq;
-DROP SEQUENCE SEQ_product_productnum;
-DROP SEQUENCE SEQ_product_pseq;
-DROP SEQUENCE SEQ_qna_qseq;
-DROP SEQUENCE SEQ_sub_product_spseq;
+DROP SEQUENCE cseq;
+DROP SEQUENCE eseq;
+DROP SEQUENCE mseq;
+DROP SEQUENCE oseq;
+DROP SEQUENCE pseq;
+DROP SEQUENCE qseq;
+DROP SEQUENCE spseq;
 
 
 
 
 /* Create Sequences */
 
-CREATE SEQUENCE SEQ_cart_cseq INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_event_eseq INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_Member_membernum INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_member_mseq INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_order_detail_odseq INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_product_productnum INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_product_pseq INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_qna_qseq INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_sub_product_spseq INCREMENT BY 1 START WITH 1;
+create sequence mseq increment by 1 start with 1;
+create sequence qseq increment by 1 start with 1;
+create sequence cseq increment by 1 start with 1;
+create sequence oseq increment by 1 start with 1;
+create sequence pseq increment by 1 start with 1;
+create sequence spseq increment by 1 start with 1;
+create sequence eseq increment by 1 start with 1;
+
 
 
 
@@ -171,6 +168,7 @@ CREATE TABLE product
 	price3 number(10) NOT NULL,
 	kind1 varchar2(5) NOT NULL,
 	kind2 varchar2(3) NOT NULL,
+	kind3 varchar2(3) NOT NULL,
 	indate  date DEFAULT sysdate NOT NULL,
 	content varchar2(100),
 	image varchar2(50),
@@ -256,7 +254,7 @@ BEGIN
 	FROM dual;
 END;
 
-/
+
 
 CREATE OR REPLACE TRIGGER TRI_event_eseq BEFORE INSERT ON event
 FOR EACH ROW
@@ -266,7 +264,7 @@ BEGIN
 	FROM dual;
 END;
 
-/
+
 
 CREATE OR REPLACE TRIGGER TRI_Member_membernum BEFORE INSERT ON Member
 FOR EACH ROW
@@ -276,7 +274,7 @@ BEGIN
 	FROM dual;
 END;
 
-/
+
 
 CREATE OR REPLACE TRIGGER TRI_member_mseq BEFORE INSERT ON member
 FOR EACH ROW
@@ -286,7 +284,7 @@ BEGIN
 	FROM dual;
 END;
 
-/
+
 
 CREATE OR REPLACE TRIGGER TRI_order_detail_odseq BEFORE INSERT ON order_detail
 FOR EACH ROW
@@ -296,7 +294,7 @@ BEGIN
 	FROM dual;
 END;
 
-/
+
 
 CREATE OR REPLACE TRIGGER TRI_product_productnum BEFORE INSERT ON product
 FOR EACH ROW
@@ -306,7 +304,7 @@ BEGIN
 	FROM dual;
 END;
 
-/
+
 
 CREATE OR REPLACE TRIGGER TRI_product_pseq BEFORE INSERT ON product
 FOR EACH ROW
@@ -316,7 +314,6 @@ BEGIN
 	FROM dual;
 END;
 
-/
 
 CREATE OR REPLACE TRIGGER TRI_qna_qseq BEFORE INSERT ON qna
 FOR EACH ROW
@@ -326,7 +323,7 @@ BEGIN
 	FROM dual;
 END;
 
-/
+
 
 CREATE OR REPLACE TRIGGER TRI_sub_product_spseq BEFORE INSERT ON sub_product
 FOR EACH ROW
@@ -336,7 +333,7 @@ BEGIN
 	FROM dual;
 END;
 
-/
+
 
 create table shortproduct(
 	spseq number(10),
@@ -348,11 +345,8 @@ create table shortproduct(
 );
 
 
-insert into product(pseq, pname, price1, price2, price3, kind1, kind2, image, content, useyn)
-values(SEQ_product_pseq.nextVal, '더블화이트갈릭와퍼라지세트', 15000, 0, 0, '2', '1', '', '더블화이트갈릭와퍼+프렌치프라이L+콜라L', 1);
-insert into product(pseq, pname, price1, price2, price3, kind1, kind2, image, content, useyn)
-values(SEQ_product_pseq.nextVal, '더블화이트갈릭와퍼세트', 12000, 0, 0, '2', '2', '', '더블화이트갈릭와퍼+프렌치프라이R+콜라R', 1);
-insert into product(pseq, pname, price1, price2, price3, kind1, kind2, image, content, useyn)
-values(SEQ_product_pseq.nextVal, '더블화이트갈릭와퍼', 8000, 0, 0, '2', '3', 'doublewhitegarlic.png', '단품', 1);
+drop table product
+
+
 
 select * from product;
