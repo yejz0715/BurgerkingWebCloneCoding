@@ -8,19 +8,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.burger.dao.ProductDao;
+import com.burger.dao.ShortProductDao;
 import com.burger.dto.ProductVO;
+import com.burger.dto.shortProductVO;
 
 public class MenudetailFormAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url="product/productDetail.jsp";
+		String url="Product/productDetail.jsp";
+		String pseq = request.getParameter("pseq");
 		String kind1 = request.getParameter("kind1");
 		
 		ProductDao pdao = ProductDao.getInstance();
-		ArrayList<ProductVO> list = pdao.getProduct(kind1);
+		ProductVO pvo = pdao.getProduct(pseq);
 		
-		request.setAttribute("productVO", list);
+		ShortProductDao spdao = ShortProductDao.getInstance();
+		ArrayList<shortProductVO> list = spdao.getShortProduct(kind1);
+		
+		request.setAttribute("ProductList", pvo);
+		request.setAttribute("ShortProductList", list);
 		request.getRequestDispatcher(url).forward(request, response);	
 
 	}

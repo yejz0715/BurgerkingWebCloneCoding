@@ -13,7 +13,7 @@
 	<div class="menuarea">
 		<ul>
 			<c:forEach var="shortProductVO" items="${shortProductList}">
-				<li><a href="burger.do?command=menudetailForm<%-- &kind=${ProductVO.kind1} --%>">
+				<li><a href="burger.do?command=menudetailForm">
 					<div class=".menuImgdiv">
 						<img class="menuImg" src="image/menu/${shortProductVO.kind1}/${shortProductVO.image}">					
 					</div>

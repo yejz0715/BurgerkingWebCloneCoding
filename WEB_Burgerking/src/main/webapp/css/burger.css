@@ -996,9 +996,20 @@ font-size: 1.5rem;
 }
 
 .prd_intro {
+	position: relative;
     height: 400px;
     color: #fff;
     background: #130101 url(../image/main/bg_prd_detailintro.png) no-repeat 50%;
+}
+
+.prd_intro .web_container{
+    position: relative;
+    height: 80%;
+    overflow: hidden;
+	max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: none;
 }
 
 
@@ -1042,4 +1053,47 @@ font-size: 1.5rem;
     -ms-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+.menu_subinfoWrap {
+    height: 88px;
+    background: url(../image/main/bg_personality.2ff1d0f9.gif) repeat top;
+}
+.menu_subinfoWrap>.web_container {
+    position: relative;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.menu_subinfoWrap .btn_back {
+    display: inline-block;
+    height: 48px;
+    padding-left: 28px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #fff;
+    line-height: 48px;
+    background: url(../image/main/backspace.png) no-repeat 0;
+}
+
+.nutrition_info button {
+    float: left;
+    height: 44px;
+    padding: 5px 17px 5px 19px;
+    font-size: 1.25rem;
+    color: #252423;
+    background: #fff;
+    border-radius: 6px;
+}
+
+
+.btn_nutrition>:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    background: url(../image/main/defence.png) no-repeat 100%;
 }

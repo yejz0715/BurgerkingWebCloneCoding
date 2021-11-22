@@ -19,17 +19,16 @@ public class ProductDao {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	
-	public ArrayList<ProductVO> getProduct(String kind1) {
-		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
-		String sql = "select * from product where kind1=?";
+	public ProductVO getProduct(String pseq) {
+		ProductVO pvo = new ProductVO();
+		String sql = "select * from product where pseq = ?";
 		con = DBman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, kind1);
+			pstmt.setString(1, pseq);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
-				ProductVO pvo = new ProductVO();
-				pvo.setPseq(rs.getInt("pseq"));
+				pvo.setPseq(Integer.parseInt(pseq));
 				pvo.setPname(rs.getString("pname"));
 				pvo.setPrice1(rs.getInt("price1"));
 				pvo.setPrice2(rs.getInt("price2"));
@@ -41,15 +40,13 @@ public class ProductDao {
 				pvo.setIndate(rs.getTimestamp("indate"));
 				pvo.setUseyn(rs.getString("useyn"));
 				pvo.setImage(rs.getString("image"));
-				list.add(pvo);
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {
 			DBman.close(con, pstmt, rs);
 		}
-
-		return list;
+		return pvo;
 	}
 	
 }
