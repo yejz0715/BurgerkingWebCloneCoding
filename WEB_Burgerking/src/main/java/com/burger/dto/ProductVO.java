@@ -7,6 +7,7 @@ public class ProductVO {
 	private String pname;
 	private String kind1;
 	private String kind2;
+	private String kind3;
 	private Integer price1;
 	private Integer price2;
 	private Integer price3;
@@ -38,6 +39,12 @@ public class ProductVO {
 	}
 	public void setKind2(String kind2) {
 		this.kind2 = kind2;
+	}
+	public String getKind3() {
+		return kind3;
+	}
+	public void setKind3(String kind3) {
+		this.kind3 = kind3;
 	}
 	public Integer getPrice1() {
 		return price1;
@@ -81,4 +88,5 @@ public class ProductVO {
 	public void setIndate(Timestamp indate) {
 		this.indate = indate;
 	}
+
 }
