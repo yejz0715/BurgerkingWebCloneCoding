@@ -367,7 +367,7 @@ height: 15px; border-left: 0px;}
 	margin-left: 0px; 
 }
 
-d, dl, dt, em, figure, h1, h2, h3, h4, h5, h6, li, ol, p, ul {
+d, dl, dt, dd, em, figure, h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 	margin: 0;
 	padding: 0;
 }
@@ -634,4 +634,55 @@ td {
 .tlist01.acc_type .acc_tit {
     padding-right: 30px;
     text-align: left;
+}
+/* appGuide*/
+.appdown {
+    margin-top: 44px;
+    font-size: 1.125rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+.appdown dl.store_down {
+    padding-right: 230px;
+}
+.appdown dl {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 140px;
+    padding: 12px 150px 0 0;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.appdown dt {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 1.875rem;
+}
+.appdown dd {
+    line-height: 133%;
+}
+.appdown .btn_area {
+    right: 15px;
+}
+.appdown .btn_area, .appdown .QRcode {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.appdown .btn_area a {
+    display: block;
+    width: 204px;
+    height: 64px;
+    margin-bottom: 10px;
+    text-indent: -9999em;
+}
+
+.btn_googleplay {
+    background-image: url(/src/main/webapp/image/main/btn_googleplay.png);
+}
+.btn_appstore {
+    background-image:url(/WEB_Burgerking/src/main/webapp/image/main/btn_appstore.png);
 }

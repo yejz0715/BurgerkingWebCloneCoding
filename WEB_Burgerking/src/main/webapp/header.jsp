@@ -20,6 +20,7 @@
 				var con = ul1.parentNode.parentNode.parentNode;
 				con.style.height = '442px';
 			}
+	
 			function sizedown(){
 				var ul1 = document.getElementById('ul1');
 				var con = ul1.parentNode.parentNode.parentNode;

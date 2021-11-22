@@ -15,7 +15,7 @@
 		<ul id="terms_wrap_ul" style="right: 0; top:0">
 			<li>
 				<span>
-					<a href="burger.do?command=terms" style="color: red; text-decoration: underline;">FAQ</a>
+					<a href="burger.do?command=faqForm&fnum=1" style="color: red; text-decoration: underline;">FAQ</a>
 				</span>
 			</li>
 			<li><span><a href="burger.do?command=qnaForm">문의</a></span></li>
