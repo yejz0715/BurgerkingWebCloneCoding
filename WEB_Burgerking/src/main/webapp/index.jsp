@@ -5,7 +5,8 @@
 
 <article>
 김우진
-유창대1234
+유창대
+
 </article>
 
 <%@ include file="undermenu.jsp" %>
