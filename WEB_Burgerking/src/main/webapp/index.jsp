@@ -3,7 +3,7 @@
 
 <div class="clear"></div>
 
-<article>
+<article style="background-color: #f2ebe6;">
 김우진 
 유창대
 </article>

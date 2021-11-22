@@ -19,7 +19,7 @@
 				</span>
 			</li>
 			<li><span><a href="burger.do?command=qnaForm" style="color: red; text-decoration: underline;">문의</a></span></li>
-			<li><span><a href="burger.do?command=appGuideForm">버거킹앱 이용안낸</a></span></li>
+			<li><span><a href="burger.do?command=appGuideForm">버거킹앱 이용안내</a></span></li>
 		</ul>
 	</div>
 	

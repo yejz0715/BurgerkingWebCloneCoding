@@ -790,4 +790,5 @@ values(pseq.nextVal, '리얼 독퍼', 2900, 0, 0, '8', '1','3', 'realdogper.png'
 select * from PRODUCT;
 select * from SHORTPRODUCT;
 
-
+insert into member(mseq, id, pwd, phone, name)
+values(mseq.nextVal, 'scott', '1234', '010-2431-6247', '김우진');
