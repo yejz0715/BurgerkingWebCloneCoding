@@ -12,13 +12,13 @@
 	</div>
 	<div class="menuarea">
 		<ul>
-			<c:forEach var="productVO" items="${ProductList}">
+			<c:forEach var="shortProductVO" items="${shortProductList}">
 				<li><a href="burger.do?command=menudetailForm">
 					<div class=".menuImgdiv">
-						<img class="menuImg" src="image/menu/${productVO.kind1}/${productVO.image}">					
+						<img class="menuImg" src="image/menu/${shortProductVO.kind1}/${shortProductVO.image}">					
 					</div>
 					<div class=".menuContdiv">
-						<p>${productVO.pname}</p>
+						<p>${shortProductVO.pname}</p>
 					</div>
 				</a></li>
 			</c:forEach>

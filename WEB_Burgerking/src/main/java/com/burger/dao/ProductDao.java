@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.burger.dto.ProductVO;
+import com.burger.dto.shortProductVO;
 import com.burger.util.DBman;
 
 public class ProductDao {
@@ -53,6 +54,8 @@ public class ProductDao {
 		
 		return list;
 	}
+
+
 	
 }
 
