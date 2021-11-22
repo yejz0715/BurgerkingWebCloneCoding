@@ -656,6 +656,11 @@ td {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.appdown dl:last-child {
+    float: right;
+    width: 40%;
+}
 .appdown dt {
     margin-bottom: 30px;
     font-weight: 700;
@@ -676,13 +681,42 @@ td {
     display: block;
     width: 204px;
     height: 64px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-indent: -9999em;
 }
 
 .btn_googleplay {
-    background-image: url(/src/main/webapp/image/main/btn_googleplay.png);
+    background: url("../image/main/btn_googleplay.png") no-repeat;
 }
 .btn_appstore {
-    background-image:url(/WEB_Burgerking/src/main/webapp/image/main/btn_appstore.png);
+    background: url("../image/main/btn_appstore.png");
+}
+
+.appdown .btn_area, .appdown .QRcode {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+.QRcode img{
+	max-width: 100%;
+    max-height: 100%;
+    width:138px; height:138px;
+    vertical-align: top;
+}
+.subtit {
+    margin-bottom: 27px;
+    font-size: 3rem;
+    text-align: center;
+}
+.txt {
+    font-size: 1.25rem;
+    text-align: center;
+}
+.WEB_guide_img{
+	margin: 25px auto 45px auto;
+	max-width: 100%;
+    max-height: 100%;
+    text-align: center;
 }

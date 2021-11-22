@@ -21,6 +21,16 @@
 			<li><span><a href="burger.do?command=qnaForm">문의</a></span></li>
 			<li><span><a href="burger.do?command=appGuideForm" style="color: red; text-decoration: underline;">버거킹앱 이용안내</a></span></li>
 		</ul>
+		
+		<h4 class="subtit"><span>버거킹 APP(앱) 다운로드</span></h4>
+		<p class="txt">
+			<span>아래 방법 중 편리한 방법으로 <strong>버거킹앱을</strong></span>
+			<span><strong>다운로드</strong>하세요.</span>
+		</p>
+
+		<div class="WEB_guide_img">
+			<img src="image/main/img_guide_appdown.jpg" alt="앱 화면 이미지">
+		</div>
 	</div>
 
 	<div class="web_container1">
