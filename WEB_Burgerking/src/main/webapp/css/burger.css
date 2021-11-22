@@ -295,6 +295,7 @@ ul {
 	background: url(https://www.burgerking.co.kr/dist/img/logo_delivery.26d1d682.png) no-repeat 0; 
 }
 
+
 .WEB_logo a{
 	text-decoration: none;
 	color: #fff;
@@ -428,6 +429,7 @@ d, dl, dt, dd, em, figure, h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 	margin-top:40px;
 	vertical-align: middle;
 }
+
 
 
 /* serviceCenter--------------------------------------------------------- */
@@ -686,3 +688,14 @@ td {
 .btn_appstore {
     background-image:url(/WEB_Burgerking/src/main/webapp/image/main/btn_appstore.png);
 }
+
+.utilWrap {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    overflow: hidden;
+}
+
+
+
+
