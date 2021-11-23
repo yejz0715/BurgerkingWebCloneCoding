@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 <div class="clear"></div>
-<article>
+<div class="contentsWrap">
 	<div class="location">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
@@ -31,7 +31,13 @@
 			<span>영양분석표, 알레르기 유발성분</span></button></div>
 		</div>
 	</div>
-</article>
-
+	<div class="bg_w">
+		<div class="web_container">
+			<ul class="prdmenu_list ">
+				<li><div class="prd_img"><img src="image/menu/2/doubleoriginercheese.png"/></div></li>
+			</ul>
+		</div>
+	</div>
+</div>
 <%@ include file="/undermenu.jsp" %>
 <%@ include file="/footer/footer.jsp" %>
