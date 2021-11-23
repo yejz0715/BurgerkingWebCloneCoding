@@ -13,29 +13,572 @@ body{
 
 article{
 	position:relative;
+<<<<<<< HEAD
 	overflow:auto;
+=======
+	overflow: auto;
+	margin-bottom: 50px;
+	overflow: auto;
+>>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 }
 
 .clear {
 	clear: both;
 }
 /* footer-------------------------------------------------------------------------------------------------------------------------------- */
+
 footer{
-	position:absolute;
-	width: 100%; height: 272px; 
-	font-size: .875rem; 
-	color:#6a6a6a;
+	position: absolute;
+	width: 100%;
+	height: 272px;
+	font-size: .875rem;
+	color: #6a6a6a;
 	background-color: #292929;
 }
+
 
 footer #copy{
 	position:relative;
 	bottom:0;
+	position: relative;
+	bottom: 0;
 	margin: 0 auto;
 	width: 60%; height: 172px;
 	top: 50px;
 	min-width: 800px;
 	font-weight: bold;
+	width: 60%;
+	height: 172px;
+	top: 50px;
+	min-width: 800px;
+	font-weight: bold;
+}
+
+footer #copy p {
+	margin: 0 0 5px 0;
+}
+
+footer #copy ul {
+	position: absolute;
+	top: -10px;
+	right: 0px;
+	list-style: none;
+}
+
+footer #copy ul li {
+	list-style: none;
+	display: list-item;
+	float: left;
+	padding: 0 10px;
+}
+
+footer #copy a {
+	color: #6a6a6a;
+	text-decoration: none;
+}
+/* location------------------------------------------------------------------------------------------------------------------------------------------ */
+.location {
+	width: 100%;
+	height: 60px;
+	background-color: #000;
+	line-height: 60px;
+	margin-bottom: 50px;
+}
+
+.location ul {
+	list-style: none;
+	width: 60%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+.location ul li {
+	float: left;
+	color: #fff;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+.location ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+.wrap {
+	width: 60%;
+	margin: 0 auto;
+	background-color: #f2ebe6;
+}
+
+#terms_wrap_ul {
+	position: absolute;
+	right: 400px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#terms_wrap_ul li {
+	float: left;
+}
+
+#terms_wrap_ul li a {
+	text-decoration: none;
+	margin: 0px 15px 0px 15px;
+	font-size: 1.25em;
+	color: #6a6a6a;
+	font-weight: bold;
+}
+
+.big_h1 {
+	margin-top: 0px;
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 2.6em
+}
+
+.textarea {
+	position: relative;
+	padding: 40px;
+	height: 600px;
+	background-color: #fff;
+	overflow: scroll;
+}
+
+.textarea h1 {
+	font-size: 1.8em;
+}
+
+.textarea h2, p {
+	font-size: 1.3em;
+}
+
+.btnarea {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	background-color: #f8f8f8;
+	font-size: 1.5em;
+	line-height: 100px;
+}
+
+.btnarea .btn_c1 {
+	position: relative;
+	height: 50px;
+	margin: 0;
+	padding: 5px 20px;
+	border: 0px;
+	border-radius: 5px;
+	vertical-align: middle;
+	margin-left: 50px;
+	color: #fff;
+	background-color: #8d8d8d;
+	font-size: 1em;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+ul {
+	list-style: none;
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+
+ul.menu {
+	margin-top: 15px;
+}
+
+.sitemap {
+	height: 585px;
+	background-image: url(../image/main/bg_botmenu.jpg);
+	margin: 0 auto;
+}
+
+.undermenu {
+	height: 585px;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.sitemap .menu {
+	height: 500px;
+	padding-top: 50px;
+}
+
+.sitemap ul.menu>li {
+	position: relative;
+	float: left;
+	width: 20%;
+}
+
+.sitemap ul.menu>li:first-child a {
+	padding-left: 0;
+}
+
+.sitemap ul.menu>li:first-child {
+	border: 0px;
+}
+
+.sitemap ul.menu>li a {
+	display: block;
+	height: 28px;
+	padding-left: 24px;
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: #89513a;
+	line-height: 28px;
+}
+
+.sitemap ul.menu .submenu {
+	margin-top: 15px;
+	padding: 0px;
+}
+
+.sitemap ul.menu .submenu a {
+	height: 32px;
+	font-size: 1rem;
+	line-height: 32px;
+	text-decoration: none;
+}
+
+.sitemap ul.menu>li:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 338px;
+	border-left: 1px dashed #d9c8be;
+}
+
+.sitemap ul.menu>li:first-child:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 338px;
+	border-left: 0px;
+}
+
+#header_container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 50;
+	background-color: #fff;
+}
+
+#web_container {
+	max-width: 1184px;
+	height: 120px;
+	position: relative;
+	margin: 0 auto;
+}
+
+#logo {
+	position: absolute;
+	vertical-align: middle;
+}
+
+#top_menu {
+	position: relative;
+	margin-left: 15%;
+}
+
+d, dl, dt, em, figure, h1, h2, h3, h4, h5, h6, li, ol, p, ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.menu_item {
+	position: relative;
+	float: left;
+	width: 25%;
+	z-index: 11;
+	font-weight: 700;
+	font-size: 1.375rem;
+	text-align: left;
+	line-height: 120px;
+	cursor: default;
+}
+
+#order_btn {
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+
+/*menuList.jsp------------------------------------------------------------------------------------------*/
+.menuarea {
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.menuarea ul {
+	width: 1200px;
+	list-style: none;
+}
+
+.menuarea ul li {
+	width: 220px;
+	height: 300px;
+	margin: 0 40px;
+	float: left;
+}
+
+.menuarea ul li a {
+	width: 220px;
+	height: 300px;
+	margin: 0 40px;
+	float: left;
+	text-decoration: none;
+	color: #292929;
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+
+.menuImgdiv {
+	width: 100%;
+	height: 144px;
+}
+
+.menuContdiv {
+	width: 100%;
+	height: 121px;
+}
+
+.menuImg {
+	width: 220px;
+	height: 144px;
+}
+
+.banner {
+	position: relative;
+	width: 1440px;
+	height: 580px;
+	top: 1px;
+	right:-6px;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.banner ul {
+	position: absolute;
+	margin: 0px;
+	padding: 0;
+	list-style: none;
+}
+
+.banner ul li {
+	float: left;
+	width: 1440px;
+	height: 580px;
+	margin: 0;
+	padding: 0;
+	text-align: center
+}
+
+#remot {
+	position: relative;
+	width: 1440px;
+	height: 580px;
+	margin: 0 auto;
+	right: 50px;
+	top: 420px;
+	text-align: center;
+}
+
+#remot ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+#remot ul li {
+	float: left;
+	width: 16px;
+	height: 16px;
+	color: white;
+	margin: 21px 2px;
+	font-size: 50%;
+	font-weight: bold;
+	line-height: 16px;
+}
+
+#sideremot ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+}
+
+#sideremot ul li {
+	float: left;
+	width: 16px;
+	height: 16px;
+	color: white;
+	margin: 210px 2px;
+	font-size: 50%;
+	font-weight: bold;
+	line-height: 16px;
+}
+
+#test {
+	position: relative;
+	width: 1440px;
+	height: 580px;
+	margin: 0 auto;
+	top: -100px;
+	text-align: center;
+	padding: 0;
+}
+
+#utube {
+	position: relative;
+
+	top: 0px;
+	height: 800px;
+	left: 6px;
+	font-weight: bold;
+}
+
+.contentsBox01 {
+	position: relative;
+	width: 100%;
+	height: 160px;
+	margin: 0 auto;
+	top: -220px;
+	text-align: center;
+	padding: 0;
+	overflow: hidden;
+}
+
+.web_container {
+	position: relative;
+	width: 1440px;
+	height: 160px;
+	margin: 0 auto;
+	top: -220px;
+	right: -6px;
+	text-align: center;
+	padding: 0;
+	overflow: hidden;
+	background: #683a2f;
+}
+
+.youtube {
+	position: relative;
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+
+.facebook {
+	position: relative;
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+
+.instargram {
+	position: relative;
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+
+.cont {
+	margin-top: 40px;
+}
+
+.web_container2 {
+	position: relative;
+	width: 1440px;
+	height: 480px;
+	margin: 0 auto;
+	top: -220px;
+	right: -6px;
+	text-align: center;
+	overflow: hidden;
+	padding: 0;
+}
+
+#app {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+#delivery {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.bottom_banner {
+	position: relative;
+	width: 1440px;
+	height: 200px;
+	margin: 0 auto;
+	top: -220px;
+	right: -6px;
+	text-align: center;
+	/* overflow: hidden; */
+	padding: 0;
+	border: 1px dashed red;
+}
+
+.bottom_text {
+	margin-top: 40px;
+	color: yellow;
+}
+
+.cs_call {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	height: 1em;
+	margin-top: -0.5em;
+	padding-left: 66px;
+	font-size: 3.75rem;
+	color: #fff;
+	line-height: 100%;
+	text-decoration: none;
+	background:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RkYyMjc3NTdGQzE1MTFFOEEzOTNBMkIwMzUyOUMyNDUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RkYyMjc3NThGQzE1MTFFOEEzOTNBMkIwMzUyOUMyNDUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGRjIyNzc1NUZDMTUxMUU4QTM5M0EyQjAzNTI5QzI0NSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGRjIyNzc1NkZDMTUxMUU4QTM5M0EyQjAzNTI5QzI0NSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pk6q1jIAAAP0SURBVHja1JpLSFVBHMbvzRIze6sVtehhDzJTC5SkxyKtoMCUtDAspCCzRYuk2lhCtCiCSNooLXogqWlFBUGKizQXpvjINMqQC22yB5W97Kqn7w9z4jSdx5wzp3uvH/yEO87Mme/O6z9zrldRFE+AtBhUg2QwAPpAM2gEbY5rJQMB4o5irAFQCubarXeCJ3CKNfnfQnAa+MAlEB2KPZAF/IqYPoICkXq9mjmQBHLBbBO/fvAY3AYjDnphGdgK1oI1YCUIM8lPc+Yg+GrVA2fBmCKudhDjQq9QHUdAj8mzOszmBv3JV5zpkYvDi0bCLvDa4FkvQayRgS7FuRJdnieRoMzgWd0gSs+AX8JAoc0GRoM0MMUiXx4Y1nleDeutvwx8ljBQYaPx6WCIlaPGNYBcMNEg/xYDEwd4Ax0SBlptGGgwqKOfmdMrs9dgiZ2j3cj6JTanBBAlmNdvkL4E1IMynSW1kqVrNROUaJfREkVO2YI9sBr4LOqqA2Fcucmsl7SioTVP7YF2yRAhUzBfNwvoNoCL4ItOnmxwnkv7AYq5tHBQpPYArQyjEj3wQedbE93Eqg3qzNDZJ55zeag3vWqGTslhtEhiAzunU98rMInLW6STL0WNRuslh9GQ02genAR1XHoc2MOl3QKjXFq6auC+ROOfgvcS5cnEYZ2ArYD7/A60cmlpqgE6Gb118PBf4JgLZwVq3FUubSOYqvNlaRWvGhhjoavdxlM3N7l04KnlPoexcFurPu7zfO0kSbAxaYfZAcXNQI5CijeaZ3wC07g8cVzs1shX0iJoYP9/OrXFg5vgHq0wJjEVna/LKcTm/5ktaKA8gEdR4SMliebEC7BUYOVYD1o8QRZ/K0GTuVSgnBdc11klgm6AVAW6BMpSFHk5FA1QLxxlw8RK+1je4MlkgtwQnNAjYFuoTGL+Jq0HxAh8D9/ZfU9zKAwhVYN/Ym5rRYIHbPsPmSGkcsXGDv0N7LARSi8HSSDC6RASvauxc3dEc6LYos5MdiOtNU5XJrvBLLcNqDHIoM1DThWYoVNXocU15ig7fV0DJ8Am/i7IiQEilX1TduTjrkysGm+kJvUQL2OA2G5w2WSlSnDcYeNV9YJwWQNEjkMTbijfjTc0dDbdydb+QGudnX3ATA9BhuRZ2Immu2XAw0LpFNAZasGcHQ2wbq0YrwZIP8EhkOXwZiPoBlTdBavY9YgyHg142KQuYBe4bePRgKonbILngF4X6x0JlAH14F/LhlUme78sK98/h/MA/tiDtIINsTywwGZZOuoms/cMQTOgvdVIZT2zmb21D7MocwacCnYPmO2wNGfoJwiJ7HqdiADPwAVQo1fwtwADAP617LQgAz1NAAAAAElFTkSuQmCC)
+		no-repeat 0;
+}
+
+.tit {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    line-height: 100%;
+}
+.web_container3{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	margin: 0 auto;
+	top: -220px;
+	right: -6px;
+	text-align: center;
+	overflow:hidden;
+	padding: 0;
+	background: url(https://www.burgerking.co.kr/dist/img/bg_home_cs.40b21d3f.png) no-repeat top;
+
 }
 
 footer #copy p{
@@ -426,6 +969,7 @@ d, dl, dt, dd, em, figure, h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 	vertical-align: middle;
 }
 
+<<<<<<< HEAD
 
 /* serviceCenter--------------------------------------------------------- */
 .page_tit {
@@ -833,3 +1377,135 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
     -moz-appearance: textfield;
     appearance: none;
 }
+=======
+.tit {
+margin-right:600px;
+color:#fff;
+font-size: 2rem;
+}
+.WEB{
+	margin-right:140px;
+		color:red;
+font-size: 1.5rem;
+}
+.cs_call{
+ 	right:	100px;
+     font-size: 4rem;
+     font-weight:bold;}
+     
+   .cont2 {
+    position: relative;
+    height: 100%;
+    padding: 60px 330px 0 0;
+}
+
+.utilWrap {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    overflow: hidden;
+}
+
+.prd_intro {
+	position: relative;
+    height: 400px;
+    color: #fff;
+    background: #130101 url(../image/main/bg_prd_detailintro.png) no-repeat 50%;
+}
+
+.prd_intro .web_container{
+    position: relative;
+    height: 80%;
+    overflow: hidden;
+	max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: none;
+}
+
+
+.prd_intro .intro_txt {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    width: 55%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    word-wrap: normal;
+    word-break: keep-all;
+}
+
+.prd_intro .intro_txt .tit {
+    display: block;
+    font-size: 3.75rem;
+    line-height: 100%;
+}
+
+.prd_intro .intro_txt .subtxt {
+    margin-top: 14px;
+    font-size: 1.375rem;
+}
+
+.prd_intro .prd_img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 504px;
+    height: 330px;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -165px;
+    text-align: right;
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.menu_subinfoWrap {
+    height: 88px;
+    background: url(../image/main/bg_personality.2ff1d0f9.gif) repeat top;
+}
+.menu_subinfoWrap>.web_container {
+    position: relative;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.menu_subinfoWrap .btn_back {
+    display: inline-block;
+    height: 48px;
+    padding-left: 28px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #fff;
+    line-height: 48px;
+    background: url(../image/main/backspace.png) no-repeat 0;
+}
+
+.nutrition_info button {
+    float: left;
+    height: 44px;
+    padding: 5px 17px 5px 19px;
+    font-size: 1.25rem;
+    color: #252423;
+    background: #fff;
+    border-radius: 6px;
+}
+
+
+.btn_nutrition>:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    background: url(../image/main/defence.png) no-repeat 100%;
+}
+>>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb

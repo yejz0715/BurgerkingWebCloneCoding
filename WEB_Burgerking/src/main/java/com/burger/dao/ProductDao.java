@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.burger.dto.ProductVO;
+import com.burger.dto.shortProductVO;
 import com.burger.util.DBman;
 
 public class ProductDao {
@@ -18,40 +19,38 @@ public class ProductDao {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	
-	public ArrayList<ProductVO> getProduct(String kind1) {
-		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
-		String sql = "select * from product where kind1 = ?";
+	public ProductVO getProduct(String pseq) {
+		ProductVO pvo = new ProductVO();
+		String sql = "select * from product where pseq = ?";
 		con = DBman.getConnection();
-		
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, kind1);
+			pstmt.setString(1, pseq);
 			rs = pstmt.executeQuery();
-			
 			while(rs.next()) {
-				ProductVO pvo = new ProductVO();
-				pvo.setPseq(rs.getInt("pseq"));
+				pvo.setPseq(Integer.parseInt(pseq));
 				pvo.setPname(rs.getString("pname"));
 				pvo.setPrice1(rs.getInt("price1"));
 				pvo.setPrice2(rs.getInt("price2"));
 				pvo.setPrice3(rs.getInt("price3"));
 				pvo.setKind1(rs.getString("kind1"));
 				pvo.setKind2(rs.getString("kind2"));
+<<<<<<< HEAD
 				pvo.setKind2(rs.getString("kind3"));
+=======
+				pvo.setKind3(rs.getString("kind3"));
+>>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 				pvo.setContent(rs.getString("content"));
 				pvo.setIndate(rs.getTimestamp("indate"));
 				pvo.setUseyn(rs.getString("useyn"));
 				pvo.setImage(rs.getString("image"));
-				list.add(pvo);
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {
 			DBman.close(con, pstmt, rs);
 		}
-		
-		
-		return list;
+		return pvo;
 	}
 	
 }

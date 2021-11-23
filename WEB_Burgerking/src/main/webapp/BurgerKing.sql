@@ -362,6 +362,7 @@ create table shortproduct(
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 drop table product
 
 
@@ -369,3 +370,5 @@ drop table product
 select * from product;
 =======
 >>>>>>> branch 'kim_yeji' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
+=======
+>>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb

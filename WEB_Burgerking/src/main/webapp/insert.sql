@@ -9,15 +9,16 @@ insert into shortproduct(spseq, pname, kind1, kind2, image, useyn)
 values(spseq.nextVal, '더블화이트갈릭팩2', '1', '2', 'set2.png', 1);
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '더블화이트갈릭팩2', 21100, 0, 0, '2', '1', '1' ,'set2.png',
+values(pseq.nextVal, '더블화이트갈릭팩2', 21100, 0, 0, '1', '2', '1' ,'set2.png',
 '더블화이트갈릭와퍼+콰트로치즈X+프렌치프라이L+너겟킹4조각+콜라R2', 1);
 
 insert into shortproduct(spseq, pname, kind1, kind2, image, useyn)
 values(spseq.nextVal, '화이트갈릭팩3', '1', '3', 'set3.png', 1);
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '화이트갈릭팩3', 20600, 0, 0, '3', '1', '1', 'set3.png',
+values(pseq.nextVal, '화이트갈릭팩3', 20600, 0, 0, '1', '3', '1', 'set3.png',
 '화이트갈릭와퍼+몬스터와퍼+프렌치프라이L+너겟킹4조각+콜라R2', 1);
+
 
 insert into shortproduct(spseq, pname, kind1, kind2, image, useyn)
 values(spseq.nextVal, '더블화이트갈릭와퍼', '2', '1', 'doublewhitegarlic.png', 1);
@@ -46,7 +47,7 @@ values(pseq.nextVal, '화이트갈릭와퍼', 7900, 0, 0, '2', '2', '1', 'whiteg
 '단품', 1);
 
 insert into shortproduct(spseq, pname, kind1, kind2, image, useyn)
-values(spseq.nextVal, '몬스터X', '2', '3', 'set3.png', 1);
+values(spseq.nextVal, '몬스터X', '2', '3', 'monsterx.png', 1);
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
 values(pseq.nextVal, '몬스터X 라지세트', 10900, 0, 0, '2', '3','3', 'monsterxls.png',
@@ -788,10 +789,14 @@ values(pseq.nextVal, '리얼 독퍼', 2900, 0, 0, '8', '1','3', 'realdogper.png'
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 select * from PRODUCT;
 select * from SHORTPRODUCT;
+<<<<<<< HEAD
 =======
 select * from PRODUCT;
 select * from SHORTPRODUCT;
@@ -799,3 +804,7 @@ select * from SHORTPRODUCT;
 insert into member(mseq, id, pwd, phone, name)
 values(mseq.nextVal, 'scott', '1234', '010-2431-6247', '김우진');
 >>>>>>> branch 'kim_yeji' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
+=======
+
+
+>>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
