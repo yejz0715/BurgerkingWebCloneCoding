@@ -40,8 +40,8 @@
 						<input type="button" class="btn01 m" onclick="location.href='burger.do?command=joinForm'" value="회원가입"/>
 					</div>
 					<div class="login_menu">
-						<a href="#/idsearch" class=""><span>아이디 찾기</span></a>
-						<a href="#/pwsearch" class=""><span>비밀번호 찾기</span></a>
+						<a onclick="find_id();"><span>아이디 찾기</span></a>
+						<a onclick="find_pwd();"><span>비밀번호 찾기</span></a>
 					</div>
 				</div>
 			</form>
