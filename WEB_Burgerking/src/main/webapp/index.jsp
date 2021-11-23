@@ -3,21 +3,10 @@
 
 <div class="clear"></div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <article>
 김우진
 유창대1234
-=======
-<article style="background-color: #f2ebe6;">
-김우진 
-유창대
->>>>>>> branch 'kim_yeji' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-=======
-<article>
-김우진 
-유창대
->>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 </article>
 
 <%@ include file="undermenu.jsp" %>
