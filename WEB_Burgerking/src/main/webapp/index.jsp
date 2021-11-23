@@ -50,18 +50,18 @@
 			<div class="home_snsWrap">
 				<div class="web_container9">
 					<ul class="list">
-						<li class="youtube"><div class="cont">
+						<li class="youtube"><div class="cont1">
 								<a
 									href="https://www.youtube.com/channel/UCEKRI0fipK4LEgV98nI2CQA/featured"
 									target="_blank" class="btn_detail"><span><img
 										src="image/main/mainyoutube.png"></span></a>
 							</div></li>
-						<li class="facebook"><div class="cont">
+						<li class="facebook"><div class="cont1">
 								<a href="https://www.facebook.com/burgerkingkorea"
 									target="_blank" class="btn_detail"><span><img
 										src="image/main/mainfacebook.png"></span></a>
 							</div></li>
-						<li class="instargram"><div class="cont">
+						<li class="instargram"><div class="cont1">
 								<a href="https://www.instagram.com/burgerkingkorea/"
 									target="_blank" class="btn_detail"><span><img
 										src="image/main/maininstargram.png"></span></a>
@@ -88,8 +88,8 @@
 
 			<div class="web_container3">
 				<div class="cont2">
-					<h2 class="tit">집에서 만나는 버거킹</h2>
-					<p class="WEB">딜리버리 전화주문 안내 10:00–22:00 / 연중무휴 (매장별로 상이할 수
+					<h2 class="tit1">집에서 만나는 버거킹</h2>
+					<p class="WEB1">딜리버리 전화주문 안내 10:00–22:00 / 연중무휴 (매장별로 상이할 수
 						있습니다.)</p>
 					<p class="cs_call">
 						<strong>1599-0505</strong>

@@ -1060,7 +1060,7 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
 	height: 100%;
 }
 
-.cont {
+.cont1 {
 	margin-top: 40px;
 }
 
@@ -1124,7 +1124,7 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
 		no-repeat 0;
 }
 
-.tit {
+.tit1 {
     margin-bottom: 20px;
     font-size: 2rem;
     line-height: 100%;
@@ -1145,14 +1145,14 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
 
 
 
-.tit {
+.tit1{
 
 margin-right:600px;
 color:#fff;
 font-size: 2rem;
 
 }
-.WEB{
+.WEB1{
 	margin-right:140px;
 		color:red;
 font-size: 1.5rem;
