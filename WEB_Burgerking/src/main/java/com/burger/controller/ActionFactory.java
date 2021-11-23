@@ -9,7 +9,9 @@ import com.burger.controller.action.EventListFormAction;
 import com.burger.controller.action.IndexAction;
 import com.burger.controller.action.JoinFormAction;
 import com.burger.controller.action.LegalAction;
+import com.burger.controller.action.LoginAction;
 import com.burger.controller.action.LoginFormAction;
+import com.burger.controller.action.LogoutAction;
 import com.burger.controller.action.MenuListFormAction;
 import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.QnaFormAction;
@@ -26,6 +28,7 @@ public class ActionFactory {
 		
 		if (command.equals("index")) ac = new IndexAction();
 		else if(command.equals("loginForm")) ac = new LoginFormAction();
+		else if(command.equals("login")) ac = new LoginAction();
 		else if(command.equals("terms")) ac = new TermsAction();
 		else if(command.equals("privacy")) ac = new PrivacyAction();
 		else if(command.equals("legal")) ac = new LegalAction();
@@ -38,6 +41,7 @@ public class ActionFactory {
 		else if(command.equals("faqForm")) ac = new FaqFormAction();
 		else if(command.equals("appGuideForm")) ac = new AppGuideFormAction();
 		else if(command.equals("joinForm")) ac = new JoinFormAction();
+		else if(command.equals("logout")) ac = new LogoutAction();
 		return ac;
 	}
 }
