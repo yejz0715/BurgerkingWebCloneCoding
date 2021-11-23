@@ -38,8 +38,8 @@
 				<div class="vtop">휴대폰 번호</div>
 					<label>
 						<span class="hide">Phone</span>
-						<input placeholder="휴대폰 번호" type="text" name="id" id="id" onblur="check_input2();">
-						<span id="pwd_coment" class="coment_text">휴대폰 번호를 입력해 주세요.</span>
+						<input placeholder="휴대폰 번호" type="text" name="phone" id="phone" onblur="check_input2();">
+						<span id="phone_coment" class="coment_text">휴대폰 번호를 입력해 주세요.</span>
 					</label>
 				</div>
 				<ul class="find_id_text">

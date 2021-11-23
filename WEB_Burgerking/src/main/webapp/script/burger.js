@@ -22,8 +22,8 @@ function check_input1(){
 }
 
 function check_input2(){
-	var a = document.getElementById("pwd");
-	var b = document.getElementById("pwd_coment");
+	var a = document.getElementById("phone");
+	var b = document.getElementById("phone_coment");
 	if(a.value != ""){
 		b.innerText = "";
 	}else{
