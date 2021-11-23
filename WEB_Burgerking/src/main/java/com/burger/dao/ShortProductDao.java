@@ -44,6 +44,30 @@ public class ShortProductDao {
 		}
 		return list;
 	}
+
+
+	public shortProductVO getShortProductdetail(String pname) {
+		shortProductVO spvo = new shortProductVO();
+		String sql = "select * from product where pname=?";
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, pname);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				spvo.setPname(pname);
+				spvo.setKind1(rs.getInt("kind1"));
+				spvo.setKind2(rs.getInt("kind2"));
+				spvo.setImage(rs.getString("image"));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return spvo;
+	}
+
 }
 
 

@@ -161,7 +161,6 @@ CREATE TABLE order_detail
 
 CREATE TABLE product
 (
-<<<<<<< HEAD
 	pseq number(10) NOT NULL,
 	pname varchar2(100) NOT NULL,
 	price1 number(10) NOT NULL,
@@ -175,21 +174,6 @@ CREATE TABLE product
 	image varchar2(50),
 	useyn number(1) DEFAULT 1 NOT NULL,
 	PRIMARY KEY (pseq)
-=======
-   pseq number(10) NOT NULL,
-   pname varchar2(100) NOT NULL,
-   price1 number(10) NOT NULL,
-   price2 number(10) NOT NULL,
-   price3 number(10) NOT NULL,
-   kind1 varchar2(5) NOT NULL,
-   kind2 varchar2(3) NOT NULL,
-   kind3 varchar2(3) NOT NULL,
-   indate  date DEFAULT sysdate NOT NULL,
-   content varchar2(100),
-   image varchar2(50),
-   useyn number(1) DEFAULT 1 NOT NULL,
-   PRIMARY KEY (pseq)
->>>>>>> branch 'kim_yeji' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 );
 
 
@@ -360,15 +344,9 @@ create table shortproduct(
    useyn varchar2(1)
 );
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-drop table product
+drop table shortproduct
 
 
 
 select * from product;
-=======
->>>>>>> branch 'kim_yeji' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-=======
->>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
+

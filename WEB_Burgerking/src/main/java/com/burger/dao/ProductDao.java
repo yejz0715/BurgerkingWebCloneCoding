@@ -48,6 +48,31 @@ public class ProductDao {
 		}
 		return pvo;
 	}
+
+	public ProductVO getProductdetail(int kind1, int kind2) {
+		ProductVO pvo = new ProductVO();
+		String sql = "select * from product where kind1=?, kind2=?";
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, kind1);
+			pstmt.setInt(2, kind2);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				pvo.setPname(rs.getString("pname"));
+				pvo.setKind1(rs.getString("kind1"));
+				pvo.setKind2(rs.getString("kind2"));
+				pvo.setKind2(rs.getString("kind3"));
+				pvo.setContent(rs.getString("content"));
+				pvo.setImage(rs.getString("image"));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return pvo;
+	}
 	
 }
 

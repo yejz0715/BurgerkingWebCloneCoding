@@ -17,17 +17,21 @@ public class MenudetailFormAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url="Product/productDetail.jsp";
-		String pseq = request.getParameter("pseq");
-		String kind1 = request.getParameter("kind1");
 		
 		ProductDao pdao = ProductDao.getInstance();
-		ProductVO pvo = pdao.getProduct(pseq);
-		
 		ShortProductDao spdao = ShortProductDao.getInstance();
-		ArrayList<shortProductVO> list = spdao.getShortProduct(kind1);
+		
+		
+		String pname = request.getParameter("pname");
+		shortProductVO spvo = spdao.getShortProductdetail("pname");
+		ProductVO pvo = pdao.getProductdetail(spvo.getKind1(), spvo.getKind2());
+
+		
+		System.out.println(spvo);
+		System.out.println(pvo);
 		
 		request.setAttribute("ProductList", pvo);
-		request.setAttribute("ShortProductList", list);
+		request.setAttribute("shortProductList", spvo);
 		request.getRequestDispatcher(url).forward(request, response);	
 
 	}

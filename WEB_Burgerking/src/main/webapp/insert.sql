@@ -788,23 +788,11 @@ values(pseq.nextVal, '리얼 독퍼', 2900, 0, 0, '8', '1','3', 'realdogper.png'
 '반려견에게 Real Dogpper를 선물하세요!', 1);
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-select * from PRODUCT;
-select * from SHORTPRODUCT;
-<<<<<<< HEAD
-=======
 select * from PRODUCT;
 select * from SHORTPRODUCT;
 
 insert into member(mseq, id, pwd, phone, name)
 values(mseq.nextVal, 'scott', '1234', '010-2431-6247', '김우진');
->>>>>>> branch 'kim_yeji' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-=======
 
+select * from product, shortproduct where product.kind1 = shortproduct.kind1 and product.kind2 = shortproduct.kind2;
 
->>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
