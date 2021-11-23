@@ -32,9 +32,29 @@
 		</div>
 	</div>
 	<div class="bg_w">
-		<div class="web_container">
-			<ul class="prdmenu_list ">
-				<li><div class="prd_img"><img src="image/menu/2/doubleoriginercheese.png"/></div></li>
+		<div class="web_container2">
+			<ul class="prdmenu_list prd_submenu">
+				<li>
+				<div class="prd_img"><img src="image/menu/2/doubleoriginercheese.png" width="296" height="193"/></div>
+				<div class="cont">
+					<div class="tit"><strong>올데이킹버거 라지세트</strong></div>
+					<div class="set"><strong>올데이킹버거+프렌치프라이L+콜라L</strong></div>
+				</div>
+				</li>
+				<li>
+				<div class="prd_img"><img src="image/menu/2/doubleoriginercheese.png" width="296" height="193"/></div>
+				<div class="cont">
+					<div class="tit"><strong>올데이킹버거 라지세트</strong></div>
+					<div class="set"><strong>올데이킹버거+프렌치프라이L+콜라L</strong></div>
+				</div>
+				</li>
+				<li>
+				<div class="prd_img"><img src="image/menu/2/doubleoriginercheese.png" width="296" height="193"/></div>
+				<div class="cont">
+					<div class="tit"><strong>올데이킹버거 라지세트</strong></div>
+					<div class="set"><strong>올데이킹버거+프렌치프라이L+콜라L</strong></div>
+				</div>
+				</li>
 			</ul>
 		</div>
 	</div>

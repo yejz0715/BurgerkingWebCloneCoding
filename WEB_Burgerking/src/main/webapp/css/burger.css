@@ -834,11 +834,18 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
 }
 
 /*------------------------ productdetail-------------------------- */
+
 .prd_intro {
 	position: relative;
     height: 400px;
     color: #fff;
     background: #130101 url(../image/main/bg_prd_detailintro.png) no-repeat 50%;
+}
+
+.web_container2{
+    max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .web_container4{
@@ -955,6 +962,7 @@ button{
 
 .bg_w {
     background: #fff;
+    padding: 50px 0 45px;
 }
 
 .prd_submenu{text-align:center}
@@ -971,4 +979,37 @@ button{
 .contentsWrap {
     min-height: 450px;
     margin: 0 auto;
+}
+.prd_submenu {
+    text-align: center;
+}
+.prdmenu_list {
+    margin-top: 60px;
+    padding-bottom: 46px;
+    overflow: hidden;
+}
+.prdmenu_list .prd_img {
+    max-width: 220px;
+    height: 144px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.prd_submenu .prd_img {
+    max-width: 296px;
+    height: 194px;
+    overflow: hidden;
+}
+.prd_submenu .tit>* {
+    display: block;
+}
+strong {
+    font-weight: bold;
+}
+.prd_submenu .tit {
+    font-size: 2rem;
+}
+.prdmenu_list .cont {
+    min-height: 115px;
+    padding: 30px 5px 0;
+    text-align: center;
 }
