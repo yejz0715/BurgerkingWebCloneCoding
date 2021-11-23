@@ -1,6 +1,8 @@
 package com.burger.controller;
 
 import com.burger.controller.action.FaqFormAction;
+import com.burger.controller.action.FindIdFormAction;
+import com.burger.controller.action.FindPwdFormAction;
 import com.burger.controller.action.Action;
 import com.burger.controller.action.AppGuideFormAction;
 import com.burger.controller.action.BrandStroyFormAction;
@@ -42,6 +44,8 @@ public class ActionFactory {
 		else if(command.equals("appGuideForm")) ac = new AppGuideFormAction();
 		else if(command.equals("joinForm")) ac = new JoinFormAction();
 		else if(command.equals("logout")) ac = new LogoutAction();
+		else if(command.equals("findIdForm")) ac = new FindIdFormAction();
+		else if(command.equals("findPwdForm")) ac = new FindPwdFormAction();
 		return ac;
 	}
 }
