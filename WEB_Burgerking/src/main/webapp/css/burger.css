@@ -13,13 +13,8 @@ body{
 
 article{
 	position:relative;
-<<<<<<< HEAD
-	overflow:auto;
-=======
 	overflow: auto;
 	margin-bottom: 50px;
-	overflow: auto;
->>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 }
 
 .clear {
@@ -969,8 +964,6 @@ d, dl, dt, dd, em, figure, h1, h2, h3, h4, h5, h6, li, ol, p, ul {
 	vertical-align: middle;
 }
 
-<<<<<<< HEAD
-
 /* serviceCenter--------------------------------------------------------- */
 .page_tit {
     margin-bottom: 15px;
@@ -1377,7 +1370,7 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
     -moz-appearance: textfield;
     appearance: none;
 }
-=======
+
 .tit {
 margin-right:600px;
 color:#fff;
@@ -1508,4 +1501,4 @@ font-size: 1.5rem;
     margin-top: -12px;
     background: url(../image/main/defence.png) no-repeat 100%;
 }
->>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
+
