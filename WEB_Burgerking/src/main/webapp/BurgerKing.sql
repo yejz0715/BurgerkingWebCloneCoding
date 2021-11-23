@@ -26,6 +26,7 @@ DROP TABLE non_member CASCADE CONSTRAINTS;
 DROP TABLE order_detail CASCADE CONSTRAINTS;
 DROP TABLE orders CASCADE CONSTRAINTS;
 DROP TABLE product CASCADE CONSTRAINTS;
+DROP TABLE shortproduct CASCADE CONSTRAINTS;
 DROP TABLE sub_product CASCADE CONSTRAINTS;
 
 
@@ -348,5 +349,4 @@ drop table shortproduct
 
 
 
-select * from product;
 

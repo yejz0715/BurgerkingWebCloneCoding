@@ -21,17 +21,18 @@ public class MenudetailFormAction implements Action {
 		ProductDao pdao = ProductDao.getInstance();
 		ShortProductDao spdao = ShortProductDao.getInstance();
 		
+		//String pname = request.getParameter("pname");
+		//shortProductVO spvo = spdao.getShortProductdetail(pname);
+		String spseq = request.getParameter("spseq");
+		shortProductVO spvo = spdao.getShortProductdetail(spseq);
 		
-		String pname = request.getParameter("pname");
-		shortProductVO spvo = spdao.getShortProductdetail("pname");
-		ProductVO pvo = pdao.getProductdetail(spvo.getKind1(), spvo.getKind2());
-
+		ArrayList<ProductVO> list = pdao.getProductdetail(spvo.getKind1(), spvo.getKind2());
 		
 		System.out.println(spvo);
-		System.out.println(pvo);
+		System.out.println(list);
 		
-		request.setAttribute("ProductList", pvo);
-		request.setAttribute("shortProductList", spvo);
+		request.setAttribute("productVO", list);
+		request.setAttribute("shortProductVO", spvo);
 		request.getRequestDispatcher(url).forward(request, response);	
 
 	}
