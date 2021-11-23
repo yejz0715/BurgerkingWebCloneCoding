@@ -45,14 +45,6 @@
 					</div>
 				</div>
 			</form>
-			<div class="simple_login">
-				<h3 class="tit01 tit_ico lock">간편 로그인</h3>
-				<ul class="list">
-					<li class="naver"><a><span>네이버 로그인</span></a></li>
-					<li class="kakao"><a><span>카카오톡 로그인</span></a></li>
-					<li class="apple"><a><span>애플 로그인</span></a></li>
-				</ul>
-			</div>
 		</div>
 	</div>
 </article>

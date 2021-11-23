@@ -10,3 +10,32 @@ function login_chk(){
 	}
 	return true;
 }
+
+function check_input1(){
+	var a = document.getElementById("name");
+	var b = document.getElementById("name_coment");
+	if(a.value != ""){
+		b.innerText = "";
+	}else{
+		b.innerText = "이름을 입력해 주세요.";
+	}
+}
+
+function check_input2(){
+	var a = document.getElementById("pwd");
+	var b = document.getElementById("pwd_coment");
+	if(a.value != ""){
+		b.innerText = "";
+	}else{
+		b.innerText = "휴대폰 번호를 입력해 주세요.";
+	}
+}
+function check_input3(){
+	var a = document.getElementById("id");
+	var b = document.getElementById("id_coment");
+	if(a.value != ""){
+		b.innerText = "";
+	}else{
+		b.innerText = "아이디를 입력해 주세요.";
+	}
+}

@@ -13,7 +13,6 @@ body{
 
 article{
 	position:relative;
-	overflow:auto;
 }
 
 .clear {
@@ -1189,3 +1188,38 @@ div::-webkit-scrollbar {
 #next_btn{background:transparent;}
 #stop{background:transparent;}
 #play{background:transparent;}
+
+/*findId/PwdForm------------------------------------------------------------------------*/
+.web_container02 {
+    max-width: 776px;
+    min-height: 1000px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+#terms_wrap_ul li a:first-child {
+    margin: 0px 15px 0px 0px;
+}
+.vtop {
+    height: 1em;
+    padding-top: 26px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    font-size: 1.5em;
+    float: left;
+}
+.coment_text{
+	color: red;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: bold;
+}
+.find_id_text {
+	font-family: 'Noto Sans KR', sans-serif;
+    margin: 62px 0 20px;
+    font-size: 1rem;
+    line-height: 167%;
+}
+.findidalign{
+	position: absolute;
+	left: 50%;
+	margin-left: -108px;
+}
