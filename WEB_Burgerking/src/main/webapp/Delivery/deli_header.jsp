@@ -7,6 +7,7 @@
 		<meta charset="UTF-8">
 		<title>딜리버리</title>
 		<link href="css/burger.css" rel="stylesheet">
+		<script src="script/burger.js" type="text/javascript"></script>
 		<link rel="icon" href="image/main/favicon.ico">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +44,7 @@
 					<c:otherwise>
 						<div class="WEB utilWrap">
 							<a href="burger.do?command=index"><span>브랜드홈</span></a>
-							<a><span>로그아웃</span></a>
+							<a href="burger.do?command=logout"><span>로그아웃</span></a>
 							<a><span>MY킹</span></a>
 							<a style="display: none;"><span>로그인</span></a>
 							<a><span>고객센터</span></a>
