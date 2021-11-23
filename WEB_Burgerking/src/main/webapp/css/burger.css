@@ -833,13 +833,12 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
     -moz-appearance: textfield;
     appearance: none;
 }
-
-.c_btn{
-	margin-top: 50px;
-}
-.c_btn a, input{
+.c_btn input{
     float: left;
     width: 216px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
 .btn01.m.red {
     background: url("../image/main/bg_btn01_m_red.png") no-repeat 0 0;
@@ -858,6 +857,7 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
     background: url(../image/main/bg_btn01_m.black.png) no-repeat 50%;
     background-size: 100% 100%;
     border-radius: 0;
+    border: 0px;
 }
 .btn01.m {
     width: 216px;
@@ -872,4 +872,31 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
 .btn01.red {
     background: url("../image/main/bg_btn01_m_red.png") no-repeat 0 0;
     background-size: 100% 100%;
+}
+.c_btn input+input {
+    margin-left: 9px;
+}
+.login_menu>a:first-child {
+    padding-left: 0;
+}
+.login_menu>a {
+    position: relative;
+    float: left;
+    padding: 5px 18px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+    outline: none;
+}
+.login_menu>a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 18px;
+    margin-top: -9px;
+    background: #e8e8e8;
 }
