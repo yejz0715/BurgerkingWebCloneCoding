@@ -900,3 +900,289 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
     margin-top: -9px;
     background: #e8e8e8;
 }
+/* index.jsp--------------------------------------------------------------------------*/
+#slide {
+	position: relative;
+	overflow: hidden;
+	width: 1440px;
+	height: 580px;
+	margin: 0 auto;
+	left: 6px;
+}
+
+#slide .cnt>li {
+	position: absolute;
+	top: 0px;
+	left: 1440px;
+	width: 1440px;
+	height: 460px;
+	text-align: center;
+	font-size: 30px;
+	line-height: 580px;
+}
+#slide .cnt > li:nth-child(1) {
+  background-color: red;
+}
+
+#slide .cnt > li:nth-child(2) {
+  background-color: orange;
+}
+
+#slide .cnt > li:nth-child(3) {
+  background-color: green;
+}
+
+#slide .cnt > li:nth-child(4) {
+  background-color: blue;
+}
+
+#slide .btn>button {
+	position: absolute;
+	top: 200px;
+	transform: translateY(-50%);
+	border: 0;
+	padding: 5px;
+}
+
+
+#slide .btn .prev {
+  left: 5px;
+}
+
+#slide .btn .next {
+  right: 5px;
+}
+
+#slide .auto>button {
+	display: none;
+	position: absolute;
+	bottom: 1px;
+	right: 620px;
+	border: 0;
+	padding: 5px;
+	margin-bottom: 100px;
+}
+#slide .indi {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+
+#slide .indi:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#slide .indi>li {
+	float: left;
+	margin-left: 5px;
+	margin-bottom: 100px;
+	border-radius: 50%;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+	background-color: #FFF;
+}
+
+#slide .indi>li.on {
+	background-color: red;
+}
+
+#slide .indi > li:first-child {
+  margin-left: 0;
+}
+
+#test {
+	position: relative;
+	width: 1440px;
+	height: 580px;
+	margin: 0 auto;
+	top: -100px;
+	text-align: center;
+	padding: 0;
+}
+
+#utube {
+	position: relative;
+
+	top: 0px;
+	height: 800px;
+	left: 6px;
+	font-weight: bold;
+}
+
+.contentsBox01 {
+	position: relative;
+	width: 100%;
+	height: 160px;
+	margin: 0 auto;
+	top: -220px;
+	text-align: center;
+	padding: 0;
+	overflow: hidden;
+}
+
+.web_container9{
+	position: relative;
+	width: 1440px;
+	height: 160px;
+	margin: 0 auto;
+	top: -220px;
+	right: -6px;
+	text-align: center;
+	padding: 0;
+	overflow: hidden;
+	background: #683a2f;
+}
+
+.youtube {
+	position: relative;
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+
+.facebook {
+	position: relative;
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+
+.instargram {
+	position: relative;
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+
+.cont {
+	margin-top: 40px;
+}
+
+.web_container2 {
+	position: relative;
+	width: 1440px;
+	height: 480px;
+	margin: 0 auto;
+	top: -220px;
+	right: -6px;
+	text-align: center;
+	overflow: hidden;
+	padding: 0;
+}
+
+#app {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+#delivery {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.bottom_banner {
+	position: relative;
+	width: 1440px;
+	height: 200px;
+	margin: 0 auto;
+	top: -220px;
+	right: -6px;
+	text-align: center;
+	/* overflow: hidden; */
+	padding: 0;
+	border: 1px dashed red;
+}
+
+.bottom_text {
+	margin-top: 40px;
+	color: yellow;
+}
+
+.cs_call {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	height: 1em;
+	margin-top: -0.5em;
+	padding-left: 66px;
+	font-size: 3.75rem;
+	color: #fff;
+	line-height: 100%;
+	text-decoration: none;
+	background:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RkYyMjc3NTdGQzE1MTFFOEEzOTNBMkIwMzUyOUMyNDUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RkYyMjc3NThGQzE1MTFFOEEzOTNBMkIwMzUyOUMyNDUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGRjIyNzc1NUZDMTUxMUU4QTM5M0EyQjAzNTI5QzI0NSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGRjIyNzc1NkZDMTUxMUU4QTM5M0EyQjAzNTI5QzI0NSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pk6q1jIAAAP0SURBVHja1JpLSFVBHMbvzRIze6sVtehhDzJTC5SkxyKtoMCUtDAspCCzRYuk2lhCtCiCSNooLXogqWlFBUGKizQXpvjINMqQC22yB5W97Kqn7w9z4jSdx5wzp3uvH/yEO87Mme/O6z9zrldRFE+AtBhUg2QwAPpAM2gEbY5rJQMB4o5irAFQCubarXeCJ3CKNfnfQnAa+MAlEB2KPZAF/IqYPoICkXq9mjmQBHLBbBO/fvAY3AYjDnphGdgK1oI1YCUIM8lPc+Yg+GrVA2fBmCKudhDjQq9QHUdAj8mzOszmBv3JV5zpkYvDi0bCLvDa4FkvQayRgS7FuRJdnieRoMzgWd0gSs+AX8JAoc0GRoM0MMUiXx4Y1nleDeutvwx8ljBQYaPx6WCIlaPGNYBcMNEg/xYDEwd4Ax0SBlptGGgwqKOfmdMrs9dgiZ2j3cj6JTanBBAlmNdvkL4E1IMynSW1kqVrNROUaJfREkVO2YI9sBr4LOqqA2Fcucmsl7SioTVP7YF2yRAhUzBfNwvoNoCL4ItOnmxwnkv7AYq5tHBQpPYArQyjEj3wQedbE93Eqg3qzNDZJ55zeag3vWqGTslhtEhiAzunU98rMInLW6STL0WNRuslh9GQ02genAR1XHoc2MOl3QKjXFq6auC+ROOfgvcS5cnEYZ2ArYD7/A60cmlpqgE6Gb118PBf4JgLZwVq3FUubSOYqvNlaRWvGhhjoavdxlM3N7l04KnlPoexcFurPu7zfO0kSbAxaYfZAcXNQI5CijeaZ3wC07g8cVzs1shX0iJoYP9/OrXFg5vgHq0wJjEVna/LKcTm/5ktaKA8gEdR4SMliebEC7BUYOVYD1o8QRZ/K0GTuVSgnBdc11klgm6AVAW6BMpSFHk5FA1QLxxlw8RK+1je4MlkgtwQnNAjYFuoTGL+Jq0HxAh8D9/ZfU9zKAwhVYN/Ym5rRYIHbPsPmSGkcsXGDv0N7LARSi8HSSDC6RASvauxc3dEc6LYos5MdiOtNU5XJrvBLLcNqDHIoM1DThWYoVNXocU15ig7fV0DJ8Am/i7IiQEilX1TduTjrkysGm+kJvUQL2OA2G5w2WSlSnDcYeNV9YJwWQNEjkMTbijfjTc0dDbdydb+QGudnX3ATA9BhuRZ2Immu2XAw0LpFNAZasGcHQ2wbq0YrwZIP8EhkOXwZiPoBlTdBavY9YgyHg142KQuYBe4bePRgKonbILngF4X6x0JlAH14F/LhlUme78sK98/h/MA/tiDtIINsTywwGZZOuoms/cMQTOgvdVIZT2zmb21D7MocwacCnYPmO2wNGfoJwiJ7HqdiADPwAVQo1fwtwADAP617LQgAz1NAAAAAElFTkSuQmCC)
+		no-repeat 0;
+}
+
+.tit {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    line-height: 100%;
+}
+.web_container3{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	margin: 0 auto;
+	top: -220px;
+	right: -6px;
+	text-align: center;
+	overflow:hidden;
+	padding: 0;
+	background: url(https://www.burgerking.co.kr/dist/img/bg_home_cs.40b21d3f.png) no-repeat top;
+
+}
+
+
+
+.tit {
+
+margin-right:600px;
+color:#fff;
+font-size: 2rem;
+
+}
+.WEB{
+	margin-right:140px;
+		color:red;
+font-size: 1.5rem;
+}
+.cs_call{
+ 	right:	100px;
+     font-size: 4rem;
+     font-weight:bold;}
+     
+   .cont2 {
+    position: relative;
+    height: 100%;
+    padding: 60px 330px 0 0;
+}
+
+
+
+/* IE  스크롤바숨기기*/
+div {
+  -ms-overflow-style: none; 
+}
+
+/* chrome etc 스크롤바숨기기*/
+div::-webkit-scrollbar { 
+    display: none !important; 
+}
+
+
+
+#prev_btn{background:transparent;}
+#next_btn{background:transparent;}
+#stop{background:transparent;}
+#play{background:transparent;}
