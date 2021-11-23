@@ -10,7 +10,8 @@ import com.burger.controller.action.Action;
 
 public class FaqFormAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "ServiceCenter/faqList.jsp";
+		String f = request.getParameter("fnum");
+		String url = "ServiceCenter/faqList" + f + ".jsp";
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 }

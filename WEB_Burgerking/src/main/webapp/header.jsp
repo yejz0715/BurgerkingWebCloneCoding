@@ -9,7 +9,7 @@
 		<title>버거킹</title>
 		<link href="css/burger.css" rel="stylesheet">
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script src="script/burger.js"></script>
+		<script src="script/burger.js" type="text/javascript"></script>
 		<link rel="icon" href="image/main/favicon.ico">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,7 @@
 				var con = ul1.parentNode.parentNode.parentNode;
 				con.style.height = '442px';
 			}
+	
 			function sizedown(){
 				var ul1 = document.getElementById('ul1');
 				var con = ul1.parentNode.parentNode.parentNode;

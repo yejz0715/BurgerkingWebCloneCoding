@@ -31,7 +31,7 @@
 		<li>
 			<a><span>고객센터</span></a>
 			<ul class="submenu">
-				<li><a href="burger.do?command=faqForm"><span>FAQ</span></a></li>
+				<li><a href="burger.do?command=faqForm&fnum=1"><span>FAQ</span></a></li>
 				<li><a href="burger.do?command=qnaForm"><span>문의</span></a></li>
 				<li><a href="burger.do?command=appGuideForm"><span>버거킹 앱 이용안내</span></a></li>
 			</ul>
