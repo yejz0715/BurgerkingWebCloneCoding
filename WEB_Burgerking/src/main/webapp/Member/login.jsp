@@ -37,7 +37,7 @@
 					
 					<div class="c_btn item2">
 						<input type="submit" class="btn01 m red" onclick="login_chk();" value="로그인"></input>
-						<input type="button" class="btn01 m" onclick="location.href='burger.do?command=joinForm'" value="회원가입"></a>
+						<input type="button" class="btn01 m" onclick="location.href='burger.do?command=joinForm'" value="회원가입"/>
 					</div>
 					<div class="login_menu">
 						<a href="#/idsearch" class=""><span>아이디 찾기</span></a>
