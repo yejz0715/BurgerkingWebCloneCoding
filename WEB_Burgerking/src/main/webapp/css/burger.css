@@ -1092,6 +1092,16 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
 	height: 100%;
 }
 
+.banner{
+	position: relative;
+	margin: 0 auto;
+	max-width: 1440px;
+}
+.mainWrap {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 .bottom_banner {
 	position: relative;
 	width: 1440px;
