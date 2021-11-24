@@ -26,6 +26,7 @@ DROP TABLE non_member CASCADE CONSTRAINTS;
 DROP TABLE order_detail CASCADE CONSTRAINTS;
 DROP TABLE orders CASCADE CONSTRAINTS;
 DROP TABLE product CASCADE CONSTRAINTS;
+DROP TABLE shortproduct CASCADE CONSTRAINTS;
 DROP TABLE sub_product CASCADE CONSTRAINTS;
 
 
@@ -161,19 +162,19 @@ CREATE TABLE order_detail
 
 CREATE TABLE product
 (
-   pseq number(10) NOT NULL,
-   pname varchar2(100) NOT NULL,
-   price1 number(10) NOT NULL,
-   price2 number(10) NOT NULL,
-   price3 number(10) NOT NULL,
-   kind1 varchar2(5) NOT NULL,
-   kind2 varchar2(3) NOT NULL,
-   kind3 varchar2(3) NOT NULL,
-   indate  date DEFAULT sysdate NOT NULL,
-   content varchar2(100),
-   image varchar2(50),
-   useyn number(1) DEFAULT 1 NOT NULL,
-   PRIMARY KEY (pseq)
+	pseq number(10) NOT NULL,
+	pname varchar2(100) NOT NULL,
+	price1 number(10) NOT NULL,
+	price2 number(10) NOT NULL,
+	price3 number(10) NOT NULL,
+	kind1 varchar2(5) NOT NULL,
+	kind2 varchar2(3) NOT NULL,
+	kind3 varchar2(3) NOT NULL,
+	indate  date DEFAULT sysdate NOT NULL,
+	content varchar2(100),
+	image varchar2(50),
+	useyn number(1) DEFAULT 1 NOT NULL,
+	PRIMARY KEY (pseq)
 );
 
 
@@ -343,4 +344,9 @@ create table shortproduct(
    image varchar2(50),
    useyn varchar2(1)
 );
+
+drop table shortproduct
+
+
+
 

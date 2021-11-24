@@ -42,9 +42,8 @@
 			<div id="utube">
 				<iframe width="1440" height="580"
 					src="https://www.youtube.com/embed/AeDPdqHbF3w"
-					title="YouTube video player" frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+					title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+				</iframe>
 			</div>
 
 			<div class="home_snsWrap">
