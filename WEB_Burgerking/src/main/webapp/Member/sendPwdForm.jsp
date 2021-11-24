@@ -26,6 +26,7 @@
 					<c:otherwise>
 						<form method="post" name="frm" action="burger.do">
 							<input type="hidden" name="command" value="updatePwd">
+							<input type="hidden" name="id" value="${memberVO.mseq}">
 							<div class="textareapwd">
 								<div class="inpbox" style="margin-bottom: 30px;">
 									<div class="vtop">비밀번호</div>

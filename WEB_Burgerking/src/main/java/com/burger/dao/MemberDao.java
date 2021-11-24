@@ -102,4 +102,51 @@ public class MemberDao {
 			DBman.close(con, pstmt, rs);
 		}
 	}
+
+	public MemberVO findPwd(String name, String id) {
+		MemberVO mvo = null;
+		String sql = "select * from member where name=? and id=?";
+		con = DBman.getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, name);
+			pstmt.setString(2, id);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				mvo = new MemberVO();
+				mvo.setMseq(rs.getInt("mseq"));
+				mvo.setId(rs.getString("id"));
+				mvo.setPwd(rs.getString("pwd"));
+				mvo.setName(rs.getString("name"));
+				mvo.setPhone(rs.getString("phone"));
+				mvo.setIndate(rs.getTimestamp("indate"));
+				mvo.setLastdate(rs.getTimestamp("lastdate"));
+				mvo.setMemberkind(rs.getInt("memberkind"));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return mvo;
+	}
+
+	public void updatePwd(String mseq, String pwd) {
+		String sql = "update member set pwd=? where mseq=?";
+		con = DBman.getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, pwd);
+			pstmt.setString(2, mseq);
+			pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+	}
 }

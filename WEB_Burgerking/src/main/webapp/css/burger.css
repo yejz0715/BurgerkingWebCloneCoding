@@ -14,7 +14,6 @@ body{
 article{
 	position:relative;
 }
-
 .clear {
 	clear: both;
 }
@@ -1193,7 +1192,7 @@ div::-webkit-scrollbar {
 /*findId/PwdForm------------------------------------------------------------------------*/
 .web_container02 {
     max-width: 776px;
-    min-height: 1000px;
+    min-height: 1200px;
     margin: 0 auto;
     padding: 0 8px;
 }
@@ -1404,4 +1403,27 @@ strong {
     min-height: 115px;
     padding: 30px 5px 0;
     text-align: center;
+}
+
+/*showId/Pwd---------------------------------------------------------------------------------------------*/
+.showid_text{
+	font-size: 1.7em;
+}
+.msgBox {
+    padding: 68px 140px 68px 0;
+    background: url("../image/main/ico_find_idpw.png") no-repeat 100%;
+    border-bottom: 1px solid #ededed;
+}
+#findid_loadtext{
+	padding-top: 20px;
+	text-align: center;
+	font-size: 1.4em;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: bold;
+}
+.textareapwd{
+	position:relative;
+	padding: 40px;
+	background-color: #fff;
+	height: 400px;
 }
