@@ -744,7 +744,6 @@ address, em {
     font-size: 1.125rem;
     font-weight: 700;
     color: #2e2e2e;
-    margin-top: 15px;
 }
 .hide {
     position: absolute!important;
@@ -755,7 +754,6 @@ address, em {
 
 .login_img {
 	position:absolute;
-	top:290px;
     width: 40px;
     height: 40px;
     float:left;
