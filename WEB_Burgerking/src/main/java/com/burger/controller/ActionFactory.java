@@ -5,7 +5,10 @@ import com.burger.controller.action.Action;
 import com.burger.controller.action.AppGuideFormAction;
 import com.burger.controller.action.BrandStroyFormAction;
 import com.burger.controller.action.DeliveryFormAction;
+import com.burger.controller.action.EventDetailFormAction;
 import com.burger.controller.action.EventListFormAction;
+import com.burger.controller.action.EventTab2Action;
+import com.burger.controller.action.EventTab3Action;
 import com.burger.controller.action.IndexAction;
 import com.burger.controller.action.JoinFormAction;
 import com.burger.controller.action.LegalAction;
@@ -38,6 +41,9 @@ public class ActionFactory {
 		else if(command.equals("faqForm")) ac = new FaqFormAction();
 		else if(command.equals("appGuideForm")) ac = new AppGuideFormAction();
 		else if(command.equals("joinForm")) ac = new JoinFormAction();
+		else if(command.equals("eventTab2")) ac = new EventTab2Action();
+		else if(command.equals("eventTab3")) ac = new EventTab3Action();
+		else if(command.equals("eventDetailForm")) ac = new EventDetailFormAction();
 		return ac;
 	}
 }

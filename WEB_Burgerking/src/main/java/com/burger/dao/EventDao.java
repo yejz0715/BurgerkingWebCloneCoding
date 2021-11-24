@@ -6,45 +6,49 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-
 import com.burger.dto.EventVO;
 import com.burger.util.DBman;
 
 public class EventDao {
-	private EventDao() { }
+	private EventDao() {
+	}
+
 	private static EventDao ist = new EventDao();
-	public static EventDao getInstance() { 	return ist;	}
-	
+
+	public static EventDao getInstance() {
+		return ist;
+	}
+
 	Connection con = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
-	
-	public ArrayList<EventVO> getevent() {
-		ArrayList<EventVO> list=new ArrayList<EventVO>();
-		String sql =" select * from event";
+
+	public ArrayList<EventVO> getAllEvents() {
+		ArrayList<EventVO> list = new ArrayList<EventVO>();
+		String sql = " select * from event";
 		con = DBman.getConnection();
-		
-		 
+
 		try {
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
-			
-			while(rs.next()) {
-			EventVO evo = new EventVO();
-			evo.setEseq(rs.getInt("eseq"));
-			evo.setSubject(rs.getString("subject"));
-			evo.setContent(rs.getString("content"));
-			evo.setImage(rs.getString("image"));
-			evo.setStartdate(rs.getTimestamp("startdate"));
-			evo.setEnddate(rs.getTimestamp("enddate"));
-			evo.setState(rs.getInt("states"));
+
+			while (rs.next()) {
+				EventVO evo = new EventVO();
+				evo.setEseq(rs.getInt("eseq"));
+				evo.setSubject(rs.getString("subject"));
+				evo.setContent(rs.getString("content"));
+				evo.setImage(rs.getString("image"));
+				evo.setStartdate(rs.getString("startdate").substring(0, 10));
+				evo.setEnddate(rs.getString("enddate").substring(0, 10));
+				evo.setState(rs.getInt("state"));
+				list.add(evo);
 			}
-		}catch(SQLException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			DBman.close(con, pstmt, rs);
-		}				
+		}
 		return list;
 	}
-			
+
 }

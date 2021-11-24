@@ -94,8 +94,8 @@ CREATE TABLE cart
 CREATE TABLE event
 (
    eseq number(10) NOT NULL,
-   subject varchar2(30) NOT NULL,
-   content varchar2(2000) NOT NULL,
+   subject varchar2(100) NOT NULL,
+   content varchar2(3000) NOT NULL,
    image varchar2(50),
    startdate date DEFAULT sysdate,
    enddate date,
@@ -254,7 +254,7 @@ BEGIN
    FROM dual;
 END;
 
-
+DROP TRIGGER TRI_cart_cseq; 
 
 CREATE OR REPLACE TRIGGER TRI_event_eseq BEFORE INSERT ON event
 FOR EACH ROW
@@ -264,7 +264,7 @@ BEGIN
    FROM dual;
 END;
 
-
+DROP TRIGGER TRI_event_eseq; 
 
 CREATE OR REPLACE TRIGGER TRI_Member_membernum BEFORE INSERT ON Member
 FOR EACH ROW
@@ -284,7 +284,7 @@ BEGIN
    FROM dual;
 END;
 
-
+DROP TRIGGER TRI_member_mseq; 
 
 CREATE OR REPLACE TRIGGER TRI_order_detail_odseq BEFORE INSERT ON order_detail
 FOR EACH ROW
@@ -294,7 +294,7 @@ BEGIN
    FROM dual;
 END;
 
-
+DROP TRIGGER TRI_order_detail_odseq;
 
 CREATE OR REPLACE TRIGGER TRI_product_productnum BEFORE INSERT ON product
 FOR EACH ROW
@@ -304,7 +304,7 @@ BEGIN
    FROM dual;
 END;
 
-
+DROP TRIGGER TRI_product_productnum;
 
 CREATE OR REPLACE TRIGGER TRI_product_pseq BEFORE INSERT ON product
 FOR EACH ROW
@@ -314,6 +314,7 @@ BEGIN
    FROM dual;
 END;
 
+DROP TRIGGER TRI_product_pseq;
 
 CREATE OR REPLACE TRIGGER TRI_qna_qseq BEFORE INSERT ON qna
 FOR EACH ROW
@@ -323,7 +324,7 @@ BEGIN
    FROM dual;
 END;
 
-
+DROP TRIGGER TRI_qna_qseq;
 
 CREATE OR REPLACE TRIGGER TRI_sub_product_spseq BEFORE INSERT ON sub_product
 FOR EACH ROW
@@ -333,8 +334,12 @@ BEGIN
    FROM dual;
 END;
 
-
-
+DROP TRIGGER TRI_sub_product_spseq;
+DROP TRIGGER TRI_MEMBER_MEMBERNUM;
+--select * from user_triggers;
+--alter table event modify subject varchar(100);
+--alter table event modify content varchar(3000);
+--delete  from event ; 
 create table shortproduct(
    spseq number(10),
    pname varchar2(100),
