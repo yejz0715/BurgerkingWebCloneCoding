@@ -289,7 +289,7 @@ ul {
     cursor: pointer;
 	background: url(https://www.burgerking.co.kr/dist/img/logo_delivery.26d1d682.png) no-repeat 0; 
 }
---
+
 .WEB_logo a{
 	text-decoration: none;
 	color: #fff;
@@ -689,9 +689,6 @@ td {
 }
 
 .appdown .btn_area, .appdown .QRcode {
-=======
-.utilWrap {
->>>>>>> refs/heads/yeji
     position: absolute;
     right: 0;
     top: 0;
@@ -1333,7 +1330,6 @@ div::-webkit-scrollbar {
     padding-right: 28px;
 }
 
-<<<<<<< HEAD
 .btn_nutrition>:after {
     content: "";
     position: absolute;
@@ -1431,6 +1427,3 @@ strong {
 	background-color: #fff;
 	height: 400px;
 }
-=======
-
->>>>>>> refs/heads/yeji
