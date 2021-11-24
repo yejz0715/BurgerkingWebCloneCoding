@@ -243,99 +243,6 @@ ALTER TABLE order_detail
    REFERENCES product (pseq)
 ;
 
-
-
-/* Create Triggers */
-
-CREATE OR REPLACE TRIGGER TRI_cart_cseq BEFORE INSERT ON cart
-FOR EACH ROW
-BEGIN
-   SELECT SEQ_cart_cseq.nextval
-   INTO :new.cseq
-   FROM dual;
-END;
-
-
-
-CREATE OR REPLACE TRIGGER TRI_event_eseq BEFORE INSERT ON event
-FOR EACH ROW
-BEGIN
-   SELECT SEQ_event_eseq.nextval
-   INTO :new.eseq
-   FROM dual;
-END;
-
-
-
-CREATE OR REPLACE TRIGGER TRI_Member_membernum BEFORE INSERT ON Member
-FOR EACH ROW
-BEGIN
-   SELECT SEQ_Member_membernum.nextval
-   INTO :new.membernum
-   FROM dual;
-END;
-
-
-
-CREATE OR REPLACE TRIGGER TRI_member_mseq BEFORE INSERT ON member
-FOR EACH ROW
-BEGIN
-   SELECT SEQ_member_mseq.nextval
-   INTO :new.mseq
-   FROM dual;
-END;
-
-
-
-CREATE OR REPLACE TRIGGER TRI_order_detail_odseq BEFORE INSERT ON order_detail
-FOR EACH ROW
-BEGIN
-   SELECT SEQ_order_detail_odseq.nextval
-   INTO :new.odseq
-   FROM dual;
-END;
-
-
-
-CREATE OR REPLACE TRIGGER TRI_product_productnum BEFORE INSERT ON product
-FOR EACH ROW
-BEGIN
-   SELECT SEQ_product_productnum.nextval
-   INTO :new.productnum
-   FROM dual;
-END;
-
-
-
-CREATE OR REPLACE TRIGGER TRI_product_pseq BEFORE INSERT ON product
-FOR EACH ROW
-BEGIN
-   SELECT SEQ_product_pseq.nextval
-   INTO :new.pseq
-   FROM dual;
-END;
-
-
-CREATE OR REPLACE TRIGGER TRI_qna_qseq BEFORE INSERT ON qna
-FOR EACH ROW
-BEGIN
-   SELECT SEQ_qna_qseq.nextval
-   INTO :new.qseq
-   FROM dual;
-END;
-
-
-
-CREATE OR REPLACE TRIGGER TRI_sub_product_spseq BEFORE INSERT ON sub_product
-FOR EACH ROW
-BEGIN
-   SELECT SEQ_sub_product_spseq.nextval
-   INTO :new.spseq
-   FROM dual;
-END;
-
-
-
 create table shortproduct(
    spseq number(10),
    pname varchar2(100),
@@ -344,10 +251,5 @@ create table shortproduct(
    image varchar2(50),
    useyn varchar2(1)
 );
-
-drop table shortproduct
-
-
-update member set lastdate=sysdate where mseq = 1;
 
 select * from member;

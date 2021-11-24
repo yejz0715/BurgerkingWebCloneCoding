@@ -19,7 +19,6 @@
 						src="image/main/banner/banner_5.png"></a></li>
 			</ul>
 
-
 			<div class="btn">
 				<button type="button" class="prev" id="prev_btn">
 					<img src="image/main/banner/banner_prev.png">

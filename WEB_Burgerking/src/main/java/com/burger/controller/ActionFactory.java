@@ -9,7 +9,10 @@ import com.burger.controller.action.Action;
 import com.burger.controller.action.AppGuideFormAction;
 import com.burger.controller.action.BrandStroyFormAction;
 import com.burger.controller.action.DeliveryFormAction;
+import com.burger.controller.action.EventDetailFormAction;
 import com.burger.controller.action.EventListFormAction;
+import com.burger.controller.action.EventTab2Action;
+import com.burger.controller.action.EventTab3Action;
 import com.burger.controller.action.IndexAction;
 import com.burger.controller.action.JoinFormAction;
 import com.burger.controller.action.LegalAction;
@@ -54,7 +57,10 @@ public class ActionFactory {
 		else if(command.equals("findId")) ac = new FindIdAction();
 		else if(command.equals("findPwd")) ac = new FindPwdAction();
 		else if(command.equals("updatePwd")) ac = new UpdatePwdAction();
-		
+		else if(command.equals("eventTab2")) ac = new EventTab2Action();
+		else if(command.equals("eventTab3")) ac = new EventTab3Action();
+		else if(command.equals("eventDetailForm")) ac = new EventDetailFormAction();
+
 		return ac;
 	}
 }
