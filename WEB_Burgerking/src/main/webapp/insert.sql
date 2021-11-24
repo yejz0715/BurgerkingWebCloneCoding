@@ -787,7 +787,6 @@ insert into member(mseq, id, pwd, phone, name)
 values(mseq.nextVal, 'scott', '1234', '010-2431-6247', '김우진');
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 update SHORTPRODUCT set kind2='2' where pname='쉐이킹프라이'
 update SHORTPRODUCT set image='monsterwhopper.png' where spseq='154';
 update PRODUCT set pname='불고기와퍼주니어 세트' where pseq='83';
@@ -795,8 +794,6 @@ update PRODUCT set pname='불고기와퍼주니어' where pseq='84';
 update PRODUCT set pname='치즈프라이' where pseq='134';
 update SHORTPRODUCT set pname='기네스' where pseq='84';
 
-=======
->>>>>>> refs/heads/changdae2
 select * from SHORTPRODUCT
 select * from PRODUCT
 
