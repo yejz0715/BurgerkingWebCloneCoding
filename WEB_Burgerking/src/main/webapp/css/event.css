@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-.contentbox {
-	/* padding: 50px 0 120px; */
-	background: white;
-}
-
 .event_web_container {
 	background: transparent;
 	margin-top: 0;
@@ -60,11 +55,7 @@
 	padding: 5px 0;
 }
 
-.eventview {
-	margin-top: 85px;
-}
-
-.event_box {
+.eventarea {
 	margin-top: 40px;
 	display: block;
 	margin-block-start: 1em;

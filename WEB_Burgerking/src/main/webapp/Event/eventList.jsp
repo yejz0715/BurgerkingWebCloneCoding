@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 <link href="css/event.css" rel="stylesheet">
 
@@ -7,7 +6,7 @@
 	<div class="location">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
-			<li>이벤트&nbsp;>&nbsp;</li>
+			<li>이벤트&nbsp; > &nbsp;</li>
 			<li>전체</li>
 		</ul>
 	</div>
@@ -26,7 +25,7 @@
 			<div class="eventarea">
 				<ul>
 					<c:forEach var="EventVO" items="${eventlist}">
-						<li><a href="burger.do?command=eventdetailForm"> <input
+						<li><a href="burger.do?command=eventDetailForm"> <input
 								type="hidden" name="eseq" value="${EventVO.eseq}" /> <img
 								class="eventImg" src="image/main/event/${EventVO.image}" />
 						</a>

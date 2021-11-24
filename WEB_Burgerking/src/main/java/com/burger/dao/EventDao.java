@@ -51,4 +51,85 @@ public class EventDao {
 		return list;
 	}
 
+	public ArrayList<EventVO> getOngoingEvents() {
+		ArrayList<EventVO> list = new ArrayList<EventVO>();
+		String sql= " select * from event where state = 1 ";
+		con = DBman.getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				EventVO evo = new EventVO();
+				evo.setEseq(rs.getInt("eseq"));
+				evo.setSubject(rs.getString("subject"));
+				evo.setContent(rs.getString("content"));
+				evo.setImage(rs.getString("image"));
+				evo.setStartdate(rs.getString("startdate").substring(0, 10));
+				evo.setEnddate(rs.getString("enddate").substring(0, 10));
+				evo.setState(rs.getInt("state"));
+				list.add(evo);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return list;
+	}
+
+	public ArrayList<EventVO> getPastEvents() {
+		ArrayList<EventVO> list = new ArrayList<EventVO>();
+		String sql= " select * from event where state =0 ";
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				EventVO evo = new EventVO();
+				evo.setEseq(rs.getInt("eseq"));
+				evo.setSubject(rs.getString("subject"));
+				evo.setContent(rs.getString("content"));
+				evo.setImage(rs.getString("image"));
+				evo.setStartdate(rs.getString("startdate").substring(0, 10));
+				evo.setEnddate(rs.getString("enddate").substring(0, 10));
+				evo.setState(rs.getInt("state"));
+				list.add(evo);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return list;
+	}
+
+	public EventVO getDetailEvent(String eseq) {
+		EventVO evo=new EventVO();
+		String sql= " select * from event where eseq = ?";
+		
+		con=DBman.getConnection();
+		try {
+			pstmt=con.prepareStatement(sql);
+			pstmt.setString(1, eseq);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+			evo.setEseq(Integer.parseInt(eseq));	
+			evo.setSubject(rs.getString("subject"));
+			evo.setContent(rs.getString("content"));
+			evo.setImage(rs.getString("image"));
+			evo.setStartdate(rs.getString("startdate").substring(0, 10));
+			evo.setEnddate(rs.getString("enddate").substring(0, 10));
+			evo.setState(rs.getInt("state"));	
+			} 
+	    } catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return evo;
+	}
+	
 }
