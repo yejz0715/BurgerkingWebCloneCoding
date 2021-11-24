@@ -21,6 +21,7 @@ import com.burger.controller.action.MenudetailFormAction;
 import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.QnaFormAction;
 import com.burger.controller.action.TermsAction;
+import com.burger.controller.action.UpdatePwdAction;
 import com.burger.controller.action.VideoPolicyAction;
 
 public class ActionFactory {
@@ -52,6 +53,7 @@ public class ActionFactory {
 		else if(command.equals("menudetailForm")) ac = new MenudetailFormAction();
 		else if(command.equals("findId")) ac = new FindIdAction();
 		else if(command.equals("findPwd")) ac = new FindPwdAction();
+		else if(command.equals("updatePwd")) ac = new UpdatePwdAction();
 		
 		return ac;
 	}
