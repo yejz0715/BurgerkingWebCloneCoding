@@ -1405,3 +1405,84 @@ strong {
     padding: 30px 5px 0;
     text-align: center;
 }
+
+.subtitWrap {
+    position: relative;
+    margin-bottom: 26px;
+}
+
+.contentsWrap .page_tit {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    line-height: 100%;
+}
+
+.subtitWrap .tab01 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: -17.5px 0 0;
+    overflow: auto;
+}
+.tab01 ul {
+    display: table;
+}
+
+.subtitWrap .tab01 button {
+    height: 35px;
+    font-size: 1.125rem;
+    border-width: 3px 0;
+}
+
+.tab01 button {
+    display: inline-block;
+    padding: 10px 1px;
+    font-weight: 700;
+    font-size: 1.375rem;
+    color: #b8b8b8;
+    border-width: 4px 0;
+}
+
+.tab01 button:hover{
+    color: #000000;	
+}
+.tab01 li {
+    position: relative;
+    display: table-cell;
+    padding: 0 18px;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.contentWarp .web_container2{
+	padding: 50px 0 120px;
+}
+.tab_aboutCon {
+    padding: 48px 20px 0;
+}
+.about01:before {
+    background: url(../image/main/about01.png) 0 0 no-repeat;
+}
+.tab_aboutCon div:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.tab_aboutCon div h3 {
+    font-size: 2.5rem;
+    width: 34%;
+    float: left;
+    line-height: 1.1;
+}
+.tab_aboutCon div p {
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 1.125rem;
+    width: 66%;
+    float: right;
+    line-height: 1.6;	
+}

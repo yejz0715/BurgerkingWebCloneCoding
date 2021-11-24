@@ -4,11 +4,35 @@
 <div class="clear"></div>
 
 <article>
+	
 	<div class="location">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
 			<li>메뉴소개</li>
 		</ul>
+	</div>
+	<div class="subtitWrap">
+		<h3 class="page_tit">메뉴소개</h3>
+		<div class="tab01" >
+			<ul>
+				<li><a href="burger.do?command=menuListForm&kind1=1">
+					<button type="button" ><span>스페셜&amp;할인팩</span></button></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=2">
+					<button type="button"><span>프리미엄</span></button></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=3">
+					<button type="button"><span>와퍼</span></button></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=4">
+					<button type="button"><span>주니어&amp;버거</span></button></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=5">
+					<button type="button"><span>올데이킹&amp;치킨버거</span></button></a></li> 
+				<li><a href="burger.do?command=menuListForm&kind1=6">
+					<button type="button"><span>사이드</span></button></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=7">
+					<button type="button"><span>음료&amp;디저트</span></button></a></li>
+				<li><a href="burger.do?command=menuListForm&kind1=8">
+					<button type="button"><span>독퍼</span></button></a></li>
+			</ul>
+		</div>
 	</div>
 	<div class="menuarea">
 		<ul>
