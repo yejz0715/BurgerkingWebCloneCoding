@@ -40,3 +40,28 @@ function check_input3(){
 		b.innerText = "아이디를 입력해 주세요.";
 	}
 }
+
+function inputidChk(){
+	if(document.frm.name.value==""){
+		alert("이름을 입력해주세요.");
+		document.frm.name.focus();
+		return false;
+	}else if(document.frm.phone.value==""){
+		alert("핸드폰 번호를 입력해주세요.");
+		document.frm.phone.focus();
+		return false;
+	}
+	return true;
+}
+function inputpwdChk(){
+	if(document.frm.name.value==""){
+		alert("이름을 입력해주세요.");
+		document.frm.name.focus();
+		return false;
+	}else if(document.frm.id.value==""){
+		alert("아이디를 입력해주세요.");
+		document.frm.id.focus();
+		return false;
+	}
+	return true;
+}
