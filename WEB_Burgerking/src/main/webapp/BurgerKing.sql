@@ -348,5 +348,6 @@ create table shortproduct(
 drop table shortproduct
 
 
+update member set lastdate=sysdate where mseq = 1;
 
-
+select * from member;

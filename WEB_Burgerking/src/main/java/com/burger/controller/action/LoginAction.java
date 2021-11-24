@@ -38,6 +38,7 @@ public class LoginAction implements Action {
 			writer.close();
 		}else {
 			HttpSession session = request.getSession();
+			mdao.setLastDate(mvo);
 			session.setAttribute("loginUser", mvo);
 			url="burger.do?command=deliveryForm";
 		}
