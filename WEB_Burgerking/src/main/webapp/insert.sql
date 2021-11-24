@@ -774,19 +774,15 @@ insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, im
 values(pseq.nextVal, '리얼 독퍼', 2900, 0, 0, '8', '1','3', 'realdogper.png',
 '반려견에게 Real Dogpper를 선물하세요!', 1);
 
-<<<<<<< HEAD
 
 select * from PRODUCT where kind1='6';
-=======
 select * from PRODUCT;
->>>>>>> refs/heads/yeji
 select * from SHORTPRODUCT;
 select * from event;
 
 insert into member(mseq, id, pwd, phone, name)
 values(mseq.nextVal, 'scott', '1234', '010-2431-6247', '김우진');
 
-<<<<<<< HEAD
 update SHORTPRODUCT set kind2='2' where pname='쉐이킹프라이'
 update SHORTPRODUCT set image='monsterwhopper.png' where spseq='154';
 update PRODUCT set pname='불고기와퍼주니어 세트' where pseq='83';
@@ -1214,7 +1210,7 @@ values(qseq.nextVal, '2 for 5000원', '1. 행사명 : 2 for 5000원
 
 6. 제외매장
 대명비발디점, 삼성라이온즈파크점, 서울역점, 오션월드점, 인천공항1점, 인천공항교통센터1점, 경기양평점, 경남대점, 경남사천점, 경북도청점, 경북상주점, 경북영주가흥점, 경주보문점, 광양LF스퀘어점, 광양중동점, 광주경안점, 광주봉선점, 광주상무점, 광주수완점, 광주월계점, 광주일곡점, 광주첨단2지구점, 광주터미널점, 구미인의점, 군산나운FS점, 김천교동DT점, 김포현대아울렛점, 나주빛가람점, 당진읍내점, 대구대명FS점, 대구대점, 대구율하점, 대구죽전네거리DT점, 대구지산점, 대구칠곡3지구점, 대구테크노폴리스점, 대전관평점, 대전도안점, 대전시청점, 대전현대아울렛점, 목포하당점, 보령동대점, 부산오시리아점, 서산호수공원점, 세종반곡점, 세종행복새롬점, 수원정자점, 안동옥동점, 안동중앙점, 안산고잔점, 여수웅천점, 연희점, 오산궐동점, 오창호수공원점, 용인동백점, 원주무실점, 의정부HP점, 익산영등점, 인제대점, 인천송도센트럴파크점, 인천연수점, 전남도청점, 정읍중앙점, 진주경상대점, 진주혁신도시점, 천안성성점, 천안쌍용대로DT점, 청주복대점, 청주오송점, 청주율량점, 충남대병원DT점, 충남도청점, 충북진천점, 평택청북점, 한동대점, 해운대비치점, 호남대점','event_16.png', '2021-09-06', '2021-09-12', '0');
-=======
+
 insert into event(eseq, subject, content, image, startdate, enddate, state)
 values(qseq.nextVal, 'Best WHOPPER 2개 구매시 7000원','1. 행사명 : Best WHOPPER 2개 구매시 7000원
 
