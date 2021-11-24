@@ -38,7 +38,7 @@
 							<a style="display: none;"><span>로그아웃</span></a>
 							<a style="display: none;"><span>MY킹</span></a>
 							<a href="burger.do?command=loginForm"><span>로그인</span></a>
-							<a><span>고객센터</span></a>
+							<a href="burger.do?command=faqForm&fnum=1"><span>고객센터</span></a>
 						</div>
 					</c:when>
 					<c:otherwise>
@@ -47,7 +47,7 @@
 							<a href="burger.do?command=logout"><span>로그아웃</span></a>
 							<a><span>MY킹</span></a>
 							<a style="display: none;"><span>로그인</span></a>
-							<a><span>고객센터</span></a>
+							<a href="burger.do?command=faqForm&fnum=1"><span>고객센터</span></a>
 						</div>
 					</c:otherwise>
 				</c:choose>
