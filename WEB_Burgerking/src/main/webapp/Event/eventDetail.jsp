@@ -7,7 +7,7 @@
 	<div class="location">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
-			<li>이벤트&nbsp; > &nbsp;</li>
+			<li><a href="burger.do?command=eventListForm">이벤트</a>&nbsp;>&nbsp;</li>
 			<li>상세</li>
 		</ul>		
 	</div>
