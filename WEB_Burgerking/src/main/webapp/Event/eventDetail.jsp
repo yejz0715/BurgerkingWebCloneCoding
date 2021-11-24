@@ -47,7 +47,10 @@
 	<a href="https://play.google.com/store/apps/details?id=kr.co.burgerkinghybrid&hl=ko">
 	<img src="image/main/event/list_button" />
 	</a>
-
+	<div class="c_btn item2">
+		<input type="submit" class="btn01 m red" onclick="return login_chk();" value="로그인"></input>
+		<input type="button" class="btn01 m" onclick="location.href='burger.do?command=joinForm'" value="회원가입"/>
+	</div>
 	</article>
 	<!--  
 	  <div class="qr">
