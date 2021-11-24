@@ -16,18 +16,17 @@
 			<h1 class="event_tit">이벤트</h1>
 	<form name="frm" method="post" action="burder.do">
 	<ul>
-	<c:forEach var="EventVO" items="${eventlist}">
 	<li>
 	<div class="detailTit">
 	<input type="hidden" name="eseq" value="${EventVO.eseq}" />
 	<h2>${EventVO.subject}</h2>
-	<p>${EventVO.startdate} ~ ${EventVO.enddate}</p>
+	<p><fmt:formatDate value="${EventVO.startdate}" type="date"/> ~
+	<fmt:formatDate value="${EventVO.enddate}" type="date"/>
+	</p>
 	</div>
-	<img class="detailImg" src="image/main/event/event_detail/${EventVO.image}" />
+	<img class="detailImg" src="image/main/event/eventDetail/${EventVO.image} "  />
 	<p>${EventVO.content}</p>
 	</li>
-	
-	</c:forEach>
 	</ul>
 	</form>
 	</div>

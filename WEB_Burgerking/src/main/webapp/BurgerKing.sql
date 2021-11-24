@@ -337,9 +337,9 @@ END;
 DROP TRIGGER TRI_sub_product_spseq;
 DROP TRIGGER TRI_MEMBER_MEMBERNUM;
 --select * from user_triggers;
---alter table event modify subject varchar(100);
---alter table event modify content varchar(3000);
---delete  from event ; 
+alter table event modify subject varchar(100);
+alter table event modify content varchar(3000);
+delete  from event ; 
 create table shortproduct(
    spseq number(10),
    pname varchar2(100),

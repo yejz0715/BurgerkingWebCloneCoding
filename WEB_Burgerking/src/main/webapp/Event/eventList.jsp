@@ -25,7 +25,7 @@
 			<div class="eventarea">
 				<ul>
 					<c:forEach var="EventVO" items="${eventlist}">
-						<li><a href="burger.do?command=eventDetailForm"> <input
+						<li><a href="burger.do?command=eventDetailForm&eseq=${EventVO.eseq}" > <input
 								type="hidden" name="eseq" value="${EventVO.eseq}" /> <img
 								class="eventImg" src="image/main/event/${EventVO.image}" />
 						</a>

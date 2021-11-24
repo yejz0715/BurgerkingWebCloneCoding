@@ -38,8 +38,8 @@ public class EventDao {
 				evo.setSubject(rs.getString("subject"));
 				evo.setContent(rs.getString("content"));
 				evo.setImage(rs.getString("image"));
-				evo.setStartdate(rs.getString("startdate").substring(0, 10));
-				evo.setEnddate(rs.getString("enddate").substring(0, 10));
+				evo.setStartdate(rs.getTimestamp("startdate"));
+				evo.setEnddate(rs.getTimestamp("enddate"));
 				evo.setState(rs.getInt("state"));
 				list.add(evo);
 			}
@@ -66,8 +66,8 @@ public class EventDao {
 				evo.setSubject(rs.getString("subject"));
 				evo.setContent(rs.getString("content"));
 				evo.setImage(rs.getString("image"));
-				evo.setStartdate(rs.getString("startdate").substring(0, 10));
-				evo.setEnddate(rs.getString("enddate").substring(0, 10));
+				evo.setStartdate(rs.getTimestamp("startdate"));
+				evo.setEnddate(rs.getTimestamp("enddate"));
 				evo.setState(rs.getInt("state"));
 				list.add(evo);
 			}
@@ -93,8 +93,8 @@ public class EventDao {
 				evo.setSubject(rs.getString("subject"));
 				evo.setContent(rs.getString("content"));
 				evo.setImage(rs.getString("image"));
-				evo.setStartdate(rs.getString("startdate").substring(0, 10));
-				evo.setEnddate(rs.getString("enddate").substring(0, 10));
+				evo.setStartdate(rs.getTimestamp("startdate"));
+				evo.setEnddate(rs.getTimestamp("enddate"));
 				evo.setState(rs.getInt("state"));
 				list.add(evo);
 			}
@@ -113,15 +113,15 @@ public class EventDao {
 		con=DBman.getConnection();
 		try {
 			pstmt=con.prepareStatement(sql);
-			pstmt.setString(1, eseq);
+			pstmt.setInt(1, Integer.parseInt(eseq));
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 			evo.setEseq(Integer.parseInt(eseq));	
 			evo.setSubject(rs.getString("subject"));
 			evo.setContent(rs.getString("content"));
 			evo.setImage(rs.getString("image"));
-			evo.setStartdate(rs.getString("startdate").substring(0, 10));
-			evo.setEnddate(rs.getString("enddate").substring(0, 10));
+			evo.setStartdate(rs.getTimestamp("startdate"));
+			evo.setEnddate(rs.getTimestamp("enddate"));
 			evo.setState(rs.getInt("state"));	
 			} 
 	    } catch (SQLException e) {

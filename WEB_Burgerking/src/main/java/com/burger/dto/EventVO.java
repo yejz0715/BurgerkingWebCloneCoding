@@ -7,8 +7,8 @@ public class EventVO {
 	private String subject;
 	private String content;
 	private String image;
-	private String startdate;
-	private String enddate;
+	private Timestamp startdate;
+	private Timestamp enddate;
 	private int state;
 
 	public int getEseq() {
@@ -43,19 +43,19 @@ public class EventVO {
 		this.image = image;
 	}
 
-	public String getStartdate() {
+	public Timestamp getStartdate() {
 		return startdate;
 	}
 
-	public void setStartdate(String startdate) {
+	public void setStartdate(Timestamp startdate) {
 		this.startdate = startdate;
 	}
 
-	public String getEnddate() {
+	public Timestamp getEnddate() {
 		return enddate;
 	}
 
-	public void setEnddate(String enddate) {
+	public void setEnddate(Timestamp enddate) {
 		this.enddate = enddate;
 	}
 
