@@ -3,6 +3,8 @@
 
 <div class="clear"></div>
 
+<div class="mainWrap">
+	<div class="banner">
 <article>
 	<div class="banner" style="overflow: scroll">
 		<div class="slide" id="slide">
@@ -34,7 +36,7 @@
 				</div>
 			</div>
 		</div>
-
+		</div>
 
 
 		<div class="test" id="test">
@@ -44,7 +46,6 @@
 					title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 				</iframe>
 			</div>
-
 			<div class="home_snsWrap">
 				<div class="web_container9">
 					<ul class="list">
@@ -67,7 +68,6 @@
 					</ul>
 				</div>
 			</div>
-
 			<div class="home_guide">
 				<div class="web_container2">
 					<div class="guide">
@@ -95,11 +95,15 @@
 				</div>
 			</div>
 
-		</div>
-	</div>
+		
+</div>
 
+<<<<<<< HEAD
+
+=======
 	<div class="clear"></div>
 </article>
+>>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 
 <%@ include file="undermenu.jsp" %>
 <%@ include file="footer/footer.jsp" %>

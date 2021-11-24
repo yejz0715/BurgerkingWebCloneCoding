@@ -48,6 +48,10 @@
 							<a style="display: none;"><span>로그인</span></a>
 							<a href="burger.do?command=faqForm&fnum=1"><span>고객센터</span></a>
 						</div>
+						<div class="WEB user">
+							<p><span>${loginUser.name}</span>님 안녕하세요</p>
+							<a href="burger.do?command=deliveryMypageForm"><strong>MY킹 바로가기</strong></a>
+						</div>
 					</c:otherwise>
 				</c:choose>
 				
