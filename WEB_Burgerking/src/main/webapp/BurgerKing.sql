@@ -95,8 +95,8 @@ CREATE TABLE cart
 CREATE TABLE event
 (
    eseq number(10) NOT NULL,
-   subject varchar2(30) NOT NULL,
-   content varchar2(100) NOT NULL,
+   subject varchar2(100) NOT NULL,
+   content varchar2(3000) NOT NULL,
    image varchar2(50),
    startdate date DEFAULT sysdate,
    enddate date,
