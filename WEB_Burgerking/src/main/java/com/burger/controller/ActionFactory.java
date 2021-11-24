@@ -1,13 +1,14 @@
 package com.burger.controller;
 
 import com.burger.controller.action.FaqFormAction;
+import com.burger.controller.action.FindIdAction;
 import com.burger.controller.action.FindIdFormAction;
+import com.burger.controller.action.FindPwdAction;
 import com.burger.controller.action.FindPwdFormAction;
 import com.burger.controller.action.Action;
 import com.burger.controller.action.AppGuideFormAction;
 import com.burger.controller.action.BrandStroyFormAction;
 import com.burger.controller.action.DeliveryFormAction;
-import com.burger.controller.action.BrandStroyFormAction;
 import com.burger.controller.action.EventListFormAction;
 import com.burger.controller.action.IndexAction;
 import com.burger.controller.action.JoinFormAction;
@@ -19,9 +20,6 @@ import com.burger.controller.action.MenuListFormAction;
 import com.burger.controller.action.MenudetailFormAction;
 import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.QnaFormAction;
-import com.burger.controller.action.LegalAction;
-import com.burger.controller.action.MenuListFormAction;
-import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.TermsAction;
 import com.burger.controller.action.VideoPolicyAction;
 
@@ -52,6 +50,8 @@ public class ActionFactory {
 		else if(command.equals("findIdForm")) ac = new FindIdFormAction();
 		else if(command.equals("findPwdForm")) ac = new FindPwdFormAction();
 		else if(command.equals("menudetailForm")) ac = new MenudetailFormAction();
+		else if(command.equals("findId")) ac = new FindIdAction();
+		else if(command.equals("findPwd")) ac = new FindPwdAction();
 		
 		return ac;
 	}
