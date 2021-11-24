@@ -30,6 +30,7 @@ function check_input2(){
 		b.innerText = "휴대폰 번호를 입력해 주세요.";
 	}
 }
+
 function check_input3(){
 	var a = document.getElementById("id");
 	var b = document.getElementById("id_coment");
