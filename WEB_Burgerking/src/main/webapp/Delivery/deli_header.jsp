@@ -30,7 +30,6 @@
 					</c:otherwise>
 				</c:choose>
 				
-				
 				<c:choose>
 					<c:when test="${empty loginUser}">
 						<div class="WEB utilWrap">
