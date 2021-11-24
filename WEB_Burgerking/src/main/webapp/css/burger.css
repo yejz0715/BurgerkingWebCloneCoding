@@ -1453,8 +1453,8 @@ strong {
     vertical-align: top;
     white-space: nowrap;
 }
-
-.contentWarp .web_container2{
+/* -------------------history---------------------------------------------------------------- */
+.contentWarp .web_container1{
 	padding: 50px 0 120px;
 }
 .tab_aboutCon {
@@ -1485,4 +1485,166 @@ strong {
     width: 66%;
     float: right;
     line-height: 1.6;	
+}
+.tab_aboutCon div:before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 0;
+    padding-top: 42%;
+    background-size: cover;
+    margin-bottom: 48px;
+}
+.about02:before {
+    background: url(../image/main/about02.png) 0 0 no-repeat;
+}
+.history{
+	padding-top: 60px;
+	position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+.history2{
+	padding-top: 60px;
+	background: #f8f5f2;
+	position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+.history3{
+	padding-top: 60px;
+	position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+}
+
+.history_area {
+    max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.history_area ul {
+    width: 45%;
+    position: relative;
+    float: left;
+    padding-left: 50px;
+    display: inline-block;
+}
+.history_area ul.lineNo:before {
+    display: none;
+}
+.history_area ul.h45 {
+    height: 45px;
+}
+.history_area h4 {
+    font-size: 4.5rem;
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+    width: 17%;
+    line-height: 1.1;
+}
+
+.history_area ul:before {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background: #000;
+    left: 0;
+    top: 13px;
+}
+.history_area ul li:before {
+    display: block;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: -54px;
+}
+.history_area:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.history_area ul li:last-child {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 33px;
+    padding-bottom: 33px;
+}
+.history_area ul li {
+    width: 100%;
+    font-size: 1.125rem;
+    position: relative;
+    padding-bottom: 15px;
+    line-height: 1.6;
+}
+
+.history:after {
+    background: url(../image/main/historyback.png) 100% no-repeat;
+    background-size: cover;
+}
+.history3:after {
+    
+    background-size: cover;
+}
+.history:after {
+    display: block;
+    content: "";
+    width: 558px;
+    min-width: 31%;
+    height: 360px;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.history2:after {
+    display: block;
+    content: "";
+    min-width: 31%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: url(../image/main/historyback2.png) 0 no-repeat;
+    left: auto;
+    right: 70%;
+    width: 458px;
+    height: 460px;
+    background-size: cover;
+}
+.history3:after {
+    display: block;
+    content: "";
+    width: 746px;
+    height: 295px;
+    background: url(../image/main/historyback3.png) 100% no-repeat;
+    min-width: 31%;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-size: cover;
+}
+
+.history_area.alignL h4{float:right;text-align:right}
+.history_area.alignL ul{float:right;padding:0 50px 0 0}
+.history_area.alignL ul:before{right:0;left:auto}
+.history_area.alignL ul li{text-align:right}
+.history_area.alignL ul li:before{right:-54px;left:auto}
+
+
+.bdNo {
+    border-bottom: 0!important;
 }
