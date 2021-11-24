@@ -135,7 +135,49 @@
 	text-align:left;
 	padding: 25px 25px;
 }
-
+.c_btn input{
+    float: left;
+    width: 216px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.btn01.m.red {
+    background: url("../image/main/bg_btn01_m_red.png") no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.btn01 {
+    display: inline-block;
+    width: 256px;
+    height: 68px;
+    font-size: 1.5rem;
+    padding: 12px 10px 10px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 46px;
+    background: url(../image/main/bg_btn01_m.black.png) no-repeat 50%;
+    background-size: 100% 100%;
+    border-radius: 0;
+    border: 0px;
+}
+.btn01.m {
+    width: 216px;
+    /* height: 68px; */
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 46px;
+    background: url(../image/main/bg_btn01_m.black.png) no-repeat 50%;
+    background-size: 100% 100%;
+    border-radius: 0;
+}
+.btn01.red {
+    background: url("../image/main/bg_btn01_m_red.png") no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.c_btn input+input {
+    margin-left: 9px;
+}
 
 
 
