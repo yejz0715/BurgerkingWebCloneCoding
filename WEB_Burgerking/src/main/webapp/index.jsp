@@ -3,8 +3,8 @@
 
 <div class="clear"></div>
 
-<article>
-	<div class="banner" style="overflow: scroll">
+<div class="mainWrap">
+	<div class="banner">
 		<div class="slide" id="slide">
 			<ul class="cnt" id="cnt">
 				<li><a href="buger.do?command=****"><img
@@ -18,7 +18,7 @@
 				<li><a href="buger.do?command=****"><img
 						src="image/main/banner/banner_5.png"></a></li>
 			</ul>
-
+	
 
 			<div class="btn">
 				<button type="button" class="prev" id="prev_btn">
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</div>
-
+		</div>
 
 
 		<div class="test" id="test">
@@ -45,7 +45,6 @@
 					title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 				</iframe>
 			</div>
-
 			<div class="home_snsWrap">
 				<div class="web_container9">
 					<ul class="list">
@@ -68,7 +67,6 @@
 					</ul>
 				</div>
 			</div>
-
 			<div class="home_guide">
 				<div class="web_container2">
 					<div class="guide">
@@ -96,11 +94,10 @@
 				</div>
 			</div>
 
-		</div>
-	</div>
+		
+</div>
 
-	<div class="clear"></div>
-</article>
+
 
 <%@ include file="undermenu.jsp" %>
 <%@ include file="footer/footer.jsp" %>
