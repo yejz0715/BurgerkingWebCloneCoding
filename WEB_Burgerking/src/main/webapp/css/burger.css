@@ -999,7 +999,6 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
 #test {
 	position: relative;
 	width: 1440px;
-	height: 580px;
 	margin: 0 auto;
 	top: -100px;
 	text-align: center;
@@ -1008,7 +1007,6 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
 
 #utube {
 	position: relative;
-
 	top: 0px;
 	height: 800px;
 	left: 6px;
