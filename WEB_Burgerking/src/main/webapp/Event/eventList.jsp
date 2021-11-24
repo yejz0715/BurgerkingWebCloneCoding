@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 <link href="css/event.css" rel="stylesheet">
 
@@ -25,11 +26,16 @@
 			<div class="eventarea">
 				<ul>
 					<c:forEach var="EventVO" items="${eventlist}">
-						<li><a href="burger.do?command=eventDetailForm&eseq=${EventVO.eseq}" > <input
-								type="hidden" name="eseq" value="${EventVO.eseq}" /> <img
+						<li><a
+							href="burger.do?command=eventDetailForm&eseq=${EventVO.eseq}">
+								<input type="hidden" name="eseq" value="${EventVO.eseq}" /> <img
 								class="eventImg" src="image/main/event/${EventVO.image}" />
 						</a>
-							<p>${EventVO.startdate} ~ ${EventVO.enddate}</p></li>
+							<p>
+								<fmt:formatDate value="${EventVO.startdate}" type="date" />
+								~
+								<fmt:formatDate value="${EventVO.enddate}" type="date" />
+							</p></li>
 					</c:forEach>
 				</ul>
 			</div>

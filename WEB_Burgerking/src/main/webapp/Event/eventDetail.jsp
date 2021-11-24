@@ -24,12 +24,49 @@
 	<fmt:formatDate value="${EventVO.enddate}" type="date"/>
 	</p>
 	</div>
+	<div class="dt_ImgCon">
 	<img class="detailImg" src="image/main/event/eventDetail/${EventVO.image} "  />
-	<p>${EventVO.content}</p>
+	<p>${EventVO.content}</p></div>
 	</li>
 	</ul>
+	
 	</form>
 	</div>
 	</div>
+<div class="qr">
+	<p><strong>버거킹 APP </strong>다운받고
+	<br>
+	<strong>더 많은 할인 혜택</strong>을
+	<br>
+	만나보세요!
+	</p>
+	<div class="qrCode">
+	<img src="image/main/appQR.png">
+	</div>
+	</div>
+	<a href="https://play.google.com/store/apps/details?id=kr.co.burgerkinghybrid&hl=ko">
+	<img src="image/main/event/list_button" />
+	</a>
+
 	</article>
+	<!--  
+	  <div class="qr">
+	<p><strong>버거킹 APP </strong>다운받고
+	<br>
+	<strong>더 많은 할인 혜택</strong>을
+	<br>
+	만나보세요!
+	</p>
+	<div class="qrCode">
+	<img src="image/main/appQR.png">
+	</div>
+	</div>
+	<a href="https://play.google.com/store/apps/details?id=kr.co.burgerkinghybrid&hl=ko">
+	<img src="image/main/event/list_button" />
+	</a>
 	
+	-->
+	
+	
+	<%@ include file="/undermenu.jsp"%>
+<%@ include file="/footer/footer.jsp"%>
