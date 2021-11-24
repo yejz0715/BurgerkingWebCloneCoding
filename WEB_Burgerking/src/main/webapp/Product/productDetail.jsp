@@ -2,7 +2,7 @@
 <%@ include file="../header.jsp"%>
 <div class="clear"></div>
 <div class="contentsWrap">
-	<div class="location">
+	<div class="location" style="margin-bottom: 0px;">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
 			<li><a  href="burger.do?command=index">메뉴소개</a>&nbsp;>&nbsp;</li>
