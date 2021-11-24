@@ -52,7 +52,7 @@ public class ActionFactory {
 		else if(command.equals("findIdForm")) ac = new FindIdFormAction();
 		else if(command.equals("findPwdForm")) ac = new FindPwdFormAction();
 		else if(command.equals("menudetailForm")) ac = new MenudetailFormAction();
-		
+
 		return ac;
 	}
 }

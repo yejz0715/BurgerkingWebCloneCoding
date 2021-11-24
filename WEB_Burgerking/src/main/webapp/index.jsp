@@ -2,9 +2,14 @@
 <%@ include file="header.jsp"%>
 
 <div class="clear"></div>
+<<<<<<< HEAD
 
 <div class="mainWrap">
 	<div class="banner">
+=======
+<article>
+	<div class="banner" style="overflow: scroll">
+>>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 		<div class="slide" id="slide">
 			<ul class="cnt" id="cnt">
 				<li><a href="buger.do?command=****"><img
@@ -97,7 +102,12 @@
 		
 </div>
 
+<<<<<<< HEAD
 
+=======
+	<div class="clear"></div>
+</article>
+>>>>>>> branch 'changdae' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 
 <%@ include file="undermenu.jsp" %>
 <%@ include file="footer/footer.jsp" %>
