@@ -38,7 +38,7 @@
 				<div class="vtop">아이디(이메일)</div>
 					<label>
 						<span class="hide">ID(email)</span>
-						<input placeholder="아이디(이메일)" type="text" name="id" id="id" onblur="check_input3();">
+						<input placeholder="아이디(이메일)" type="email" name="id" id="id" onblur="check_input3();">
 						<span id="id_coment" class="coment_text">아이디를 입력해 주세요.</span>
 					</label>
 				</div>

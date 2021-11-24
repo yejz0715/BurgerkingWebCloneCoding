@@ -22,7 +22,7 @@
 					<div class="inpbox">
 						<label>
 							<span class="hide">ID</span>
-							<input type="text" placeholder="아이디 (이메일)" id="userId" name="id">
+							<input type="email" placeholder="아이디 (이메일)" id="userId" name="id">
 							<button type="button" tabindex="-1" class="btn_del01" style="display: none;">
 									<span>입력 텍스트 삭제</span>
 							</button>
