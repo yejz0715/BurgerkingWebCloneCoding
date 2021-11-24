@@ -39,11 +39,3 @@ function check_input3(){
 		b.innerText = "아이디를 입력해 주세요.";
 	}
 }
-
-$(document).ready(function(){
-	consol.log(`hi`);
-	 $('.header_submenu').hover(function() {
-		$('.header_container').addClass('.header_container_open');
-	
-	});
-});
