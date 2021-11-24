@@ -30,7 +30,7 @@
 					<div class="vtop">이름</div>
 					<label>
 						<span class="hide">ID</span>
-						<input type="text" placeholder="이름" id="name" name="name" onblur="check_input1();">
+						<input type="text" placeholder="이름" id="name" name="name" value="${name}" onblur="check_input1();">
 						<span id="name_coment" class="coment_text">이름을 입력해 주세요.</span>
 					</label>
 				</div>
@@ -38,7 +38,7 @@
 				<div class="vtop">아이디(이메일)</div>
 					<label>
 						<span class="hide">ID(email)</span>
-						<input placeholder="아이디(이메일)" type="email" name="id" id="id" onblur="check_input3();">
+						<input placeholder="아이디(이메일)" type="email" name="id" value="${id}" id="id" onblur="check_input3();">
 						<span id="id_coment" class="coment_text">아이디를 입력해 주세요.</span>
 					</label>
 				</div>
@@ -48,7 +48,7 @@
 				</ul>
 			</div>
 			<div class="c_btn item2 findidalign">
-				<input type="submit" class="btn01 m" value="비밀번호 찾기"/>
+				<input type="submit" class="btn01 m" value="비밀번호 찾기" onclick="return inputpwdChk()"/>
 			</div>
 		</form>
 	</div>

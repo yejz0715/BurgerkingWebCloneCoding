@@ -49,7 +49,7 @@
 				</ul>
 			</div>
 			<div class="c_btn item2 findidalign">
-				<input type="submit" class="btn01 m" value="아이디 찾기"/>
+				<input type="submit" class="btn01 m" value="아이디 찾기" onclick="return inputidChk()"/>
 			</div>
 		</form>
 	</div>
