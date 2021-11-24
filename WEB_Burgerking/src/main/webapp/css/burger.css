@@ -744,7 +744,6 @@ address, em {
     font-size: 1.125rem;
     font-weight: 700;
     color: #2e2e2e;
-    margin-top: 15px;
 }
 .hide {
     position: absolute!important;
@@ -755,7 +754,6 @@ address, em {
 
 .login_img {
 	position:absolute;
-	top:290px;
     width: 40px;
     height: 40px;
     float:left;
@@ -1146,6 +1144,7 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
 
 
 
+
 #prev_btn {
    background: transparent;
 }
@@ -1377,7 +1376,53 @@ strong {
     padding: 30px 5px 0;
     text-align: center;
 }
+.subtitWrap {
+    position: relative;
+    margin-bottom: 26px;
+}
 
+.contentsWrap .page_tit {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    line-height: 100%;
+}
+
+.subtitWrap .tab01 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: -17.5px 0 0;
+    overflow: auto;
+}
+.tab01 ul {
+    display: table;
+}
+
+.subtitWrap .tab01 button {
+    height: 35px;
+    font-size: 1.125rem;
+    border-width: 3px 0;
+}
+
+.tab01 button {
+    display: inline-block;
+    padding: 10px 1px;
+    font-weight: 700;
+    font-size: 1.375rem;
+    color: #b8b8b8;
+    border-width: 4px 0;
+}
+
+.tab01 button:hover{
+    color: #000000;	
+}
+.tab01 li {
+    position: relative;
+    display: table-cell;
+    padding: 0 18px;
+    vertical-align: top;
+    white-space: nowrap;
+}
 /*showId/Pwd---------------------------------------------------------------------------------------------*/
 .showid_text{
 	font-size: 1.7em;

@@ -4,7 +4,6 @@
 <div class="clear"></div>
 <div class="mainWrap">
    <div class="banner">
-<article>
    <div class="banner" style="overflow: scroll">
       <div class="slide" id="slide">
          <ul class="cnt" id="cnt">
@@ -20,7 +19,6 @@
                   src="image/main/banner/banner_5.png"></a></li>
          </ul>
    
-
          <div class="btn">
             <button type="button" class="prev" id="prev_btn">
                <img src="image/main/banner/banner_prev.png">
@@ -36,9 +34,9 @@
             </div>
          </div>
       </div>
-      </div>
-
-
+      </div>   
+   
+   
       <div class="test" id="test">
          <div id="utube">
             <iframe width="1440" height="580"
@@ -82,8 +80,8 @@
                </div>
             </div>
          </div>
-
-
+   
+   
          <div class="web_container3">
             <div class="cont2">
                <h2 class="tit1">집에서 만나는 버거킹</h2>
@@ -94,12 +92,10 @@
                </p>
             </div>
          </div>
-
-      
+      </div>
 </div>
-   <div class="clear"></div>
-</article>
 
+   <div class="clear"></div>
 
 <%@ include file="undermenu.jsp" %>
 <%@ include file="footer/footer.jsp" %>
