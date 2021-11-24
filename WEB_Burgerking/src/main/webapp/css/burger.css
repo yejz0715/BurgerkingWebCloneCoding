@@ -14,7 +14,13 @@ body{
 article{
 	position:relative;
 }
-
+a {
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
 .clear {
 	clear: both;
 }
@@ -1647,4 +1653,29 @@ strong {
 
 .bdNo {
     border-bottom: 0!important;
+}
+
+.head_personalWrap {
+    height: 124px;
+    font-size: 1.375rem;
+    color: #fff;
+    background: url(../img/bg_personality.2ff1d0f9.gif) repeat-x top;
+}
+
+ .WEB.user {
+    position: absolute;
+    right: 20px;
+    bottom: 36px;
+    min-height: 46px;
+    padding: 3px 0 3px 57px;
+    color: #fff;
+    background: url(../image/main/loginuser.png) no-repeat 0;
+}
+
+.WEB.user a {
+    margin-top: 3px;
+    padding-right: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: url(../image/main/rednext.png) no-repeat 100%;
 }
