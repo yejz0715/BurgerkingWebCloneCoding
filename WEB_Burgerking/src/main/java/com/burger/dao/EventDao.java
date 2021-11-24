@@ -25,7 +25,7 @@ public class EventDao {
 
 	public ArrayList<EventVO> getAllEvents() {
 		ArrayList<EventVO> list = new ArrayList<EventVO>();
-		String sql = " select * from event";
+		String sql = " select * from event order by eseq asc";
 		con = DBman.getConnection();
 
 		try {
@@ -53,7 +53,7 @@ public class EventDao {
 
 	public ArrayList<EventVO> getOngoingEvents() {
 		ArrayList<EventVO> list = new ArrayList<EventVO>();
-		String sql= " select * from event where state = 1 ";
+		String sql= " select * from event where state = 1 order by eseq asc ";
 		con = DBman.getConnection();
 		
 		try {
@@ -81,7 +81,7 @@ public class EventDao {
 
 	public ArrayList<EventVO> getPastEvents() {
 		ArrayList<EventVO> list = new ArrayList<EventVO>();
-		String sql= " select * from event where state =0 ";
+		String sql= " select * from event where state =0 order by eseq asc";
 		con = DBman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);

@@ -29,26 +29,27 @@
 	<p>${EventVO.content}</p></div>
 	</li>
 	</ul>
-	
 	</form>
 	</div>
 	</div>
+	
 <div class="qr">
-	<p><strong>버거킹 APP </strong>다운받고
+
+	<p><strong style="color:red;">버거킹 APP </strong>다운받고
 	<br>
-	<strong>더 많은 할인 혜택</strong>을
+	<strong style="color:red;">더 많은 할인 혜택</strong>을
 	<br>
 	만나보세요!
 	</p>
 	<div class="qrCode">
-	<img src="image/main/appQR.png">
-	</div>
-	</div>
 	<a href="https://play.google.com/store/apps/details?id=kr.co.burgerkinghybrid&hl=ko">
-	<img src="image/main/event/list_button" />
+	<img src="image/main/appQR.png">
 	</a>
-	<div class="c_btn item2">
-		<input type="button" class="btn01 m" onclick="location.href='burger.do?command=joinForm'" value="목록으로"/>
+	</div>
+	
+	</div>
+	<div class="c_btnItem2">
+		<input type="button" class="btn01 m" onclick="location.href='burger.do?command=eventListForm'" value="목록으로"/>
 	</div>
 	</article>
 	<!--  

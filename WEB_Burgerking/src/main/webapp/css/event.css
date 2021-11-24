@@ -135,6 +135,32 @@
 	text-align:left;
 	padding: 25px 25px;
 }
+
+.qr{
+	position: relative;
+    width: 500px;
+    height: 160px;
+    margin: 0 auto;
+    padding: 35px 45px;
+    background-color: #fafafa;
+    text-align: left;
+    font-size: 24px;
+}
+
+.qrCode{
+    position: absolute;
+    right: 130px;
+    top: 2px;
+    width: 120px;
+    height: 120px;
+}
+/* button */
+
+.c_btnItem2{
+	text-align:center;
+	margin:50px;
+}
+
 .c_btn input{
     float: left;
     width: 216px;
