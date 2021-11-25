@@ -331,14 +331,12 @@ height: 15px; border-left: 0px;}
      align-items: center;
      height: 124px;
     font-size: 1.375rem;
-    width: 100vw;
-    /* max-width: 1184px; */
+   /*  width: 100vw; */
+     max-width: 1184px; 
     margin: 0 auto;
     padding: 0 20px; 
      background:#2C3033;
 }
-
-
 
 .web_deliveryContainer a{  
 	margin: 0;
@@ -377,6 +375,17 @@ height: 15px; border-left: 0px;}
     font-size: 1.125rem;
 }
 
+.count{
+	height: 30px;
+    margin-left: 14px;
+    padding:10px;
+    font-weight: 700;
+    font-size: 1rem;
+    color:#fff;
+    line-height: 30px;
+    border-radius: 15px;
+    background: #e22219;
+}
 
 /* header------------------------------------------------------------------------------------*/
 .header_container {

@@ -45,7 +45,7 @@
  <dl>
  <dt><strong>카트</strong>
  <em class="count">
- <span>숫자</span>
+ <span>1</span>
  </em>
  </dt>
  <dd>카트에 담은 상품</dd>
