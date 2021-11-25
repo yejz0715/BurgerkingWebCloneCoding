@@ -35,6 +35,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 	<div class="menuarea">
 		<ul>
 			<c:forEach var="shortProductVO" items="${shortProductList}">
@@ -48,6 +49,12 @@
 				</a></li>
 			</c:forEach>
 		</ul>
+</div>
+<div class="order_caution">
+	<div class="tit03">
+		<h4 class="WEB">유의사항</h4>
+		<button type="button" class="btn_infoingredient"><strong>영양분석표, 알레르기 유발성분</strong></button></div>
+	</div>
 </div>
 </article>
 

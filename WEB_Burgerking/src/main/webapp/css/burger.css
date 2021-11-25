@@ -1755,3 +1755,34 @@ strong {
     color: #fff;
     background: url(../image/main/rednext.png) no-repeat 100%;
 }
+
+/*---------------------------------order-------------------------------------------*/
+.order_caution{margin-top:55px}
+
+.tit03 {
+    position: relative;
+    margin: 25px 0;
+    padding: 12px 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #000;
+}
+
+.btn_infoingredient {
+    position: relative;
+    padding: 0 0 0 24px;
+    background: url(../image/main/information.png) no-repeat 0;
+}
+
+.tit03>h2, .tit03>h3, .tit03>h4 {
+    margin-right: 10em;
+}
+
+.btn_infoingredient>:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background: url(../image/main/nextblack.png) no-repeat 100%;
+}
