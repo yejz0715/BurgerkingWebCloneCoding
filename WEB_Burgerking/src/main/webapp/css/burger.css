@@ -772,6 +772,7 @@ address, em {
     padding-right: 5.23%;
     border:0px;
     border-right: 1px solid #e5e5e5;
+    float: left;
 }
 
 .weblogin_ui>* {
@@ -899,6 +900,27 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
 }
 .login_menu>a:first-child:before {
     width: 0px;
+}
+.weblogin_ui .login2{
+    min-width: 580px;
+    padding-right: 5.23%;
+    padding-left: 5.23%;
+    background-color: #f2ebe6;
+    float: right;
+    text-align: center;
+}
+.textarea2{
+	position:relative;
+	min-width: 80%;
+	padding: 40px; 
+	margin-top: 50px;
+	float:left; overflow: hidden;
+	background-color:#fff;
+	font-size: 1.3em;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+.translo{
+	margin-left: 108px;
 }
 /* index.jsp--------------------------------------------------------------------------*/
 #slide {

@@ -45,6 +45,62 @@
 					</div>
 				</div>
 			</form>
+			
+			<c:choose>
+				<c:when test='${non=="1"}'>
+					<form class="login2" name="frm" method="post" action="burger.do">
+						<input type="hidden" name="command" value="nonUserForm">
+						<ul id="terms_wrap_ul" style=" left:0px; position:relative; margin-top: 30px;">
+							<li>
+								<span>
+									<a href="burger.do?command=loginForm&non=1" style="color: red; text-decoration: underline; font-size: 1.45em;">비회원 주문</a>
+								</span>
+							</li>
+							<li><span><a href="burger.do?command=loginForm&non=2" style="font-size: 1.45em;">비회원 주문내역</a></span></li>
+						</ul>
+						
+						<div class="textarea2">
+							회원가입 없이 비회원으로 주문 가능합니다.
+						</div>
+						
+						<div class="c_btn item2" >
+								<input type="submit" class="btn01 m red translo" value="비회원주문"></input>
+						</div>
+					</form>
+				</c:when>
+				<c:otherwise>
+					<form class="login2" name="frm" method="post" action="burger.do">
+						<input type="hidden" name="command" value="nonUserForm">
+						<ul id="terms_wrap_ul" style=" left:0px; position:relative; margin-top: 30px;">
+							<li>
+								<span>
+									<a href="burger.do?command=loginForm&non=1" style="font-size: 1.45em;">비회원 주문</a>
+								</span>
+							</li>
+							<li><span><a href="burger.do?command=loginForm&non=2" style="color: red; text-decoration: underline; font-size: 1.45em;">비회원 주문내역</a></span></li>
+						</ul>
+						
+						<div class="textarea2">
+							<div class="inpbox">
+								<label>
+									<span class="hide">주문번호</span>
+									<input type="email" placeholder="주문번호" id="oseq" name="oseq">
+								</label>
+							</div>
+							<div class="inpbox">
+								<label>
+									<span class="hide">비밀번호</span>
+									<input placeholder="비밀번호" type="password" name="pwd">
+								</label>
+							</div>
+						</div>
+						
+						<div class="c_btn item2" >
+								<input type="submit" class="btn01 m red translo" value="조회하기"></input>
+						</div>
+					</form>
+				</c:otherwise>
+			</c:choose>
 		</div>
 	</div>
 </article>
