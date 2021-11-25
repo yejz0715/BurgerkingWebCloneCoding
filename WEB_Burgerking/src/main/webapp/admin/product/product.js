@@ -1,10 +1,10 @@
 function go_wrt(){
-	document.frm.action = "shop.do?command=adminProductWriteForm";
+	document.frm.action = "burger.do?command=adminProductWriteForm";
 	document.frm.submit();
 }
 
 function go_mov(){
-	location.href="shop.do?command=adminProductList";
+	location.href="burger.do?command=adminProductList";
 }
 
 function go_save(){
@@ -28,19 +28,19 @@ function go_save(){
 		alert("상품이미지를 입력하세요");
 		theForm.image.focus();
 	}else{
-		theForm.action = "shop.do?command=adminProductWrite";
+		theForm.action = "burger.do?command=adminProductWrite";
 		theForm.submit();
 	}
 }
 
 function go_detail(pseq){
-	var url = "shop.do?command=adminProductDetail&pseq=" + pseq;
+	var url = "burger.do?command=adminProductDetail&pseq=" + pseq;
 	document.frm.action = url;
 	document.frm.submit();
 }
 
 function go_mod(pseq){
-	var url = "shop.do?command=adminProductUpdateForm&pseq=" + pseq;
+	var url = "burger.do?command=adminProductUpdateForm&pseq=" + pseq;
 	location.href=url;
 }
 
@@ -62,7 +62,7 @@ function go_mod_save(){
 		document.frm.content.focus();
 	}else{
 		if(confirm('수정하시겠습니까?')){
-			document.frm.action = "shop.do?command=adminProductUpdate";
+			document.frm.action = "burger.do?command=adminProductUpdate";
 			document.frm.submit();
 		}
 	}
@@ -72,7 +72,7 @@ function go_search(){
 	if(document.frm.key.value=="")
 		return;
 		
-	var url = "shop.do?command=adminProductList&page=1";
+	var url = "burger.do?command=adminProductList&page=1";
 	// 보던 페이지가 어떤 페이지이던간에 검색 결과의 1페이지로 가기위해 파라미터 page를 1로 전송
 	document.frm.action = url;
 	document.frm.submit();
@@ -80,7 +80,7 @@ function go_search(){
 
 function go_total(){
 	document.frm.key.value="";
-	document.frm.action = "shop.do?command=adminProductList&page=1";
+	document.frm.action = "burger.do?command=adminProductList&page=1";
 	document.frm.submit();
 }
 
@@ -88,7 +88,7 @@ function go_search_order(){
 	if(document.frm.key.value=="")
 		return;
 		
-	var url = "shop.do?command=adminOrderList&page=1";
+	var url = "burger.do?command=adminOrderList&page=1";
 	// 보던 페이지가 어떤 페이지이던간에 검색 결과의 1페이지로 가기위해 파라미터 page를 1로 전송
 	document.frm.action = url;
 	document.frm.submit();
@@ -96,7 +96,7 @@ function go_search_order(){
 
 function go_total_order(){
 	document.frm.key.value="";
-	document.frm.action = "shop.do?command=adminOrderList&page=1";
+	document.frm.action = "burger.do?command=adminOrderList&page=1";
 	document.frm.submit();
 }
 
@@ -115,7 +115,7 @@ function go_order_save(){
 	if(count == 0){
 		alert("주문처리할 항목을 선택해 주세요.")
 	}else{
-		document.frm.action = "shop.do?command=adminOrderSave";
+		document.frm.action = "burger.do?command=adminOrderSave";
 		document.frm.submit();
 	}
 }
@@ -124,22 +124,22 @@ function go_search_qna(){
 	if(document.frm.key.value=="")
 		return;
 		
-	var url = "shop.do?command=adminQnaList&page=1";
+	var url = "burger.do?command=adminQnaList&page=1";
 	document.frm.action = url;
 	document.frm.submit();
 }
 
 function go_total_qna(){
 	document.frm.key.value="";
-	document.frm.action = "shop.do?command=adminQnaList&page=1";
+	document.frm.action = "burger.do?command=adminQnaList&page=1";
 	document.frm.submit();
 }
 
 function go_view(qseq){
-	location.href = "shop.do?command=adminQnaDetail&qseq=" + qseq;
+	location.href = "burger.do?command=adminQnaDetail&qseq=" + qseq;
 }
 
 function go_rep(){
-	document.frm.action="shop.do?command=adminQnaRepsave";
+	document.frm.action="burger.do?command=adminQnaRepsave";
 	document.frm.submit();
 }

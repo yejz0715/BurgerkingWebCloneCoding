@@ -5,7 +5,7 @@ header {
 }
 
 body {
- background-color: white;
+ background-color: #f2ebe6;
  margin: 0;
  padding: 0;
  font-size: 0.75em;
@@ -27,12 +27,30 @@ a:hover {
 #wrap {
  width: 971px;
  text-align: center;
- margin: 0px;
- margin-right: auto;
- margin-left: auto;
+ margin: 0px auto;
  min-height: 923px;
+ font-family: 'Noto Sans KR', sans-serif;
 }
-
+.adminLogin_header{
+	position: fixed;
+	top:0;
+	width: 971px;
+	height: 150px;
+	background-color: red;
+	color: #fff;
+	line-height: 150px;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+.adminlogo{
+	position: relative;
+	width: 485px;
+	float: left;
+}
+.adminlogo img{
+	width: 200px;
+}
 nav#top_menu {
  float: right;
  width: 600px;
@@ -141,7 +159,7 @@ footer hr {
 }
 
 article {
- min-height: 600px;
+ min-height: 300px;
 }
 
 th {
@@ -169,7 +187,7 @@ th {
 }
 
 #loginform {
- margin-left: 400px;
+ margin-top: 40px;
 }
 
 table#productList {
@@ -348,27 +366,35 @@ table#orderList {
 }
 
 nav#sub_menu {
- float: left;
  margin-right: 10px;
 }
 
 nav#sub_menu ul li {
  list-style-type: none;
+ float:left;
  margin-top: 10px;
+ margin-bottom: 10px;
+ background-color:gray;
+ width: 187px;
+ border-right: 1px solid #6a6a6a;
 }
 
 nav#sub_menu a {
  text-decoration: none;
- color: #666;
- border-bottom: 1px dotted #999;
+ color: #fff;
+ font-weight: bold;
+ border-bottom: 1px solid #999;
  display: block;
- width: 100px;
  height: 25px;
  padding: 5px;
+ line-height: 25px;
+}
+nav#sub_menu ul li:last-child {
+ border-right: 0px;
 }
 
 nav#sub_menu a:hover {
- border-bottom: 1px solid black;
+	background-color: #000;
 }
 
 nav#sub_menu h1 {
