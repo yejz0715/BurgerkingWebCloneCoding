@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.burger.dao.ProductDao;
-import com.burger.dao.ShortProductDao;
 import com.burger.dto.ProductVO;
-import com.burger.dto.shortProductVO;
 
 public class MenudetailFormAction implements Action {
 
@@ -19,20 +17,20 @@ public class MenudetailFormAction implements Action {
 		String url="Product/productDetail.jsp";
 		
 		ProductDao pdao = ProductDao.getInstance();
-		ShortProductDao spdao = ShortProductDao.getInstance();
 		
-		String spseq = request.getParameter("spseq");
-		shortProductVO spvo = spdao.getShortProductdetail(spseq);
+		String pseq = request.getParameter("pseq");
+		ArrayList<ProductVO> list = pdao.getProductdetail(pseq);
+		ProductVO pvo = list.get(0);
 		
-		ArrayList<ProductVO> list = pdao.getProductdetail(spvo.getKind1(), spvo.getKind2());
+		ArrayList<ProductVO> list2 = pdao.getProductkind(pvo.getKind1(), pvo.getKind2());
 		
-		System.out.println(spvo);
-		System.out.println(list);
+		System.out.println(list2);
 		
-		request.setAttribute("productVO", list);
-		request.setAttribute("shortProductVO", spvo);
+		request.setAttribute("list2", list2);
+		request.setAttribute("pvo", pvo);
 		request.getRequestDispatcher(url).forward(request, response);	
 
 	}
 
 }
+

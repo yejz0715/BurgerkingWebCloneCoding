@@ -36,16 +36,20 @@
 	</div>
 	<div class="menuarea">
 		<ul>
-			<c:forEach var="shortProductVO" items="${shortProductList}">
-				<li><a href="burger.do?command=menudetailForm&spseq=${shortProductVO.spseq}">
-					<div class="menuImgdiv">
-						<img class="menuImg" src="image/menu/${shortProductVO.kind1}/${shortProductVO.image}">					
-					</div>
-					<div class="menuContdiv">
-						<p>${shortProductVO.pname}</p>
-					</div>
-				</a></li>
-			</c:forEach>
+			<c:forEach var="productVO" items="${productList}">
+				<c:choose>
+					<c:when test='${productVO.kind3=="4" }'>
+					<li><a href="burger.do?command=menudetailForm&pseq=${productVO.pseq}">
+						<div class="menuImgdiv">
+							<img class="menuImg" src="image/menu/${productVO.kind1}/${productVO.image}">					
+						</div>
+						<div class="menuContdiv">
+							<p>${productVO.pname}</p>
+						</div>
+						</a></li>
+					</c:when>
+				</c:choose>
+			</c:forEach>	
 		</ul>
 	</div>
 	<!-- DB구조 변동에 따라 위 코드는 변경가능성 존재 -->

@@ -899,6 +899,165 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
     appearance: none;
 }
 
+<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
+=======
+
+/*------------------------ productdetail-------------------------- */
+.prd_intro {
+	position: relative;
+    height: 400px;
+    color: #fff;
+    background: #130101 url(../image/main/bg_prd_detailintro.png) no-repeat 50%;
+}
+
+.web_container4{
+	position: relative;
+    height: 100%;
+    overflow: hidden;
+    max-width:1184px;
+    margin:0 auto;
+    padding:0 20px
+}
+
+
+.prd_intro .intro_txt {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    width: 55%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    word-wrap: normal;
+    word-break: keep-all;
+}
+
+.prd_intro .intro_txt .tit {
+    display: block;
+    font-size: 3.75rem;
+    line-height: 100%;
+}
+
+.prd_intro .intro_txt .subtxt {
+    margin-top: 14px;
+    font-size: 1.375rem;
+}
+
+.prd_intro .prd_img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 504px;
+    height: 330px;
+    display: flex;
+    margin-top: -165px;
+    text-align: right;
+    align-items: center;
+}
+
+.menu_subinfoWrap {
+    height: 88px;
+    background: url(../image/main/bg_personality.2ff1d0f9.gif) repeat top;
+}
+.web_container4{
+    position: relative;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.btn_back {
+	position: relative;
+    display: inline-block;
+    height: 48px;
+    padding-left: 28px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #fff;
+    line-height: 48px;
+    background: url(../image/main/backspace.png) no-repeat 0;
+}
+
+.nutrition_info{
+	position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -40px;
+    overflow: hidden;
+}
+
+.nutrition_info button {
+    float: left;
+    height: 44px;
+    padding: 5px 17px 5px 19px;
+    font-size: 1.25rem;
+    color: #252423;
+    background: #fff;
+    border-radius: 6px;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.nutrition_info button>* {
+    position: relative;
+    display: inline-block;
+    padding-right: 28px;
+}
+
+.btn_nutrition>:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    background: url(../image/main/defence1.png) no-repeat 100%;
+}
+
+button{
+	appearance: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+.bg_w {
+    background: #fff;
+}
+
+.prd_submenu{text-align:center}
+.prd_submenu li{position:relative;float:none;display:inline-block;width:33%;margin:0 -2px;
+		vertical-align:top}
+.prd_submenu li:nth-child(2){border:1px solid #e9e9e9;border-width:0 1px}
+.prd_submenu li:last-child{border-right:none}
+.prd_submenu .prd_img{max-width:296px;height:194px;overflow:hidden}
+.prd_submenu .cont{min-height:165px;padding:40px 10px 10px}
+.prd_submenu .tit{font-size:2rem}
+.prd_submenu .tit>*{display:block}
+.prd_submenu .set{margin-top:20px;font-size:1.25rem}
+
+.contentsWrap {
+    min-height: 450px;
+    margin: 0 auto;
+}
+
+>>>>>>> 212770c changdae new db and menu
 .c_btn input{
     float: left;
     width: 216px;
@@ -1770,19 +1929,47 @@ strong {
 .btn_infoingredient {
     position: relative;
     padding: 0 0 0 24px;
+    float:right;
+    right:20px;
     background: url(../image/main/information.png) no-repeat 0;
+    font-size: 1.125rem;
+    color: #2e2e2e;
 }
 
 .tit03>h2, .tit03>h3, .tit03>h4 {
-    margin-right: 10em;
+    margin-right: 10em; 
+}
+.tit03 h4 {
+	position:relative;
+	display: inline-block;
 }
 
 .btn_infoingredient>:after {
     content: "";
-    position: absolute;
-    right: 0;
+    position:absolute;
     top: 0;
     width: 20px;
     height: 100%;
     background: url(../image/main/nextblack.png) no-repeat 100%;
+    font-weight: bold;
+}
+
+.txtlist01 {
+    margin: 7px 0 7px 5px;
+    line-height: 167%;
+}
+
+.txtlist01 li {
+    position: relative;
+    padding-left: 12px;
+}
+
+.txtlist01 li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 1.67em;
+    background: url(../image/main/dot.png) no-repeat 0;
 }

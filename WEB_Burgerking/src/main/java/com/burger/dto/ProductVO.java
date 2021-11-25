@@ -3,7 +3,7 @@ package com.burger.dto;
 import java.sql.Timestamp;
 
 public class ProductVO {
-	private Integer pseq;
+	private int pseq;
 	private String pname;
 	private String kind1;
 	private String kind2;
@@ -16,10 +16,11 @@ public class ProductVO {
 	private String useyn;
 	private Timestamp indate;
 	
-	public Integer getPseq() {
+
+	public int getPseq() {
 		return pseq;
 	}
-	public void setPseq(Integer pseq) {
+	public void setPseq(int pseq) {
 		this.pseq = pseq;
 	}
 	public String getPname() {

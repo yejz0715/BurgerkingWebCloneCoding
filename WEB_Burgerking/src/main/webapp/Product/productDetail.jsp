@@ -5,33 +5,38 @@
 	<div class="location" style="margin-bottom: 0px;">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
+<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 			<li><a  href="burger.do?command=menuListForm&kind1=${shortProductVO.kind1}">메뉴소개</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=menudetailForm&spseq=${shortProductVO.spseq}">${shortProductVO.pname }</a></li>
+=======
+			<li><a href="burger.do?command=index">메뉴소개</a>&nbsp;>&nbsp;</li>
+			<li><a href="burger.do?command=index"><${pvo.pname}</a></li>
+>>>>>>> 212770c changdae new db and menu
 		</ul>
 	</div>
 	<div class="prd_intro">
 		<div class="web_container4">
-			<div class="intro_txt"><strong class="tit"><span>${shortProductVO.pname}</span></strong>
+			<div class="intro_txt"><strong class="tit"><span>${pvo.pname}</span></strong>
 			<p class="subtxt"><span></span></p></div>
-			<div class="prd_img"><img src="image/menu/${shortProductVO.kind1}/${shortProductVO.image}" /></div>
+			<div class="prd_img"><img src="image/menu/${pvo.kind1}/${pvo.image}" /></div>
 		</div>
 	</div>
 	<div class="menu_subinfoWrap">
 		<div class="web_container4">
-			<a class="btn_back" href="burger.do?command=menuListForm&kind1=${shortProductVO.kind1}"><span>메뉴 목록으로 돌아가기</span></a>
+			<a class="btn_back" href="burger.do?command=menuListForm&kind1=${pvo.kind1}"><span>메뉴 목록으로 돌아가기</span></a>
 			<div class="nutrition_info"><button type="button" class="btn_nutrition">
 			<span>영양분석표, 알레르기 유발성분</span></button></div>
 		</div>
 	</div>
 	<div class="bg_w">
 		<div class="web_container5">
-			<ul class="prdmenu_list prd_submenu">
-			<c:forEach var="productVO" items="${productVO}">
+			<ul class="prdmenu_list prd_submenu"> 
+			<c:forEach var="list2" items="${list2}">
 				<li>
-				<div class="prd_img"><img src="image/menu/${productVO.kind1}/${productVO.image}" width="296" height="193"/></div>
+				<div class="prd_img"><img src="image/menu/${list2.kind2}/${list2.image}" width="296" height="193"/></div>
 				<div class="cont">
-					<div class="tit"><strong>${productVO.pname}</strong></div>
-					<div class="set"><strong>${productVO.content}</strong></div>
+					<div class="tit"><strong>${list2.pname}</strong></div>
+					<div class="set"><strong>${list2.content}</strong></div>
 				</div>
 				</li>
 			</c:forEach>

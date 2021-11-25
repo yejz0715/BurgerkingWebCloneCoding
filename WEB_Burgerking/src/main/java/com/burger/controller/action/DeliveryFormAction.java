@@ -17,12 +17,12 @@ public class DeliveryFormAction implements Action {
 		String url = "Delivery/delivery.jsp";
 		
 		request.setCharacterEncoding("UTF-8");
-		String kind1 = request.getParameter("kind1");		
+		String kind1 = request.getParameter("kind1");
 		
-		ShortProductDao spdao = ShortProductDao.getInstance();
-		ArrayList<shortProductVO> list = spdao.getShortProduct(kind1);
+		ProductDao pdao = ProductDao.getInstance();
+		ArrayList<ProductVO> list = pdao.getProduct(kind1);
 
-		request.setAttribute("shortProductList", list);
+		request.setAttribute("productList", list);
 		request.getRequestDispatcher(url).forward(request, response);
 		
 	}
