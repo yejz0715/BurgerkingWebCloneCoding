@@ -7,12 +7,15 @@
 		<meta charset="UTF-8">
 		<title>AdminLogin</title>
 		<link rel="stylesheet" href="admin/css/admin.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Myeongjo:wght@800&family=Noto+Sans+KR&display=swap" rel="stylesheet">
 		<script type="text/javascript">
 			function workerCheck(){
-				if(document.frm.workId.value==""){
+				if(document.frm.adminId.value==""){
 					alert("아이디를 입력하세요.");
 					return false;
-				}else if(document.frm.workPwd.value==""){
+				}else if(document.frm.adminPwd.value==""){
 					alert("비밀번호를 입력하세요");
 					return false;
 				}
@@ -23,26 +26,30 @@
 	<body>
 		<div id="wrap">
 			<header>
-				<div id="logo">
-					<img src="admin/images/bar_01.gif" style="float: left;">
-					<img src="admin/images/text.gif">
+				<div class="adminLogin_header">
+					<span>BurgerKing Manager Page</span>
 				</div>
 			</header>
 			<div class="clear"></div>
 			
 			<article>
 				<div id="loginform">
-					<form action="shop.do" method="post" name="frm">
+					<form action="burger.do" method="post" name="frm">
 						<input type="hidden" name="command" value="adminLogin">
+						<div class="adminlogo">
+							<a id="logo"> 
+								<img src="image/main/burgerkinglogo.png"/>
+							</a>	
+						</div>
 						<table>
 							<tr>
 								<td>아이디</td>
-								<td><input type="text" name="workId" size="10"></td>
+								<td><input type="text" name="adminId" size="10"></td>
 							</tr>
 							
 							<tr>
 								<td>비밀번호</td>
-								<td><input type="password" name="workPwd" size="10"></td>
+								<td><input type="password" name="adminPwd" size="10"></td>
 							</tr>
 							
 							<tr align="center">
@@ -51,7 +58,7 @@
 									<br><br>
 									<h4 style="color: red">${message}</h4>
 								</td>
-							</tr>
+							</tr>	
 						</table>
 					</form>
 				</div>

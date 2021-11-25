@@ -12,11 +12,10 @@
 	<body>
 		<div id="wrap">
 			<header>
-				<div id="logo">
-					<img style="width: 800px" src="admin/images/bar_01.gif">
-					<img src="admin/images/text.gif">
-					<input type="button" class="btn" value="logout" style="float: right;"
-					onclick="location.href='shop.do?command=adminLogout'">
+				<div class="adminLogin_header">
+					<span>BurgerKing Manager Page</span><br>
+					<input type="button" class="btn" value="Logout" style="float: right;"
+					onclick="location.href='burger.do?command=adminLogout'">
 				</div>
 			</header>
 			<div class="clear"></div>

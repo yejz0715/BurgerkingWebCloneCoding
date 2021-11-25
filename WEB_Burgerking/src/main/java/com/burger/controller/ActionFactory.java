@@ -28,6 +28,8 @@ import com.burger.controller.action.UpdatePwdAction;
 import com.burger.controller.action.VideoPolicyAction;
 import com.burger.controller.admin.action.AdminAction;
 import com.burger.controller.admin.action.AdminLoginAction;
+import com.burger.controller.admin.action.AdminLogoutAction;
+import com.burger.controller.admin.action.AdminProductListAction;
 
 public class ActionFactory {
 	private ActionFactory() {}
@@ -66,6 +68,8 @@ public class ActionFactory {
 		
 		else if(command.equals("admin")) ac = new AdminAction();
 		else if(command.equals("adminLogin")) ac = new AdminLoginAction();
+		else if(command.equals("adminLogout")) ac = new AdminLogoutAction();
+		else if(command.equals("adminProductList")) ac = new AdminProductListAction();
 		return ac;
 	}
 }
