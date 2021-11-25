@@ -27,6 +27,7 @@ import com.burger.controller.action.TermsAction;
 import com.burger.controller.action.UpdatePwdAction;
 import com.burger.controller.action.VideoPolicyAction;
 import com.burger.controller.admin.action.AdminAction;
+import com.burger.controller.admin.action.AdminLoginAction;
 
 public class ActionFactory {
 	private ActionFactory() {}
@@ -64,7 +65,7 @@ public class ActionFactory {
 		
 		
 		else if(command.equals("admin")) ac = new AdminAction();
-
+		else if(command.equals("adminLogin")) ac = new AdminLoginAction();
 		return ac;
 	}
 }
