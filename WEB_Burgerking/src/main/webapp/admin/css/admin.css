@@ -199,10 +199,14 @@ table#productList {
  margin-left: 100px;
  margin-bottom: 20px;
 }
-
+table#list{
+	width: 80%;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-bottom: 30px;
+}
 th, td{ 
  padding: 8px 5px;
- 
 }
 
 #productList td{ /* 테이블의 th 와 td 마진과 패딩 지정 */
@@ -212,7 +216,8 @@ th, td{
 
 #list td{ 
  padding: 8px 5px;
- text-align: left;
+ text-align: center;
+ font-size: 1.2em;
 }
 
 table#orderList {

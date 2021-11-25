@@ -38,6 +38,11 @@ function go_detail(pseq){
 	document.frm.action = url;
 	document.frm.submit();
 }
+function go_detail2(pseq){
+	var url = "burger.do?command=adminShortProductDetail&pseq=" + pseq;
+	document.frm.action = url;
+	document.frm.submit();
+}
 
 function go_mod(pseq){
 	var url = "burger.do?command=adminProductUpdateForm&pseq=" + pseq;
@@ -77,10 +82,24 @@ function go_search(){
 	document.frm.action = url;
 	document.frm.submit();
 }
+function go_search2(){
+	if(document.frm.key.value=="")
+		return;
+		
+	var url = "burger.do?command=adminShortProductList&page=1";
+	// 보던 페이지가 어떤 페이지이던간에 검색 결과의 1페이지로 가기위해 파라미터 page를 1로 전송
+	document.frm.action = url;
+	document.frm.submit();
+}
 
 function go_total(){
 	document.frm.key.value="";
 	document.frm.action = "burger.do?command=adminProductList&page=1";
+	document.frm.submit();
+}
+function go_total2(){
+	document.frm.key.value="";
+	document.frm.action = "burger.do?command=adminShortProductList&page=1";
 	document.frm.submit();
 }
 

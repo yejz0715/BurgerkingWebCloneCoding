@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.burger.controller.action.Action;
 import com.burger.dao.AdminDao;
 import com.burger.dto.AdminVO;
+import com.burger.dto.ProductVO;
 import com.burger.dto.shortProductVO;
 import com.burger.util.Paging;
 

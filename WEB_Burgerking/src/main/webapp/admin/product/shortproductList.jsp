@@ -8,8 +8,8 @@
 		<table>
 			<tr>
 				<td width="800">상품명<input type="text" name="key" value="${key}">
-				<input class="btn" type="button" name="btn_search" value="검색" onclick="go_search();">
-				<input class="btn" type="button" name="btn_total" value="전체보기" onclick="go_total();">
+				<input class="btn" type="button" name="btn_search" value="검색" onclick="go_search2();">
+				<input class="btn" type="button" name="btn_total" value="전체보기" onclick="go_total2();">
 				<input class="btn" type="button" name="btn_wrt" value="세부품목보기" onclick="location.href='burger.do?command=adminProductList&page=1&key='">
 				<input class="btn" type="button" name="btn_wrt" value="상품등록" onclick="go_wrt();">
 			</tr>
@@ -27,7 +27,7 @@
 			<tr>
 				<td height="23" align="center">${productVO.spseq}</td>
 				<td style="text-align: left; padding-left: 50px;">
-					<a href="#" onClick="go_detail('${productVO.spseq}')">${productVO.pname}</a>
+					<a href="#" onClick="go_detail2('${productVO.spseq}')">${productVO.pname}</a>
 				</td>
 				<td><fmt:formatNumber value="${productVO.kind1}"/></td>
 				<td><fmt:formatNumber value="${productVO.kind2}"/></td>
