@@ -29,6 +29,7 @@ import com.burger.controller.action.QnaFormAction;
 import com.burger.controller.action.TermsAction;
 import com.burger.controller.action.UpdatePwdAction;
 import com.burger.controller.action.VideoPolicyAction;
+import com.burger.controller.admin.action.AdminAction;
 
 public class ActionFactory {
 	private ActionFactory() {}
@@ -66,6 +67,8 @@ public class ActionFactory {
 		else if(command.equals("deliveryOrderListForm")) ac = new DeliveryOrderListFormAction();
 		else if(command.equals("deliveryCartForm")) ac = new DeliveryCartFormAction();
 		else if(command.equals("deliveryMypageForm")) ac = new DeliveryMypageFormAction();
+		else if(command.equals("admin")) ac = new AdminAction();
+
 		return ac;
 	}
 }
