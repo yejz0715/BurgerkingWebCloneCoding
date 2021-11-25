@@ -7,21 +7,14 @@
 	<table id="list" border="1">
 		<tr>
 			<th>상품분류</th>
-			<td colspan="7">${kind1}</td>
+			<td colspan="3">${kind1}</td>
+			<th>분류번호</th><td colspan="7">${productVO.kind2}</td>
 		</tr>
 		<tr>
 			<th align="center">상품명</th>
-			<td colspan="7">${productVO.pname}</td>
-		</tr>
-		<tr>
-			<th>가격</th><td width="60">${productVO.price1}</td>
-			<th>분류번호</th><td width="60">${productVO.kind2}</td>
-			<th>세부번호</th><td>${productVO.kind3}</td>
-			<th>등록일</th><td>${productVO.indate}</td>
-		</tr>
-		<tr>
-			<th>상세설명</th>
-			<td colspan="7"><pre>${productVO.content}</pre></td>
+			<td colspan="3">${productVO.pname}</td>
+			<th align="center">사용유무</th>
+			<td colspan="3">${useyn}</td>
 		</tr>
 		<tr>
 			<th>상품이미지</th>
@@ -30,7 +23,7 @@
 			</td>
 		</tr>
 	</table>
-	<input type="button" class="btn" value="수정" onclick="go_mod('${productVO.pseq}')">
+	<input type="button" class="btn" value="수정" onclick="go_mod('${productVO.spseq}')">
 	<input type="button" class="btn" value="목록" onclick="go_mov()">
 </article>
 

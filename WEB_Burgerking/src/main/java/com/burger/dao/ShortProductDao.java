@@ -70,6 +70,31 @@ public class ShortProductDao {
 		return spvo;
 	}
 
+
+	public shortProductVO getshortProduct(String pseq) {
+		shortProductVO pvo = new shortProductVO();
+		String sql = "select * from shortproduct where spseq = ?";
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, pseq);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				pvo.setSpseq(Integer.parseInt(pseq));
+				pvo.setPname(rs.getString("pname"));
+				pvo.setKind1(rs.getString("kind1"));
+				pvo.setKind2(rs.getString("kind2"));
+				pvo.setUseyn(rs.getInt("useyn"));
+				pvo.setImage(rs.getString("image"));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return pvo;
+	}
+	
 }
 
 
