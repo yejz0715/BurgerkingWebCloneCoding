@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import com.burger.dto.AdminVO;
 import com.burger.dto.ProductVO;
+import com.burger.dto.shortProductVO;
 import com.burger.util.DBman;
 import com.burger.util.Paging;
 
@@ -100,6 +101,43 @@ public class AdminDao {
 				pvo.setContent(rs.getString("content"));
 				pvo.setImage(rs.getString("image"));
 				pvo.setUseyn(rs.getString("useyn"));
+				list.add(pvo);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return list;
+	}
+
+	public ArrayList<shortProductVO> listShortProduct(Paging paging, String key) {
+		ArrayList<shortProductVO> list = new ArrayList<shortProductVO>();
+		//String sql ="select * from product order by pseq desc";
+		String sql = "select * from ("
+				+ "select * from ("
+				+ "select rownum as rn, p.* from "
+				+ "((select * from shortproduct where pname like '%'||?||'%' order by spseq desc) p)"
+				+ ") where rn >=?"
+				+ ") where rn <=?";
+		
+		try {
+			con = DBman.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, key);
+			pstmt.setInt(2, paging.getStartNum());
+			pstmt.setInt(3, paging.getEndNum());
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				shortProductVO pvo = new shortProductVO();
+				pvo.setSpseq(rs.getInt("spseq"));
+				pvo.setPname(rs.getString("pname"));
+				pvo.setKind1(rs.getString("kind1"));
+				pvo.setKind2(rs.getString("kind2"));
+				pvo.setImage(rs.getString("image"));
+				pvo.setUseyn(rs.getInt("useyn"));
 				list.add(pvo);
 			}
 		}catch(SQLException e) {
