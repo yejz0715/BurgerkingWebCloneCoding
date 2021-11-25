@@ -26,6 +26,7 @@ import com.burger.controller.action.QnaFormAction;
 import com.burger.controller.action.TermsAction;
 import com.burger.controller.action.UpdatePwdAction;
 import com.burger.controller.action.VideoPolicyAction;
+import com.burger.controller.admin.action.AdminAction;
 
 public class ActionFactory {
 	private ActionFactory() {}
@@ -60,6 +61,9 @@ public class ActionFactory {
 		else if(command.equals("eventTab2")) ac = new EventTab2Action();
 		else if(command.equals("eventTab3")) ac = new EventTab3Action();
 		else if(command.equals("eventDetailForm")) ac = new EventDetailFormAction();
+		
+		
+		else if(command.equals("admin")) ac = new AdminAction();
 
 		return ac;
 	}
