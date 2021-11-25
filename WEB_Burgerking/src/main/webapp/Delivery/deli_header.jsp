@@ -62,3 +62,4 @@
 				</c:if>
 			</div>
 		</div>
+<%@ include file="../Delivery/deli_orderCart.jsp"%>

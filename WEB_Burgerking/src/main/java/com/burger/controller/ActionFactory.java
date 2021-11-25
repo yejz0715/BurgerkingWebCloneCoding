@@ -8,7 +8,9 @@ import com.burger.controller.action.FindPwdFormAction;
 import com.burger.controller.action.Action;
 import com.burger.controller.action.AppGuideFormAction;
 import com.burger.controller.action.BrandStroyFormAction;
+import com.burger.controller.action.DeliveryCartForm;
 import com.burger.controller.action.DeliveryFormAction;
+import com.burger.controller.action.DeliveryOrderListForm;
 import com.burger.controller.action.EventDetailFormAction;
 import com.burger.controller.action.EventListFormAction;
 import com.burger.controller.action.EventTab2Action;
@@ -60,7 +62,8 @@ public class ActionFactory {
 		else if(command.equals("eventTab2")) ac = new EventTab2Action();
 		else if(command.equals("eventTab3")) ac = new EventTab3Action();
 		else if(command.equals("eventDetailForm")) ac = new EventDetailFormAction();
-
+		else if(command.equals("deliveryOrderListForm")) ac = new DeliveryOrderListForm();
+		else if(command.equals("deliveryCartForm")) ac = new DeliveryCartForm();
 		return ac;
 	}
 }
