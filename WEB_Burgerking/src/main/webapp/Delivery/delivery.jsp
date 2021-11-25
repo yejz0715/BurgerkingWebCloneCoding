@@ -39,13 +39,15 @@
 				<c:forEach var="productVO" items="${productList}">
 				<c:choose>
 					<c:when test='${productVO.kind3=="4" }'>
-					<li><a href="burger.do?command=deliveryForm&pseq=${productVO.pseq}">
+					<li><a href="burger.do?command=deliveryDetail&pseq=${productVO.pseq}">
 						<div class="menuImgdiv">
 							<img class="menuImg" src="image/menu/${productVO.kind1}/${productVO.image}">					
 						</div>
 						<div class="menuContdiv">
 							<p>${productVO.pname}</p>
-							<p style="font-weight:bold;">${productVO.price1}~</p>
+							<p style="font-size:90%;color:#8d8d8d">${productVO.content}</p>
+							<p style="color:red;font-weight:bold">&#8361;${productVO.price1}~</p>
+							
 						</div>
 						</a></li>
 					</c:when>

@@ -41,6 +41,7 @@ function check_input3(){
 		b.innerText = "아이디를 입력해 주세요.";
 	}
 }
+
 function check_input4(){
 	var a = document.getElementById("pwd");
 	var b = document.getElementById("pwd_coment");
@@ -96,3 +97,11 @@ function updatepwdChk(){
 	}
 	return true;
 }
+
+function deliveryDetail(){
+	var url = "shop.do?command=deliveryDetail&pseq=${productVO.pseq}";
+	var opt = "toolbar=no,menubar=no,scrollbars=no,resizable=no,width=700,";
+	opt = opt + "height=500, top=300, left=300";
+	window.open(url, "Find Id/Pw", opt);
+}
+

@@ -32,6 +32,7 @@ values(pseq.nextVal, '더블화이트갈릭와퍼', 9900, 0, 0, '2', '1', '1', '
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
 values(pseq.nextVal, '더블화이트갈릭와퍼', 9900, 0, 0, '2', '1', '4', 'doublewhitegarlic.png',
 <<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
+<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 ' ', 1);
 =======
 '단품', 1);
@@ -39,6 +40,9 @@ values(pseq.nextVal, '더블화이트갈릭와퍼', 9900, 0, 0, '2', '1', '4', '
 
 <<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 =======
+=======
+' ', 1);
+>>>>>>> c22856e changdae delivery detail
 
 >>>>>>> 212770c changdae new db and menu
 
@@ -821,10 +825,14 @@ values(pseq.nextVal, '선데 딸기', 0, 0, 0, '7', '10', '1', 'sundaystrawberry
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
 values(pseq.nextVal, '선데', 0, 0, 0, '7', '10', '4', 'sunday3kind.png',
 <<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
+<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 ' ', 1);
 =======
 '딸기맛의 상큼함이 살아있어요', 1);
 >>>>>>> 212770c changdae new db and menu
+=======
+' ', 1);
+>>>>>>> c22856e changdae delivery detail
 
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
@@ -870,6 +878,7 @@ select * from PRODUCT
 delete from product;
 >>>>>>> 843c7c4 product Table date Update
 
+<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 insert into event(eseq, subject, content, image, startdate, enddate, state)
 values(qseq.nextVal, 'Best WHOPPER 2개 구매시 7000원','1. 행사명 : Best WHOPPER 2개 구매시 7000원
 
@@ -1708,3 +1717,6 @@ values(qseq.nextVal, '2 for 5000원', '1. 행사명 : 2 for 5000원
 select * from event;
 insert into admin values('admin', 'admin1234', '김우진', '010-2431-6247');
 
+=======
+update PRODUCT set content=' ' where pname='선데' and kind3=4
+>>>>>>> c22856e changdae delivery detail
