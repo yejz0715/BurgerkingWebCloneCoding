@@ -7,9 +7,6 @@
 	<form name="frm" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="pseq" value="${productVO.pseq}">
 		<input type="hidden" name="oldImage" value="${productVO.image}">
-		<input type="hidden" name="price2" value="${productVO.price2}">
-		<input type="hidden" name="price3" value="${productVO.price3}">
-		<input type="hidden" name="imagelocation" value="images/menu/${productVO.kind1}">
 		<table id="list" width="500" border="1">
 			<tr>
 				<th>상품분류</th>
