@@ -8,13 +8,14 @@
 		<tr>
 			<th>상품분류</th>
 			<td colspan="3">${kind1}</td>
-			<th>분류번호</th><td colspan="7">${productVO.kind2}</td>
+			<th>분류번호</th><td>${productVO.kind2}</td>
+			<th>세부</th><td>${kind3}</td>
 		</tr>
 		<tr>
 			<th align="center">상품명</th>
-			<td colspan="3">${productVO.pname}</td>
+			<td colspan="5">${productVO.pname}</td>
 			<th align="center">사용유무</th>
-			<td colspan="3">${useyn}</td>
+			<td colspan="1">${useyn}</td>
 		</tr>
 		<tr>
 			<th>상품이미지</th>
@@ -23,7 +24,7 @@
 			</td>
 		</tr>
 	</table>
-	<input type="button" class="btn" value="수정" onclick="go_mod('${productVO.pseq}')">
+	<input type="button" class="btn" value="수정" onclick="go_mod2('${productVO.pseq}')">
 	<input type="button" class="btn" value="목록" onclick="go_mov2()">
 </article>
 

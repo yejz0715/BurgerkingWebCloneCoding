@@ -68,7 +68,10 @@ function go_mod_save(){
 		document.frm.price1.focus();
 	}else if(document.frm.kind2.value==""){
 		alert("분류번호를 선택하세요.");
-		document.frm.price2.focus();
+		document.frm.kind2.focus();
+	}else if(document.frm.kind3.value==""){
+		alert("세부를 선택하세요.");
+		document.frm.kind3.focus();
 	}else if(document.frm.content.value==""){
 		alert("상품상세를 선택하세요.");
 		document.frm.content.focus();
@@ -80,24 +83,18 @@ function go_mod_save(){
 	}
 }
 function go_mod_save2(){
-	if(document.frm.kind.value==""){
+	if(document.frm.kind1.value==""){
 		alert("상품분류를 선택하세요.");
-		document.frm.kind.focus();
-	}else if(document.frm.name.value==""){
+		document.frm.kind1.focus();
+	}else if(document.frm.pname.value==""){
 		alert("상품명을 선택하세요.");
-		document.frm.name.focus();
-	}else if(document.frm.price1.value==""){
-		alert("원가를 선택하세요.");
-		document.frm.price1.focus();
-	}else if(document.frm.price2.value==""){
-		alert("판매가를 선택하세요.");
-		document.frm.price2.focus();
-	}else if(document.frm.content.value==""){
-		alert("상품상세를 선택하세요.");
-		document.frm.content.focus();
+		document.frm.pname.focus();
+	}else if(document.frm.kind2.value==""){
+		alert("분류번호를 선택하세요.");
+		document.frm.kind2.focus();
 	}else{
 		if(confirm('수정하시겠습니까?')){
-			document.frm.action = "burger.do?command=adminProductUpdate";
+			document.frm.action = "burger.do?command=adminShortProductUpdate";
 			document.frm.submit();
 		}
 	}

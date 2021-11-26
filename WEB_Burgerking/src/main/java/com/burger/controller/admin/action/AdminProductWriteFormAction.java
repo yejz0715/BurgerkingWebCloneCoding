@@ -15,13 +15,15 @@ public class AdminProductWriteFormAction implements Action {
 		String url = "admin/product/productWrite.jsp";
 		
 		HttpSession session = request.getSession();
-		/*
-		 * AdminVO avo = (AdminVO)session.getAttribute("loginAdmin"); if(avo == null) {
-		 * url = "shop.do?command=admin"; }else { String kindList[] = {"Heels", "Boots",
-		 * "Sandals", "Shcakers", "Slipers", "On sale"};
-		 * request.setAttribute("kindList", kindList); }
-		 * 
-		 * request.getRequestDispatcher(url).forward(request, response);
-		 */
+
+		AdminVO avo = (AdminVO)session.getAttribute("loginAdmin"); 
+		if(avo == null) {
+			url = "burger.do?command=admin"; 
+		}else { 
+			String kindList[] = {"Heels", "Boots",	"Sandals", "Shcakers", "Slipers", "On sale"
+		};
+		request.setAttribute("kindList", kindList); }
+		
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 }

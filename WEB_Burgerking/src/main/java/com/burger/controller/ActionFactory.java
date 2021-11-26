@@ -30,8 +30,11 @@ import com.burger.controller.admin.action.AdminAction;
 import com.burger.controller.admin.action.AdminLoginAction;
 import com.burger.controller.admin.action.AdminLogoutAction;
 import com.burger.controller.admin.action.AdminProductListAction;
+import com.burger.controller.admin.action.AdminProductUpdateAction;
 import com.burger.controller.admin.action.AdminProductUpdateFormAction;
 import com.burger.controller.admin.action.AdminShortProductDetailAction;
+import com.burger.controller.admin.action.AdminShortProductUpdateForm;
+import com.burger.controller.admin.action.AdminShortProductUpdateFormAction;
 import com.burger.controller.admin.action.AdminshortProductListAction;
 import com.burger.controller.admin.action.AdminProductDetailAction;
 
@@ -78,6 +81,9 @@ public class ActionFactory {
 		else if(command.equals("adminProductDetail")) ac = new AdminProductDetailAction();
 		else if(command.equals("adminShortProductDetail")) ac= new AdminShortProductDetailAction();
 		else if(command.equals("adminProductUpdateForm")) ac = new AdminProductUpdateFormAction();
+		else if(command.equals("adminProductUpdate")) ac = new AdminProductUpdateAction();
+		else if(command.equals("adminShortProductUpdate")) ac = new AdminShortProductUpdateForm();
+		else if(command.equals("adminShortProductUpdateForm")) ac = new AdminShortProductUpdateFormAction();
 		return ac;
 	}
 }

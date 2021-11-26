@@ -37,7 +37,7 @@ public class AdminShortProductDetailAction implements Action {
 			// 추출한 kind 번호로 배열에서 해당 타이틀 추출 & 리퀘스트에 저장 
 			request.setAttribute("kind1", kindList1[index]);
 			request.setAttribute("useyn", useynList[index2]);
-			request.setAttribute("kind1", kindList2[index3]);
+			request.setAttribute("kind3", kindList2[index3]);
 			request.setAttribute("productVO", pvo); 
 		}
 		request.getRequestDispatcher(url).forward(request,response);
