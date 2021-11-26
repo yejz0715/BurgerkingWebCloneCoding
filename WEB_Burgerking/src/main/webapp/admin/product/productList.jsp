@@ -20,11 +20,12 @@
 			<th>번호</th>
 			<th>상품명</th>
 			<th>가격</th>
-			<th>메뉴종류</th>
-			<th>메뉴목록번호</th>
-			<th>메뉴하위번호</th>
+			<th>상품분류</th>
+			<th>분류번호</th>
+			<th>세부</th>
 			<th>등록일</th>
 			<th>사용유무</th>
+			<th>삭제</th>
 		</tr>
 		<c:forEach items="${productList}" var="productVO">
 			<tr>
@@ -43,9 +44,13 @@
 						<c:otherwise>사용</c:otherwise>
 					</c:choose>
 				</td>
+				<td>
+					<input type="checkbox" name="delete" value="1">
+				</td>
 			</tr>
 		</c:forEach>
 	</table><br>
+	<input type="button" name="del" value="삭제" onclick="del_product();">
 	
 	<jsp:include page="/admin/paging/paging.jsp">
 		<jsp:param name="page" value="${paging.page}"/>

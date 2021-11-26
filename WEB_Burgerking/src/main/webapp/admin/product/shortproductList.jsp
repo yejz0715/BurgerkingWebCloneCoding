@@ -19,9 +19,9 @@
 		<tr>
 			<th>번호</th>
 			<th>상품명</th>
-			<th>메뉴종류</th>
-			<th>메뉴목록번호</th>
-			<th>목록하위번호</th>
+			<th>상품분류</th>
+			<th>분류번호</th>
+			<th>세부</th>
 			<th>사용유무</th>
 		</tr>
 		<c:forEach items="${shortproductList}" var="productVO">

@@ -197,4 +197,66 @@ public class AdminDao {
 		} finally { DBman.close(con, pstmt, rs);  }	
 		
 	}
+
+	public void insertProduct(ProductVO pvo) {
+		String sql = "insert into product(pseq, kind1, kind2, kind3, pname, price1, price2, price3,"
+				+ " content, image, useyn) values(pseq.nextVal, ?,?,?,?,?,?,?,?,?,?)";
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, pvo.getKind1());      
+			pstmt.setString(2, pvo.getKind2());
+			pstmt.setString(3, pvo.getKind3());
+		    pstmt.setString(4, pvo.getPname());
+		    pstmt.setInt(5, pvo.getPrice1());
+		    pstmt.setInt(6, pvo.getPrice2());
+		    pstmt.setInt(7, pvo.getPrice3());
+		    pstmt.setString(8, pvo.getContent());
+		    pstmt.setString(9, pvo.getImage());  
+		    pstmt.setString(10, pvo.getUseyn());
+		    pstmt.executeUpdate();
+		} catch (SQLException e) {	e.printStackTrace();
+		} finally { DBman.close(con, pstmt, rs); 	}
+		
+	}
+
+	public int checkShortProductYN(String k1, String k2, String k3) {
+		int result=1;
+		String sql = "select * from product where kind1 = ?";
+		
+		try {
+			con = DBman.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, k1);
+			rs = pstmt.executeQuery();
+			
+			if(!rs.next()) {
+				result = 2;
+				return result;
+			}
+			
+			sql = "select * from product where kind1=? and kind2 = ?";
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, k1);
+			pstmt.setString(2, k2);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				result = 3;
+				return result;
+			}
+			
+			if(k3.equals("4")) {
+				result = 4;
+				return result;
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return result;
+	}
 }

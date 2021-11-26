@@ -20,9 +20,9 @@ public class AdminProductWriteFormAction implements Action {
 		if(avo == null) {
 			url = "burger.do?command=admin"; 
 		}else { 
-			String kindList[] = {"Heels", "Boots",	"Sandals", "Shcakers", "Slipers", "On sale"
-		};
-		request.setAttribute("kindList", kindList); }
+			String kindList[] = {"스페셜&할인팩", "프리미엄", "와퍼", "주니어&버거", "올데이킹&치킨버거", "사이드", "음료&디저트", "독퍼"};
+			request.setAttribute("kindList", kindList); 
+		}
 		
 		request.getRequestDispatcher(url).forward(request, response);
 	}

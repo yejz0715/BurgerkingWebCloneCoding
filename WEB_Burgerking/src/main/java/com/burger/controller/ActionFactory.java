@@ -29,9 +29,12 @@ import com.burger.controller.action.VideoPolicyAction;
 import com.burger.controller.admin.action.AdminAction;
 import com.burger.controller.admin.action.AdminLoginAction;
 import com.burger.controller.admin.action.AdminLogoutAction;
+import com.burger.controller.admin.action.AdminProductDeleteAction;
 import com.burger.controller.admin.action.AdminProductListAction;
 import com.burger.controller.admin.action.AdminProductUpdateAction;
 import com.burger.controller.admin.action.AdminProductUpdateFormAction;
+import com.burger.controller.admin.action.AdminProductWriteAction;
+import com.burger.controller.admin.action.AdminProductWriteFormAction;
 import com.burger.controller.admin.action.AdminShortProductDetailAction;
 import com.burger.controller.admin.action.AdminShortProductUpdateAction;
 import com.burger.controller.admin.action.AdminShortProductUpdateFormAction;
@@ -84,6 +87,9 @@ public class ActionFactory {
 		else if(command.equals("adminProductUpdate")) ac = new AdminProductUpdateAction();
 		else if(command.equals("adminShortProductUpdate")) ac = new AdminShortProductUpdateAction();
 		else if(command.equals("adminShortProductUpdateForm")) ac = new AdminShortProductUpdateFormAction();
+		else if(command.equals("adminProductWriteForm")) ac = new AdminProductWriteFormAction();
+		else if(command.equals("adminProductWrite")) ac = new AdminProductWriteAction();
+		else if(command.equals("adminProductDelete")) ac = new AdminProductDeleteAction();
 		return ac;
 	}
 }
