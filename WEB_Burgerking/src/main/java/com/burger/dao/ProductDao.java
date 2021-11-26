@@ -173,7 +173,21 @@ public class ProductDao {
 		}
 		return pvo;
 	}
-	
+
+	public void deleteProduct(String pseq) {
+		String sql = "delete from product where pseq=?";
+		con = DBman.getConnection();
+		
+		try {
+		      pstmt = con.prepareStatement(sql); 
+		      pstmt.setInt(1, Integer.parseInt(pseq));
+		      pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+	    } finally { 
+	    	DBman.close(con, pstmt, rs);
+	    }   		
+	}
 }
 
 

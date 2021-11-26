@@ -12,12 +12,12 @@ import com.burger.dao.ProductDao;
 public class AdminProductDeleteAction implements Action {
 
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String[] pseqArr = request.getParameterValues("pseq");
+		String[] pseqArr = request.getParameterValues("delete");
 		
 		ProductDao pdao = ProductDao.getInstance();
-		for(String pseq : pseqArr) 
-			pdao.deleteCart(pseq);
-		
-		response.sendRedirect("shop.do?command=cartList");
+		for(String pseq : pseqArr) { 
+			pdao.deleteProduct(pseq);
+		}
+		response.sendRedirect("burger.do?command=adminProductList");
 	}
 }
