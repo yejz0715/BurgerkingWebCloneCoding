@@ -26,7 +26,7 @@ public class AdminProductUpdateAction implements Action {
 		else { 
 			ProductVO pvo = new ProductVO();
 			ServletContext context = session.getServletContext(); 
-			String path = context.getRealPath("admin/images");
+			String path = context.getRealPath("image/menu");
 			
 			MultipartRequest multi = new MultipartRequest(request, path, 5*1024*1024,
 					"UTF-8", new DefaultFileRenamePolicy());

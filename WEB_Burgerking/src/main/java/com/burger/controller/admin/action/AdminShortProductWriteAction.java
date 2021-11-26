@@ -27,7 +27,7 @@ String url = "burger.do?command=adminShortProductList";
 		else {
 			// 현재 프로젝트의 세션을 통해 적용할 저장경로 얻음
 			ServletContext context = session.getServletContext(); String uploadFilePath =
-			context.getRealPath("admin/images");
+			context.getRealPath("image/menu");
 			
 			// MultipartRequest 객체 생성 - 파일 업로드 
 			MultipartRequest multi = new MultipartRequest( request, uploadFilePath, 5*1024*1024, "UTF-8", new
@@ -42,7 +42,7 @@ String url = "burger.do?command=adminShortProductList";
 			if(result == 2) {
 				response.setContentType("text/html; charset=UTF-8");
 				PrintWriter writer = response.getWriter();
-				writer.println("<script>alert('해당하는 분류번호 값이 이미 있습니다.'); location.href='burger.do?command=adminProductWriteForm';</script>");
+				writer.println("<script>alert('해당하는 분류번호 값이 이미 있습니다.'); location.href='burger.do?command=adminShortProductWriteForm';</script>");
 				writer.close();
 			}
 			

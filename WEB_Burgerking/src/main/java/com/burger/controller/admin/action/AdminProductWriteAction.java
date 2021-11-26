@@ -27,7 +27,7 @@ public class AdminProductWriteAction implements Action {
 		else {
 			// 현재 프로젝트의 세션을 통해 적용할 저장경로 얻음
 			ServletContext context = session.getServletContext(); String uploadFilePath =
-			context.getRealPath("admin/images");
+			context.getRealPath("image/menu");
 			
 			// MultipartRequest 객체 생성 - 파일 업로드 
 			MultipartRequest multi = new MultipartRequest( request, uploadFilePath, 5*1024*1024, "UTF-8", new
