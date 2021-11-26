@@ -327,29 +327,18 @@ height: 15px; border-left: 0px;}
 .web_deliveryContainer{
 	 position: relative;
 	 display:flex;
-     justify-content :space-evenly;
+     justify-content:space-around;
      align-items: center;
      height: 124px;
     font-size: 1.375rem;
-   /*  width: 100vw; */
-     max-width: 1184px; 
     margin: 0 auto;
     padding: 0 20px; 
      background:#2C3033;
 }
 
-.web_deliveryContainer a{  
-	margin: 0;
-    color: #fff;
-    text-decoration: none;
-    outline: none;
-    cursor: pointer;
-    }
-
 .deliveryOrder{
 	display:flex;
-	flex-direction: row;
-	
+	flex-direction: row;		
 }
 
 .deliveryOrder dl{
@@ -364,6 +353,8 @@ height: 15px; border-left: 0px;}
 .deliveryCart{
 	display:flex;
 	flex-direction: row;
+	left:20px;
+	margin-right:150px;
 }
 
 .deliveryCart dl{
@@ -375,14 +366,26 @@ height: 15px; border-left: 0px;}
     font-size: 1.125rem;
 }
 
+.web_deliveryContainer a{  
+	margin: 0;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    }
+
 .count{
-	height: 30px;
+	position:absolute;
+	height: 25px;
+	width: 25px;
     margin-left: 14px;
-    padding:10px;
+    padding:5px;
     font-weight: 700;
     font-size: 1rem;
     color:#fff;
-    line-height: 30px;
+    line-height: 25px;
+    text-align:center;
+    margin-bottom:5px;
     border-radius: 15px;
     background: #e22219;
 }

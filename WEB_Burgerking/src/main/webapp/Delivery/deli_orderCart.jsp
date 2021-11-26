@@ -2,10 +2,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <link href="css/burger.css" rel="stylesheet">
+
 <article>
+
  <div class="web_deliveryContainer">
  
-  
+ 
  <a href="burger.do?command=deliveryOrderListForm">
  <div class="deliveryOrder">
  <img class= "deliveryIcon" src="image/main/my_delivery.png" />
@@ -20,7 +22,7 @@
  <dl>
  <dt><strong>딜리버리 주문내역</strong>
  <em class="count">
- <span>숫자</span>
+ <span>10</span>
  </em>
  </dt>
  <dd>주문내역</dd>
@@ -45,7 +47,7 @@
  <dl>
  <dt><strong>카트</strong>
  <em class="count">
- <span>1</span>
+ <span>10</span>
  </em>
  </dt>
  <dd>카트에 담은 상품</dd>
@@ -57,6 +59,7 @@
   </a>
   
  </div>
+
  </article>
  
  
