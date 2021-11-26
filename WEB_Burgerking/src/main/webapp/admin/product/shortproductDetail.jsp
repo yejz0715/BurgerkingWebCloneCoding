@@ -23,8 +23,8 @@
 			</td>
 		</tr>
 	</table>
-	<input type="button" class="btn" value="수정" onclick="go_mod('${productVO.spseq}')">
-	<input type="button" class="btn" value="목록" onclick="go_mov()">
+	<input type="button" class="btn" value="수정" onclick="go_mod('${productVO.pseq}')">
+	<input type="button" class="btn" value="목록" onclick="go_mov2()">
 </article>
 
 <%@ include file="/admin/footer.jsp"%>

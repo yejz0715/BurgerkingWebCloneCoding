@@ -30,7 +30,7 @@ public class AdminProductDetailAction implements Action {
 			// 카테고리 별 타이틀을 배열에 저장 
 			String kindList1[] = {"0", "스페셜&할인팩", "프리미엄", "와퍼", "주니어&버거", "올데이킹&치킨버거", "사이드", "음료&디저트", "독퍼"}; // 검색해온 상품에서 kind 값 추출 & 상품의 kind 값을 정수로 변환
 			int index = Integer.parseInt(pvo.getKind1());
-			String kindList3[] = {"0", "라지세트", "세트", "단품"};
+			String kindList3[] = {"0", "Single", "Set", "LargeSet", "Menu list"};
 			int index2 = Integer.parseInt(pvo.getKind3());
 			// 추출한 kind 번호로 배열에서 해당 타이틀 추출 & 리퀘스트에 저장 
 			request.setAttribute("kind1", kindList1[index]);

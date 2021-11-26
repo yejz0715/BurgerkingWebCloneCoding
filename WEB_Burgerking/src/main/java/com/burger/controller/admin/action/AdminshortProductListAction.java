@@ -12,7 +12,6 @@ import com.burger.controller.action.Action;
 import com.burger.dao.AdminDao;
 import com.burger.dto.AdminVO;
 import com.burger.dto.ProductVO;
-import com.burger.dto.shortProductVO;
 import com.burger.util.Paging;
 
 public class AdminshortProductListAction implements Action {
@@ -49,9 +48,9 @@ public class AdminshortProductListAction implements Action {
 		Paging paging = new Paging(); paging.setPage(page);
 		
 		AdminDao adao = AdminDao.getInstance(); 
-		int count = adao.getAllCount("shortproduct", "pname", key); 
+		int count = adao.getshortPCount("product", "pname", key); 
 		paging.setTotalCount(count);
-		ArrayList<shortProductVO> productList = adao.listShortProduct(paging, key);
+		ArrayList<ProductVO> productList = adao.listShortProduct(paging, key);
 		
 		request.setAttribute("shortproductList", productList);
 		request.setAttribute("paging", paging);
