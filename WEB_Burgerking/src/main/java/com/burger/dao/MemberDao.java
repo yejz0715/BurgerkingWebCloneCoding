@@ -149,4 +149,10 @@ public class MemberDao {
 			DBman.close(con, pstmt, rs);
 		}
 	}
-}
+
+	
+
+	
+		
+	
+   }
