@@ -104,4 +104,3 @@ function deliveryDetail(pseq){
 	window.open(url, "delivery", opt);
 }
 
-function 
