@@ -21,8 +21,6 @@ public class MenudetailFormAction implements Action {
 		ProductDao pdao = ProductDao.getInstance();
 		ShortProductDao spdao = ShortProductDao.getInstance();
 		
-		//String pname = request.getParameter("pname");
-		//shortProductVO spvo = spdao.getShortProductdetail(pname);
 		String spseq = request.getParameter("spseq");
 		shortProductVO spvo = spdao.getShortProductdetail(spseq);
 		

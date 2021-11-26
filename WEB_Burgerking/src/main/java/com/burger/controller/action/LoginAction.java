@@ -40,7 +40,7 @@ public class LoginAction implements Action {
 			HttpSession session = request.getSession();
 			mdao.setLastDate(mvo);
 			session.setAttribute("loginUser", mvo);
-			url="burger.do?command=deliveryForm";
+			url="burger.do?command=deliveryForm&kind1=1";
 		}
 		
 		RequestDispatcher rd = request.getRequestDispatcher(url);
