@@ -790,8 +790,8 @@ update PRODUCT set pname='불고기와퍼주니어' where pseq='84';
 update PRODUCT set pname='치즈프라이' where pseq='134';
 update SHORTPRODUCT set pname='기네스' where pseq='84';
 
-select * from SHORTPRODUCT
-select * from PRODUCT
+select * from SHORTPRODUCT;
+select * from PRODUCT;
 
 insert into event(eseq, subject, content, image, startdate, enddate, state)
 values(qseq.nextVal, 'Best WHOPPER 2개 구매시 7000원','1. 행사명 : Best WHOPPER 2개 구매시 7000원
