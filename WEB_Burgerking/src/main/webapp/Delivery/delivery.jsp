@@ -47,7 +47,6 @@
 							<p>${productVO.pname}</p>
 							<p style="font-size:90%;color:#8d8d8d">${productVO.content}</p>
 							<p style="color:red;font-weight:bold">&#8361;${productVO.price1}~</p>
-							
 						</div>
 						</a></li>
 					</c:when>

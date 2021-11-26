@@ -875,6 +875,7 @@ select * from PRODUCT;
 select * from SHORTPRODUCT
 select * from PRODUCT
 <<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
+<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 delete from product;
 >>>>>>> 843c7c4 product Table date Update
 
@@ -1720,3 +1721,5 @@ insert into admin values('admin', 'admin1234', '김우진', '010-2431-6247');
 =======
 update PRODUCT set content=' ' where pname='선데' and kind3=4
 >>>>>>> c22856e changdae delivery detail
+=======
+>>>>>>> ce7de48 changdae new 15
