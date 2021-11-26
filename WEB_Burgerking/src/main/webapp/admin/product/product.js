@@ -63,6 +63,26 @@ function go_save(){
 	}
 }
 
+function go_save2(){
+	var theForm = document.frm;
+	if(theForm.kind1.value==""){
+		alert("상품분류를 선택하세요.");
+		theForm.kind1.focus();
+	}else if(theForm.pname.value==""){
+		alert("상품명을 입력하세요.");
+		theForm.pname.focus();
+	}else if(theForm.kind2.value==""){
+		alert("분류번호를 입력하세요");
+		theForm.kind2.focus();
+	}else if(theForm.image.value==""){
+		alert("상품이미지를 입력하세요");
+		theForm.image.focus();
+	}else{
+		theForm.action = "burger.do?command=adminShortProductWrite";
+		theForm.submit();
+	}
+}
+
 function go_detail(pseq){
 	var url = "burger.do?command=adminProductDetail&pseq=" + pseq;
 	document.frm.action = url;

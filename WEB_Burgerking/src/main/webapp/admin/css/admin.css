@@ -210,8 +210,7 @@ th, td{
 }
 
 #productList td{ /* 테이블의 th 와 td 마진과 패딩 지정 */
- padding-right: 20px;
- text-align: right;
+ text-align: center;
 }
 
 #list td{ 
@@ -219,7 +218,20 @@ th, td{
  text-align: center;
  font-size: 1.2em;
 }
-
+#list td input, textarea{ 
+ 	width: 100%;
+ 	height: 100%;
+ 	border: 0px;
+	text-align: center;
+ 	font-size: 1.2em;
+ 	font-family: 'Noto Sans KR', sans-serif;
+}
+#list .kind1{
+	width: 80%;
+	text-align: center;
+	border: 0px;
+	font-size: 1.2em;
+}
 table#orderList {
  border-collapse: collapse; /* border 사이의 간격 없앰 */
  border-top: 2px solid #333;

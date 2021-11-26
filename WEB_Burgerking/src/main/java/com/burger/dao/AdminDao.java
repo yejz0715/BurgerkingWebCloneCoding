@@ -259,4 +259,28 @@ public class AdminDao {
 		
 		return result;
 	}
+
+	public int checkShortProductYN2(String k1, String k2) {
+		int result=1;
+		String sql = "select * from product where kind1=? and kind2 = ?";
+		
+		try {
+			con = DBman.getConnection();			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, k1);
+			pstmt.setString(2, k2);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				result = 2;
+				return result;
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return result;
+	}
 }

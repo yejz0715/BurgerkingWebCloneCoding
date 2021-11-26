@@ -11,7 +11,7 @@
 				<input class="btn" type="button" name="btn_search" value="검색" onclick="go_search2();">
 				<input class="btn" type="button" name="btn_total" value="전체보기" onclick="go_total2();">
 				<input class="btn" type="button" name="btn_wrt" value="세부품목보기" onclick="location.href='burger.do?command=adminProductList&page=1&key='">
-				<input class="btn" type="button" name="btn_wrt" value="상품등록" onclick="go_wrt();">
+				<input class="btn" type="button" name="btn_wrt" value="상품등록" onclick="go_wrt2();">
 			</tr>
 		</table>
 		<table id="productList">
