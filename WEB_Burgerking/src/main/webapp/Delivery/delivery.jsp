@@ -39,7 +39,7 @@
 				<c:forEach var="productVO" items="${productList}">
 				<c:choose>
 					<c:when test='${productVO.kind3=="4" }'>
-					<li><a onclick="deliveryDetail()">
+					<li><a onclick="deliveryDetail('${productVO.pseq}')">
 						<div class="menuImgdiv">
 							<img class="menuImg" src="image/menu/${productVO.kind1}/${productVO.image}">					
 						</div>

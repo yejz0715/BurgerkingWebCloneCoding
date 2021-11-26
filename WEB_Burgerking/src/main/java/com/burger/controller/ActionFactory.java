@@ -8,6 +8,7 @@ import com.burger.controller.action.FindPwdFormAction;
 import com.burger.controller.action.Action;
 import com.burger.controller.action.AppGuideFormAction;
 import com.burger.controller.action.BrandStroyFormAction;
+import com.burger.controller.action.DeliveryAddMaterialAction;
 import com.burger.controller.action.DeliveryCartFormAction;
 import com.burger.controller.action.DeliveryDetailFormAction;
 import com.burger.controller.action.DeliveryFormAction;
@@ -84,6 +85,7 @@ public class ActionFactory {
 		else if(command.equals("adminShortProductDetail")) ac= new AdminShortProductDetailAction();
 		else if(command.equals("adminProductUpdateForm")) ac = new AdminProductUpdateFormAction();
 		else if(command.equals("deliveryDetail")) ac = new DeliveryDetailFormAction();
+		else if(command.equals("deliveryAddMaterial")) ac = new DeliveryAddMaterialAction();
 		
 		return ac;
 	}

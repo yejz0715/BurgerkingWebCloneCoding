@@ -28,31 +28,32 @@
 		</div>
 		<div class="popcont nopadding">
 			<div class="prd_intro">
-				<span><img src="image/menu/${pvo.kind1 }/${pvo.image}" style="display: inline; opacity: 1;"></span>
+				<div class="prd_img">
+					<span><img src="image/menu/${pvo.kind1 }/${pvo.image}" style="display: inline; opacity: 1;"></span>
+				</div>
+				<div class="intro_txt">
+					<h3 class="tit"><span>${pvo.pname }</span></h3>
+					<p class="subtxt">${pvo.content }</p>
+				</div>
 			</div>
 		</div>
-		<div class="intro_txt">
-			<h3 class="tit"><span>${pvo.pname }</span></h3>
-			<p class="subtxt">${pvo.content }</p>
-		</div>
 		<ul class="menu_sub_list02">
-			<li>
-				<c:forEach var="list2" items="${list2}">
+			<c:forEach var="list2" items="${list2}">
+				<li>
 					<div class="prd_img">
-						<span><img src="image/menu/${list2.kind1 }/${list2.image}" style="display: inline; opacity: 1;"></span>
+						<span><img src="image/menu/${list2.kind2 }/${list2.image}" style="display: inline; opacity: 1;"></span>
 					</div>
 					<div class="cont">
 						<div class="tit"><strong>${list2.pname}</strong></div>
 						<div class="set"><span>${list2.content }</span></div>
-						<div class="price"><strong>${list2.price1}</strong></div>
+						<div class="price" ><strong style="color:red;font-weight:bold">&#8361;${list2.price1}</strong></div>
 					</div>
 					<div>
-						<button type="button" class="btn_detail"><span>Details</span></button>
+						<button type="button" class="btn_detail" >
+						<a href="burger.do?command=deliveryAddMaterial&pseq=${list2.pseq }"></a></button>
 					</div>
-				</c:forEach>
-			</li>
-			<li></li>
-			<li></li>
+				</li>
+			</c:forEach>
 		</ul>
 	</div>
 </div>

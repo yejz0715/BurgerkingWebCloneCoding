@@ -98,10 +98,10 @@ function updatepwdChk(){
 	return true;
 }
 
-function deliveryDetail(){
-	var url = "shop.do?command=deliveryDetail&pseq=${productVO.pseq}";
-	var opt = "toolbar=no,menubar=no,scrollbars=no,resizable=no,width=700,";
-	opt = opt + "height=500, top=300, left=300";
-	window.open(url, "Find Id/Pw", opt);
+function deliveryDetail(pseq){
+	var url = "burger.do?command=deliveryDetail&pseq="+pseq;
+	var opt = "toolbar=no,menubar=no,scrollbars=yes,resizable=no,width=600,top=300, left=300";
+	window.open(url, "delivery", opt);
 }
 
+function 

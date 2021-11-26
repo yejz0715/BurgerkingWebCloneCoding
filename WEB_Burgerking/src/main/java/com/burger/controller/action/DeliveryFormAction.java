@@ -21,7 +21,7 @@ public class DeliveryFormAction implements Action {
 		
 		ProductDao pdao = ProductDao.getInstance();
 		ArrayList<ProductVO> list = pdao.getProductList(kind1);
-
+		
 		request.setAttribute("productList", list);
 		request.getRequestDispatcher(url).forward(request, response);
 		

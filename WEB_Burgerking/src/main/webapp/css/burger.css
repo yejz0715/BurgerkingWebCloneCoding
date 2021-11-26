@@ -2068,7 +2068,6 @@ strong {
 .popWrap .prd_intro {
     position: relative;
     height: 308px;
-    background: url(../img/bg_prd_detailintro_m.02438ba0.gif) no-repeat 50%;
     background-size: 100% 100%;
     overflow: hidden;
 }
@@ -2111,6 +2110,15 @@ strong {
     width: 182px;
     height: 119px;
     margin-top: -59.5px;
+}
+.popWrap img:only-child {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: top;
 }
 .menu_sub_list02 .cont {
     min-height: 105px;
