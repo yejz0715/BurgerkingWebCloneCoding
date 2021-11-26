@@ -5,13 +5,8 @@
 	<div class="location" style="margin-bottom: 0px;">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-			<li><a  href="burger.do?command=menuListForm&kind1=${shortProductVO.kind1}">메뉴소개</a>&nbsp;>&nbsp;</li>
-			<li><a href="burger.do?command=menudetailForm&spseq=${shortProductVO.spseq}">${shortProductVO.pname }</a></li>
-=======
 			<li><a href="burger.do?command=index">메뉴소개</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=index"><${pvo.pname}</a></li>
->>>>>>> 212770c changdae new db and menu
 		</ul>
 	</div>
 	<div class="prd_intro">

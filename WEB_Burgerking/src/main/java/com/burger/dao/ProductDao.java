@@ -19,8 +19,8 @@ public class ProductDao {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	
-	public ArrayList<ProductVO> getProduct(String kind1) {
-		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
+	public ProductVO getProduct(String kind1) {
+		ProductVO pvo = new ProductVO();
 		String sql = "select * from product where kind1 = ?";
 		con = DBman.getConnection();
 		try {
@@ -28,7 +28,6 @@ public class ProductDao {
 			pstmt.setString(1, kind1);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
-				ProductVO pvo = new ProductVO();
 				pvo.setKind1(kind1);
 				pvo.setPseq(rs.getInt("pseq"));
 				pvo.setPname(rs.getString("pname"));
@@ -41,14 +40,13 @@ public class ProductDao {
 				pvo.setIndate(rs.getTimestamp("indate"));
 				pvo.setUseyn(rs.getString("useyn"));
 				pvo.setImage(rs.getString("image"));
-				list.add(pvo);
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {
 			DBman.close(con, pstmt, rs);
 		}
-		return list;
+		return pvo;
 	}
 
 	public ArrayList<ProductVO> getProductdetail(String pseq) {
@@ -235,6 +233,38 @@ public class ProductDao {
 			DBman.close(con, pstmt, rs);
 		}
 		return pvo;
+	}
+
+	public ArrayList<ProductVO> getProductList(String kind1) {
+		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
+		String sql = "select * from product where kind1 = ?";
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, kind1);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				ProductVO pvo = new ProductVO();
+				pvo.setKind1(kind1);
+				pvo.setPseq(rs.getInt("pseq"));
+				pvo.setPname(rs.getString("pname"));
+				pvo.setPrice1(rs.getInt("price1"));
+				pvo.setPrice2(rs.getInt("price2"));
+				pvo.setPrice3(rs.getInt("price3"));
+				pvo.setKind2(rs.getString("kind2"));
+				pvo.setKind3(rs.getString("kind3"));
+				pvo.setContent(rs.getString("content"));
+				pvo.setIndate(rs.getTimestamp("indate"));
+				pvo.setUseyn(rs.getString("useyn"));
+				pvo.setImage(rs.getString("image"));
+				list.add(pvo);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return list;
 	}
 	
 }

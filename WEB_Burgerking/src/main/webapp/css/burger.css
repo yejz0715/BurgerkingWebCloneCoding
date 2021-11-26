@@ -899,8 +899,6 @@ input[type=color], input[type=date], input[type=datetime], input[type=email], in
     appearance: none;
 }
 
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-=======
 
 /*------------------------ productdetail-------------------------- */
 .prd_intro {
@@ -1057,7 +1055,6 @@ button{
     margin: 0 auto;
 }
 
->>>>>>> 212770c changdae new db and menu
 .c_btn input{
     float: left;
     width: 216px;

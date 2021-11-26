@@ -3,7 +3,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 	<head>
 		<meta charset="UTF-8">
 		<title>딜리버리</title>
@@ -62,6 +61,7 @@
 					</a>
 				</c:if>
 			</div>
+<<<<<<< Upstream, based on branch 'yeji2' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 =======
 <head>
 	<meta charset="UTF-8">
@@ -128,3 +128,5 @@
 >>>>>>> 989a623 changdae delivery detail new
 		</div>
 <%@ include file="../Delivery/deli_orderCart.jsp"%>
+=======
+>>>>>>> 1d50222 changdae merge and error repair
