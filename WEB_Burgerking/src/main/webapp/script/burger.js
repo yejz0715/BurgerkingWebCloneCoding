@@ -100,7 +100,7 @@ function updatepwdChk(){
 
 function deliveryDetail(){
 	var url = "shop.do?command=deliveryDetail&pseq=${productVO.pseq}";
-	var opt = "toolbar=no,menubar=no,scrollbars=no,resizable=no,width=700,";
+	var opt = "toolbar=no,menubar=no,scrollbars=no,resizable=no,width=,";
 	opt = opt + "height=500, top=300, left=300";
 	window.open(url, "Find Id/Pw", opt);
 }

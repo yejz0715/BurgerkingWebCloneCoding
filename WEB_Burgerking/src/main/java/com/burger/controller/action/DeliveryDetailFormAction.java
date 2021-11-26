@@ -17,10 +17,8 @@ public class DeliveryDetailFormAction implements Action {
 		String url="Delivery/deliveryDetail.jsp";
 		
 		ProductDao pdao = ProductDao.getInstance();
-		
 		String pseq = request.getParameter("pseq");
-		ArrayList<ProductVO> list = pdao.getProductdetail(pseq);
-		ProductVO pvo = list.get(0);
+		ProductVO  pvo = pdao.getDeliverydetail(pseq);
 		
 		ArrayList<ProductVO> list2 = pdao.getProductkind(pvo.getKind1(), pvo.getKind2());
 		
