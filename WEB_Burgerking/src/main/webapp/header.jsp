@@ -81,5 +81,3 @@
 				</div>	
 			</header>
 		</div>
-
->>>>>>> 2bdb178 changdae new 13

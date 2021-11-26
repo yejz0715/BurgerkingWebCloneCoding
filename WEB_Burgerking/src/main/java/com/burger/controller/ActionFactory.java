@@ -8,11 +8,8 @@ import com.burger.controller.action.FindPwdFormAction;
 import com.burger.controller.action.Action;
 import com.burger.controller.action.AppGuideFormAction;
 import com.burger.controller.action.BrandStroyFormAction;
-<<<<<<< Upstream, based on branch 'yeji2' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 import com.burger.controller.action.DeliveryCartFormAction;
-=======
 import com.burger.controller.action.DeliveryDetailFormAction;
->>>>>>> 6402449 changdae delivery detail
 import com.burger.controller.action.DeliveryFormAction;
 import com.burger.controller.action.DeliveryMypageFormAction;
 import com.burger.controller.action.DeliveryOrderListFormAction;

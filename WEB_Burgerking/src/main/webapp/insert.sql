@@ -31,20 +31,8 @@ values(pseq.nextVal, '더블화이트갈릭와퍼', 9900, 0, 0, '2', '1', '1', '
 '단품', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
 values(pseq.nextVal, '더블화이트갈릭와퍼', 9900, 0, 0, '2', '1', '4', 'doublewhitegarlic.png',
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 ' ', 1);
-=======
-'단품', 1);
->>>>>>> 212770c changdae new db and menu
 
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-=======
-=======
-' ', 1);
->>>>>>> c22856e changdae delivery detail
-
->>>>>>> 212770c changdae new db and menu
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
 values(pseq.nextVal, '화이트갈릭와퍼 라지세트', 10900, 0, 0, '2', '2','3', 'whitegarlicls.png',
@@ -824,15 +812,7 @@ values(pseq.nextVal, '선데 딸기', 0, 0, 0, '7', '10', '1', 'sundaystrawberry
 '딸기맛의 상큼함이 살아있어요', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
 values(pseq.nextVal, '선데', 0, 0, 0, '7', '10', '4', 'sunday3kind.png',
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 ' ', 1);
-=======
-'딸기맛의 상큼함이 살아있어요', 1);
->>>>>>> 212770c changdae new db and menu
-=======
-' ', 1);
->>>>>>> c22856e changdae delivery detail
 
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
@@ -857,29 +837,8 @@ values(pseq.nextVal, '리얼 독퍼', 2900, 0, 0, '8', '1','3', 'realdogper.png'
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
 values(pseq.nextVal, '리얼 독퍼', 2900, 0, 0, '8', '1','4', 'realdogper.png',
 '반려견에게 Real Dogpper를 선물하세요!', 1);
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-=======
 
 
-select * from PRODUCT where kind1='6';
-select * from SHORTPRODUCT;
-
-insert into member(mseq, id, pwd, phone, name)
-values(mseq.nextVal, 'scott', '1234', '010-2431-6247', '김우진');
->>>>>>> 212770c changdae new db and menu
-
-<<<<<<< Upstream, based on branch 'yeji2' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-select * from SHORTPRODUCT;
-select * from PRODUCT;
-=======
-select * from SHORTPRODUCT
-select * from PRODUCT
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
-delete from product;
->>>>>>> 843c7c4 product Table date Update
-
-<<<<<<< Upstream, based on branch 'Error_Update' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 insert into event(eseq, subject, content, image, startdate, enddate, state)
 values(qseq.nextVal, 'Best WHOPPER 2개 구매시 7000원','1. 행사명 : Best WHOPPER 2개 구매시 7000원
 
@@ -1717,9 +1676,3 @@ values(qseq.nextVal, '2 for 5000원', '1. 행사명 : 2 for 5000원
 대명비발디점, 삼성라이온즈파크점, 서울역점, 오션월드점, 인천공항1점, 인천공항교통센터1점, 경기양평점, 경남대점, 경남사천점, 경북도청점, 경북상주점, 경북영주가흥점, 경주보문점, 광양LF스퀘어점, 광양중동점, 광주경안점, 광주봉선점, 광주상무점, 광주수완점, 광주월계점, 광주일곡점, 광주첨단2지구점, 광주터미널점, 구미인의점, 군산나운FS점, 김천교동DT점, 김포현대아울렛점, 나주빛가람점, 당진읍내점, 대구대명FS점, 대구대점, 대구율하점, 대구죽전네거리DT점, 대구지산점, 대구칠곡3지구점, 대구테크노폴리스점, 대전관평점, 대전도안점, 대전시청점, 대전현대아울렛점, 목포하당점, 보령동대점, 부산오시리아점, 서산호수공원점, 세종반곡점, 세종행복새롬점, 수원정자점, 안동옥동점, 안동중앙점, 안산고잔점, 여수웅천점, 연희점, 오산궐동점, 오창호수공원점, 용인동백점, 원주무실점, 의정부HP점, 익산영등점, 인제대점, 인천송도센트럴파크점, 인천연수점, 전남도청점, 정읍중앙점, 진주경상대점, 진주혁신도시점, 천안성성점, 천안쌍용대로DT점, 청주복대점, 청주오송점, 청주율량점, 충남대병원DT점, 충남도청점, 충북진천점, 평택청북점, 한동대점, 해운대비치점, 호남대점','event_16.png', '2021-09-06', '2021-09-12', '0');
 select * from event;
 insert into admin values('admin', 'admin1234', '김우진', '010-2431-6247');
-
-=======
-update PRODUCT set content=' ' where pname='선데' and kind3=4
->>>>>>> c22856e changdae delivery detail
-=======
->>>>>>> ce7de48 changdae new 15
