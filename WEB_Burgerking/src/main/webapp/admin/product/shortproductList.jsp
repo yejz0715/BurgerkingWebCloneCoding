@@ -21,16 +21,18 @@
 			<th>상품명</th>
 			<th>메뉴종류</th>
 			<th>메뉴목록번호</th>
+			<th>목록하위번호</th>
 			<th>사용유무</th>
 		</tr>
 		<c:forEach items="${shortproductList}" var="productVO">
 			<tr>
-				<td height="23" align="center">${productVO.spseq}</td>
+				<td height="23" align="center">${productVO.pseq}</td>
 				<td style="text-align: left; padding-left: 50px;">
-					<a href="#" onClick="go_detail2('${productVO.spseq}')">${productVO.pname}</a>
+					<a href="#" onClick="go_detail2('${productVO.pseq}')">${productVO.pname}</a>
 				</td>
 				<td><fmt:formatNumber value="${productVO.kind1}"/></td>
 				<td><fmt:formatNumber value="${productVO.kind2}"/></td>
+				<td><fmt:formatNumber value="${productVO.kind3}"/></td>
 				<td>
 					<c:choose>
 						<c:when test='${productVO.useyn==2 }'>미사용</c:when>

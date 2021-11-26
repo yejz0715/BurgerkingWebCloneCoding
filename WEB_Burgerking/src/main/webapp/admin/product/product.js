@@ -6,6 +6,9 @@ function go_wrt(){
 function go_mov(){
 	location.href="burger.do?command=adminProductList";
 }
+function go_mov2(){
+	location.href="burger.do?command=adminShortProductList";
+}
 
 function go_save(){
 	var theForm = document.frm;

@@ -16,7 +16,7 @@
 		<tr>
 			<th>가격</th><td width="60">${productVO.price1}</td>
 			<th>분류번호</th><td width="60">${productVO.kind2}</td>
-			<th>세부번호</th><td>${productVO.kind3}</td>
+			<th>세부</th><td>${kind3}</td>
 			<th>등록일</th><td>${productVO.indate}</td>
 		</tr>
 		<tr>

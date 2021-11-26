@@ -49,6 +49,7 @@ public class AdminProductListAction implements Action {
 		
 		AdminDao adao = AdminDao.getInstance(); 
 		int count = adao.getAllCount("product", "pname", key); 
+		count = count - adao.getshortPCount("product", "pname", key);
 		paging.setTotalCount(count);
 		ArrayList<ProductVO> productList = adao.listProduct(paging, key);
 		
