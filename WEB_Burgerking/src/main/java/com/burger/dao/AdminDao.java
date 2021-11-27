@@ -194,8 +194,11 @@ public class AdminDao {
 		    pstmt.setString(8, pvo.getKind3());
 		    pstmt.setInt(9, pvo.getPseq());
 		    pstmt.executeUpdate();
-		} catch (SQLException e) {e.printStackTrace();
-		} finally { DBman.close(con, pstmt, rs);  }	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs); 
+		}	
 		
 	}
 
@@ -322,5 +325,23 @@ public class AdminDao {
 		}
 		
 		return list;
+	}
+
+	public void updateMember(MemberVO mvo) {
+		String sql = "update member set name=?, pwd=?, phone=? where mseq=?";
+		
+		con = DBman.getConnection();
+		try {			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, mvo.getName());
+			pstmt.setString(2, mvo.getPwd());
+			pstmt.setString(3, mvo.getPhone());
+			pstmt.setInt(4, mvo.getMseq());
+		    pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs); 
+		}	
 	}
 }

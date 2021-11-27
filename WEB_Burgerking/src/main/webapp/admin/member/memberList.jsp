@@ -3,7 +3,7 @@
 <%@ include file="/admin/sub_menu.jsp"%>
 
 <article>
-	<h1>상품리스트</h1>
+	<h1>회원리스트</h1>
 	<form name="frm" method="post">
 		<table>
 			<tr>
@@ -27,7 +27,7 @@
 				<tr>
 					<td height="23" align="center">${memberVO.mseq}</td>
 					<td style="text-align: left; padding-left: 50px;">
-						<a href="#" onClick="go_detail('${memberVO.mseq}')">${memberVO.name}</a>
+						<a href="#" onclick="go_member_update('${memberVO.mseq}');">${memberVO.name}</a>
 					</td>
 					<td align="center">${memberVO.id}</td>
 					<td align="center">${memberVO.phone}</td>

@@ -164,4 +164,34 @@ public class MemberDao {
 	    	DBman.close(con, pstmt, rs);
 	    }   		
 	}
+
+	public MemberVO getMember_mseq(String mseq) {
+		MemberVO mvo = null;
+		String sql = "select * from member where mseq = ?";
+		con = DBman.getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, mseq);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				mvo = new MemberVO();
+				mvo.setMseq(rs.getInt("mseq"));
+				mvo.setId(rs.getString("id"));
+				mvo.setPwd(rs.getString("pwd"));
+				mvo.setName(rs.getString("name"));
+				mvo.setPhone(rs.getString("phone"));
+				mvo.setIndate(rs.getTimestamp("indate"));
+				mvo.setLastdate(rs.getTimestamp("lastdate"));
+				mvo.setMemberkind(rs.getInt("memberkind"));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return mvo;
+	}
 }
