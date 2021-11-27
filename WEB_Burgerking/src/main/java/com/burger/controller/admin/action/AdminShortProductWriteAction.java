@@ -30,8 +30,7 @@ String url = "burger.do?command=adminShortProductList";
 			context.getRealPath("image/menu");
 			
 			// MultipartRequest 객체 생성 - 파일 업로드 
-			MultipartRequest multi = new MultipartRequest( request, uploadFilePath, 5*1024*1024, "UTF-8", new
-			DefaultFileRenamePolicy());
+			MultipartRequest multi = new MultipartRequest( request, uploadFilePath, 5*1024*1024, "UTF-8");
 			
 			String k1 = multi.getParameter("kind1");
 			String k2 = multi.getParameter("kind2");

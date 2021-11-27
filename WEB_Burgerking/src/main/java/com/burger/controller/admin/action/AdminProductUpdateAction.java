@@ -29,7 +29,7 @@ public class AdminProductUpdateAction implements Action {
 			String path = context.getRealPath("image/menu");
 			
 			MultipartRequest multi = new MultipartRequest(request, path, 5*1024*1024,
-					"UTF-8", new DefaultFileRenamePolicy());
+					"UTF-8");
 		 
 			pvo.setPseq(Integer.parseInt(multi.getParameter("pseq")));
 			pvo.setKind1(multi.getParameter("kind1"));
