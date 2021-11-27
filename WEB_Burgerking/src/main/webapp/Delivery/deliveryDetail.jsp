@@ -49,8 +49,7 @@
 						<div class="price" ><strong style="color:red;font-weight:bold">&#8361;${list2.price1}</strong></div>
 					</div>
 					<div>
-						<button type="button" class="btn_detail" >
-						<a href="burger.do?command=deliveryAddMaterial&pseq=${list2.pseq }"></a></button>
+						<button type="button" class="btn_detail" onclick="add_or_cart('${list2.kind1}','${list2.pseq}')"></button>
 					</div>
 				</li>
 			</c:forEach>

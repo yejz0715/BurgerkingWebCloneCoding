@@ -100,7 +100,23 @@ function updatepwdChk(){
 
 function deliveryDetail(pseq){
 	var url = "burger.do?command=deliveryDetail&pseq="+pseq;
-	var opt = "toolbar=no,menubar=no,scrollbars=yes,resizable=no,width=600,top=300, left=300";
+	var opt = "toolbar=no,menubar=no,scrollbars=yes,resizable=no,height=800,width=580,top=300, left=300";
 	window.open(url, "delivery", opt);
+}
+
+function add_or_cart(kind1, pseq){
+	var url="";
+	if(kind1.value=='1'){
+		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
+	}else if(kind1.value=='6'){
+		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
+	}else if(kind1.value=='7'){
+		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
+	}else if(kind1.value=='8'){
+		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
+	}else{
+		url="burger.do?command=addCart";
+	}
+	window.open(url,"delivery_self")
 }
 
