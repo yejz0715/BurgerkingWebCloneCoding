@@ -149,4 +149,19 @@ public class MemberDao {
 			DBman.close(con, pstmt, rs);
 		}
 	}
+
+	public void deleteMember(String mseq) {
+		String sql = "delete from member where mseq=?";
+		con = DBman.getConnection();
+		
+		try {
+		      pstmt = con.prepareStatement(sql); 
+		      pstmt.setInt(1, Integer.parseInt(mseq));
+		      pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+	    } finally { 
+	    	DBman.close(con, pstmt, rs);
+	    }   		
+	}
 }

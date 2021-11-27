@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.burger.dto.AdminVO;
+import com.burger.dto.MemberVO;
 import com.burger.dto.ProductVO;
 import com.burger.util.DBman;
 import com.burger.util.Paging;
@@ -282,5 +283,44 @@ public class AdminDao {
 		}
 		
 		return result;
+	}
+
+	public ArrayList<MemberVO> listMember(Paging paging, String key) {
+		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+		//String sql ="select * from product order by pseq desc";
+		String sql = "select * from ("
+				+ "select * from ("
+				+ "select rownum as rn, m.* from "
+				+ "((select * from member where name like '%'||?||'%' order by mseq desc) m)"
+				+ ") where rn >=?"
+				+ ") where rn <=?";
+		
+		try {
+			con = DBman.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, key);
+			pstmt.setInt(2, paging.getStartNum());
+			pstmt.setInt(3, paging.getEndNum());
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				MemberVO mvo = new MemberVO();
+				mvo.setId(rs.getString("id"));
+				mvo.setName(rs.getString("name"));
+				mvo.setPwd(rs.getString("pwd"));
+				mvo.setMseq(rs.getInt("mseq"));
+				mvo.setPhone(rs.getString("phone"));
+				mvo.setIndate(rs.getTimestamp("indate"));
+				mvo.setLastdate(rs.getTimestamp("lastdate"));
+				mvo.setMemberkind(rs.getInt("memberkind"));
+				list.add(mvo);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return list;
 	}
 }
