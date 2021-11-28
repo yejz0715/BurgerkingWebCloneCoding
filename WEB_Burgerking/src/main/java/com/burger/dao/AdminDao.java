@@ -12,6 +12,7 @@ import com.burger.dto.AdminVO;
 import com.burger.dto.EventVO;
 import com.burger.dto.MemberVO;
 import com.burger.dto.ProductVO;
+import com.burger.dto.QnaVO;
 import com.burger.util.DBman;
 import com.burger.util.Paging;
 
@@ -435,5 +436,45 @@ public class AdminDao {
 		} finally {
 			DBman.close(con, pstmt, rs); 	
 		}
+	}
+
+	public ArrayList<QnaVO> listQna(Paging paging, String key) {
+		ArrayList<QnaVO> list = new ArrayList<QnaVO>();
+		String sql = "select * from ("
+				+ "select * from ("
+				+ "select rownum as rn, q.* from "
+				+ "((select * from qna where id like '%'||?||'%' order by qseq desc) q)"
+				+ ") where rn >= ?"
+				+ ") where rn <= ?";
+		
+		try {
+			con = DBman.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, key);
+			pstmt.setInt(2, paging.getStartNum());
+			pstmt.setInt(3, paging.getEndNum());
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				QnaVO qvo = new QnaVO();
+				qvo.setQseq(rs.getInt("qseq"));
+				qvo.setSubject(rs.getString("subject"));
+				qvo.setContent(rs.getString("content"));
+				qvo.setReply(rs.getString("reply"));
+				qvo.setId(rs.getString("id"));
+				qvo.setRep(rs.getString("rep"));
+				qvo.setIndate(rs.getTimestamp("indate"));
+				qvo.setReadcount(rs.getInt("readcount"));
+				qvo.setPass(rs.getInt("pass"));
+				
+				list.add(qvo);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return list;
 	}
 }

@@ -8,14 +8,14 @@
 		<table style="float: right;">
 			<tr>
 				<td>
-				제목 + 내용 검색 <input type="text" name="key" value="${key}">
+				ID 검색 <input type="text" name="key" value="${key}">
 				<input type="button" class="btn" value="검색" onclick="go_search_qna();">
 				<input type="button" class="btn" name="btn_total" value="전체보기" onclick="go_total_qna();">
 				</td>
 			</tr>
 		</table>
 	</form>
-	<table id="orderList">
+	<table id="productList">
 		<tr>
 			<th>번호(답변여부)</th>
 			<th>제목</th>

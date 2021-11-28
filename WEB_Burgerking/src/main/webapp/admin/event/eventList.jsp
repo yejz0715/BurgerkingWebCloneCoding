@@ -20,6 +20,7 @@
 				<th>시작일</th>
 				<th>종료일</th>
 				<th>상태</th>
+				<th>삭제</th>
 			</tr>
 			<c:forEach items="${eventList}" var="eventVO">
 				<tr>
