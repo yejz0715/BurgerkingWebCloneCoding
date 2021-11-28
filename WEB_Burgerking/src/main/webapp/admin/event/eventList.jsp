@@ -3,7 +3,7 @@
 <%@ include file="/admin/sub_menu.jsp"%>
 
 <article>
-	<h1>상품리스트</h1>
+	<h1>이벤트리스트</h1>
 	<form name="frm" method="post">
 		<table>
 			<tr>
