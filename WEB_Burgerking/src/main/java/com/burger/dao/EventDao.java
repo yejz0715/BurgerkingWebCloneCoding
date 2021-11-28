@@ -131,5 +131,20 @@ public class EventDao {
 		}
 		return evo;
 	}
+
+	public void deleteEvent(String eseq) {
+		String sql = "delete from event where eseq = ?";
+		con = DBman.getConnection();
+		
+		try {
+		      pstmt = con.prepareStatement(sql); 
+		      pstmt.setInt(1, Integer.parseInt(eseq));
+		      pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+	    } finally { 
+	    	DBman.close(con, pstmt, rs);
+	    }   		
+	}
 	
 }

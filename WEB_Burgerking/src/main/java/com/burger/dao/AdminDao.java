@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.burger.dto.AdminVO;
+import com.burger.dto.EventVO;
 import com.burger.dto.MemberVO;
 import com.burger.dto.ProductVO;
 import com.burger.util.DBman;
@@ -343,5 +344,42 @@ public class AdminDao {
 		} finally {
 			DBman.close(con, pstmt, rs); 
 		}	
+	}
+
+	public ArrayList<EventVO> listEvent(Paging paging, String key) {
+		ArrayList<EventVO> list = new ArrayList<EventVO>();
+		String sql = "select * from ("
+				+ "select * from ("
+				+ "select rownum as rn, e.* from "
+				+ "((select * from event where subject like '%'||?||'%' order by eseq desc) e)"
+				+ ") where rn >=?"
+				+ ") where rn <=?";
+		
+		try {
+			con = DBman.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, key);
+			pstmt.setInt(2, paging.getStartNum());
+			pstmt.setInt(3, paging.getEndNum());
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				EventVO evo = new EventVO();
+				evo.setEseq(rs.getInt("eseq"));
+				evo.setSubject(rs.getString("subject"));
+				evo.setContent(rs.getString("content"));
+				evo.setImage(rs.getString("image"));
+				evo.setStartdate(rs.getTimestamp("startdate"));
+				evo.setEnddate(rs.getTimestamp("enddate"));
+				evo.setState(rs.getInt("state"));
+				list.add(evo);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return list;
 	}
 }
