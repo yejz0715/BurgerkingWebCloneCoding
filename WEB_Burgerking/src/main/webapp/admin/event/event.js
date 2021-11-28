@@ -38,3 +38,56 @@ function del_event(){
 	    document.frm.submit();
 	}
 }
+
+function go_event_detail(eseq){
+	var url = "burger.do?command=adminEventDetail&eseq=" + eseq;
+	document.frm.action = url;
+	document.frm.submit();
+}
+
+function go_event_mov(){
+	location.href="burger.do?command=adminEventList";
+}
+
+function go_event_mod(eseq){
+	var url = "burger.do?command=adminEventUpdateForm&eseq=" + eseq;
+	location.href=url;
+}
+
+function go_event_mod_save(){
+	if(document.frm.subject.value==""){
+		alert("이벤트명를 입력하세요.");
+		document.frm.subject.focus();
+	}else if(document.frm.enddate.value==""){
+		alert("종료일을 입력하세요");
+		document.frm.enddate.focus();
+	}else if(document.frm.content.value==""){
+		alert("상세 설명을 입력하세요.");
+		document.frm.content.focus();
+	}else{
+		if(confirm('수정하시겠습니까?')){
+			document.frm.action = "burger.do?command=adminEventUpdate";
+			document.frm.submit();
+		}
+	}
+}
+
+function go_event_save(){
+	var theForm = document.frm;
+	if(theForm.subject.value==""){
+		alert("이벤트명을 입력하세요.");
+		theForm.subject.focus();
+	}else if(theForm.enddate.value==""){
+		alert("종료일을 입력하세요");
+		theForm.enddate.focus();
+	}else if(theForm.content.value==""){
+		alert("상세 설명를 입력하세요");
+		theForm.content.focus();
+	}else if(theForm.image.value==""){
+		alert("이벤트 이미지를 입력하세요");
+		theForm.image.focus();
+	}else{
+		theForm.action = "burger.do?command=adminEventWrite";
+		theForm.submit();
+	}
+}

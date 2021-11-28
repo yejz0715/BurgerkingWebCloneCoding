@@ -25,7 +25,7 @@
 				<tr>
 					<td height="23" align="center">${eventVO.eseq}</td>
 					<td style="text-align: left; padding-left: 50px;">
-						<a href="#" onClick="go_detail('${eventVO.eseq}')">${eventVO.subject}</a>
+						<a href="#" onClick="go_event_detail('${eventVO.eseq}')">${eventVO.subject}</a>
 					</td>
 					<td><fmt:formatDate value="${eventVO.startdate}"/></td>
 					<td><fmt:formatDate value="${eventVO.enddate}"/></td>

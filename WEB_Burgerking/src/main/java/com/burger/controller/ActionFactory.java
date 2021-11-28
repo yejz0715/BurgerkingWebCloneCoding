@@ -28,7 +28,12 @@ import com.burger.controller.action.UpdatePwdAction;
 import com.burger.controller.action.VideoPolicyAction;
 import com.burger.controller.admin.action.AdminAction;
 import com.burger.controller.admin.action.AdminEventDeleteAction;
+import com.burger.controller.admin.action.AdminEventDetailAction;
 import com.burger.controller.admin.action.AdminEventListAction;
+import com.burger.controller.admin.action.AdminEventUpdateAction;
+import com.burger.controller.admin.action.AdminEventUpdateFormAction;
+import com.burger.controller.admin.action.AdminEventWriteAction;
+import com.burger.controller.admin.action.AdminEventWriteFormAction;
 import com.burger.controller.admin.action.AdminLoginAction;
 import com.burger.controller.admin.action.AdminLogoutAction;
 import com.burger.controller.admin.action.AdminMemberDeleteAction;
@@ -106,6 +111,11 @@ public class ActionFactory {
 		else if(command.equals("adminMemberUpdate")) ac = new AdminMemberUpdateAction();
 		else if(command.equals("adminEventList")) ac = new AdminEventListAction();
 		else if(command.equals("adminEventDelete")) ac = new AdminEventDeleteAction();
+		else if(command.equals("adminEventDetail")) ac = new AdminEventDetailAction();
+		else if(command.equals("adminEventUpdateForm")) ac = new AdminEventUpdateFormAction();
+		else if(command.equals("adminEventUpdate")) ac = new AdminEventUpdateAction();
+		else if(command.equals("adminEventWriteForm")) ac = new AdminEventWriteFormAction();
+		else if(command.equals("adminEventWrite")) ac = new AdminEventWriteAction();
 		return ac;
 	}
 }

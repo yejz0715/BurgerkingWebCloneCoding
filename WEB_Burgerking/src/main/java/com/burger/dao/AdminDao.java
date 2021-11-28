@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import com.burger.dto.AdminVO;
@@ -221,7 +223,9 @@ public class AdminDao {
 		    pstmt.setString(10, pvo.getUseyn());
 		    pstmt.executeUpdate();
 		} catch (SQLException e) {	e.printStackTrace();
-		} finally { DBman.close(con, pstmt, rs); 	}
+		} finally {
+			DBman.close(con, pstmt, rs); 	
+		}
 		
 	}
 
@@ -381,5 +385,55 @@ public class AdminDao {
 		}
 		
 		return list;
+	}
+
+	public void updateEvent(EventVO evo) {
+		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        SimpleDateFormat sdf = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss"); 
+        int state = 1;
+        if(sdf.format(timestamp).compareTo(sdf.format(evo.getEnddate())) > 0) {
+        	state = 2;
+        }
+		String sql = "update event set subject=?, content=?, image=?, enddate=?, state=? where eseq=?";
+		
+		con = DBman.getConnection();
+		try {			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, evo.getSubject());
+			pstmt.setString(2, evo.getContent());
+			pstmt.setString(3, evo.getImage());
+			pstmt.setTimestamp(4, evo.getEnddate());
+			pstmt.setInt(5, state);
+			pstmt.setInt(6, evo.getEseq());
+		    pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs); 
+		}	
+	}
+
+	public void insertEvent(EventVO evo) {
+		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        SimpleDateFormat sdf = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss"); 
+        int state = 1;
+        if(sdf.format(timestamp).compareTo(sdf.format(evo.getEnddate())) > 0) {
+        	state = 2;
+        }
+		String sql = "insert into event(eseq, subject, content, startdate, enddate, image, state) "
+				+ "values(eseq.nextVal, ?,?, sysdate,?,?,?)";
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, evo.getSubject());
+			pstmt.setString(2, evo.getContent());
+			pstmt.setTimestamp(3, evo.getEnddate());
+			pstmt.setString(4, evo.getImage());
+			pstmt.setInt(5, state);
+		    pstmt.executeUpdate();
+		} catch (SQLException e) {	e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs); 	
+		}
 	}
 }
