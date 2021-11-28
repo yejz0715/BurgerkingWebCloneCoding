@@ -36,7 +36,7 @@
 				<label>질문내용</label>
 				<textarea rows="10" cols="120" name="content"></textarea>
 				<label>비밀번호</label>
-				<input type="text" name="pass" size="4">
+				<input type="password" name="pass" size="4">
 			</fieldset>
 			<div class="clear"></div>
 			
