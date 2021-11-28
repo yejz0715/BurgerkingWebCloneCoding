@@ -10,6 +10,8 @@
 		<script type="text/javascript" src="admin/product/product.js"></script>
 		<script type="text/javascript" src="admin/member/member.js"></script>
 		<script type="text/javascript" src="admin/event/event.js"></script>
+		<script type="text/javascript" src="admin/qna/qna.js"></script>
+		<script type="text/javascript" src="admin/order/order.js"></script>
 	</head>
 	<body>
 		<div id="wrap">
