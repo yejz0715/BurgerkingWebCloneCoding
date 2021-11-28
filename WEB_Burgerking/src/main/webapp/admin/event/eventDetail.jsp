@@ -27,7 +27,7 @@
 		</tr>
 		<tr>
 			<th>상세설명</th>
-			<td colspan="5"><pre>${eventVO.content}</pre></td>
+			<td colspan="5"><textarea rows="12" cols="80">${eventVO.content}</textarea></td>
 		</tr>
 		<tr>
 			<th>이벤트이미지</th>

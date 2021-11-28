@@ -21,28 +21,33 @@
 			<th>제목</th>
 			<th>작성자</th>
 			<th>작성일</th>
+			<th>삭제</th>
 		</tr>
-		<c:forEach items="${qnaList}" var="qnaVO">
-			<tr>
-				<td>
-					${qnaVO.qseq}
-					<c:choose>
-						<c:when test='${qnaVO.rep=="1" }'>
-							(미처리)
-						</c:when>
-						<c:otherwise>
-							(답변처리완료)
-						</c:otherwise>
-					</c:choose>
-				</td>
-				<td><a href="#" onclick="javascript:go_view('${qnaVO.qseq}')">${qnaVO.subject}</a></td>
-				<td>${qnaVO.id}</td>
-				<td><fmt:formatDate value="${qnaVO.indate}"/></td>
-			</tr>
-		</c:forEach>
-	</table>
-	
-	<br><br>
+		<form name="frm2" method="post" action="burger.do">
+			<c:forEach items="${qnaList}" var="qnaVO">
+				<tr>
+					<td>
+						${qnaVO.qseq}
+						<c:choose>
+							<c:when test='${qnaVO.rep=="1" }'>
+								(미처리)
+							</c:when>
+							<c:otherwise>
+								(답변처리완료)
+							</c:otherwise>
+						</c:choose>
+					</td>
+					<td><a href="#" onclick="javascript:go_qna_view('${qnaVO.qseq}')">${qnaVO.subject}</a></td>
+					<td>${qnaVO.id}</td>
+					<td><fmt:formatDate value="${qnaVO.indate}"/></td>
+					<td>
+						<input type="checkbox" name="delete" value="${qnaVO.qseq}">
+					</td>
+				</tr>
+			</c:forEach>
+		</form>
+	</table><br>
+	<input type="button" class="btn" style="float: right;" value="삭제" onclick="del_qna();">
 	
 	<jsp:include page="/admin/paging/paging.jsp">
 		<jsp:param name="page" value="${paging.page}"/>

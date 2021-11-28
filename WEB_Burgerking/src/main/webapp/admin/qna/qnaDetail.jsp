@@ -10,10 +10,14 @@
 			<tr>
 				<th width="20%">제목</th>
 				<td align="left">${qnaVO.subject} ${qnaVO.rep}</td>
+				<th>비밀번호</th>
+				<td align="left">${qnaVO.pass}</td>
 			</tr>
 			<tr>
 				<th>등록일</th>
 				<td align="left"><fmt:formatDate value="${qnaVO.indate}"/></td>
+				<th>작성자</th>
+				<td align="left">${qnaVO.id}</td>
 			</tr>
 			<tr>
 				<th>내용</th>
@@ -44,7 +48,7 @@
 				</table>
 			</c:otherwise>
 		</c:choose>
-		<input type="button" class="btn" value="목록" onclick="location.href='shop.do?command=adminQnaList'">
+		<input type="button" class="btn" value="목록" onclick="location.href='burger.do?command=adminQnaList'">
 	</form>
 </article>
 

@@ -51,6 +51,8 @@ import com.burger.controller.admin.action.AdminProductUpdateAction;
 import com.burger.controller.admin.action.AdminProductUpdateFormAction;
 import com.burger.controller.admin.action.AdminProductWriteAction;
 import com.burger.controller.admin.action.AdminProductWriteFormAction;
+import com.burger.controller.admin.action.AdminQnaDeleteAction;
+import com.burger.controller.admin.action.AdminQnaDetailAction;
 import com.burger.controller.admin.action.AdminQnaListAction;
 import com.burger.controller.admin.action.AdminShortProductDetailAction;
 import com.burger.controller.admin.action.AdminShortProductUpdateAction;
@@ -130,6 +132,8 @@ public class ActionFactory {
 		else if(command.equals("adminEventWriteForm")) ac = new AdminEventWriteFormAction();
 		else if(command.equals("adminEventWrite")) ac = new AdminEventWriteAction();
 		else if(command.equals("adminQnaList")) ac = new AdminQnaListAction();
+		else if(command.equals("adminQnaDelete")) ac = new AdminQnaDeleteAction();
+		else if(command.equals("adminQnaDetail")) ac = new AdminQnaDetailAction();
 		return ac;
 	}
 }
