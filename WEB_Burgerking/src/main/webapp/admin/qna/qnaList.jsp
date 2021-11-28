@@ -5,7 +5,7 @@
 <article>
 	<h1>Q&amp;A 게시글 리스트</h1>
 	<form name="frm" method="post">
-		<table style="float: right;">
+		<table style="margin: 0 auto;">
 			<tr>
 				<td>
 				ID 검색 <input type="text" name="key" value="${key}">
