@@ -22,7 +22,10 @@ import com.burger.controller.action.LogoutAction;
 import com.burger.controller.action.MenuListFormAction;
 import com.burger.controller.action.MenudetailFormAction;
 import com.burger.controller.action.PrivacyAction;
+import com.burger.controller.action.QnaDeleteAction;
 import com.burger.controller.action.QnaFormAction;
+import com.burger.controller.action.QnaViewAction;
+import com.burger.controller.action.QnaWriteFormAction;
 import com.burger.controller.action.TermsAction;
 import com.burger.controller.action.UpdatePwdAction;
 import com.burger.controller.action.VideoPolicyAction;
@@ -52,6 +55,7 @@ import com.burger.controller.admin.action.AdminShortProductUpdateFormAction;
 import com.burger.controller.admin.action.AdminShortProductWriteAction;
 import com.burger.controller.admin.action.AdminShortProductWriteFormAction;
 import com.burger.controller.admin.action.AdminshortProductListAction;
+import com.burger.controller.admin.action.QnaWriteAction;
 import com.burger.controller.admin.action.AdminProductDetailAction;
 
 public class ActionFactory {
@@ -87,6 +91,10 @@ public class ActionFactory {
 		else if(command.equals("eventTab2")) ac = new EventTab2Action();
 		else if(command.equals("eventTab3")) ac = new EventTab3Action();
 		else if(command.equals("eventDetailForm")) ac = new EventDetailFormAction();
+		else if(command.equals("qnaView")) ac = new QnaViewAction();
+		else if(command.equals("QnaDelete")) ac = new QnaDeleteAction();
+		else if(command.equals("qnaWriteForm")) ac = new QnaWriteFormAction();
+		else if(command.equals("qnaWrite")) ac = new QnaWriteAction();
 		
 		
 		else if(command.equals("admin")) ac = new AdminAction();
