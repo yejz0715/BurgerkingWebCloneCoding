@@ -83,5 +83,33 @@ String sql = "insert into qna(qseq, subject, content, indate, id, readcount, pas
 			DBman.close(con, pstmt, rs);
 		}
 	}
-	
+
+	public QnaVO getQna2(int qseq) {
+		String sql = "select * from qna where qseq = ?";
+		QnaVO qvo = new QnaVO();	
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, qseq);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				qvo.setQseq(rs.getInt("qseq"));
+				qvo.setSubject(rs.getString("subject"));
+				qvo.setContent(rs.getString("content"));
+				qvo.setIndate(rs.getTimestamp("indate"));
+				qvo.setId(rs.getString("id"));
+				qvo.setReply(rs.getString("reply"));
+				qvo.setRep(rs.getString("rep"));
+				qvo.setReadcount(rs.getInt("readcount"));
+				qvo.setPass(rs.getInt("pass"));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return qvo;
+	}
+
 }

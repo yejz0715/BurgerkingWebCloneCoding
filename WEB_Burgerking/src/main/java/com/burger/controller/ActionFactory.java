@@ -21,6 +21,8 @@ import com.burger.controller.action.LoginFormAction;
 import com.burger.controller.action.LogoutAction;
 import com.burger.controller.action.MenuListFormAction;
 import com.burger.controller.action.MenudetailFormAction;
+import com.burger.controller.action.PassCheckAction;
+import com.burger.controller.action.PassCheckFormAction;
 import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.QnaDeleteAction;
 import com.burger.controller.action.QnaFormAction;
@@ -95,6 +97,8 @@ public class ActionFactory {
 		else if(command.equals("QnaDelete")) ac = new QnaDeleteAction();
 		else if(command.equals("qnaWriteForm")) ac = new QnaWriteFormAction();
 		else if(command.equals("qnaWrite")) ac = new QnaWriteAction();
+		else if(command.equals("passCheckForm")) ac = new PassCheckFormAction();
+		else if(command.equals("passCheck")) ac = new PassCheckAction();
 		
 		
 		else if(command.equals("admin")) ac = new AdminAction();

@@ -68,7 +68,7 @@
 								<c:forEach items="${qnaList}" var="qnaVO">
 									<tr align="center">
 										<td> ${qnaVO.qseq}</td>    
-							    		<td><a href="burger.do?command=qnaView&qseq=${qnaVO.qseq}">${qnaVO.subject}</a></td>      
+							    		<td><a href="#" onclick="input_pass('${qnaVO.qseq}');">${qnaVO.subject}</a></td>      
 							       		<td><fmt:formatDate value="${qnaVO.indate}" type="date"/></td>
 							       		<td> ${qnaVO.id}</td> 
 							       		<td>

@@ -124,7 +124,23 @@ function qna_write_chk(){
 	}else if(document.frm.content.value==""){
 		alert("문의내용을 입력해주세요.");
 		document.frm.content.focus();
+	}else if(document.frm.pass.value==""){
+		alert("비밀번호를 입력해주세요.");
+		document.frm.pass.focus();
+	}else if(document.frm.pass.value.length != 4){
+		alert("비밀번호를 4자리로 입력해주세요.");
+		document.frm.pass.focus();
 	}else{
 		document.frm.submit();
 	}
+}
+
+function input_pass(qseq){
+	var url = "burger.do?command=passCheckForm&qseq=" + qseq;
+	document.frm.action = url;
+	document.frm.submit();
+}
+
+function passCheck_step2(qseq){
+	self.close();
 }

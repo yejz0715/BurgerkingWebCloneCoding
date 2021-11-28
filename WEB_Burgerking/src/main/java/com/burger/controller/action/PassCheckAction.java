@@ -11,20 +11,27 @@ import com.burger.dao.QnaDao;
 import com.burger.dto.MemberVO;
 import com.burger.dto.QnaVO;
 
-public class QnaViewAction implements Action {
+public class PassCheckAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "ServiceCenter/qnaView.jsp";
+		String url = "burger.do?command=qnaView";
 		
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
 		
 		if(mvo == null) {
-			url = "burger.do?command=index";
+			url = "buger.do?command=index";
 		}else {
 			int qseq = Integer.parseInt(request.getParameter("qseq"));
+			System.out.println(qseq);
+			int pass = Integer.parseInt(request.getParameter("pass"));
 			QnaDao qdao = QnaDao.getInstance();
 			QnaVO qvo = qdao.getQna2(qseq);
-			request.setAttribute("qvoVO", qvo);
+			if(qvo.getPass() == pass) {
+				url = url + "&qseq="+ qseq;
+				request.setAttribute("qnaVO", qvo);
+			}else {
+				url = "burger.do?command=qnaForm";
+			}
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}
