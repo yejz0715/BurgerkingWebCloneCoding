@@ -33,8 +33,8 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<textarea name="reply" rows="3" cols="50"></textarea>
-							<input type="button" class="btn" value="저장" onclick="go_rep();">
+							<textarea name="reply" rows="3" cols="50"></textarea><br><br>
+							<input type="button" class="btn" value="저장" onclick="go_qna_rep();">
 						</td>
 					</tr>
 				</table>

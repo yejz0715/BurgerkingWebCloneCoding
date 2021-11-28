@@ -54,6 +54,7 @@ import com.burger.controller.admin.action.AdminProductWriteFormAction;
 import com.burger.controller.admin.action.AdminQnaDeleteAction;
 import com.burger.controller.admin.action.AdminQnaDetailAction;
 import com.burger.controller.admin.action.AdminQnaListAction;
+import com.burger.controller.admin.action.AdminQnaRepsaveAction;
 import com.burger.controller.admin.action.AdminShortProductDetailAction;
 import com.burger.controller.admin.action.AdminShortProductUpdateAction;
 import com.burger.controller.admin.action.AdminShortProductUpdateFormAction;
@@ -134,6 +135,7 @@ public class ActionFactory {
 		else if(command.equals("adminQnaList")) ac = new AdminQnaListAction();
 		else if(command.equals("adminQnaDelete")) ac = new AdminQnaDeleteAction();
 		else if(command.equals("adminQnaDetail")) ac = new AdminQnaDetailAction();
+		else if(command.equals("adminQnaRepsave")) ac = new AdminQnaRepsaveAction();
 		return ac;
 	}
 }

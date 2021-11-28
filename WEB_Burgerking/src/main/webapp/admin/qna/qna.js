@@ -37,3 +37,8 @@ function del_qna(){
 function go_qna_view(qseq){
 	location.href = "burger.do?command=adminQnaDetail&qseq=" + qseq;
 }
+
+function go_qna_rep(){
+	document.frm.action="burger.do?command=adminQnaRepsave";
+	document.frm.submit();
+}
