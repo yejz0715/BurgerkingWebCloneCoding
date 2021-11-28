@@ -25,7 +25,7 @@
 				</tr>
 				<tr>
 					<th>답변 내용</th>
-					<td align="left" style="text-align: left; color: white;">${qnaVO.reply}</td>
+					<td align="left" style="text-align: left;">${qnaVO.reply}</td>
 				</tr>
 			</table>
 			<div class="clear"></div>
