@@ -7,15 +7,15 @@
 	   <div class="banner" style="overflow: scroll">
 	      <div class="slide" id="slide">
 	         <ul class="cnt" id="cnt">
-	            <li><a href="buger.do?command=****"><img
+	            <li><a href="burger.do?command=eventDetailForm&eseq=4"><img
 	                  src="image/main/banner/banner_3.png"></a></li>
-	            <li><a href="buger.do?command=****"><img
+	            <li><a href="burger.do?command=eventDetailForm&eseq=2"><img
 	                  src="image/main/banner/banner_1.png"></a></li>
-	            <li><a href="buger.do?command=****"><img
+	            <li><a href="burger.do?command=eventDetailForm&eseq=3"><img
 	                  src="image/main/banner/banner_2.png"></a></li>
-	            <li><a href="buger.do?command=****"><img
+	            <li><a href="burger.do?command=eventDetailForm&eseq=5"><img
 	                  src="image/main/banner/banner_4.png"></a></li>
-	            <li><a href="buger.do?command=****"><img
+	            <li><a href="burger.do?command=eventDetailForm&eseq=1"><img
 	                  src="image/main/banner/banner_5.png"></a></li>
 	         </ul>
 	   
@@ -75,8 +75,9 @@
 	                        src="image/main/appimg.png"></a>
 	                  </div>
 	                  <div id="delivery">
-	                     <a href="buger.do?command=****"> <img
-	                        src="image/main/deliveryimg.png"></a>
+	                     <a href="#" onclick=""> 
+	                     	<img src="image/main/deliveryimg.png">
+	                     </a>
 	                  </div>
 	               </div>
 	            </div>
