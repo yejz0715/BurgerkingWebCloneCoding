@@ -8,6 +8,7 @@ import com.burger.controller.action.ContractAction;
 import com.burger.controller.action.ContractFormAction;
 import com.burger.controller.action.ContractFrmAction;
 import com.burger.controller.action.DeliveryFormAction;
+import com.burger.controller.action.DeliveryUseFormAction;
 import com.burger.controller.action.EventDetailFormAction;
 import com.burger.controller.action.EventListFormAction;
 import com.burger.controller.action.EventTab2Action;
@@ -97,6 +98,7 @@ public class ActionFactory {
 		else if(command.equals("qnaForm")) ac = new QnaFormAction();
 		else if(command.equals("faqForm")) ac = new FaqFormAction();
 		else if(command.equals("appGuideForm")) ac = new AppGuideFormAction();
+		else if(command.equals("deliveryUseForm")) ac = new DeliveryUseFormAction();
 		else if(command.equals("joinForm")) ac = new JoinFormAction();
 		else if(command.equals("logout")) ac = new LogoutAction();
 		else if(command.equals("findIdForm")) ac = new FindIdFormAction();

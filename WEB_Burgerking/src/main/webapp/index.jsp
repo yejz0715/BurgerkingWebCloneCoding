@@ -75,7 +75,7 @@
 	                        src="image/main/appimg.png"></a>
 	                  </div>
 	                  <div id="delivery">
-	                     <a href="#" onclick=""> 
+	                     <a href="burger.do?command=deliveryUseForm"> 
 	                     	<img src="image/main/deliveryimg.png">
 	                     </a>
 	                  </div>
