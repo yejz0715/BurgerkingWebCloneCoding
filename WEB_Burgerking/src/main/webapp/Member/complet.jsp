@@ -33,10 +33,6 @@
 		</div>
 	</div>
 
-
-
-
-
 </article>
 
 <%@ include file="/footer/footer.jsp"%>
