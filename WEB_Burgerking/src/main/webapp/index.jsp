@@ -13,9 +13,9 @@
 	                  src="image/main/banner/banner_1.png"></a></li>
 	            <li><a href="burger.do?command=eventDetailForm&eseq=3"><img
 	                  src="image/main/banner/banner_2.png"></a></li>
-	            <li><a href="burger.do?command=eventDetailForm&eseq=5"><img
+	            <li><a href="burger.do?command=eventDetailForm&eseq=44"><img
 	                  src="image/main/banner/banner_4.png"></a></li>
-	            <li><a href="burger.do?command=eventDetailForm&eseq=1"><img
+	            <li><a href="burger.do?command=eventDetailForm&eseq=45"><img
 	                  src="image/main/banner/banner_5.png"></a></li>
 	         </ul>
 	   
