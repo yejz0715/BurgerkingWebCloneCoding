@@ -33,6 +33,9 @@
 					<a href="burger.do?command=contract" class="btn02 st03" ><span>버거킹 회원가입</span></a>
 				</div>
 			</div>
+			<div class="simple_login">
+            	<img src="image/main/flame_grilled02.png">
+        	</div>
 			<!--  <div class="simple_login">
 				<h3 class="tit01 tit_ico lock">간편 회원가입</h3>
 				<ul class="list">
@@ -42,7 +45,6 @@
 				</ul>
 			</div>-->
 		</div>
-		
 	</div>
 			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
