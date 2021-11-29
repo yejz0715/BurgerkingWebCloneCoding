@@ -13,6 +13,7 @@ import com.burger.dto.EventVO;
 import com.burger.dto.MemberVO;
 import com.burger.dto.ProductVO;
 import com.burger.dto.QnaVO;
+import com.burger.dto.orderVO;
 import com.burger.util.DBman;
 import com.burger.util.Paging;
 
@@ -485,6 +486,53 @@ public class AdminDao {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, qvo.getReply());
 			pstmt.setInt(2, qvo.getQseq());
+			pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+	}
+
+	public ArrayList<orderVO> listOrder(Paging paging, String key) {
+		ArrayList<orderVO> list = new ArrayList<orderVO>();
+		String sql = "select * from ("
+				+ "select * from ("
+				+ "select rownum as rn, o.* from "
+				+ "((select * from order_view where mname like '%'||?||'%' order by result, odseq desc) o)"
+				+ ") where rn >= ?"
+				+ ") where rn <= ?";
+		
+		try {
+			con = DBman.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, key);
+			pstmt.setInt(2, paging.getStartNum());
+			pstmt.setInt(3, paging.getEndNum());
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				orderVO ovo = new orderVO();
+				
+				
+				list.add(ovo);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return list;
+	}
+
+	public void updateOrderResult(String odseq) {
+		String sql = "update order_detail set result = '2' where odseq = ?";
+		
+		try {
+			con = DBman.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, Integer.parseInt(odseq));
 			pstmt.executeUpdate();
 		}catch(SQLException e) {
 			e.printStackTrace();

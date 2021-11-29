@@ -63,6 +63,8 @@ import com.burger.controller.admin.action.AdminShortProductWriteFormAction;
 import com.burger.controller.admin.action.AdminshortProductListAction;
 import com.burger.controller.admin.action.QnaWriteAction;
 import com.burger.controller.admin.action.AdminProductDetailAction;
+import com.burger.controller.admin.action.AdminOrderListAction;
+import com.burger.controller.admin.action.AdminOrderSaveAction;
 
 public class ActionFactory {
 	private ActionFactory() {}
@@ -136,6 +138,8 @@ public class ActionFactory {
 		else if(command.equals("adminQnaDelete")) ac = new AdminQnaDeleteAction();
 		else if(command.equals("adminQnaDetail")) ac = new AdminQnaDetailAction();
 		else if(command.equals("adminQnaRepsave")) ac = new AdminQnaRepsaveAction();
+		else if(command.equals("adminOrderList")) ac = new AdminOrderListAction();
+		else if(command.equals("adminOrderSave")) ac = new AdminOrderSaveAction();
 		return ac;
 	}
 }
