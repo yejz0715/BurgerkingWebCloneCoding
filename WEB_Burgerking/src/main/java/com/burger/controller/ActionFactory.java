@@ -1,20 +1,26 @@
 package com.burger.controller;
 
-import com.burger.controller.action.FaqFormAction;
-import com.burger.controller.action.FindIdAction;
-import com.burger.controller.action.FindIdFormAction;
-import com.burger.controller.action.FindPwdAction;
-import com.burger.controller.action.FindPwdFormAction;
 import com.burger.controller.action.Action;
 import com.burger.controller.action.AppGuideFormAction;
 import com.burger.controller.action.BrandStroyFormAction;
+import com.burger.controller.action.CompletAction;
+import com.burger.controller.action.ContractAction;
+import com.burger.controller.action.ContractFormAction;
 import com.burger.controller.action.DeliveryFormAction;
 import com.burger.controller.action.EventDetailFormAction;
 import com.burger.controller.action.EventListFormAction;
 import com.burger.controller.action.EventTab2Action;
 import com.burger.controller.action.EventTab3Action;
+import com.burger.controller.action.FaqFormAction;
+import com.burger.controller.action.FindIdAction;
+import com.burger.controller.action.FindIdFormAction;
+import com.burger.controller.action.FindPwdAction;
+import com.burger.controller.action.FindPwdFormAction;
+import com.burger.controller.action.IdCheckFormAction;
 import com.burger.controller.action.IndexAction;
 import com.burger.controller.action.JoinFormAction;
+import com.burger.controller.action.JoinPageAction;
+import com.burger.controller.action.JoinPageFormAction;
 import com.burger.controller.action.LegalAction;
 import com.burger.controller.action.LoginAction;
 import com.burger.controller.action.LoginFormAction;
@@ -23,6 +29,8 @@ import com.burger.controller.action.MenuListFormAction;
 import com.burger.controller.action.MenudetailFormAction;
 import com.burger.controller.action.PassCheckAction;
 import com.burger.controller.action.PassCheckFormAction;
+import com.burger.controller.action.PopUp1Action;
+import com.burger.controller.action.PopUp2Action;
 import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.QnaDeleteAction;
 import com.burger.controller.action.QnaFormAction;
@@ -45,7 +53,10 @@ import com.burger.controller.admin.action.AdminMemberDeleteAction;
 import com.burger.controller.admin.action.AdminMemberListAction;
 import com.burger.controller.admin.action.AdminMemberUpdateAction;
 import com.burger.controller.admin.action.AdminMemberUpdateFormAction;
+import com.burger.controller.admin.action.AdminOrderListAction;
+import com.burger.controller.admin.action.AdminOrderSaveAction;
 import com.burger.controller.admin.action.AdminProductDeleteAction;
+import com.burger.controller.admin.action.AdminProductDetailAction;
 import com.burger.controller.admin.action.AdminProductListAction;
 import com.burger.controller.admin.action.AdminProductUpdateAction;
 import com.burger.controller.admin.action.AdminProductUpdateFormAction;
@@ -62,9 +73,6 @@ import com.burger.controller.admin.action.AdminShortProductWriteAction;
 import com.burger.controller.admin.action.AdminShortProductWriteFormAction;
 import com.burger.controller.admin.action.AdminshortProductListAction;
 import com.burger.controller.admin.action.QnaWriteAction;
-import com.burger.controller.admin.action.AdminProductDetailAction;
-import com.burger.controller.admin.action.AdminOrderListAction;
-import com.burger.controller.admin.action.AdminOrderSaveAction;
 
 public class ActionFactory {
 	private ActionFactory() {}
@@ -105,6 +113,15 @@ public class ActionFactory {
 		else if(command.equals("qnaWrite")) ac = new QnaWriteAction();
 		else if(command.equals("passCheckForm")) ac = new PassCheckFormAction();
 		else if(command.equals("passCheck")) ac = new PassCheckAction();
+		else if(command.equals("contract")) ac = new ContractAction(); 
+		else if(command.equals("contractForm")) ac = new ContractFormAction(); 
+		else if(command.equals("popup1")) ac = new PopUp1Action(); 
+		else if(command.equals("popup2")) ac = new PopUp2Action(); 	
+		else if(command.equals("joinpage")) ac = new JoinPageAction(); 	
+		else if(command.equals("contractFrm")) ac = new ContractFrmAction(); 
+		else if(command.equals("idCheckForm")) ac = new IdCheckFormAction(); 	
+		else if(command.equals("joinpageForm")) ac = new JoinPageFormAction(); 
+		else if(command.equals("complet")) ac = new CompletAction(); 
 		
 		
 		else if(command.equals("admin")) ac = new AdminAction();

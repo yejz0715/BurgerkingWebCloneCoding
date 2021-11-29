@@ -194,4 +194,35 @@ public class MemberDao {
 		
 		return mvo;
 	}
+	
+	public int confirmID(String id) {
+		int result = -1;
+		String sql = "select * from member where id=?";
+		con = DBman.getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs.next() ) result = 1;
+		} catch (SQLException e) {e.printStackTrace();
+		} finally {DBman.close(con, pstmt, rs);}
+		return result;
+	}
+
+	public void insertMember(MemberVO mvo) {
+		String sql = "insert into member(mseq, id, pwd, phone, name) "
+				+ "values(mseq.nextVal, ?, ?, ?, ?)";
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, mvo.getId());
+			pstmt.setString(2, mvo.getPwd());
+			pstmt.setString(3, mvo.getPhone());
+			pstmt.setString(4, mvo.getName());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {	e.printStackTrace();
+		} finally {DBman.close(con, pstmt, rs);}
+		
+	}
 }
