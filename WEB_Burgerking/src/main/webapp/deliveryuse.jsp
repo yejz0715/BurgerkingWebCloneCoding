@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 	
-<article>
+<article  id="use_load">
 <div class="subtitWrap">
 	<h4 class="subtit"><span>딜리버리 사용방법</span></h4>
 		<p class="txt">
@@ -42,6 +42,10 @@
 		<br><br><br><br><br>
 		<span style="font-size: 1.5rem;"><strong>주문완료</strong></span><br>
 		<span style="font-size: 1.3rem;">결제 후 주문이 완료되면 배달시간 및 배달 상황을 알 수 있어요.</span>
+	</div>
+	
+	<div class="c_btnItem2" style="text-align: center; margin-top: 30px;">
+		<a href="#use_load"><input type="button" class="btn01 m" value="상단으로"/></a>
 	</div>
 </div>
 </article>
