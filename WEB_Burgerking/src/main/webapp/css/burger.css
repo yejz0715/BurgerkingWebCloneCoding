@@ -2508,7 +2508,7 @@ input[type=checkbox]+:before {
 	background-image: url(../img/bg_btn01_normal_disabled.bac83f13.png);
 }
 
-.btn77 {
+.btn86 {
 	display: inline-block;
 	width: 256px;
 	height: 38px;
@@ -2536,7 +2536,6 @@ input[type=checkbox]+:before {
 	margin-left: 160px;
 	margin-top: -60px;
 }
-
 #reid {
 	width: 80px;
 	background: #fa5a5a;
