@@ -144,3 +144,14 @@ function input_pass(qseq){
 function passCheck_step2(qseq){
 	self.close();
 }
+
+function resign(){
+	return alert(`정말로 탈퇴하시겠습니까?`);
+}
+
+function post_zip(){
+	var url = "burger.do?command=findZipNum";
+	var opt = "toolbar=no, menubar=no, scrollbars=no, resizable=no, width=550,";
+	opt = opt + " height=300, top=300, left=300";
+	window.open( url, "우편번호 찾기", opt );
+}
