@@ -270,6 +270,8 @@ create table shortproduct(
 
 select * from member;
 
+select * from order_view;
+select * from orders;
 select * from cart;
 select * from cart_view;
 delete from cart_view where cseq=74

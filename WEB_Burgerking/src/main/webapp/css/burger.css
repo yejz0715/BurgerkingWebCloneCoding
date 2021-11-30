@@ -2660,4 +2660,158 @@ body {
     background-repeat: no-repeat;
     background-position: 0;
 }
+.cart_list01>li:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}
+.tit_ico.money:before {
+    background-image: url(../image/main/won.png);
+}
+.tit01:first-child {
+    margin-top: 0;
+}
+.tit_ico>* {
+    margin: 0;
+    padding: 0;
+}
+.tit01.tit_ico+.container02 {
+    margin-top: 8px;
+}
+.container02.deli_info01 {
+    padding-top: 20px;
+    padding-bottom: 57px;
+}
+.tit_ordermenu {
+    padding-right: 67%;
+}
+.deli_info01 .addrWrap01 {
+    padding: 45px 4em 45px 0;
+    border-bottom: 1px solid #ededed;
+}
+.deli_info01 .addrWrap01 .txt_addr {
+    font-weight: 400;
+    font-size: 1.75rem;
+}
+.deli_info01 .addrWrap01 .txt_addr>* {
+    display: inline;
+}
 
+.txt_addr>* {
+    display: block;
+}
+.addrWrap01 button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.deli_info01 .info_list {
+    margin-top: 50px;
+    overflow: hidden;
+}
+.deli_info01 .info_list dl {
+    float: left;
+    width: 50%;
+}
+.deli_info01 .info_list dt {
+    float: left;
+    width: 128px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 66px;
+}
+.deli_info01 .info_list input {
+    font-size: 1em;
+}
+.container02.order_accWrap {
+    padding: 0 64px 60px;
+}
+.order_accWrap.open .acc_tit {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.order_accWrap .acc_tit {
+    padding: 56px 0 46px;
+    font-size: 2.5rem;
+    line-height: 110%;
+    border-bottom: 1px solid #f2f2f2;
+}
+.order_accWrap.open .cart_list01 {
+    height: auto;
+}
+.order_accWrap.open .cart_list01 li {
+    display: block;
+}
+.order_accWrap .cart_list01>li {
+    margin: 0;
+    border-bottom: 1px solid #f2f2f2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.order_accWrap .cart_list01 .cont {
+    padding: 56px 0 0;
+}
+.order_accWrap .cart_list01 .menu_titWrap {
+    min-height: 1em;
+    padding: 0 0 40px;
+}
+.order_accWrap .cart_list01 .menu_name {
+    padding-left: 0;
+}
+.order_accWrap .cart_list01 .menu_name .tit {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    line-height: 110%;
+}
+.order_accWrap .cart_list01 .menu_name>* {
+    display: block;
+}
+.order_accWrap.open .cart_list01 .price {
+    margin-top: 3px;
+    opacity: 1;
+}
+.order_accWrap .cart_list01 .quantity {
+    left: 0;
+    bottom: 30px;
+}
+.order_accWrap .cart_list01 .sumWrap {
+    height: 95px;
+    padding: 0;
+}
+.orderWrap .container02 .order_payment_list {
+    margin: -5px 0;
+}
+.order_payment_list .tot {
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 2px dashed #eee;
+}
+.order_payment_list dl {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1.375rem;
+}
+.order_payment_list dd, .order_payment_list dt {
+    display: table-cell;
+    padding: 1px 0;
+    vertical-align: middle;
+}
+.order_payment_list .tot dt {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.totamountWrap {
+    position: relative;
+}
+.totamountWrap .c_btn {
+    margin-top: 40px;
+    text-align: right;
+}
+.totamountWrap .c_btn button {
+    margin-left: 5px;
+}

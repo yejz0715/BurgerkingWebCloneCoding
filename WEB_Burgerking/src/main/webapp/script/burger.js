@@ -146,6 +146,9 @@ function menu_plus(){
 }
 
 function go_order_insert(){
+	document.cartForm.id.value=id;
+	document.cartForm.action="burger.do?command=deliveryCartOrder";
+	document.cartForm.submit();
 	var url="burger.do?command=deliveryCartOrder";
 	window.location.replace(url);
 }

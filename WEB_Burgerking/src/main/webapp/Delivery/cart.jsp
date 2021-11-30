@@ -127,9 +127,9 @@
 		</div>
 		<div class="cartinfo">
 			<div class="c_btn item2">
-				<button type="button" class="btn_01 m ico add" 
+				<button type="button" class="btn01 m ico add" 
 				onclick="location.href='burger.do?command=deliveryForm&kind1=1'"><span>메뉴 추가</span></button>
-				<button type="button" class="btn01 m red, submit" onclick="go_order_insert()"><span>주문하기</span></button>
+				<button type="button" class="btn01 m red" onclick="go_order_insert()"><span>주문하기</span></button>
 			</div>
 			<ul class="txtlist01">
 				<li>주문서를 작성하기 전에 선택하신 상품명, 수량 및 가격이 정확한지 확인해주세요.</li>
