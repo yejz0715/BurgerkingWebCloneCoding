@@ -49,7 +49,7 @@
 			<c:choose>
 				<c:when test='${non=="1"}'>
 					<form class="login2" name="frm" method="post" action="burger.do">
-						<input type="hidden" name="command" value="nonMemberForm">
+						<input type="hidden" name="command" value="nonmemberForm">
 						<ul id="terms_wrap_ul" style=" left:0px; position:relative; margin-top: 30px;">
 							<li>
 								<span>
