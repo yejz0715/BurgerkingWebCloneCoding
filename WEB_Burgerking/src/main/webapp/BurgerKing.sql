@@ -29,7 +29,7 @@ DROP TABLE product CASCADE CONSTRAINTS;
 DROP TABLE shortproduct CASCADE CONSTRAINTS;
 DROP TABLE sub_product CASCADE CONSTRAINTS;
 
-
+select * from cart
 
 /* Drop Sequences */
 
@@ -202,6 +202,8 @@ CREATE TABLE sub_product
    image varchar2(50),
    PRIMARY KEY (spseq)
 );
+
+select * from SUB_PRODUCT;
 
 create or replace view cart_view
 as

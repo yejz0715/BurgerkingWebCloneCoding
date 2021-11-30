@@ -838,27 +838,6 @@ insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, im
 values(pseq.nextVal, '리얼 독퍼', 2900, 0, 0, '8', '1','4', 'realdogper.png',
 '반려견에게 Real Dogpper를 선물하세요!', 1);
 
-
-create table shortproduct(
-   spseq number(10),
-   pname varchar2(100),
-   kind1 varchar2(5),
-   kind2 varchar2(3),
-   image varchar2(50),
-   useyn varchar2(1)
-);
-
-CREATE TABLE sub_product
-(
-   spseq number(10) NOT NULL,
-   sname varchar2(10) NOT NULL,
-   kind1 number(5),
-   kind2 varchar2(3) DEFAULT '0-0',
-   addprice number(5) NOT NULL,
-   image varchar2(50),
-   PRIMARY KEY (spseq)
-);
-
 insert into sub_product(spseq, sname, kind1, kind2, image, addprice)
 values(pseq.nextVal, '롱베이컨 2장', '9', '1', 'bacon2.png','1200');
 insert into sub_product(spseq, sname, kind1, kind2, image, addprice)

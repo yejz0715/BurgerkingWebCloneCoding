@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,15 @@
 		</div>
 		<div class="popcont bg_basic"> 
 			<ul class="menu_sub_list check_mode">
-				<li>
+				<c:choose>
+					<c:when test="">
+					
+					</c:when>
+					<c:otherwise>
+						
+					</c:otherwise>
+				</c:choose>
+				<!-- <li>
 					<input type="checkbox" title="재료 추가" class="check03">
 					<div class="prd_img">
 						<img src="image/menu/plus/bacon2.png" alt="재료">
@@ -93,7 +102,7 @@
 						<p class="tit"><span>올엑스트라 300원</span></p>
 						<p class="price"><span>+300원</span></p>
 					</div>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 		<div class="pop_btn c_btn item2">
