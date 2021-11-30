@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSession;
 
 public class LogoutAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "burger.do?command=loginForm";
+		String url = "burger.do?command=loginForm&non=1";
 		HttpSession session = request.getSession();
 		session.removeAttribute("loginUser");
 		request.getRequestDispatcher(url).forward(request, response);

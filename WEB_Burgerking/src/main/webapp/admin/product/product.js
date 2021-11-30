@@ -3,6 +3,11 @@ function go_wrt(){
 	document.frm.submit();
 }
 
+function go_wrt2(){
+	document.frm.action = "burger.do?command=adminShortProductWriteForm";
+	document.frm.submit();
+}
+
 function go_mov(){
 	location.href="burger.do?command=adminProductList";
 }
@@ -10,20 +15,43 @@ function go_mov2(){
 	location.href="burger.do?command=adminShortProductList";
 }
 
+function del_product(){
+	var count = 0;  //  체크된 체크박스의 갯수를 카운트 하기위한 변수
+	if(document.frm.delete.length==undefined){   // 장바구니에 물건이 하나일때, 체크박스가 하나일때
+		if( document.frm.delete.checked == true)   // 그 체크박스만 체크되어 있는지 확인
+			count++;	 
+	}else{
+		for( var i=0; i<document.frm.delete.length; i++){
+			if( document.frm.delete[i].checked==true)
+				count++;
+		}
+	}
+	// 지금의 스크립트 명령은 체크박스가 하나도 체크되지 않았다면 원래로 되돌아 가기위한 코드들입니다
+	if( count == 0 ){
+		alert("삭제할 항목을 선택해주세요");
+	} else{
+		document.frm.action = "burger.do?command=adminProductDelete";
+	    document.frm.submit();
+	}
+}
+
 function go_save(){
 	var theForm = document.frm;
-	if(theForm.kind.value==""){
+	if(theForm.kind1.value==""){
 		alert("상품분류를 선택하세요.");
-		theForm.kind.focus();
-	}else if(theForm.name.value==""){
+		theForm.kind1.focus();
+	}else if(theForm.pname.value==""){
 		alert("상품명을 입력하세요.");
-		theForm.name.focus();
+		theForm.pname.focus();
 	}else if(theForm.price1.value==""){
-		alert("원가를 입력하세요");
+		alert("가격를 입력하세요");
 		theForm.price1.focus();
-	}else if(theForm.price2.value==""){
-		alert("판매가를 입력하세요");
-		theForm.price2.focus();
+	}else if(theForm.kind2.value==""){
+		alert("분류번호를 입력하세요");
+		theForm.kind2.focus();
+	}else if(theForm.kind3.value==""){
+		alert("세부를 입력하세요");
+		theForm.kind3.focus();
 	}else if(theForm.content.value==""){
 		alert("상품상세를 입력하세요");
 		theForm.content.focus();
@@ -32,6 +60,26 @@ function go_save(){
 		theForm.image.focus();
 	}else{
 		theForm.action = "burger.do?command=adminProductWrite";
+		theForm.submit();
+	}
+}
+
+function go_save2(){
+	var theForm = document.frm;
+	if(theForm.kind1.value==""){
+		alert("상품분류를 선택하세요.");
+		theForm.kind1.focus();
+	}else if(theForm.pname.value==""){
+		alert("상품명을 입력하세요.");
+		theForm.pname.focus();
+	}else if(theForm.kind2.value==""){
+		alert("분류번호를 입력하세요");
+		theForm.kind2.focus();
+	}else if(theForm.image.value==""){
+		alert("상품이미지를 입력하세요");
+		theForm.image.focus();
+	}else{
+		theForm.action = "burger.do?command=adminShortProductWrite";
 		theForm.submit();
 	}
 }
@@ -68,7 +116,10 @@ function go_mod_save(){
 		document.frm.price1.focus();
 	}else if(document.frm.kind2.value==""){
 		alert("분류번호를 선택하세요.");
-		document.frm.price2.focus();
+		document.frm.kind2.focus();
+	}else if(document.frm.kind3.value==""){
+		alert("세부를 선택하세요.");
+		document.frm.kind3.focus();
 	}else if(document.frm.content.value==""){
 		alert("상품상세를 선택하세요.");
 		document.frm.content.focus();
@@ -80,24 +131,18 @@ function go_mod_save(){
 	}
 }
 function go_mod_save2(){
-	if(document.frm.kind.value==""){
+	if(document.frm.kind1.value==""){
 		alert("상품분류를 선택하세요.");
-		document.frm.kind.focus();
-	}else if(document.frm.name.value==""){
+		document.frm.kind1.focus();
+	}else if(document.frm.pname.value==""){
 		alert("상품명을 선택하세요.");
-		document.frm.name.focus();
-	}else if(document.frm.price1.value==""){
-		alert("원가를 선택하세요.");
-		document.frm.price1.focus();
-	}else if(document.frm.price2.value==""){
-		alert("판매가를 선택하세요.");
-		document.frm.price2.focus();
-	}else if(document.frm.content.value==""){
-		alert("상품상세를 선택하세요.");
-		document.frm.content.focus();
+		document.frm.pname.focus();
+	}else if(document.frm.kind2.value==""){
+		alert("분류번호를 선택하세요.");
+		document.frm.kind2.focus();
 	}else{
 		if(confirm('수정하시겠습니까?')){
-			document.frm.action = "burger.do?command=adminProductUpdate";
+			document.frm.action = "burger.do?command=adminShortProductUpdate";
 			document.frm.submit();
 		}
 	}

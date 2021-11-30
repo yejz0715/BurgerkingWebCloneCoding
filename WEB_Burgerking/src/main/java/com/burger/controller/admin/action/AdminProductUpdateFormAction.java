@@ -31,7 +31,7 @@ public class AdminProductUpdateFormAction implements Action {
 			String kindList1[] = {"스페셜&할인팩", "프리미엄", "와퍼", "주니어&버거", "올데이킹&치킨버거", "사이드", "음료&디저트", "독퍼"}; // 검색해온 상품에서 kind 값 추출 & 상품의 kind 값을 정수로 변환
 			request.setAttribute("kindList1", kindList1);
 			int index = Integer.parseInt(pvo.getKind1());
-			request.setAttribute("kind", kindList1[index]);
+			request.setAttribute("kind", kindList1[index-1]);
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}

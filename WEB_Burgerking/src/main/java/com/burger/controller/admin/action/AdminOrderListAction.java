@@ -20,30 +20,42 @@ public class AdminOrderListAction implements Action {
 		int page = 1;
 		HttpSession session = request.getSession();
 		AdminVO avo = (AdminVO)session.getAttribute("loginAdmin");
+
+		if(avo == null) { 
+			url = "burger.do?command=admin"; 
+		}else{ 
+			// 검색을 위한 준비 
+			String key = "";
+			if(request.getParameter("key") != null) {
+				key = request.getParameter("key"); 
+				session.setAttribute("key", key); 
+			}else if	(session.getAttribute("key") != null) {
+				key = (String)session.getAttribute("key"); 
+			}else { 
+				session.removeAttribute("key");
+				key = ""; 
+			}
 		
-		/*
-		 * if(avo == null) { url = "shop.do?command=admin"; }else{ // 검색을 위한 준비 String
-		 * key = ""; if(request.getParameter("key") != null) { key =
-		 * request.getParameter("key"); session.setAttribute("key", key); }else if
-		 * (session.getAttribute("key") != null) { key =
-		 * (String)session.getAttribute("key"); }else { session.removeAttribute("key");
-		 * key = ""; }
-		 * 
-		 * // 현재 표시할 페이지에 대한 준비 if(request.getParameter("page") != null){ page =
-		 * Integer.parseInt(request.getParameter("page")); session.setAttribute("page",
-		 * page); }else if(session.getAttribute("page") != null) { page =
-		 * (int)session.getAttribute("page"); }else { page = 1;
-		 * session.removeAttribute("page"); }
-		 * 
-		 * Paging paging = new Paging(); paging.setPage(page);
-		 * 
-		 * AdminDao adao = AdminDao.getInstance(); int count =
-		 * adao.getAllCount("order_view", "mname", key); paging.setTotalCount(count);
-		 * ArrayList<orderVO> productList = adao.listOrder(paging, key);
-		 * 
-		 * request.setAttribute("orderList", productList);
-		 * request.setAttribute("paging", paging); request.setAttribute("key", key); }
-		 * request.getRequestDispatcher(url).forward(request, response);
-		 */
+			// 현재 표시할 페이지에 대한 준비
+			if(request.getParameter("page") != null){ 
+				page = Integer.parseInt(request.getParameter("page")); 
+				session.setAttribute("page", page);
+			}else if(session.getAttribute("page") != null){ 
+				page = (int)session.getAttribute("page"); 
+			}else { 
+				page = 1;
+				session.removeAttribute("page"); 
+			}
+		
+		Paging paging = new Paging(); paging.setPage(page);
+		
+		AdminDao adao = AdminDao.getInstance(); int count = adao.getAllCount("order_view", "mname", key); 
+			paging.setTotalCount(count);
+			ArrayList<orderVO> orderList = adao.listOrder(paging, key);
+		
+			request.setAttribute("orderList", orderList);
+			request.setAttribute("paging", paging); request.setAttribute("key", key);
+		}
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 }

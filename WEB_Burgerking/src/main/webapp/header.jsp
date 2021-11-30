@@ -68,7 +68,7 @@
 					
 					<c:choose>
 						<c:when test="${empty loginUser}">
-							<a id="order_btn" href="burger.do?command=loginForm&non=2"> 
+							<a id="order_btn" href="burger.do?command=loginForm&non=1"> 
 								<img	src="image/main/delivery1.png" width="160" height="50" />
 							</a>
 						</c:when>

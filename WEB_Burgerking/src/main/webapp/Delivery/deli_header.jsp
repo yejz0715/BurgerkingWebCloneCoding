@@ -20,7 +20,7 @@
 				<c:choose>
 					<c:when test="${empty loginUser}">
 						<h1 class="WEB_logo">
-							<a href="burger.do?command=loginForm"><span>버거킹</span></a>
+							<a href="burger.do?command=loginForm&non=1"><span>버거킹</span></a>
 						</h1>
 					</c:when>
 					<c:otherwise>

@@ -158,7 +158,7 @@ CREATE TABLE order_detail
    PRIMARY KEY (odseq)
 );
 
-
+select * from product where kind1 = 8;
 CREATE TABLE product
 (
 	pseq number(10) NOT NULL,

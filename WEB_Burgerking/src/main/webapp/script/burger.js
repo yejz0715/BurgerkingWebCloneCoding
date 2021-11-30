@@ -149,6 +149,63 @@ function go_order_insert(){
 	document.cartForm.id.value=id;
 	document.cartForm.action="burger.do?command=deliveryCartOrder";
 	document.cartForm.submit();
-	var url="burger.do?command=deliveryCartOrder";
-	window.location.replace(url);
+}
+
+function del_qna(){
+	var count = 0;  //  체크된 체크박스의 갯수를 카운트 하기위한 변수
+	if(document.frm.delete.length==undefined){   // 장바구니에 물건이 하나일때, 체크박스가 하나일때
+		if( document.frm.delete.checked == true)   // 그 체크박스만 체크되어 있는지 확인
+			count++;	 
+	}else{
+		for( var i=0; i<document.frm.delete.length; i++){
+			if( document.frm.delete[i].checked==true)
+				count++;
+		}
+	}
+	// 지금의 스크립트 명령은 체크박스가 하나도 체크되지 않았다면 원래로 되돌아 가기위한 코드들입니다
+	if( count == 0 ){
+		alert("삭제할 항목을 선택해주세요");
+	} else{
+		document.frm.action = "burger.do?command=QnaDelete";
+	    document.frm.submit();
+	}
+}
+
+function qna_write_chk(){
+	if(document.frm.subject.value==""){
+		alert("제목을 입력해주세요.");
+		document.frm.subject.focus();
+	}else if(document.frm.content.value==""){
+		alert("문의내용을 입력해주세요.");
+		document.frm.content.focus();
+	}else if(document.frm.pass.value==""){
+		alert("비밀번호를 입력해주세요.");
+		document.frm.pass.focus();
+	}else if(document.frm.pass.value.length != 4){
+		alert("비밀번호를 4자리로 입력해주세요.");
+		document.frm.pass.focus();
+	}else{
+		document.frm.submit();
+	}
+}
+
+function input_pass(qseq){
+	var url = "burger.do?command=passCheckForm&qseq=" + qseq;
+	document.frm.action = url;
+	document.frm.submit();
+}
+
+function passCheck_step2(qseq){
+	self.close();
+}
+
+function resign(){
+	return alert(`정말로 탈퇴하시겠습니까?`);
+}
+
+function post_zip(){
+	var url = "burger.do?command=findZipNum";
+	var opt = "toolbar=no, menubar=no, scrollbars=no, resizable=no, width=550,";
+	opt = opt + " height=300, top=300, left=300";
+	window.open( url, "우편번호 찾기", opt );
 }

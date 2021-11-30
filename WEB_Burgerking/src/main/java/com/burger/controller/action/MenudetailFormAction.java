@@ -20,12 +20,14 @@ public class MenudetailFormAction implements Action {
 		
 		String pseq = request.getParameter("pseq");
 		ArrayList<ProductVO> list = pdao.getProductdetail(pseq);
-		ProductVO pvo = list.get(0);
-		
+		ProductVO pvo = list.get(0);		
+
 		ArrayList<ProductVO> list2 = pdao.getProductkind(pvo.getKind1(), pvo.getKind2());
-		
+
 		System.out.println(list2);
-		
+		System.out.println(pvo);
+		System.out.println(list);
+
 		request.setAttribute("list2", list2);
 		request.setAttribute("pvo", pvo);
 		request.getRequestDispatcher(url).forward(request, response);	

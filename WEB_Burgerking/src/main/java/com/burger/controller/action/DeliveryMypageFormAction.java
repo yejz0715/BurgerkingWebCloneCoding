@@ -14,16 +14,12 @@ public class DeliveryMypageFormAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url="Delivery/myPage.jsp";
-		String id=request.getParameter("id");				
-	    
+		String url="Delivery/myPage.jsp";	
+	       
 		HttpSession session =request.getSession();
 		MemberVO mvo=(MemberVO) session.getAttribute("loginUser");
 		if(mvo==null) {
 			url="burger.do?command=LoginFormAction";
-		}else {
-			MemberDao mdao = MemberDao.getInstance();
-		    MemberVO mvo1 = mdao.getMember(id); 
 		}
 		request.setAttribute("MemberVO", mvo);
 		request.getRequestDispatcher(url).forward(request, response);

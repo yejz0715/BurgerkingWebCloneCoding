@@ -131,5 +131,45 @@ public class EventDao {
 		}
 		return evo;
 	}
+
+	public void deleteEvent(String eseq) {
+		String sql = "delete from event where eseq = ?";
+		con = DBman.getConnection();
+		
+		try {
+		      pstmt = con.prepareStatement(sql); 
+		      pstmt.setInt(1, Integer.parseInt(eseq));
+		      pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+	    } finally { 
+	    	DBman.close(con, pstmt, rs);
+	    }   		
+	}
+
+	public EventVO getEvent(String eseq) {
+		EventVO evo = new EventVO();
+		String sql = "select * from event where eseq = ?";
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, eseq);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				evo.setEseq(rs.getInt("eseq"));
+				evo.setSubject(rs.getString("subject"));
+				evo.setContent(rs.getString("content"));
+				evo.setImage(rs.getString("image"));
+				evo.setStartdate(rs.getTimestamp("startdate"));
+				evo.setEnddate(rs.getTimestamp("enddate"));
+				evo.setState(rs.getInt("state"));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return evo;
+	}
 	
 }
