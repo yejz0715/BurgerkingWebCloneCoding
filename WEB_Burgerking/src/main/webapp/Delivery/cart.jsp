@@ -21,8 +21,7 @@
 		<div class="allchk01">
 			<label><input type="checkbox" class="check02"><span>전체선택</span></label>
 			<div class="rcen_btn"></div>
-				<button type="button" class="btn_my"><span>MY세트 등록</span></button>
-				<button type="button" class="btn_04" ><span>삭제</span></button>
+				<button type="button" class="btn04" ><strong>삭제</strong></button>
 		</div>
 		<ul class="cart_list01">
 		<c:forEach var="cartList" items="${cartList}">
@@ -39,7 +38,7 @@
 					</label>
 					<div class="prd_img"><img src="image/menu/${cartList.kind1}/${cartList.image}"></div>
 				</div>
-				<div class="setmenu_detail">
+<%-- 				<div class="setmenu_detail">
 					<dl>
 						<dt>재료추가</dt>
 						<dd>
@@ -100,7 +99,7 @@
 						</c:otherwise>
 					</c:choose>
 					</dl>
-				</div>
+				</div> --%>
 				<div class="quantity"><strong class="tit">수량</strong>
 					<div class="num_set">
 						<button type="button" class="btn_minus"

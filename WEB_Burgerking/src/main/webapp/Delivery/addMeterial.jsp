@@ -25,7 +25,7 @@
 		<div class="popcont bg_basic"> 
 			<ul class="menu_sub_list check_mode">
 				<li>
-					<input type="checkbox" title="재료 추가" class="check02">
+					<input type="checkbox" title="재료 추가" class="check03">
 					<div class="prd_img">
 						<img src="image/menu/plus/bacon2.png" alt="재료">
 					</div>
@@ -35,7 +35,7 @@
 					</div>
 				</li>
 				<li>
-					<input type="checkbox" title="재료 추가" class="check02">
+					<input type="checkbox" title="재료 추가" class="check03">
 					<div class="prd_img">
 						<img src="image/menu/plus/hallapinyo4.png" alt="재료">
 					</div>
@@ -45,7 +45,7 @@
 					</div>
 				</li>
 				<li>
-					<input type="checkbox" title="재료 추가" class="check02">
+					<input type="checkbox" title="재료 추가" class="check03">
 					<div class="prd_img">
 						<img src="image/menu/plus/bacon1.png" alt="재료">
 					</div>
@@ -55,7 +55,7 @@
 					</div>
 				</li>
 				<li>
-					<input type="checkbox" title="재료 추가" class="check02">
+					<input type="checkbox" title="재료 추가" class="check03">
 					<div class="prd_img">
 						<img src="image/menu/plus/cheese2.png" alt="재료">
 					</div>
@@ -65,7 +65,7 @@
 					</div>
 				</li>
 				<li>
-					<input type="checkbox" title="재료 추가" class="check02">
+					<input type="checkbox" title="재료 추가" class="check03">
 					<div class="prd_img">
 						<img src="image/menu/plus/hallapinyo2.png" alt="재료">
 					</div>
@@ -75,7 +75,7 @@
 					</div>
 				</li>
 				<li>
-					<input type="checkbox" title="재료 추가" class="check02">
+					<input type="checkbox" title="재료 추가" class="check03">
 					<div class="prd_img">
 						<img src="image/menu/plus/cheese1.png" alt="재료">
 					</div>
@@ -85,7 +85,7 @@
 					</div>
 				</li>
 				<li>
-					<input type="checkbox" title="재료 추가" class="check02">
+					<input type="checkbox" title="재료 추가" class="check03">
 					<div class="prd_img">
 						<img src="image/menu/plus/allextra.png" alt="재료">
 					</div>

@@ -275,5 +275,3 @@ select * from orders;
 select * from cart;
 select * from cart_view;
 delete from cart_view where cseq=74
-delete from cart where cseq<='80'
-update cart set quantity=quantity+1 where cseq = 92

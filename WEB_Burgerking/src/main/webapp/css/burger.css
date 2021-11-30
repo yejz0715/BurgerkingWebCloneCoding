@@ -318,7 +318,7 @@ ul {
 .menuarea ul li a {
 	width: 220px;
 	height: 300px;
-	margin: 0 40px;
+	margin: 0 auto;
 	float: left;
 	text-decoration: none;
 	color: #292929;
@@ -2130,9 +2130,10 @@ strong {
 	background-position: 0;
 }
 
-.btn02 st03 {
+.btn02.st03 {
 	display: inline-block;
-	height: 84px;
+	border-radius:10px;
+	height: 54px;
 	padding: 20px 10px;
 	font-weight: 700;
 	font-size: 1.625rem;
@@ -2144,8 +2145,7 @@ strong {
 	background-size: auto 100%;
 }
 
-.btn02, .btn02.red {
-	border-radius: 10px;
+/* .btn02, .btn02.red {
 	display: inline-block;
 	padding: 20px 10px;
 	font-weight: 700;
@@ -2153,7 +2153,8 @@ strong {
 	color: #fff;
 	background: #e22219 url(../image/main/bg_btn01_m_red.png) repeat-x 0;
 	background-size: auto 100%
-}
+} */
+
 
 .btn02.red {
 	font-weight: 700;
@@ -2276,13 +2277,6 @@ input[type=checkbox]+:before {
 		no-repeat 0;
 }
 
-input[type=checkbox]+:before, input[type=radio]+:before {
-	content: "";
-	display: inline-block;
-	margin-right: 13px;
-	vertical-align: middle;
-}
-
 .auth_list button {
 	position: absolute;
 	right: -5px;
@@ -2332,7 +2326,7 @@ button {
 	top: -3px;
 }
 
-input.check02+:before {
+/* input.check02+:before {
 	width: 32px;
 	height: 32px;
 	background-image:
@@ -2343,10 +2337,10 @@ input[type=checkbox]+:before {
 	background:
 		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDg5MDc0NTVGQzUyMTFFODk1OTQ4NUZFOTQ1NDk1MzAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDg5MDc0NTZGQzUyMTFFODk1OTQ4NUZFOTQ1NDk1MzAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpEODkwNzQ1M0ZDNTIxMUU4OTU5NDg1RkU5NDU0OTUzMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpEODkwNzQ1NEZDNTIxMUU4OTU5NDg1RkU5NDU0OTUzMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjpSlu4AAAG9SURBVHjatJY9T8JQFIZPixglJMyEECHQbhBlcdCBhET+hVHcjDH+BP6CX5sf0V+hxoHBuGiiUxlLcYSRECNDfQ+0UD4u0FLe5M1paHkf7uXc2yuVy2VyKp/Pb6IcwXtwAl6l2erAOvwC31YqlW/nzRVH+BrKNXwAy+ROQVi1fIysB66A/ZIdhg/XUV7hkgfAqPj7h5xn5fYDz+Ed8lecd8kXEoa0hfrpwwgmyYS3ZZ+mSCQJ3ufwIi1XRYZsLJoSCoWm3U7Ic64DoSKRCOVyOVIURdje8qKATCZDgUCAotEohcNhYU8vDDBNkzRNo1ar5Q4Si8WEv2wSoNlsTl2dY4rH45ROpymbzY6B3AKEEEmSev9YMDgE8gIY2iCdqtfr3ZpMJvsgXdcplUq5Bgghk0Cqqvb2CZeAmd3FoFqtNtiIAKhWq64ANuRv2gOGYXRBNqDRaLjt9g5PlwErs0Ac3m63vSwpg0fyPM+THgGsJ4bcWfv+svQo46X1hYubJQH4UPFhd9cZ/O4zgPNO+y0MGk94Ab73YepMK6dg5Q4Wo3V8KeGEcYF6Au/yNsbvpHn6Av6B3+Cr0XPXvwADAHY1rlsfWsRZAAAAAElFTkSuQmCC)
 		no-repeat 0;
-}
+} */
 
 input[type=checkbox]+:before, input[type=radio]+:before {
-	content: "";
+	/* content: ""; */
 	display: inline-block;
 	margin-right: 13px;
 	vertical-align: middle;
@@ -2498,13 +2492,16 @@ input[type=checkbox]+:before {
 		no-repeat 0;
 }
 
-input[type=checkbox]+:before {
+.check02+:before {
 	content: "";
 	display: inline-block;
 	width: 25px;
 	height: 25px;
 	margin-right: 13px;
 	vertical-align: middle;
+	background:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDg5MDc0NTVGQzUyMTFFODk1OTQ4NUZFOTQ1NDk1MzAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDg5MDc0NTZGQzUyMTFFODk1OTQ4NUZFOTQ1NDk1MzAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpEODkwNzQ1M0ZDNTIxMUU4OTU5NDg1RkU5NDU0OTUzMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpEODkwNzQ1NEZDNTIxMUU4OTU5NDg1RkU5NDU0OTUzMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjpSlu4AAAG9SURBVHjatJY9T8JQFIZPixglJMyEECHQbhBlcdCBhET+hVHcjDH+BP6CX5sf0V+hxoHBuGiiUxlLcYSRECNDfQ+0UD4u0FLe5M1paHkf7uXc2yuVy2VyKp/Pb6IcwXtwAl6l2erAOvwC31YqlW/nzRVH+BrKNXwAy+ROQVi1fIysB66A/ZIdhg/XUV7hkgfAqPj7h5xn5fYDz+Ed8lecd8kXEoa0hfrpwwgmyYS3ZZ+mSCQJ3ufwIi1XRYZsLJoSCoWm3U7Ic64DoSKRCOVyOVIURdje8qKATCZDgUCAotEohcNhYU8vDDBNkzRNo1ar5Q4Si8WEv2wSoNlsTl2dY4rH45ROpymbzY6B3AKEEEmSev9YMDgE8gIY2iCdqtfr3ZpMJvsgXdcplUq5Bgghk0Cqqvb2CZeAmd3FoFqtNtiIAKhWq64ANuRv2gOGYXRBNqDRaLjt9g5PlwErs0Ac3m63vSwpg0fyPM+THgGsJ4bcWfv+svQo46X1hYubJQH4UPFhd9cZ/O4zgPNO+y0MGk94Ab73YepMK6dg5Q4Wo3V8KeGEcYF6Au/yNsbvpHn6Av6B3+Cr0XPXvwADAHY1rlsfWsRZAAAAAElFTkSuQmCC)
+		no-repeat 0;
 }
 
 .btn77:disabled {
@@ -2598,15 +2595,6 @@ input[type=checkbox]+:before {
 
 .auth_cont li {
 	padding-left: 1em;
-}
-
-li {
-	list-style: none;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	display: list-item;
-	text-align: -webkit-match-parent;
 }
 
 .pop_btn.full_type {
@@ -3247,15 +3235,7 @@ img {
 .menu_sub_list.check_mode input {
     z-index: 10;
 }
-input[type="checkbox" i] {
-    background-color: initial;
-    cursor: default;
-    appearance: auto;
-    box-sizing: border-box;
-    margin: 3px 3px 3px 4px;
-    padding: initial;
-    border: initial;
-}
+
 .c_btn:last-child {
     margin-bottom: 0;
 }
@@ -3375,13 +3355,13 @@ input[type="checkbox" i] {
 .allchk01 input {
     margin-right: 7px;
 }
-input.check02:checked+:before {
+input.check03:checked+:before {
     background-image: url(../image/main/checkbox01.png);
 }
 input[type=checkbox]:checked+:before {
     background-image: url(../image/main/checkbox01.png);
 }
-input.check02+:before {
+input.check03+:before {
     width: 32px;
     height: 32px;
     background-image: url(../image/main/checkbox02.png);
@@ -3402,7 +3382,7 @@ input[type=checkbox]+:before {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
-.allchk01 .btn04 {
+.allchk01.btn04 {
     height: 44px;
     margin-left: 22px;
     font-size: 1.25rem;
@@ -3416,6 +3396,7 @@ input[type=checkbox]+:before {
     color: #fff;
     background: #2e2e2e;
     border-radius: 5px;
+    float:right;
 }
 .cart_list01>li {
     position: relative;
@@ -3432,7 +3413,7 @@ input[type=checkbox]+:before {
     min-height: 178px;
     padding: 50px 320px 20px 0;
     font-weight: 700;
-    font-size: 1.125rem;
+    font-size: 2rem;
     border-bottom: 1px solid #f4f4f4;
 }
 .cart_list01 .menu_titWrap .menu_name {
@@ -3645,14 +3626,14 @@ address, em {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    width:500px;
 }
 .c_btn:first-child {
     margin-top: 0;
 }
-.cartinfo .c_btn button {
+/* .cartinfo .c_btn button {
     width: 216px;
-    margin-left: 10px;
-}
+} */
 .c_btn.item2 a, .c_btn.item2 button {
     float: left;
     width: 49%;
@@ -3696,6 +3677,11 @@ address, em {
     height: 40px;
     background-repeat: no-repeat;
     background-position: 0;
+}
+.result{
+	text-align:center;
+	font-size: 2rem;
+	font-weight:700;
 }
 .cart_list01>li:after {
     content: "";
@@ -4138,23 +4124,6 @@ label {
 	cursor: default;
 }
 
-input[type=checkbox] {
-	position: absolute;
-	margin: 0;
-	vertical-align: middle;
-	font-size: 1em;
-	border: none;
-	border-radius: 0;
-	-webkit-appearance: none;
-	opacity: 0;
-}
-
-input[type="checkbox" i] {
-	background-color: initial;
-	cursor: default;
-	box-sizing: border-box;
-	padding: initial;
-}
 
 .auth_list label>span {
 	display: inline;
@@ -4178,12 +4147,6 @@ input[type=checkbox]+:before {
 		no-repeat 0;
 }
 
-input[type=checkbox]+:before, input[type=radio]+:before {
-	content: "";
-	display: inline-block;
-	margin-right: 13px;
-	vertical-align: middle;
-}
 
 .auth_list .btn_acc {
 	left: auto;

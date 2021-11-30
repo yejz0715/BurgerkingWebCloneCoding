@@ -4,8 +4,7 @@
 <link href="css/burger.css" rel="stylesheet">
 
 
-<c:choose>
-	<c:when test=" ${!empty loginUser}">
+
 		<article>
 			 <div class="web_deliveryContainer">
 			 <a href="burger.do?command=deliveryOrderListForm">
@@ -60,7 +59,3 @@
 			 </div>
 			 </div>
 			 </article>
-	</c:when>
-	<c:otherwise>
-	</c:otherwise>
-</c:choose>
