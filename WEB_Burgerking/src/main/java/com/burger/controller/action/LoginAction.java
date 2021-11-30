@@ -24,17 +24,17 @@ public class LoginAction implements Action {
 		if(mvo == null) {
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter writer = response.getWriter();
-			writer.println("<script>alert('입력하신 아이디가 없습니다.'); location.href='burger.do?command=loginForm';</script>");
+			writer.println("<script>alert('입력하신 아이디가 없습니다.'); location.href='burger.do?command=loginForm&non=1';</script>");
 			writer.close();
 		}else if(mvo.getPwd() == null) {
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter writer = response.getWriter();
-			writer.println("<script>alert('회원정보 오류 관리자에게 문의하세요'); location.href='burger.do?command=loginForm';</script>");
+			writer.println("<script>alert('회원정보 오류 관리자에게 문의하세요'); location.href='burger.do?command=loginForm&non=1';</script>");
 			writer.close();
 		}else if(!mvo.getPwd().equals(pwd)) {
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter writer = response.getWriter();
-			writer.println("<script>alert('비밀번호가 틀렸습니다.'); location.href='burger.do?command=loginForm';</script>");
+			writer.println("<script>alert('비밀번호가 틀렸습니다.'); location.href='burger.do?command=loginForm&non=1';</script>");
 			writer.close();
 		}else {
 			HttpSession session = request.getSession();
