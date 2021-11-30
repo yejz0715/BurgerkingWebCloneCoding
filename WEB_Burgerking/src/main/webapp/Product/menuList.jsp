@@ -36,8 +36,8 @@
 	</div>
 	<div class="menuarea">
 		<ul>
-			<c:forEach var="shortProductVO" items="${shortProductList}">
-				<li><a href="burger.do?command=menudetailForm&spseq=${shortProductVO.spseq}">
+			<c:forEach var="shortProductVO" items="${ProductList}">
+				<li><a href="burger.do?command=menudetailForm&pseq=${shortProductVO.pseq}">
 					<div class="menuImgdiv">
 						<img class="menuImg" src="image/menu/${shortProductVO.kind1}/${shortProductVO.image}">					
 					</div>
