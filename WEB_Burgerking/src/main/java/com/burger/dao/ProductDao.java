@@ -296,7 +296,6 @@ public class ProductDao {
 		}
 		return pvo;
 	}
-	
 	public void deleteProduct(String pseq) {
 		String sql = "delete from product where pseq=?";
 		con = DBman.getConnection();
