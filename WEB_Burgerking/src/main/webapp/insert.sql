@@ -838,6 +838,40 @@ insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, im
 values(pseq.nextVal, '리얼 독퍼', 2900, 0, 0, '8', '1','4', 'realdogper.png',
 '반려견에게 Real Dogpper를 선물하세요!', 1);
 
+create table shortproduct(
+   spseq number(10),
+   pname varchar2(100),
+   kind1 varchar2(5),
+   kind2 varchar2(3),
+   image varchar2(50),
+   useyn varchar2(1)
+);
+
+CREATE TABLE sub_product
+(
+   spseq number(10) NOT NULL,
+   sname varchar2(10) NOT NULL,
+   kind1 number(5),
+   kind2 varchar2(3) DEFAULT '0-0',
+   addprice number(5) NOT NULL,
+   image varchar2(50),
+   PRIMARY KEY (spseq)
+);
+
+insert into sub_product(spseq, sname, kind1, kind2, image, addprice)
+values(pseq.nextVal, '롱베이컨 2장', '9', '1', 'bacon2.png','1200');
+insert into sub_product(spseq, sname, kind1, kind2, image, addprice)
+values(pseq.nextVal, '할라피뇨4 추가', '9', '2', 'hallapinyo4.png','800');
+insert into sub_product(spseq, sname, kind1, kind2, image, addprice)
+values(pseq.nextVal, '롱베이컨 1장', '9', '3', 'bacon1.png','600');
+insert into sub_product(spseq, sname, kind1, kind2, image, addprice)
+values(pseq.nextVal, '치즈 2장', '9', '4', 'cheese2.png','600');
+insert into sub_product(spseq, sname, kind1, kind2, image, addprice)
+values(pseq.nextVal, '할라피뇨2 추가', '9', '5', 'hallapinyo2.png','800');
+insert into sub_product(spseq, sname, kind1, kind2, image, addprice)
+values(pseq.nextVal, '치즈 1장', '9', '6', 'cheese1.png','600');
+insert into sub_product(spseq, sname, kind1, kind2, image, addprice)
+values(pseq.nextVal, '올엑스트라', '9', '7', 'cheese1.png','300');
 
 insert into event(eseq, subject, content, image, startdate, enddate, state)
 values(qseq.nextVal, 'Best WHOPPER 2개 구매시 7000원','1. 행사명 : Best WHOPPER 2개 구매시 7000원
@@ -1679,3 +1713,6 @@ select * from event;
 
 insert into member(mseq, id, pwd, phone, name)
 values(mseq.nextVal, 'scott@naver.com', '1234', '010-2431-6247', '김우진')
+
+
+insert into MYADDRESS(mseq, address, aname, zip_num) values(mseq.nextVal, '경기도 파주시 야당동44', '유창대', '12345')

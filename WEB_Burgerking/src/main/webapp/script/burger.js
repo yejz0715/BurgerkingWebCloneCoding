@@ -104,19 +104,48 @@ function deliveryDetail(pseq){
 	window.open(url, "delivery", opt);
 }
 
+
 function add_or_cart(kind1, pseq){
 	var url="";
-	if(kind1.value=='1'){
-		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
-	}else if(kind1.value=='6'){
-		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
-	}else if(kind1.value=='7'){
-		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
-	}else if(kind1.value=='8'){
-		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
+	if(kind1.value=="1"){
+		url="burger.do?command=addCart&pseq"+pseq;
+	}else if(kind1.value=="6"){
+		url="burger.do?command=addCart&pseq"+pseq;
+	}else if(kind1.value=="7"){
+		url="burger.do?command=addCart&pseq"+pseq;
+	}else if(kind1.value=="8"){
+		url="burger.do?command=addCart&pseq"+pseq;
 	}else{
-		url="burger.do?command=addCart";
+		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
 	}
-	window.open(url,"delivery_self")
+	window.location.replace(url);
 }
 
+function go_cart(pseq, id){
+	opener.document.cartForm.pseq.value=pseq;
+	opener.document.cartForm.id.value=id;
+	opener.cartForm.submit();
+	self.close();
+}
+function go_cart02(id){
+	document.cartForm.id.value=id;
+	document.cartForm.action="burger.do?command=deliveryCartForm";
+	document.cartForm.submit();
+}
+
+
+function go_cart_delete(cseq){
+	var url="burger.do?command=cartDelete&cseq="+cseq;
+	window.location.replace(url);
+}
+
+
+function menu_plus(){
+	var url="burger.do?command=deliveryForm&kind1=1";
+	window.location.replace(url);
+}
+
+function go_order_insert(){
+	var url="burger.do?command=deliveryCartOrder";
+	window.location.replace(url);
+}

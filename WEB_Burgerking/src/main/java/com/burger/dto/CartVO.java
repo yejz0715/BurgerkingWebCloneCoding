@@ -9,7 +9,50 @@ public class CartVO {
 	private int quantity;
 	private String result;
 	private Timestamp date;
+	private String pname;
+	private String mname;
+	private String image;
+	private int price1;
+	private String kind1;
+	private String kind3;
 	
+	
+	public String getKind3() {
+		return kind3;
+	}
+	public void setKind3(String kind3) {
+		this.kind3 = kind3;
+	}
+	public String getKind1() {
+		return kind1;
+	}
+	public void setKind1(String kind1) {
+		this.kind1 = kind1;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public int getPrice1() {
+		return price1;
+	}
+	public void setPrice1(int price1) {
+		this.price1 = price1;
+	}
+	public String getPname() {
+		return pname;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+	public String getMname() {
+		return mname;
+	}
+	public void setMname(String mname) {
+		this.mname = mname;
+	}
 	public int getCseq() {
 		return cseq;
 	}

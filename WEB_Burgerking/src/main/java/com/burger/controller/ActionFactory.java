@@ -6,10 +6,13 @@ import com.burger.controller.action.FindIdFormAction;
 import com.burger.controller.action.FindPwdAction;
 import com.burger.controller.action.FindPwdFormAction;
 import com.burger.controller.action.Action;
+import com.burger.controller.action.AddCartAction;
 import com.burger.controller.action.AppGuideFormAction;
 import com.burger.controller.action.BrandStroyFormAction;
+import com.burger.controller.action.CartDeleteFormAction;
 import com.burger.controller.action.DeliveryAddMaterialAction;
 import com.burger.controller.action.DeliveryCartFormAction;
+import com.burger.controller.action.DeliveryCartOrderAction;
 import com.burger.controller.action.DeliveryDetailFormAction;
 import com.burger.controller.action.DeliveryFormAction;
 import com.burger.controller.action.DeliveryMypageFormAction;
@@ -26,6 +29,8 @@ import com.burger.controller.action.LoginFormAction;
 import com.burger.controller.action.LogoutAction;
 import com.burger.controller.action.MenuListFormAction;
 import com.burger.controller.action.MenudetailFormAction;
+import com.burger.controller.action.MinusQuantityAction;
+import com.burger.controller.action.PlusQuantityAction;
 import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.QnaFormAction;
 import com.burger.controller.action.TermsAction;
@@ -86,7 +91,15 @@ public class ActionFactory {
 		else if(command.equals("adminProductUpdateForm")) ac = new AdminProductUpdateFormAction();
 		else if(command.equals("deliveryDetail")) ac = new DeliveryDetailFormAction();
 		else if(command.equals("deliveryAddMaterial")) ac = new DeliveryAddMaterialAction();
+		else if(command.equals("addCart")) ac = new AddCartAction();
+		else if(command.equals("deliveryCartForm")) ac = new DeliveryCartFormAction();
+		else if(command.equals("cartDelete")) ac = new CartDeleteFormAction();
+		else if(command.equals("minusQuantity")) ac = new MinusQuantityAction();
+		else if(command.equals("plusQuantity")) ac = new PlusQuantityAction();
+		else if(command.equals("deliveryCartOrder")) ac = new DeliveryCartOrderAction();
+		
 		
 		return ac;
 	}
 }
+

@@ -2,11 +2,12 @@
 <%@ include file="deli_header.jsp"%>
 <div class="clear"></div>
 
+
 <article>
 	<div class="location">
 		<ul>
 			<li><a href="burger.do?command=deliveryForm&kind1=1">딜리버리</a>&nbsp;>&nbsp;</li>
-			<li>메뉴</li>
+			<li>카트</li>
 		</ul>
 	</div>
 <div class="bg_w">

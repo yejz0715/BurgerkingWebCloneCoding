@@ -40,7 +40,7 @@ DROP SEQUENCE oseq;
 DROP SEQUENCE pseq;
 DROP SEQUENCE qseq;
 DROP SEQUENCE spseq;
-
+DROP SEQUENCE aseq;
 
 
 
@@ -53,8 +53,6 @@ create sequence oseq increment by 1 start with 1;
 create sequence pseq increment by 1 start with 1;
 create sequence spseq increment by 1 start with 1;
 create sequence eseq increment by 1 start with 1;
-
-
 
 
 /* Create Tables */
@@ -129,6 +127,7 @@ CREATE TABLE Myaddress
 );
 
 
+
 CREATE TABLE non_member
 (
    id varchar2(50) NOT NULL,
@@ -196,7 +195,7 @@ CREATE TABLE qna
 CREATE TABLE sub_product
 (
    spseq number(10) NOT NULL,
-   sname varchar2(10) NOT NULL,
+   sname varchar2(30) NOT NULL,
    kind1 number(5),
    kind2 varchar2(3) DEFAULT '0-0',
    addprice number(5) NOT NULL,
@@ -204,7 +203,24 @@ CREATE TABLE sub_product
    PRIMARY KEY (spseq)
 );
 
+create or replace view cart_view
+as
+select  c.cseq, c.id, m.name as mname, c.pseq, p.pname as pname, p.image, p.kind1, p.kind3,
+	c.quantity, p.price1, c.result,  c.indate 
+from cart c, product p, member m   
+where  c.pseq = p.pseq and m.id = c.id;
 
+create or replace view order_view
+as
+select d.odseq, o.oseq, o.id, o.indate, d.pseq, d.quantity,  d.result, 
+m.name as mname, a.zip_num, a.address, m.phone, p.pname as pname, p.price1
+from orders o, order_detail d, member m, product p, myaddress a
+where o.oseq = d.oseq and o.id = m.id and d.pseq = p.pseq;
+
+
+select*from CART
+select * from cart_view;
+select * from order_view;
 
 /* Create Foreign Keys */
 
@@ -253,3 +269,9 @@ create table shortproduct(
 );
 
 select * from member;
+
+select * from cart;
+select * from cart_view;
+delete from cart_view where cseq=74
+delete from cart where cseq<='80'
+update cart set quantity=quantity+1 where cseq = 92
