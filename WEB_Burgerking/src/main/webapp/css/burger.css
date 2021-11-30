@@ -10,11 +10,10 @@ body {
 	background-color: #fff;
 	margin-top: 120px;
 	min-width: 1000px;
-}
-
-article {
-	position: relative;
-	min-height: 900px;
+    min-height: 100%;
+    color: #000;
+    word-wrap: normal;
+    word-break: keep-all;
 }
 
 .clear {
@@ -2575,7 +2574,7 @@ input[type=checkbox]+:before {
 
 .popcont .auth_cont {
 	min-height: 400px;
-	margin-left: 20px;
+	margin-left: 36px;
 }
 
 .auth_cont {
@@ -2641,9 +2640,6 @@ li {
 	border-radius: 0;
 }
 
-.c_btn.item2 button:last-child {
-	width: 100%;
-}
 
 .pop_btn.item2 button {
 	width: 50%;
@@ -3681,13 +3677,7 @@ address, em {
 .contentsBox01 {
     padding: 50px 0 45px;
 }
-body {
-    min-height: 100%;
-    color: #000;
-    background: #f2ebe6;
-    word-wrap: normal;
-    word-break: keep-all;
-}
+
 
 /* ---------------OrderList-------------------------------------- */
 

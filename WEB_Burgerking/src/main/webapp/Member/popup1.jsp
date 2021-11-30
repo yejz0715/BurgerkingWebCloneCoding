@@ -339,13 +339,15 @@ function checkon()  {
 			</div>
 		</div>
 		<div class="pop_btn full_type c_btn item2">
+		<button type="button" class="btn02 dark">
+					<span>취소</span>
+				</button>
 			<button type="button" class="btn02 dark" value="popbox"  onclick="self.close();">
 				<span>확인</span>
 			</button>
 
 		</div>
 	</div>
-
 
 </form>
 </body>
