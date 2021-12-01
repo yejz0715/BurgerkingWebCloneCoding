@@ -25,14 +25,18 @@
 		</div>
 		<div class="popcont bg_basic"> 
 			<ul class="menu_sub_list check_mode">
-				<c:choose>
-					<c:when test="">
-					
-					</c:when>
-					<c:otherwise>
-						
-					</c:otherwise>
-				</c:choose>
+				<c:forEach items="${subProductVO}" var="subproductVO">
+					<li>
+						<input type="checkbox" name="Meterial" value="${subproductVO.spseq}" title="재료추가" class="check03">
+						<div class="prd_img">
+							<img src = "image/menu/plus/${subproductVO.image}" alt="재료">
+						</div>
+						<div class="cont">
+							<p class="tit"><span>${subproductVO.sname}</span></p>
+							<p class="price"><span>${subproductVO.addprice}</span></p>
+						</div>
+					</li>
+				</c:forEach>
 				<!-- <li>
 					<input type="checkbox" title="재료 추가" class="check03">
 					<div class="prd_img">
