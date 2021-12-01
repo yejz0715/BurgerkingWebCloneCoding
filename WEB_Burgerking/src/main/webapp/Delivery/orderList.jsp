@@ -29,7 +29,7 @@
 				<!-- <button type="button" class="btn04 h02 rbtn"><span>변경</span></button> -->
 			</div>
 			<div class="info_list">
-				<dl><dt>연락처</dt><dd>${memberVO.phone}</dd></dl>
+				<dl><dt>연락처</dt><dd>${orderVO.phone}</dd></dl>
 			</div>
 		</div>
 		<div class="tit01 tit_ico burger tit_ordermenu">

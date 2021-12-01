@@ -20,7 +20,7 @@ public class MyAddressUpdateAction implements Action {
 		HttpSession session =request.getSession();
 		MemberVO mvo=(MemberVO) session.getAttribute("loginUser");
 		if(mvo==null) {
-			url="burger.do?command=LoginFormAction";
+			url="burger.do?command=LoginFormAction&non=1";
 		}else {
 			int mseq = mvo.getMseq();
 			String zip_num=request.getParameter("zip_num");

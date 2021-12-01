@@ -40,12 +40,8 @@ public class DeliveryOrderListAction implements Action {
 				request.setAttribute("orderVO", ovo1);
 			}
 			
-			System.out.println(list1);
-			System.out.println(mvo1);
-			
 			ArrayList<orderVO> list2 = odao.getOrderList(mvo.getId());
 			ArrayList<CartVO> list3 = cdao.selectCart( mvo.getId() );
-			
 			
 			request.setAttribute("memberVO", mvo1);
 			request.setAttribute("orderList", list1);

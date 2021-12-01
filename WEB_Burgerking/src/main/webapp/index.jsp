@@ -4,7 +4,7 @@
 <div class="clear"></div>
 <div class="mainWrap">
    <div class="banner">
-	   <div class="banner" style="overflow: scroll">
+	   <div class="banner">
 	      <div class="slide" id="slide">
 	         <ul class="cnt" id="cnt">
 	            <li><a href="burger.do?command=eventDetailForm&eseq=4"><img

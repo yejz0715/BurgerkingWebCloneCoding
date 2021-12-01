@@ -62,7 +62,32 @@ public class MyAddressDao {
 		} finally {
 			DBman.close(con, pstmt, rs);
 		}	
+	}
+
+
+
+	public MyAddressVO getAddress(int mseq) {
+		MyAddressVO mavo = new MyAddressVO();
+		String sql= " select * from myaddress where mseq = ?";
+		con = DBman.getConnection();
 		
+		try {
+			pstmt=con.prepareStatement(sql);
+			pstmt.setInt(1, mseq);	
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				mavo.setMseq(rs.getInt("mseq"));
+				mavo.setAddress(rs.getString("address"));
+				mavo.setZip_num(rs.getString("zip_num"));
+			}
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return mavo;
 	}
 	
 	
