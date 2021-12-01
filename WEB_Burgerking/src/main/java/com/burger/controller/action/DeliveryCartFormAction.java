@@ -9,10 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.burger.dao.CartDao;
+import com.burger.dao.OrderDao;
 import com.burger.dao.ProductDao;
 import com.burger.dto.CartVO;
 import com.burger.dto.MemberVO;
 import com.burger.dto.ProductVO;
+import com.burger.dto.orderVO;
 
 public class DeliveryCartFormAction implements Action {
 
@@ -24,7 +26,7 @@ public class DeliveryCartFormAction implements Action {
 		HttpSession session = request.getSession(); 
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
 		if (mvo == null) {
-		    url = "burger.do?command=loginForm";
+		    url = "burger.do?command=loginForm&non=1";
 		}else {
 			// 로그인 유저의 아이디로 카트물건들을 검색해서 리턴받습니다 
 			CartDao cdao = CartDao.getInstance();
@@ -35,7 +37,13 @@ public class DeliveryCartFormAction implements Action {
 			int totalPrice = 0; 
 			for(CartVO cvo : list) totalPrice += cvo.getPrice1() * cvo.getQuantity(); // 금액*수량이 누적 -> 총금액을 추가로 계산
 			request.setAttribute("totalPrice", totalPrice); // 리퀘스트에 저장
+			OrderDao odao = OrderDao.getInstance();
+			ArrayList<orderVO> list1 = odao.getOrderList(mvo.getId());
+			ArrayList<CartVO> list2 = cdao.selectCart( mvo.getId() );	
+			request.setAttribute("ovo", list1);
+			request.setAttribute("cvo", list2);
 		}
+		
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 

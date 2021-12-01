@@ -119,7 +119,24 @@ window.addEventListener("load", function () {
 	    indi.children[before].classList.remove("on");
 	    indi.children[after].classList.add("on");
 	  }
-	});
+	
+	var pb = function p(){
+       playBtn[0].style.display = "none";
+       stopBtn[0].style.display = "block";
+       playSet = setInterval(function () {
+         if (!moveIng) {
+           after++;
+           if (after >= slideCntItem.length) {
+             after = 0;
+           }
+           move(after, before, "next");
+           before = after;
+         }
+       }, AUTO_TIME);
+   };
+   
+   pb();
+});
 
 
 

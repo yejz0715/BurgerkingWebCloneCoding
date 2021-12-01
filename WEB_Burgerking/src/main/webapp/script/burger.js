@@ -149,6 +149,10 @@ function go_order_insert(){
 	location.href="burger.do?command=deliveryCartOrder";
 }
 
+function go_order_select(){
+	location.href="burger.do?command=deliveryOrderList";	
+}
+
 function del_qna(){
 	var count = 0;  //  체크된 체크박스의 갯수를 카운트 하기위한 변수
 	if(document.frm.delete.length==undefined){   // 장바구니에 물건이 하나일때, 체크박스가 하나일때

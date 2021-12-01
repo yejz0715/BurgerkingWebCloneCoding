@@ -10,6 +10,7 @@ import com.burger.controller.action.ContractFrmAction;
 import com.burger.controller.action.DeliveryFormAction;
 import com.burger.controller.action.DeliveryMypageFormAction;
 import com.burger.controller.action.DeliveryOrderDetailAction;
+import com.burger.controller.action.DeliveryOrderListAction;
 import com.burger.controller.action.DeliveryUseFormAction;
 import com.burger.controller.action.EventDetailFormAction;
 import com.burger.controller.action.EventListFormAction;
@@ -197,6 +198,7 @@ public class ActionFactory {
 		else if(command.equals("adminQnaRepsave")) ac = new AdminQnaRepsaveAction();
 		else if(command.equals("adminOrderList")) ac = new AdminOrderListAction();
 		else if(command.equals("adminOrderSave")) ac = new AdminOrderSaveAction();
+		else if(command.equals("deliveryOrderList")) ac = new DeliveryOrderListAction();
 
 		return ac;
 	}

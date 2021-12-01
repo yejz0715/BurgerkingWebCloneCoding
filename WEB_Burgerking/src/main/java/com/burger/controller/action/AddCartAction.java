@@ -20,7 +20,7 @@ public class AddCartAction implements Action {
 		String url;
 		
 		if (mvo == null) {
-		    url = "burger.do?command=loginForm";
+		    url = "burger.do?command=loginForm&non=1";
 		}else {
 			//로그인이 되어 있다면 로그인 정보에스 id 를 추출하고  상품번호와 아이디를  CartVO 에 담아서
 			CartVO cvo = new CartVO();
