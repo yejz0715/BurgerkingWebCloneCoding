@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.burger.dto.ProductVO;
 import com.burger.dto.shortProductVO;
+import com.burger.dto.subProductVO;
 import com.burger.util.DBman;
 
 public class subProductDao {
@@ -95,6 +95,30 @@ public class subProductDao {
 		return pvo;
 	}
 	
+	public ArrayList<subProductVO> getSubProduct() {
+		ArrayList<subProductVO> list = new ArrayList<subProductVO>();
+		String sql = "select * from sub_product order by kind2 desc";
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				subProductVO spvo = new subProductVO();
+				spvo.setSpseq(rs.getInt("spseq"));
+				spvo.setSname(rs.getString("sname"));
+				spvo.setKind1(rs.getInt("kind1"));
+				spvo.setKind2(rs.getString("kind2"));
+				spvo.setAddprice(rs.getInt("addprice"));
+				spvo.setImage(rs.getString("image"));
+				list.add(spvo);
+			}
+		} catch (SQLException e) {e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return list;
+	}
 }
 
 

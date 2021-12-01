@@ -25,7 +25,7 @@
 					</c:when>
 					<c:otherwise>
 						<h1 class="WEB_logo">
-							<a href="burger.do?command=deliveryForm"><span>버거킹</span></a>
+							<a href="burger.do?command=deliveryForm&kind1=1"><span>버거킹</span></a>
 						</h1>
 					</c:otherwise>
 				</c:choose>
@@ -62,4 +62,6 @@
 				</c:if>
 			</div>
 		</div>
-<%@ include file="../Delivery/deli_orderCart.jsp"%>
+		<c:if test="${!empty loginUser}">
+			<%@ include file="../Delivery/deli_orderCart.jsp"%>		
+		</c:if>
