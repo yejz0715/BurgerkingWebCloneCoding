@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.burger.dao.CartDao;
 import com.burger.dao.MemberDao;
 import com.burger.dao.OrderDao;
+import com.burger.dto.CartVO;
 import com.burger.dto.MemberVO;
 import com.burger.dto.orderVO;
 
@@ -28,6 +30,7 @@ public class DeliveryOrderListFormAction implements Action {
 		if (mvo == null) {
 		    url = "burger.do?command=loginForm";
 		}else {
+			CartDao cdao = CartDao.getInstance();
 			OrderDao odao = OrderDao.getInstance();
 			//  order_view 에서 주문번호와  로그인 아이디로 주문을 검색
 			ArrayList<orderVO> list = odao.listOrderById( mvo.getId() , oseq );
@@ -38,6 +41,11 @@ public class DeliveryOrderListFormAction implements Action {
 			orderVO ovo = list.get(0);	
 			System.out.println(list);
 			System.out.println(mvo1);
+			
+			ArrayList<orderVO> list2 = odao.getOrderList(mvo.getId());
+			ArrayList<CartVO> list3 = cdao.selectCart( mvo.getId() );
+			request.setAttribute("ovo", list2);
+			request.setAttribute("cvo", list3);
 			
 			request.setAttribute("orderVO", ovo);
 			request.setAttribute("memberVO", mvo1);

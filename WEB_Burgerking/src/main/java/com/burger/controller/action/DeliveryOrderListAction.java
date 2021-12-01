@@ -27,7 +27,7 @@ public class DeliveryOrderListAction implements Action {
 		MemberVO mvo1 = mdao.getMember(mvo.getId());
 		if (mvo1 == null) {
 		    url = "burger.do?command=loginForm";
-		}else {
+		}else{
 			CartDao cdao = CartDao.getInstance();
 			OrderDao odao = OrderDao.getInstance();
 			ArrayList<orderVO> list1 = odao.getOrderList(mvo.getId());
@@ -35,8 +35,11 @@ public class DeliveryOrderListAction implements Action {
 			int totalPrice=0;
 			for(orderVO ovo : list1)  // 조회된 주문의 총 결제금액 계산
 				totalPrice+=ovo.getPrice1() * ovo.getQuantity();	
+			if(list1.size()!=0) {
+				orderVO ovo1 = list1.get(0);
+				request.setAttribute("orderVO", ovo1);
+			}
 			
-			orderVO ovo1 = list1.get(0);
 			System.out.println(list1);
 			System.out.println(mvo1);
 			
@@ -44,7 +47,6 @@ public class DeliveryOrderListAction implements Action {
 			ArrayList<CartVO> list3 = cdao.selectCart( mvo.getId() );
 			
 			
-			request.setAttribute("orderVO", ovo1);
 			request.setAttribute("memberVO", mvo1);
 			request.setAttribute("orderList", list1);
 			request.setAttribute("ovo", list2);

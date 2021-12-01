@@ -229,7 +229,7 @@ select*from orders
 select*from order_detail
 select * from cart_view;
 select * from order_view;
-
+delete from order_detail where odseq<100
 
 /* Create Foreign Keys */
 
