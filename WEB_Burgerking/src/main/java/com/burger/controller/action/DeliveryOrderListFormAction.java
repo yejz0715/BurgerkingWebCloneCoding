@@ -30,6 +30,9 @@ public class DeliveryOrderListFormAction implements Action {
 			for(orderVO ovo : list)  // 조회된 주문의 총 결제금액 계산
 				totalPrice+=ovo.getPrice1() * ovo.getQuantity();	
 			// 리퀘스트에 저장
+			
+			System.out.println(list);
+			
 			request.setAttribute("orderList", list);
 	        request.setAttribute("totalPrice", totalPrice);
 		}

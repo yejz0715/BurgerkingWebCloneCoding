@@ -3,7 +3,6 @@
 <%@ include file="deli_header.jsp"%>
 <div class="clear"></div>
 <form name="cartForm" method="post" action="burger.do" style="background: #f2ebe6;">
-<input type="hidden" name="command" value="cartForm">
 <input type="hidden" name="cseq" value="">
 <article>
 <div class="location">
@@ -109,7 +108,7 @@
 						 onclick="location.href='burger.do?command=plusQuantity&cseq=${cartList.cseq}'"><span>+</span></button>
 					</div>
 				</div>
-				<button type="button" class="btn_del02" onclick="go_cart_delete('${cartList.cseq}')"><span>Delete menu</span></button>
+				<button type="button" name="submit" class="btn_del02" onclick="go_cart_delete('${cartList.cseq}')"><span>Delete menu</span></button>
 			</div>
 		</li> 
 		</c:forEach>

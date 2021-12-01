@@ -2578,5 +2578,6 @@ values(qseq.nextVal, '앵그리너겟킹', '1. 행사명 : 앵그리너겟킹 8�
 
 
 select * from event;
+select * from order_view;
 insert into admin values('admin', 'admin1234', '김우진', '010-2431-6247');
 

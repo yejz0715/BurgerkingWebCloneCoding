@@ -2,6 +2,8 @@
 <%@ include file="deli_header.jsp"%>
 <div class="clear"></div>
 <article>
+<form name="order" method="post" action="burger.do" style="background: #f2ebe6;">
+<input type="hidden" name="order" value="">
 <div class="contentsBox01">
 	<div class="web_container">
 		<div class="subtitWrap m_bg_basic">
@@ -12,11 +14,11 @@
 		</div>
 		<div class="container02 deli_info01">
 			<div class="addrWrap01">
-				<p class="txt_addr"><span>${orderList.address}</span></p>
+				<p class="txt_addr"><span><%-- ${orderList.address} --%></span></p>
 				<button type="button" class="btn04 h02 rbtn"><span>변경</span></button>
 			</div>
 			<div class="info_list">
-				<dl><dt>연락처</dt><dd><input type="text"maxlength="20" value="${orderList.phone}"></dd></dl>
+				<dl><dt>연락처</dt><dd><input type="text"maxlength="20" value="<%-- ${orderList.phone} --%>"></dd></dl>
 			</div>
 		</div>
 		<div class="tit01 tit_ico burger tit_ordermenu">
@@ -42,10 +44,10 @@
 					<div class="quantity"><strong class="tit">수량</strong>
 						<div class="num_set">
 							<button type="button" class="btn_minus"
-							 onclick="location.href='burger.do?command=minusQuantity&cseq=${orderList.cseq}'"><span>-</span></button>
+							 onclick=""><span>-</span></button>
 							<div class="result">${orderList.quantity}</div>
 							<button type="button" class="btn_plus"
-							 onclick="location.href='burger.do?command=plusQuantity&cseq=${orderList.cseq}'"><span>+</span></button>
+							 onclick=""><span>+</span></button>
 						</div>
 					</div>
 				</div>
@@ -111,5 +113,6 @@
 		</div>
 	</div>
 </div>
+</form>
 </article>
 <%@ include file="/footer/footer.jsp" %>

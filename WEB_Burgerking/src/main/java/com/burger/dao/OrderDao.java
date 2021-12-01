@@ -51,10 +51,14 @@ public class OrderDao {
 				pstmt.executeUpdate();
 				
 				// 4. order_detail 에 추가된 카트 내용은  cart 테이블에서 처리되었으므로 삭제 또는 result  를 2로 변경
+				/*
 				pstmt.close();
+				// sql = "delete from cart where cseq = ?"; 
+				sql = "Update cart set result='2' where cseq=?";
 				pstmt = con.prepareStatement(sql);
 				pstmt.setInt(1, cvo.getCseq());
 				pstmt.executeUpdate();
+				*/
 			}			
 		} catch (SQLException e) { e.printStackTrace();
 		} finally { DBman.close(con, pstmt, rs);  }
