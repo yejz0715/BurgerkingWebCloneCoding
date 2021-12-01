@@ -25,6 +25,7 @@
 				<th>배송지</th>
 				<th>전화</th>
 				<th>주문일</th>
+				<th>삭제</th>
 			</tr>
 			<c:forEach items="${orderList}" var="orderVO">
 				<tr>
@@ -47,11 +48,15 @@
 					<td>${orderVO.address}</td>
 					<td>${orderVO.phone}</td>
 					<td><fmt:formatDate value="${orderVO.indate}"/></td>
+					<td>
+						<input type="checkbox" name="delete" value="${orderVO.odseq}">
+					</td>
 				</tr>
 			</c:forEach>
 		</table>
 		<div class="clear"></div>
 		<input type="button" class="btn" style="width: 200px" value="주문처리(입금확인)" onclick="go_order_save()">
+		<input type="button" class="btn" style="float: right;" value="삭제" onclick="del_order();">
 	</form>
 	
 	<br><br>
@@ -67,3 +72,4 @@
 </article>
 
 <%@ include file="/admin/footer.jsp"%>
+

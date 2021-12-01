@@ -127,6 +127,16 @@ function go_cart(pseq, id){
 	opener.cartForm.submit();
 	self.close();
 }
+
+/*function go_add_Meterial(){
+	var frm=document.cartForm;
+	var 
+	opener.document.cartForm.pseq.value=pseq;
+	opener.document.cartForm.id.value=id;
+	opener.cartForm.submit();
+	self.close();
+}*/
+
 function go_cart02(id){
 	document.cartForm.id.value=id;
 	document.cartForm.action="burger.do?command=deliveryCartForm";
@@ -171,6 +181,16 @@ function del_qna(){
 		document.frm.action = "burger.do?command=QnaDelete";
 	    document.frm.submit();
 	}
+}
+
+function selectAllDelete(selectAllDelete)  {
+  	const checkboxes = document.getElementsByName('menu');
+  	checkboxes.forEach((checkbox) => {
+    checkbox.checked = selectAllDelete.checked;
+  })
+}
+function del_cart(){
+
 }
 
 function qna_write_chk(){

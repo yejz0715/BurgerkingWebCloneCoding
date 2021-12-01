@@ -338,7 +338,7 @@ function checkon()  {
 				</p>
 			</div>
 		</div>
-		<div class="pop_btn full_type c_btn item2">
+		<div class="pop_btn full_type c_btn item3">
 
 			<button type="button" class="btn02 dark" value="popbox"  onclick="self.close();">
 				<span>확인</span>

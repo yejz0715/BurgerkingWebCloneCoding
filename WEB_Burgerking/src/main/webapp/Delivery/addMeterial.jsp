@@ -25,7 +25,7 @@
 		</div>
 		<div class="popcont bg_basic"> 
 			<ul class="menu_sub_list check_mode">
-				<c:forEach items="${subProductVO}" var="subproductVO">
+				<c:forEach items="${subProductVO}" var="subproductVO" >
 					<li>
 						<input type="checkbox" name="Meterial" value="${subproductVO.spseq}" title="재료추가" class="check03">
 						<div class="prd_img">
@@ -42,7 +42,9 @@
 		<div class="pop_btn c_btn item2">
 			<button type="button" class="btn02 dark m_btn01_s"
 			onclick="go_cart('${pvo.pseq}','${loginUser}')"><span>추가안함</span></button>
-			<button type="button" class="btn02 red m_btn01_s"><span>추가함</span></button>
+			<button type="button" class="btn02 red m_btn01_s"
+			onclick="go_add_Meterial('${pvo.pseq}','${subproductVO.spseq}','${loginUser}')">
+			<span>추가함</span></button>
 		</div>
 	</div>
 </div>

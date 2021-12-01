@@ -80,6 +80,7 @@ import com.burger.controller.admin.action.AdminMemberDeleteAction;
 import com.burger.controller.admin.action.AdminMemberListAction;
 import com.burger.controller.admin.action.AdminMemberUpdateAction;
 import com.burger.controller.admin.action.AdminMemberUpdateFormAction;
+import com.burger.controller.admin.action.AdminOrderDeleteAction;
 import com.burger.controller.admin.action.AdminOrderListAction;
 import com.burger.controller.admin.action.AdminOrderSaveAction;
 import com.burger.controller.admin.action.AdminProductDeleteAction;
@@ -207,6 +208,7 @@ public class ActionFactory {
 		else if(command.equals("adminOrderList")) ac = new AdminOrderListAction();
 		else if(command.equals("adminOrderSave")) ac = new AdminOrderSaveAction();
 		else if(command.equals("deliveryOrderList")) ac = new DeliveryOrderListAction();
+		else if(command.equals("adminOrderDelete")) ac = new AdminOrderDeleteAction();
 
 		return ac;
 	}

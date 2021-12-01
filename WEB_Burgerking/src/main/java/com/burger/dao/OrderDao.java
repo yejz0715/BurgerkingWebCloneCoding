@@ -123,6 +123,58 @@ public class OrderDao {
 	    } finally { DBman.close(con, pstmt, rs); } 
 		return list2;
 	}
+	public void deleteOrder(String odseq, int oseq) {
+		// 1. 해당 odseq값을 가진 주문을 order_detail에서 제거
+		String sql = "delete from order_detail where odseq = ?";
+
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, odseq);
+			pstmt.executeUpdate();
+			
+			//2. order_detail에서 제거한 주문의 oseq 값을 가진 odseq 주문이 남아있는지 확인
+			sql = "select * from order_detail where oseq = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, oseq);
+			rs = pstmt.executeQuery();
+			
+			// 하나라도 남아있다면 여기서 메소드 종료
+			if(rs.next()) {
+				return;
+			}else {
+				// 없다면 orders에서 해당 oseq 값을 가진 주문을 삭제한다.
+				sql = "delete from orders where oseq = ?";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setInt(1, oseq);
+				pstmt.executeUpdate();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}
+	}
+
+	public int getOseq(String odseq) {
+		int oseq = 0;
+		String sql = "select * from order_detail where odseq = ?";
+
+		con = DBman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, odseq);
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				oseq = rs.getInt("oseq");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return oseq;
+	}
 }
 
 
