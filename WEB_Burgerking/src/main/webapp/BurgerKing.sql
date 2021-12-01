@@ -175,7 +175,8 @@ CREATE TABLE product
 	useyn number(1) DEFAULT 1 NOT NULL,
 	PRIMARY KEY (pseq)
 );
-select * from member
+
+
 
 CREATE TABLE qna
 (
@@ -219,10 +220,16 @@ m.name as mname, a.zip_num, a.address, m.phone, p.pname as pname, p.price1
 from orders o, order_detail d, member m, product p, myaddress a
 where o.oseq = d.oseq and o.id = m.id and d.pseq = p.pseq;
 
+select distinct oseq, result from order_view where id='scott@naver.com' order by result, oseq desc
+select * from order_view where id='scott@naver.com' and oseq=48
+select * from order_view  where id='scott@naver.com' and result ='1'
 
 select*from CART
+select*from orders
+select*from order_detail
 select * from cart_view;
 select * from order_view;
+
 
 /* Create Foreign Keys */
 

@@ -7,10 +7,10 @@
 
 		<article>
 			 <div class="web_deliveryContainer">
-			 <div class="deliveryOrder" onclick="go_order_insert()">
+			 <div class="deliveryOrder" onclick="go_order_select()">
 			 <img class= "deliveryIcon" src="image/main/my_delivery.png" />
 			 <c:choose>
-				 <c:when test="${orderList.size() == 0}">
+				 <c:when test="${ovo.size() == 0}">
 					 <dl>
 						 <dt><strong>딜리버리 주문내역</strong></dt>
 						 <dd>주문내역이 없습니다.</dd>
@@ -20,7 +20,7 @@
 					 <dl>
 						 <dt><strong>딜리버리 주문내역</strong>
 							 <em class="count">
-							 <span>${orderList.size()}</span>
+							 <span>${ovo.size()}</span>
 							 </em>
 						 </dt>
 						 <dd>주문내역</dd>
@@ -37,7 +37,7 @@
 			<input type="hidden" name="id" value="">
 			<input type="hidden" name="command" value="deliveryCartForm">
 			 <c:choose>
-				 <c:when test="${cartList.size() == 0}">
+				 <c:when test="${cvo.size() == 0}"> 
 					 <dl>
 					 <dt><strong>카트</strong></dt>
 					 <dd>카트에 담은 상품이 없습니다.</dd>
@@ -47,7 +47,7 @@
 					 <dl>
 						<dt><strong>카트</strong>
 						<em class="count">
-						<span>${cartList.size()}</span>
+						<span>${cvo.size()}</span>
 						</em>
 						</dt>
 					 	<dd>카트에 담은 상품</dd>

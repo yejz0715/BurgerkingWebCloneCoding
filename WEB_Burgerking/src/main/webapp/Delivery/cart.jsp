@@ -17,6 +17,14 @@
 		<h2 class="page_tit">딜리버리 카트</h2>			
 	</div>
 	<div class="container01 cartWrap">
+		<c:choose>
+		<c:when test="${empty cartList}">
+			<div class="tab_cont">
+				<div class="nodata"><p>주문내역이 없습니다.</p></div>
+			</div>
+		</c:when>
+		<c:otherwise>
+		
 		<div class="allchk01">
 			<label><input type="checkbox" class="check02"><span>전체선택</span></label>
 			<div class="rcen_btn"></div>
@@ -37,68 +45,6 @@
 					</label>
 					<div class="prd_img"><img src="image/menu/${cartList.kind1}/${cartList.image}"></div>
 				</div>
-<%-- 				<div class="setmenu_detail">
-					<dl>
-						<dt>재료추가</dt>
-						<dd>
-							<ul class="list">
-							<c:choose>
-								<c:when test='${addMeterial.size()==0 }'>
-								<li>없음</li>
-								</c:when>
-								<c:otherwise>
-								<li></li>
-								</c:otherwise>
-							</c:choose>
-							</ul>
-							<button type="button" class="btn_04 h02 btn_edit"><span>변경</span></button>
-						</dd>
-					</dl>
-					<dl>
-					<c:choose>
-						<c:when test='${cartList.kind3=="3"}'>
-						<dt>사이드</dt>
-						<dd>
-							<ul class="list">
-								<span class="txt">프렌치프라이(L)</span>
-							</ul>								
-						</dd>
-						</c:when>
-						<c:when test='${cartList.kind3=="2"}'>
-						<dt>사이드</dt>
-						<dd>
-							<ul class="list">
-								<span class="txt">프렌치프라이(R)</span>
-							</ul>								
-						</dd>
-						</c:when>
-						<c:otherwise>
-						</c:otherwise>
-					</c:choose>
-					</dl>
-					<dl>
-					<c:choose>
-						<c:when test='${cartList.kind3=="3"}'>
-						<dt>음료</dt>
-						<dd>
-							<ul class="list">
-								<span class="txt">콜라(L)</span>
-							</ul>								
-						</dd>
-						</c:when>
-						<c:when test='${cartList.kind3=="2"}'>
-						<dt>음료</dt>
-						<dd>
-							<ul class="list">
-								<span class="txt">콜라(R)</span>
-							</ul>								
-						</dd>
-						</c:when>
-						<c:otherwise>
-						</c:otherwise>
-					</c:choose>
-					</dl>
-				</div> --%>
 				<div class="quantity"><strong class="tit">수량</strong>
 					<div class="num_set">
 						<button type="button" class="btn_minus"
@@ -113,6 +59,7 @@
 		</li> 
 		</c:forEach>
 		</ul>
+		
 		<div class="sumWrap">
 			<dl>
 				<dt>총 주문금액</dt>
@@ -123,6 +70,8 @@
 				</dd>
 			</dl>
 		</div>
+		</c:otherwise>
+		</c:choose>
 		<div class="cartinfo">
 			<div class="c_btn item2">
 				<button type="button" class="btn01 m ico add" 
@@ -134,8 +83,12 @@
 				<li>해당매장의 주문배달 최소금액은 12,000원 입니다.</li>
 			</ul>
 		</div>
+	
 	</div>
 </div>
 </div>
 </article>
 </form>
+<c:if test="${empty cartList}">
+<%@ include file="/footer/footer.jsp" %>
+</c:if>

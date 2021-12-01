@@ -51,14 +51,14 @@ public class OrderDao {
 				pstmt.executeUpdate();
 				
 				// 4. order_detail 에 추가된 카트 내용은  cart 테이블에서 처리되었으므로 삭제 또는 result  를 2로 변경
-				/*
+
 				pstmt.close();
 				// sql = "delete from cart where cseq = ?"; 
 				sql = "Update cart set result='2' where cseq=?";
 				pstmt = con.prepareStatement(sql);
 				pstmt.setInt(1, cvo.getCseq());
 				pstmt.executeUpdate();
-				*/
+
 			}			
 		} catch (SQLException e) { e.printStackTrace();
 		} finally { DBman.close(con, pstmt, rs);  }
@@ -93,6 +93,35 @@ public class OrderDao {
 		} catch (Exception e) { e.printStackTrace();
 	    } finally { DBman.close(con, pstmt, rs); } 
 		return list;
+	}
+	public ArrayList<orderVO> getOrderList(String id) {
+		ArrayList<orderVO> list2 = new ArrayList<orderVO>();
+		String sql = "select * from order_view  where id=? and result ='1'";
+		con = DBman.getConnection();
+		try {
+			  pstmt = con.prepareStatement(sql); 
+			  pstmt.setString(1, id);
+			  rs = pstmt.executeQuery();
+			  while(rs.next()) {
+				    orderVO ovo = new orderVO();
+					ovo.setOdseq(rs.getInt("odseq"));
+					ovo.setOseq(rs.getInt("oseq"));
+					ovo.setId(rs.getString("id"));
+					ovo.setIndate(rs.getTimestamp("indate"));
+					ovo.setMname(rs.getString("mname"));
+					ovo.setZip_num(rs.getString("zip_num"));
+					ovo.setAddress(rs.getString("address"));
+					ovo.setPhone(rs.getString("phone"));
+					ovo.setPname(rs.getString("pname"));
+					ovo.setPrice1(rs.getInt("price1"));
+					ovo.setPseq(rs.getInt("pseq"));
+					ovo.setQuantity(rs.getInt("quantity"));
+					ovo.setResult(rs.getString("result"));
+					list2.add(ovo);
+			  }
+		} catch (Exception e) { e.printStackTrace();
+	    } finally { DBman.close(con, pstmt, rs); } 
+		return list2;
 	}
 }
 
