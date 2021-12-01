@@ -7,8 +7,7 @@
 
 		<article>
 			 <div class="web_deliveryContainer">
-			 <a href="burger.do?command=deliveryOrderListForm">
-			 <div class="deliveryOrder">
+			 <div class="deliveryOrder" onclick="go_order_insert()">
 			 <img class= "deliveryIcon" src="image/main/my_delivery.png" />
 			 <c:choose>
 				 <c:when test="${orderList.size() == 0}">
@@ -21,7 +20,7 @@
 					 <dl>
 						 <dt><strong>딜리버리 주문내역</strong>
 							 <em class="count">
-							 <span>10</span>
+							 <span>${orderList.size()}</span>
 							 </em>
 						 </dt>
 						 <dd>주문내역</dd>
@@ -29,7 +28,7 @@
 				 </c:otherwise> 
 			 </c:choose>
 			 </div>
-			 </a>
+			 
 			 
 			 <div class="deliveryCart" onclick="go_cart02('${loginUser}')">
 			 <img class= "deliveryIcon" src="image/main/my_cart.png" />

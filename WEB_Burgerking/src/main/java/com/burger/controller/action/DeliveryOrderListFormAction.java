@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.burger.dao.MemberDao;
 import com.burger.dao.OrderDao;
 import com.burger.dto.MemberVO;
 import com.burger.dto.orderVO;
@@ -19,6 +20,10 @@ public class DeliveryOrderListFormAction implements Action {
 		String url = "Delivery/orderList.jsp";
 		int oseq = Integer.parseInt(request.getParameter("oseq"));
 		HttpSession session = request.getSession();
+		
+		MemberDao mdao = MemberDao.getInstance();
+		MemberVO mvo1 = mdao.getMember(session.getId());
+		
 		MemberVO mvo = (MemberVO) session.getAttribute("loginUser");
 		if (mvo == null) {
 		    url = "burger.do?command=loginForm";
@@ -30,9 +35,12 @@ public class DeliveryOrderListFormAction implements Action {
 			for(orderVO ovo : list)  // 조회된 주문의 총 결제금액 계산
 				totalPrice+=ovo.getPrice1() * ovo.getQuantity();	
 			// 리퀘스트에 저장
-			
+			orderVO ovo = list.get(0);	
 			System.out.println(list);
+			System.out.println(mvo1);
 			
+			request.setAttribute("orderVO", ovo);
+			request.setAttribute("memberVO", mvo1);
 			request.setAttribute("orderList", list);
 	        request.setAttribute("totalPrice", totalPrice);
 		}

@@ -175,7 +175,7 @@ CREATE TABLE product
 	useyn number(1) DEFAULT 1 NOT NULL,
 	PRIMARY KEY (pseq)
 );
-
+select * from member
 
 CREATE TABLE qna
 (
