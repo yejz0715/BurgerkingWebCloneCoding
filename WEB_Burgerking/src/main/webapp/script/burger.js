@@ -189,8 +189,29 @@ function selectAllDelete(selectAllDelete)  {
     checkbox.checked = selectAllDelete.checked;
   })
 }
-function del_cart(){
-
+function del_cart(sad){
+	var count = 0;  //  체크된 체크박스의 갯수를 카운트 하기위한 변수
+	var checkboxes = document.getElementsByName('menu');
+	var cb = [];
+	
+	if(checkboxes.length==undefined){   // 장바구니에 물건이 하나일때, 체크박스가 하나일때
+		if(checkboxes.checked == true)   // 그 체크박스만 체크되어 있는지 확인
+			count++;
+			cb[0] = checkboxes.value;	 
+	}else{
+		for( var i=0; i<checkboxes.length; i++){
+			if( checkboxes[i].checked==true){
+				count++;
+				cb[i] = checkboxes[i].value;
+			}
+		}
+	}
+	// 지금의 스크립트 명령은 체크박스가 하나도 체크되지 않았다면 원래로 되돌아 가기위한 코드들입니다
+	if( count == 0 ){
+		alert("삭제할 항목을 선택해주세요");
+	} else{
+	    window.location.href = "burger.do?command=deliveryCartDelete&menu=" + cb;
+	}
 }
 
 function qna_write_chk(){

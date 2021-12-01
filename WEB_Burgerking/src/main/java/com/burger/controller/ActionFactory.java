@@ -61,6 +61,7 @@ import com.burger.controller.action.QnaWriteFormAction;
 import com.burger.controller.action.TermsAction;
 import com.burger.controller.action.UpdatePwdAction;
 import com.burger.controller.action.VideoPolicyAction;
+import com.burger.controller.actiona.DeliveryCartDeleteAction;
 import com.burger.controller.admin.action.AdminAction;
 import com.burger.controller.admin.action.AdminLoginAction;
 import com.burger.controller.admin.action.AdminLogoutAction;
@@ -209,7 +210,7 @@ public class ActionFactory {
 		else if(command.equals("adminOrderSave")) ac = new AdminOrderSaveAction();
 		else if(command.equals("deliveryOrderList")) ac = new DeliveryOrderListAction();
 		else if(command.equals("adminOrderDelete")) ac = new AdminOrderDeleteAction();
-
+		else if(command.equals("deliveryCartDelete")) ac = new DeliveryCartDeleteAction();
 		return ac;
 	}
 }
