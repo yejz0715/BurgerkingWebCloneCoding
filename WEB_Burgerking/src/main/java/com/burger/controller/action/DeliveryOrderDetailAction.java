@@ -18,7 +18,7 @@ public class DeliveryOrderDetailAction implements Action {
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO) session.getAttribute("loginUser");
 		if (mvo == null) {
-			url = "burger.do?command=LoginFormAction";
+			url = "burger.do?command=LoginFormAction&non=1";
 		}else {
 			
 			

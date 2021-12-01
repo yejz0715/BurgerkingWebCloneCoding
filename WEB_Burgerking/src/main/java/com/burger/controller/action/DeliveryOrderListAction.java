@@ -26,7 +26,7 @@ public class DeliveryOrderListAction implements Action {
 		MemberVO mvo = (MemberVO) session.getAttribute("loginUser");
 		MemberVO mvo1 = mdao.getMember(mvo.getId());
 		if (mvo1 == null) {
-		    url = "burger.do?command=loginForm";
+		    url = "burger.do?command=loginForm&non=1";
 		}else{
 			CartDao cdao = CartDao.getInstance();
 			OrderDao odao = OrderDao.getInstance();

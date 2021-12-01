@@ -26,7 +26,7 @@ public class DeliveryCartFormAction implements Action {
 		HttpSession session = request.getSession(); 
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
 		if (mvo == null) {
-		    url = "burger.do?command=loginForm";
+		    url = "burger.do?command=loginForm&non=1";
 		}else {
 			// 로그인 유저의 아이디로 카트물건들을 검색해서 리턴받습니다 
 			CartDao cdao = CartDao.getInstance();
