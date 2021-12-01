@@ -116,12 +116,11 @@ CREATE TABLE member
    PRIMARY KEY (mseq)
 );
 
-
+select * from Myaddress
 CREATE TABLE Myaddress
 (
    mseq number(10) NOT NULL,
    address varchar2(100) NOT NULL,
-   aname varchar2(10) NOT NULL,
    zip_num varchar2(7),
    PRIMARY KEY (mseq)
 );
