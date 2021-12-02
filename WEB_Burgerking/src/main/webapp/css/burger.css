@@ -1261,6 +1261,11 @@ input[type=color], input[type=date], input[type=datetime], input[type=email],
 	font-weight: bold;
 }
 
+.web_container9 .list {
+    height: 100%;
+    overflow: hidden;
+}
+
 .web_container9 {
 	position: relative;
 	width: 1440px;

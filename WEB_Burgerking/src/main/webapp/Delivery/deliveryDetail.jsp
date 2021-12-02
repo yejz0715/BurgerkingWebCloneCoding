@@ -49,7 +49,7 @@
 						<div class="price" ><strong style="color:red;font-weight:bold">&#8361;${list2.price1}</strong></div>
 					</div>
 					<div>
-						<button type="button" class="btn_detail" onclick="add_or_cart('${list2.kind2}','${list2.pseq}')"></button>
+						<button type="button" class="btn_detail" onclick="add_or_cart('${list2.kind2}','${list2.pseq}','${loginUser}')"></button>
 					</div>
 				</li>
 			</c:forEach>
