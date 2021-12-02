@@ -1259,6 +1259,7 @@ input[type=color], input[type=date], input[type=datetime], input[type=email],
 	top: 0px;
 	left: 6px;
 	font-weight: bold;
+	height:580px;
 }
 
 .web_container9 .list {
@@ -1277,6 +1278,7 @@ input[type=color], input[type=date], input[type=datetime], input[type=email],
 	overflow: hidden;
 	background: #683a2f;
 }
+
 
 .youtube {
 	position: relative;
@@ -2751,7 +2753,6 @@ input[type="password" i] {
 .inpbox button, .inpbox input ~* {
 	position: absolute;
 	right: 0;
-	top: 0;
 }
 
 .btn_view01 {

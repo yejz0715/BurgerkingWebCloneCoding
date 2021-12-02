@@ -9,7 +9,7 @@
 	<div class="location">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
-			<li><a href="burger.do?command=loginForm">로그인</a>&nbsp;>&nbsp;</li>
+			<li><a href="burger.do?command=loginForm&non=1">로그인</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=joinForm">회원가입</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=contract">약관동의 및 본인인증</a>&nbsp;>&nbsp;</li>
 
