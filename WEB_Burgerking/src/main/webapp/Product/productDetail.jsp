@@ -28,7 +28,7 @@
 			<ul class="prdmenu_list prd_submenu"> 
 			<c:forEach var="list2" items="${list2}">
 				<li>
-				<div class="prd_img"><img src="image/menu/${list2.kind2}/${list2.image}" width="296" height="193"/></div>
+				<div class="prd_img"><img src="image/menu/${list2.kind1}/${list2.image}" width="296" height="193"/></div>
 				<div class="cont">
 					<div class="tit"><strong>${list2.pname}</strong></div>
 					<div class="set"><strong>${list2.content}</strong></div>

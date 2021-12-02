@@ -106,7 +106,12 @@ function deliveryDetail(pseq){
 
 
 function add_or_cart(kind1, pseq){
-	var url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
+	var url="";
+	if(kind1=="1"||"6"||"7"||"8"){
+		url="burger.do?command=addCart&pseq="+pseq;
+	}else{
+		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
+	}
 	window.location.replace(url);
 }
 
