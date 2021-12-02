@@ -16,7 +16,7 @@
 
 
 	<div class="contentsBox01 join_welcome">
-		<div class="web_container">
+		<div class="web_container1">
 			<h2 class="logo"></h2>
 			<div class="cont">
 				<p class="tit">
