@@ -136,6 +136,13 @@ CREATE TABLE non_member
    PRIMARY KEY (id, password)
 );
 
+create or replace view cart_view
+as
+select  c.cseq, c.id, m.name as mname, c.pseq, p.pname as pname, p.image, p.kind1, p.kind3,
+	c.quantity, p.price1, c.result,  c.indate 
+from cart c, product p, member m   
+where  c.pseq = p.pseq and m.id = c.id;
+
 
 CREATE TABLE orders
 (
@@ -219,8 +226,26 @@ m.name as mname, a.zip_num, a.address, m.phone, p.pname as pname, p.price1
 from orders o, order_detail d, member m, product p, myaddress a
 where o.oseq = d.oseq and o.id = m.id and d.pseq = p.pseq;
 
+create or replace view non_cart_view
+as
+select  c.cseq, c.id, n.id as nid, n.phone, n.memberkind, c.pseq, p.pname as pname, p.image, p.kind1, p.kind3,
+	c.quantity, p.price1, c.result,  c.indate 
+from cart c, product p, non_member n   
+where  c.pseq = p.pseq and n.id = c.id;
 
-select*from CART
+create or replace view non_order_view
+as
+select d.odseq, o.oseq, o.id, o.indate, d.pseq, d.quantity,  d.result, 
+n.id as nid, n.memberkind, a.zip_num, a.address, n.phone, p.pname as pname, p.price1
+from orders o, order_detail d, non_member n, product p, myaddress a
+where o.oseq = d.oseq and o.id = n.id and d.pseq = p.pseq;
+
+select * from non_cart_view
+select * from non_order_view
+drop view non_cart_view
+
+select*from cart
+select*from sub_product
 select*from orders
 select*from order_detail
 select * from cart_view;

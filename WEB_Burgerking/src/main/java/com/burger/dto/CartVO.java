@@ -15,8 +15,28 @@ public class CartVO {
 	private int price1;
 	private String kind1;
 	private String kind3;
+	private String nid;
+	private String phone;
+	private String memberkind;
 	
-	
+	public String getMemberkind() {
+		return memberkind;
+	}
+	public void setMemberkind(String memberkind) {
+		this.memberkind = memberkind;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getNid() {
+		return nid;
+	}
+	public void setNid(String nid) {
+		this.nid = nid;
+	}
 	public String getKind3() {
 		return kind3;
 	}

@@ -24,11 +24,11 @@
 				if(document.nonmembercheckForm.nonok.checked == false) {
 				    alert("이용약관에 동의해주세요.");	    
 				    document.nonmembercheckForm.nonok.focus();		
-				} else if(document.nonmembercheckForm.name.value == "") {
-				    alert("이름을 입력해 주세요.");	    
+				} else if(document.nonmembercheckForm.id.value == "") {
+				    alert("아이디(이메일)를 입력해 주세요.");	    
 				    document.nonmembercheckForm.name.focus();
 				} else if(document.nonmembercheckForm.phone.value == "") {
-				    alert("휴대폰번호을 입력해 주세요.");	   
+				    alert("휴대폰번호를 입력해 주세요.");	   
 				    document.nonmembercheckForm.phone.focus();
 				} else if(document.nonmembercheckForm.password.value == "") {
 				    alert("비밀번호를 입력해 주세요.");	    
@@ -37,7 +37,7 @@
 				    alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");	    
 				    document.nonmembercheckForm.pwd.focus();
 				} else{
-					document.nonmembercheckForm.action ="burger.do";
+					document.nonmembercheckForm.action ="burger.do?command=nonMemberJoinForm";
 					document.nonmembercheckForm.submit(); 
 				}
 			}			
@@ -101,10 +101,10 @@
 			<div class="container02">
 				<div class="dlist01">
 					<dl>
-						<dt class="WEB">이름</dt>
+						<dt class="WEB">아이디</dt>
 						<dd>
 							<div class="inpbox st02">
-								<input type="text" placeholder="받는 분의 이름을 입력해 주세요." class="st02" name="name">
+								<input type="text" placeholder="ex)burger@naver.com" class="st02" name="id">
 								<button type="button" class="btn_del01 " style="display: none;" >
 									<span>입력 텍스트 삭제</span>
 								</button>

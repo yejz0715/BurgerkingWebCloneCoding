@@ -124,14 +124,31 @@ function go_cart(pseq, id){
 	self.close();
 }
 
-/*function go_add_Meterial(){
-	var frm=document.cartForm;
-	var 
-	opener.document.cartForm.pseq.value=pseq;
-	opener.document.cartForm.id.value=id;
-	opener.cartForm.submit();
-	self.close();
-}*/
+function go_add_Meterial(){
+	var count = 0;  //  체크된 체크박스의 갯수를 카운트 하기위한 변수
+	var checkboxes = document.getElementsByName('Meterial');
+	var cb = [];
+	
+	if(checkboxes.length==undefined){   // 장바구니에 물건이 하나일때, 체크박스가 하나일때
+		if(checkboxes.checked == true)   // 그 체크박스만 체크되어 있는지 확인
+			count++;
+			cb[0] = checkboxes.value;	 
+	}else{
+		for( var i=0; i<checkboxes.length; i++){
+			if( checkboxes[i].checked==true){
+				count++;
+				cb[i] = checkboxes[i].value;
+			}
+		}
+	}
+	// 지금의 스크립트 명령은 체크박스가 하나도 체크되지 않았다면 원래로 되돌아 가기위한 코드들입니다
+	if( count == 0 ){
+		alert("추가할 항목을 선택해주세요");
+	} else{
+	    var url = "burger.do?command=deliveryCartForm&Meterial=" + cb;
+		opener.location.href = url;
+	}
+}
 
 function go_cart02(id){
 	document.cartForm.id.value=id;
@@ -185,7 +202,7 @@ function selectAllDelete(selectAllDelete)  {
     checkbox.checked = selectAllDelete.checked;
   })
 }
-function del_cart(sad){
+function del_cart(){
 	var count = 0;  //  체크된 체크박스의 갯수를 카운트 하기위한 변수
 	var checkboxes = document.getElementsByName('menu');
 	var cb = [];

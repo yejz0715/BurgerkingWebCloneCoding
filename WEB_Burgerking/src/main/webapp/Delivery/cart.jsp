@@ -28,7 +28,7 @@
 			<label><input type="checkbox" class="check02" onclick="selectAllDelete(this)" name="all">
 			<span>전체선택</span></label>
 			<div class="rcen_btn"></div>
-				<button type="button" class="btn04" id="delete" onclick="del_cart(this)"><strong>삭제</strong></button>
+				<button type="button" class="btn04" id="delete" onclick="del_cart()"><strong>삭제</strong></button>
 		</div>
 		<ul class="cart_list01">
 		<c:forEach var="cartList" items="${cartList}" varStatus="status">

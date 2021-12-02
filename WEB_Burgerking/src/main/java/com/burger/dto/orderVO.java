@@ -16,6 +16,21 @@ public class orderVO {
 	private int quantity;
 	private int price1;
 	private String result;
+	private String nid;
+	private String memberkind;
+	
+	public String getMemberkind() {
+		return memberkind;
+	}
+	public void setMemberkind(String memberkind) {
+		this.memberkind = memberkind;
+	}
+	public String getNid() {
+		return nid;
+	}
+	public void setNid(String nid) {
+		this.nid = nid;
+	}
 	public int getOdseq() {
 		return odseq;
 	}

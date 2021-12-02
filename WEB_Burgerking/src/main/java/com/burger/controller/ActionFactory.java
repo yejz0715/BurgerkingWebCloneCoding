@@ -49,7 +49,9 @@ import com.burger.controller.action.PlusQuantityAction;
 import com.burger.controller.action.MyAddressAction;
 import com.burger.controller.action.MyAddressFormAction;
 import com.burger.controller.action.MyAddressUpdateAction;
+import com.burger.controller.action.NonDeliveryFormAction;
 import com.burger.controller.action.NonMemberFormAction;
+import com.burger.controller.action.NonMemberJoinFormAction;
 import com.burger.controller.action.PassCheckAction;
 import com.burger.controller.action.PassCheckFormAction;
 import com.burger.controller.action.PopUp1Action;
@@ -203,6 +205,10 @@ public class ActionFactory {
 		else if(command.equals("deliveryOrderList")) ac = new DeliveryOrderListAction();
 		else if(command.equals("adminOrderDelete")) ac = new AdminOrderDeleteAction();
 		else if(command.equals("deliveryCartDelete")) ac = new DeliveryCartDeleteAction();
+		else if(command.equals("nonMemberJoinForm")) ac = new NonMemberJoinFormAction();
+		else if(command.equals("nonDeliveryForm")) ac = new NonDeliveryFormAction();
+		
+		
 		return ac;
 	}
 }
