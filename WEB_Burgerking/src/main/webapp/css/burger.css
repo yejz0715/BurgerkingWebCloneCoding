@@ -2753,7 +2753,6 @@ input[type="password" i] {
 .inpbox button, .inpbox input ~* {
 	position: absolute;
 	right: 0;
-	top: 0;
 }
 
 .btn_view01 {
