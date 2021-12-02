@@ -107,12 +107,14 @@ function deliveryDetail(pseq){
 
 function add_or_cart(kind1, pseq){
 	var url="";
-	if(kind1=="1"||"6"||"7"||"8"){
+	if(kind1 == "1" || kind1 == "6" || kind1 == "7" || kind1 == "8"){
 		url="burger.do?command=addCart&pseq="+pseq;
+		opener.location.href = url;
+		self.close();
 	}else{
 		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
+		window.location.href = url;
 	}
-	window.location.replace(url);
 }
 
 function go_cart(pseq, id){
