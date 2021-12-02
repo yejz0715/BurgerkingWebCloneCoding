@@ -1,4 +1,4 @@
-package com.burger.controller.actiona;
+package com.burger.controller.action;
 
 import java.io.IOException;
 
@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.burger.controller.action.Action;
 import com.burger.dao.CartDao;
 import com.burger.dao.MemberDao;
 import com.burger.dto.MemberVO;
