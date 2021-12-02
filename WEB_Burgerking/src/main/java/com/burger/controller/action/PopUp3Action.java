@@ -6,9 +6,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ContractFormAction implements Action {
+public class PopUp3Action implements Action {
+
+	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "Member/productdetailform.jsp";
+		String url = "Product/popup3.jsp";
 		request.getRequestDispatcher(url).forward(request, response);
 	}
+
 }

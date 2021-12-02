@@ -1,5 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
+<script type="text/javascript">
+function popup3() {
+	
+	window.open("burger.do?command=popup3", "a",
+			"width=620, height=900, resizable=no");}
+
+ 
+</script>
+
+
 <div class="clear"></div>
 <div class="contentsWrap">
 	<div class="location" style="margin-bottom: 0px;">
@@ -19,7 +29,7 @@
 	<div class="menu_subinfoWrap">
 		<div class="web_container4">
 			<a class="btn_back" href="burger.do?command=menuListForm&kind1=${pvo.kind1}"><span>메뉴 목록으로 돌아가기</span></a>
-			<div class="nutrition_info"><button type="button" class="btn_nutrition">
+			<div class="nutrition_info"><button type="button" class="btn_nutrition" onClick="popup3();">
 			<span>영양분석표, 알레르기 유발성분</span></button></div>
 		</div>
 	</div>

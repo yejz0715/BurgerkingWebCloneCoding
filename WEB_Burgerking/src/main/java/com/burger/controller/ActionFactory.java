@@ -56,6 +56,7 @@ import com.burger.controller.action.PassCheckAction;
 import com.burger.controller.action.PassCheckFormAction;
 import com.burger.controller.action.PopUp1Action;
 import com.burger.controller.action.PopUp2Action;
+import com.burger.controller.action.PopUp3Action;
 import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.QnaDeleteAction;
 import com.burger.controller.action.QnaFormAction;
@@ -207,8 +208,9 @@ public class ActionFactory {
 		else if(command.equals("deliveryCartDelete")) ac = new DeliveryCartDeleteAction();
 		else if(command.equals("nonMemberJoinForm")) ac = new NonMemberJoinFormAction();
 		else if(command.equals("nonDeliveryForm")) ac = new NonDeliveryFormAction();
+		else if(command.equals("popup3")) ac = new PopUp3Action();
 		
-		
+
 		return ac;
 	}
 }
