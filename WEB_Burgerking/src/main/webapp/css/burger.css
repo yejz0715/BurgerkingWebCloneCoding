@@ -1421,6 +1421,12 @@ input[type=color], input[type=date], input[type=datetime], input[type=email],
 }
 
 /*findId/PwdForm------------------------------------------------------------------------*/
+		#name_coment{bottom:380px; left:40px;}
+		#phone_coment{bottom:220px; left:40px;}
+		#id_coment{bottom:220px; left:40px;}
+		#pwd_coment{bottom:280px; left:40px;}
+		#pwd_chk_coment{bottom:120px; left:40px;}
+
 .web_container02 {
 	max-width: 776px;
 	min-height: 1200px;

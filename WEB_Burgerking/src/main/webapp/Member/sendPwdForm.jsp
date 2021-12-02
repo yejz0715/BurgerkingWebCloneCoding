@@ -27,7 +27,7 @@
 						<form method="post" name="frm" action="burger.do">
 							<input type="hidden" name="command" value="updatePwd">
 							<input type="hidden" name="id" value="${memberVO.mseq}">
-							<div class="textareapwd">
+							<div class="textareapwd" style="right: 140px;">
 								<div class="inpbox" style="margin-bottom: 30px;">
 									<div class="vtop">비밀번호</div>
 									<label>
@@ -45,7 +45,7 @@
 									</label>
 								</div>
 							</div>
-							<div class="c_btn item2 findidalign" style="margin-left: -108px;">
+							<div class="c_btn item2 findidalign" style="margin-left: -108px; margin-top:340px;">
 								<input type="submit" class="btn01 m red" value="비밀번호 수정" onclick="return updatepwdChk();"/>
 							</div>
 						</form>
