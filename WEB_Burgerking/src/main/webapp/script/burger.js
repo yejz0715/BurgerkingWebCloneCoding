@@ -107,8 +107,14 @@ function deliveryDetail(pseq){
 
 function add_or_cart(kind1, pseq){
 	var url="";
-	if(kind1=="1"||"6"||"7"||"8"){
-		url="burger.do?command=addCart&pseq="+pseq;
+	if(kind1.value=="1"){
+		url="burger.do?command=addCart&pseq"+pseq;
+	}else if(kind1.value=="6"){
+		url="burger.do?command=addCart&pseq"+pseq;
+	}else if(kind1.value=="7"){
+		url="burger.do?command=addCart&pseq"+pseq;
+	}else if(kind1.value=="8"){
+		url="burger.do?command=addCart&pseq"+pseq;
 	}else{
 		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
 	}
