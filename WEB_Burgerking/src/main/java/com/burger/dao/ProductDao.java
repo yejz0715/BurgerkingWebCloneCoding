@@ -80,14 +80,14 @@ public class ProductDao {
 		return list;
 	}
 
-	public ArrayList<ProductVO> getProductkind(String kind2, String kind1) {
+	public ArrayList<ProductVO> getProductkind(String kind1, String kind2) {
 		ArrayList<ProductVO> list2 = new ArrayList<ProductVO>();
 		String sql = "select * from product where kind1 = ? and kind2 = ? and kind3<4";
 		con = DBman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(2, kind1);
-			pstmt.setString(1, kind2);
+			pstmt.setString(1, kind1);
+			pstmt.setString(2, kind2);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				ProductVO pvo = new ProductVO();
