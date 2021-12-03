@@ -117,7 +117,7 @@ CREATE TABLE member
    PRIMARY KEY (mseq)
 );
 
-
+select * from Myaddress
 CREATE TABLE Myaddress
 (
    mseq number(10) NOT NULL,
@@ -312,8 +312,8 @@ ALTER TABLE cart
 ALTER TABLE order_detail
    ADD FOREIGN KEY (pseq)
    REFERENCES product (pseq)
-;
 
+<<<<<<< HEAD
 
 
 create table shortproduct(
@@ -324,6 +324,8 @@ create table shortproduct(
    image varchar2(50),
    useyn varchar2(1)
 );
+=======
+>>>>>>> branch 'total' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 
 select * from member;
 

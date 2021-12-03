@@ -29,12 +29,9 @@
 		var opt = "toolbar=no, menubar=no, resizable=no, width=400, height=350";
 		window.open(url, "IdCheck", opt);
 	}
-
-
 		
-
-
 	function go_save(){
+		
 		if (document.joinpageForm.id.value == "") {
 			alert("아이디를 입력하여 주세요."); 	    
 		    document.joinpageForm.id.focus();
@@ -55,7 +52,7 @@
 			document.joinpageForm.submit(); 
 		}
 	}
-		
+	
 	
 	
 	</script>
@@ -83,16 +80,16 @@
 								<dt class="WEB vtop77">이메일 아이디</dt>
 								<dd>
 									<div class="inpbox">
-										<label><input type="email" placeholder="이메일 아이디"
-											class="st02" name="id"><input type="hidden" name="reid" id="reid">
-											<button type="button" class="btn_del01"
-												style="display: none;">
-											
-												<span>입력 텍스트 삭제</span>
-											</button></label>
-										<p class="txt77"><input type="button" width="40" value="중복확인" id="reid" class="dup" onclick="idcheck()">  사용 가능한 이메일 주소를 입력해 주세요. (예:
-											name@mail.com)</p>
-									</div>
+                              <label><input type="email" placeholder="이메일 아이디"
+                                 class="st02" name="id"><input type="hidden" name="reid" class="reid">
+                                 <button type="button" class="btn_del01"
+                                    style="display: none;">
+                                 
+                                    <span>입력 텍스트 삭제</span>
+                                 </button></label>
+                              <p class="txt77"><input type="button" width="40" value="중복확인" class="dup reid" onclick="idcheck()">  사용 가능한 이메일 주소를 입력해 주세요. (예:
+                                 name@mail.com)</p>
+                           </div>
 								</dd>
 							</dl>
 							<dl>

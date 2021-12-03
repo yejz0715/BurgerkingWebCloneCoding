@@ -2496,14 +2496,13 @@ input[type=checkbox]+:before {
 	margin-left: 160px;
 	margin-top: -60px;
 }
-#reid {
-	width: 80px;
-	background: #fa5a5a;
-	font-size: 1rem;
-	color: white;
-	font-weight: 700;
+.dup.reid {
+   width: 80px;
+   background: #fa5a5a;
+   font-size: 1rem;
+   color: white;
+   font-weight: 700;
 }
-
 .popWrap .titleBar {
 	position: relative;
 	border-bottom: 1px solid #f2f2f2;

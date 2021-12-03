@@ -5,6 +5,7 @@ function go_pop2() {
 	window.open("burger.do?command=popup2", "a",
 			"width=500, height=700, left=50, top=50");}
 
+
 function agree()  {
   // 선택된 목록 가져오기
   const query = 'input[name="agree"]:checked';
@@ -51,4 +52,3 @@ function go_save(){
 		document.joinpageForm.submit(); 
 	}
 }
-
