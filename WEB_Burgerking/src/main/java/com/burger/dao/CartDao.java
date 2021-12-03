@@ -19,7 +19,7 @@ public class CartDao {
 	ResultSet rs = null;
 	public void insertCart(CartVO cvo) {
 		String sql = "insert into cart( cseq , id, pseq)"
-				+ "values( cart_seq.nextVal, ? , ? )";
+				+ "values( cseq.nextVal, ? , ? )";
 		con = DBman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -64,6 +64,11 @@ public class CartDao {
 		      pstmt = con.prepareStatement(sql); 
 		      pstmt.setInt(1, Integer.parseInt(cseq));
 		      pstmt.executeUpdate();
+		      
+		      sql = "delete from subproduct_order where cseq = ?";
+	          pstmt = con.prepareStatement(sql); 
+	          pstmt.setInt(1, Integer.parseInt(cseq));
+	          pstmt.executeUpdate();
 		} catch (Exception e) { e.printStackTrace();
 	    } finally { DBman.close(con, pstmt, rs); }  
 	}
@@ -135,7 +140,7 @@ public class CartDao {
 	}
 	public ArrayList<CartVO> nonSelectCart(String id) {
 		ArrayList<CartVO> list = new ArrayList<CartVO>();
-		String sql = "select * from cart_view where id=? and result='1'";
+		String sql = "select * from non_cart_view where id=? and result='1'";
 		con = DBman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -145,20 +150,50 @@ public class CartDao {
 				CartVO cvo = new CartVO();				
 				cvo.setCseq(rs.getInt("cseq"));  		
 				cvo.setId(rs.getString("id"));
-				cvo.setMname(rs.getString("mname")); 
+				cvo.setNid(rs.getString("nid")); 
 				cvo.setPseq(rs.getInt("pseq"));				
-				cvo.setNid(rs.getString("nid"));
+				cvo.setPname(rs.getString("pname"));
 				cvo.setImage(rs.getString("image"));
 				cvo.setKind1(rs.getString("kind1"));
 				cvo.setKind3(rs.getString("kind3"));
 				cvo.setQuantity(rs.getInt("quantity"));
 				cvo.setPrice1(rs.getInt("price1"));  
 				cvo.setDate(rs.getTimestamp("indate"));
-				cvo.setMemberkind(rs.getString("memberkind"));
+				cvo.setResult(rs.getString("result"));
 				list.add(cvo);
 			}
 		} catch (SQLException e) { e.printStackTrace();
 		} finally { DBman.close(con, pstmt, rs); }
 		return list;
 	}
+	public CartVO getPseqCart(String pseq) {
+      CartVO cvo = null;
+
+      String sql = "select * from cart_view where pseq = ? order by indate desc";
+      con = DBman.getConnection();
+      try {
+         pstmt = con.prepareStatement(sql);
+         pstmt.setInt(1, Integer.parseInt(pseq));
+         rs = pstmt.executeQuery();
+         if (rs.next()) {
+            cvo = new CartVO();
+            cvo.setCseq(rs.getInt("cseq"));
+            cvo.setPseq(rs.getInt("pseq"));
+            cvo.setQuantity(rs.getInt("quantity"));
+            cvo.setId(rs.getString("id"));
+            cvo.setDate(rs.getTimestamp("indate"));
+            cvo.setPrice1(rs.getInt("price1"));
+            cvo.setKind1(rs.getString("kind1"));
+            cvo.setKind3(rs.getString("kind3"));
+            cvo.setImage(rs.getString("image"));
+         }
+      } catch (Exception e) {
+         e.printStackTrace();
+      } finally {
+         DBman.close(con, pstmt, rs);
+      }
+
+      return cvo;
+   }
 }
+

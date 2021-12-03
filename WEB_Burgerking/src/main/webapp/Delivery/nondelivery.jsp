@@ -5,10 +5,18 @@
 
 <article>
 	<div class="location">
+	<div class="web_container1">
 		<ul>
-			<li><a href="burger.do?command=deliveryForm&kind1=1">딜리버리</a>&nbsp;>&nbsp;</li>
-			<li>카트</li>
+			<li><a href="burger.do?command=nondeliveryForm&kind1=1">딜리버리</a>&nbsp;>&nbsp;</li>
+			<li>메뉴</li>
 		</ul>
+		<div style="float:right; color:#fff;">
+		<a  href="burger.do?command=myAddressForm&id=${nonMemberVO.id}">
+		<strong style="color:#fff; font-size:120%;">배달지를 등록하셔야 배달이 가능합니다. click!</strong></a>
+		<a  href="burger.do?command=deliveryCartForm">
+		<strong style="color:#000; font-size:100%; background:white; border-radius:2px;">
+		장바구니</strong></a></div>
+	</div>
 	</div>
 <div class="bg_w">
 	<div class="web_container1">

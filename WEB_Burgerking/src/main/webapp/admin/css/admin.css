@@ -32,24 +32,24 @@ a:hover {
  font-family: 'Noto Sans KR', sans-serif;
 }
 .adminLogin_header{
-	position: fixed;
-	top:0;
-	width: 971px;
-	height: 150px;
-	background-color: red;
-	color: #fff;
-	line-height: 150px;
-	font-size: 40px;
-	font-weight: bold;
-	text-align: center;
+   position: fixed;
+   top:0;
+   width: 971px;
+   height: 150px;
+   background-color: red;
+   color: #fff;
+   line-height: 150px;
+   font-size: 40px;
+   font-weight: bold;
+   text-align: center;
 }
 .adminlogo{
-	position: relative;
-	width: 485px;
-	float: left;
+   position: relative;
+   width: 485px;
+   float: left;
 }
 .adminlogo img{
-	width: 200px;
+   width: 200px;
 }
 nav#top_menu {
  float: right;
@@ -187,18 +187,17 @@ table#productList {
  margin-bottom: 20px;
 }
 table#list{
-	width: 80%;
-	margin: 0 auto;
-	background-color: #fff;
-	margin-bottom: 30px;
+   width: 80%;
+   margin: 0 auto;
+   background-color: #fff;
+   margin-bottom: 30px;
 }
 th, td{ 
  padding: 8px 5px;
 }
 
 #productList td{ /* 테이블의 th 와 td 마진과 패딩 지정 */
- padding-right: 40px;
- text-align: right;
+    text-align: center;
 }
 
 #list td{ 
@@ -245,7 +244,7 @@ nav#sub_menu ul li:last-child {
 }
 
 nav#sub_menu a:hover {
-	background-color: #000;
+   background-color: #000;
 }
 
 nav#sub_menu h1 {
@@ -272,15 +271,15 @@ nav#sub_menu ul {
  text-align: center;
 }
 #list td input, textarea{ 
- 	width: 100%;
- 	border: 0px;
-	text-align: center;
- 	font-size: 1.2em;
- 	font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    border: 0px;
+   text-align: center;
+    font-size: 1.2em;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 #list .kind1{
-	width: 80%;
-	text-align: center;
-	border: 0px;
-	font-size: 1.2em;
+   width: 80%;
+   text-align: center;
+   border: 0px;
+   font-size: 1.2em;
 }

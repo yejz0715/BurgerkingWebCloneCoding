@@ -32,6 +32,7 @@ import com.burger.controller.action.DeliveryOrderListFormAction;
 import com.burger.controller.action.FindZipNumAction;
 import com.burger.controller.action.IdCheckFormAction;
 import com.burger.controller.action.IndexAction;
+import com.burger.controller.action.InsertAddMeterialAction;
 import com.burger.controller.action.JoinFormAction;
 import com.burger.controller.action.JoinPageAction;
 import com.burger.controller.action.JoinPageFormAction;
@@ -209,6 +210,7 @@ public class ActionFactory {
 		else if(command.equals("nonMemberJoinForm")) ac = new NonMemberJoinFormAction();
 		else if(command.equals("nonDeliveryForm")) ac = new NonDeliveryFormAction();
 		else if(command.equals("popup3")) ac = new PopUp3Action();
+		else if(command.equals("insertAddMeterial")) ac = new InsertAddMeterialAction();
 		
 
 		return ac;

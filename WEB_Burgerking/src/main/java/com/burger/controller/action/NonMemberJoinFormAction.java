@@ -26,9 +26,13 @@ public class NonMemberJoinFormAction implements Action {
 		NonMemberVO nmvo1 = mdao1.getNonMember(nmvo.getId());
 		
 		System.out.println(nmvo1);
+
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("NonloginUser", nmvo1);
+		
+		
+		System.out.println(nmvo1);
 		
 		response.sendRedirect("burger.do?command=nonDeliveryForm&kind1=1");
 	}

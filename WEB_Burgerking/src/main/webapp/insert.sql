@@ -2570,7 +2570,10 @@ values(qseq.nextVal, '앵그리너겟킹', '1. 행사명 : 앵그리너겟킹 8�
 대명비발디점, 삼성라이온즈파크점, 서울역점, 오션월드점, 인천공항1점, 인천공항교통센터1점, 경기양평점, 경남대점, 경남사천점, 경남삼천포점, 경북도청점, 경북상주점, 경북영주가흥점, 경주보문점, 광양LF스퀘어점, 광주일곡점, 광주첨단2지구점, 구미인의점, 군산나운FS점, 김포현대아울렛점, 당진읍내점, 대구죽전네거리DT점, 대구지산점, 대전관평점, 대전시청점, 대전현대아울렛점, 목포하당점, 서산호수공원점, 수원정자점, 안동옥동점, 안동중앙점, 오산궐동점, 원주기업도시점, 익산영등점, 전남도청점, 전주중앙점, 진주경상대점, 진주혁신도시점, 천안두정점, 천안쌍용대로DT점, 충남대병원DT점, 충남도청점, 충북진천점, 충주연수점',
 'event_18.png', '2021-11-10', '2021-11-30', '1'); 
 
-insert into MYADDRESS(mseq, address, zip_num) values(mseq.nextVal, '경기도 파주시 야당동44', '12345')
+insert into MYADDRESS(mseq, address, zip_num) values(8, '경기도 파주시 야당동44', '12345')
 
 insert into admin values('admin', 'admin1234', '김우진', '010-2431-6247');
 
+delete from MYADDRESS where mseq=8
+update myaddress set mseq=8
+select*from member

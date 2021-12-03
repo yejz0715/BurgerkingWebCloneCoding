@@ -53,6 +53,7 @@ create sequence oseq increment by 1 start with 1;
 create sequence pseq increment by 1 start with 1;
 create sequence spseq increment by 1 start with 1;
 create sequence eseq increment by 1 start with 1;
+create sequence sposeq increment by 1 start with 1;
 
 
 /* Create Tables */
@@ -129,12 +130,16 @@ CREATE TABLE Myaddress
 
 CREATE TABLE non_member
 (
+	mseq number(10) NOT NULL,
    id varchar2(50) NOT NULL,
    password varchar2(20) NOT NULL,
    phone varchar2(13) NOT NULL,
    memberkind number(1) DEFAULT 2,
    PRIMARY KEY (id, password)
 );
+
+select * from NON_MEMBER
+select * from myaddress
 
 create or replace view cart_view
 as
@@ -210,6 +215,19 @@ CREATE TABLE sub_product
    PRIMARY KEY (spseq)
 );
 
+
+create table subproduct_order(
+	sposeq number(10) not null,
+	cseq number(10) not null,
+	spseq number(10) not null,
+	mseq number(10) not null,
+	oseq number(10) not null,
+	odseq number(10) not null,
+	sname varchar2(30) not null,
+	addprice number(5) not null,
+	primary key(sposeq)
+);
+drop table subproduct_order
 select * from SUB_PRODUCT;
 
 create or replace view cart_view
@@ -242,8 +260,10 @@ where o.oseq = d.oseq and o.id = n.id and d.pseq = p.pseq;
 
 select * from non_cart_view
 select * from non_order_view
-drop view non_cart_view
 
+select*from sub_product
+
+delete from SUBPRODUCT_order
 select*from cart
 select*from sub_product
 select*from orders
@@ -263,6 +283,11 @@ ALTER TABLE cart
 ALTER TABLE Myaddress
    ADD FOREIGN KEY (mseq)
    REFERENCES member (mseq)
+;
+
+ALTER TABLE Myaddress
+   ADD FOREIGN KEY (mseq)
+   REFERENCES non_member (mseq)
 ;
 
 
@@ -289,6 +314,8 @@ ALTER TABLE order_detail
    REFERENCES product (pseq)
 ;
 
+
+
 create table shortproduct(
    spseq number(10),
    pname varchar2(100),
@@ -305,3 +332,4 @@ select * from orders;
 select * from cart;
 select * from cart_view;
 delete from cart_view where cseq=74
+

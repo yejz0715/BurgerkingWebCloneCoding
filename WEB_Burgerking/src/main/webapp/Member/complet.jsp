@@ -28,7 +28,7 @@
 			</div>
 			<div class="c_btn m_item2">
 				<a href="burger.do?command=index" class="btn01"><span>홈으로</span></a><a
-					href="burger.do?command=index" class="btn01"><span>주문하기</span></a>
+					href="burger.do?command=loginForm&non=1" class="btn01"><span>주문하기</span></a>
 			</div>
 		</div>
 	</div>

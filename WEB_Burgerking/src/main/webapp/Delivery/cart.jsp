@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="deli_header.jsp"%>
 <div class="clear"></div>
-<form name="cartForm" method="post" action="burger.do" style="background: #f2ebe6;">
+<form name="cart" method="post" action="burger.do" style="background: #f2ebe6;">
 <input type="hidden" name="cseq" value="">
 <article>
 <div class="location">
@@ -30,14 +30,14 @@
 			<div class="rcen_btn"></div>
 				<button type="button" class="btn04" id="delete" onclick="del_cart()"><strong>삭제</strong></button>
 		</div>
-		<ul class="cart_list01">
+<ul class="cart_list01">
 		<c:forEach var="cartList" items="${cartList}" varStatus="status">
 		<li>
 			<div class="cont">
 				<div class="menu_titWrap">
 					<label class="menu_name">
 						<input type="checkbox" name="menu" title="선택" class="check02" value="${cartList.cseq}">
-						<span class="tit">${cartList.pname}</span>
+						<span class="tit">${cartList.cseq} : ${cartList.pname}</span>
 						<span class="set_info"></span>
 						<span class="price">
 							<strong><span>${cartList.price1}</span><span class="unit">원</span></strong>
@@ -60,6 +60,23 @@
 		</c:forEach>
 		</ul>
 		
+		<div class="cont">
+			<c:choose>
+				<c:when test="${empty spseqAm}">
+					<div class="cont">
+						<div class="menu_titWrap">
+							empty					
+						</div>
+					</div>
+				</c:when>
+				<c:otherwise>
+					<c:forEach items="${spseqAm}" var="spseqAm">
+						${spseqAm.cseq}번 : ${spseqAm.sname}/${spseqAm.addprice}원<br><br>
+					</c:forEach>
+				</c:otherwise>
+			</c:choose>
+		</div>
+		
 		<div class="sumWrap">
 			<dl>
 				<dt>총 주문금액</dt>
@@ -74,11 +91,18 @@
 		</c:choose>
 		<div class="cartinfo">
 			<div class="c_btn item2">
-				<button type="button" class="btn01 m ico add" 
-				onclick="location.href='burger.do?command=deliveryForm&kind1=1'"><span>메뉴 추가</span></button>
+				<c:if test="${!empty loginUser &&empty NonloginUser }">
+					<button type="button" class="btn01 m ico add" 
+					onclick="location.href='burger.do?command=deliveryForm&kind1=1'"><span>메뉴 추가</span></button>
+				</c:if>
+				<c:if test="${empty loginUser &&!empty NonloginUser }">
+					<button type="button" class="btn01 m ico add" 
+					onclick="location.href='burger.do?command=nonDeliveryForm&kind1=1'"><span>메뉴 추가</span></button>
+				</c:if>
 				<c:if test="${!empty cartList}">
 					<button type="button" class="btn01 m red" onclick="go_order_insert()"><span>주문하기</span></button>
 				</c:if>
+				
 			</div>
 			<ul class="txtlist01">
 				<li>주문서를 작성하기 전에 선택하신 상품명, 수량 및 가격이 정확한지 확인해주세요.</li>

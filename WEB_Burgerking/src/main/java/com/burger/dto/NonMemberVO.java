@@ -5,7 +5,14 @@ public class NonMemberVO {
 	private String pwd;
 	private String phone;
 	private int memberkind;
+	private int mseq;
 	
+	public int getMseq() {
+		return mseq;
+	}
+	public void setMseq(int mseq) {
+		this.mseq = mseq;
+	}
 	public String getId() {
 		return id;
 	}

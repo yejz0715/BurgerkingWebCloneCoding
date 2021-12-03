@@ -10,10 +10,12 @@ import javax.servlet.http.HttpSession;
 
 import com.burger.dao.CartDao;
 import com.burger.dao.MemberDao;
+import com.burger.dao.NonMemberDao;
 import com.burger.dao.OrderDao;
 import com.burger.dto.CartVO;
 import com.burger.dto.MemberVO;
 import com.burger.dto.MyAddressVO;
+import com.burger.dto.NonMemberVO;
 import com.burger.dto.orderVO;
 
 public class MyAddressFormAction implements Action {
@@ -24,9 +26,36 @@ public class MyAddressFormAction implements Action {
 		
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO) session.getAttribute("loginUser");
+		NonMemberVO nmvo = (NonMemberVO)session.getAttribute("NonloginUser");
 		
-		if (mvo == null) {
-			url = "burger.do?command=LoginFormAction&non=1";
+		System.out.println(nmvo);
+		if (mvo == null&&nmvo==null) {
+		    url = "burger.do?command=loginForm&non=1";
+		}else if(mvo == null&&nmvo!=null){
+			String id = request.getParameter("id");
+			NonMemberDao nmdao = NonMemberDao.getInstance();
+			int result = nmdao.checkNonMyAddress(nmvo.getMseq());
+			if (result == 1) {
+				url = "Delivery/myaddressUpdate.jsp";
+				MyAddressVO mavo=nmdao.getNonMyAddress(nmvo.getMseq());
+				String m =mavo.getAddress();
+				String[] m2= m.split(" ");
+				String addr1="";
+				for(int i=0; i<3; i++) {
+					addr1 += m2[i] + " ";
+				}
+				String addr2="";
+				for(int i=3; i<m2.length; i++) {
+					addr2 += m2[i] + " ";
+				}			 
+				request.setAttribute("addr1", addr1);
+				request.setAttribute("addr2", addr2);
+				request.setAttribute("MyAddressVO", mavo);
+				
+				NonMemberVO nmvo1 = nmdao.getNonMember(id);
+				
+				request.setAttribute("MemberVO", nmvo1);
+			}
 		} else {
 			OrderDao odao = OrderDao.getInstance();
 			ArrayList<orderVO> list1 = odao.getOrderList(mvo.getId());
@@ -54,14 +83,12 @@ public class MyAddressFormAction implements Action {
 				request.setAttribute("MyAddressVO", mavo);
 				request.setAttribute("ovo", list1);
 				request.setAttribute("cvo", list2);
+				
+				MemberVO mvo1 = mdao.getMember(id);
+				request.setAttribute("MemberVO", mvo1);
 			}
-			
-
-			MemberVO mvo1 = mdao.getMember(id);
-			request.setAttribute("MemberVO", mvo1);
-			request.getRequestDispatcher(url).forward(request, response);
-
 		}
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 
 }

@@ -13,6 +13,7 @@ import com.burger.dao.MemberDao;
 import com.burger.dao.OrderDao;
 import com.burger.dto.CartVO;
 import com.burger.dto.MemberVO;
+import com.burger.dto.NonMemberVO;
 import com.burger.dto.orderVO;
 
 public class DeliveryOrderListFormAction implements Action {
@@ -27,8 +28,30 @@ public class DeliveryOrderListFormAction implements Action {
 		MemberVO mvo1 = mdao.getMember(session.getId());
 		
 		MemberVO mvo = (MemberVO) session.getAttribute("loginUser");
-		if (mvo == null) {
+		NonMemberVO nmvo = (NonMemberVO)session.getAttribute("NonloginUser");
+		
+		if (mvo == null&&nmvo==null) {
 		    url = "burger.do?command=loginForm&non=1";
+		}else if(mvo == null&&nmvo!=null){
+			CartDao cdao = CartDao.getInstance();
+			OrderDao odao = OrderDao.getInstance();
+			//  order_view 에서 주문번호와  로그인 아이디로 주문을 검색
+			ArrayList<orderVO> list = odao.nonListOrderById( nmvo.getId() , oseq );
+			int totalPrice=0;
+			for(orderVO ovo : list)  // 조회된 주문의 총 결제금액 계산
+				totalPrice+=ovo.getPrice1() * ovo.getQuantity();	
+			// 리퀘스트에 저장
+			orderVO ovo = list.get(0);	
+			
+			ArrayList<orderVO> list2 = odao.getNonOrderList(nmvo.getId());
+			ArrayList<CartVO> list3 = cdao.nonSelectCart( nmvo.getId() );
+			request.setAttribute("ovo", list2);
+			request.setAttribute("cvo", list3);
+			
+			request.setAttribute("nonMemberVO", nmvo);
+			request.setAttribute("orderVO", ovo);
+			request.setAttribute("orderList", list);
+	        request.setAttribute("totalPrice", totalPrice);
 		}else {
 			CartDao cdao = CartDao.getInstance();
 			OrderDao odao = OrderDao.getInstance();

@@ -119,6 +119,30 @@ public class subProductDao {
 		
 		return list;
 	}
+	
+	public subProductVO getSubProduct(String spseq) {
+	      subProductVO spvo = null;
+	      String sql = "select * from sub_product where spseq = ?";
+	      con = DBman.getConnection();
+	      try {
+	         pstmt = con.prepareStatement(sql);
+	         pstmt.setInt(1, Integer.parseInt(spseq));
+	         rs = pstmt.executeQuery();
+	         while(rs.next()) {
+	            spvo = new subProductVO();
+	            spvo.setSpseq(rs.getInt("spseq"));
+	            spvo.setSname(rs.getString("sname"));
+	            spvo.setKind1(rs.getInt("kind1"));
+	            spvo.setKind2(rs.getString("kind2"));
+	            spvo.setAddprice(rs.getInt("addprice"));
+	            spvo.setImage(rs.getString("image"));
+	         }
+	      } catch (SQLException e) {e.printStackTrace();
+	      }finally {
+	         DBman.close(con, pstmt, rs);
+	      }
+	      return spvo;
+	   }
 }
 
 

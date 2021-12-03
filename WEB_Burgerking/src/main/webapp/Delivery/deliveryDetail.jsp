@@ -37,7 +37,7 @@
 				</div>
 			</div>
 		</div>
-		<ul class="menu_sub_list02">
+		<ul class="menu_sub_list02" style="background: #f2ebe6;">
 			<c:forEach var="list2" items="${list2}">
 				<li>
 					<div class="prd_img">
