@@ -32,27 +32,23 @@ public class DeliveryOrderListFormAction implements Action {
 		
 		if (mvo == null&&nmvo==null) {
 		    url = "burger.do?command=loginForm&non=1";
-		}else if(mvo == null&&nmvo!=null){
-			CartDao cdao = CartDao.getInstance();
-			OrderDao odao = OrderDao.getInstance();
-			//  order_view 에서 주문번호와  로그인 아이디로 주문을 검색
-			ArrayList<orderVO> list = odao.nonListOrderById( nmvo.getId() , oseq );
-			int totalPrice=0;
-			for(orderVO ovo : list)  // 조회된 주문의 총 결제금액 계산
-				totalPrice+=ovo.getPrice1() * ovo.getQuantity();	
-			// 리퀘스트에 저장
-			orderVO ovo = list.get(0);	
-			
-			ArrayList<orderVO> list2 = odao.getNonOrderList(nmvo.getId());
-			ArrayList<CartVO> list3 = cdao.nonSelectCart( nmvo.getId() );
-			request.setAttribute("ovo", list2);
-			request.setAttribute("cvo", list3);
-			
-			request.setAttribute("nonMemberVO", nmvo);
-			request.setAttribute("orderVO", ovo);
-			request.setAttribute("orderList", list);
-	        request.setAttribute("totalPrice", totalPrice);
-		}else {
+		} /*
+			 * if (mvo == null&&nmvo==null) { url = "burger.do?command=loginForm&non=1";
+			 * }else if(mvo == null&&nmvo!=null){ CartDao cdao = CartDao.getInstance();
+			 * OrderDao odao = OrderDao.getInstance(); // order_view 에서 주문번호와 로그인 아이디로 주문을
+			 * 검색 ArrayList<orderVO> list = odao.listOrderById( nmvo.getId() , oseq ); int
+			 * totalPrice=0; for(orderVO ovo : list) // 조회된 주문의 총 결제금액 계산
+			 * totalPrice+=ovo.getPrice1() * ovo.getQuantity(); // 리퀘스트에 저장 orderVO ovo =
+			 * list.get(0);
+			 * 
+			 * ArrayList<orderVO> list2 = odao.getOrderList(nmvo.getId()); ArrayList<CartVO>
+			 * list3 = cdao.nonSelectCart( nmvo.getId() ); request.setAttribute("ovo",
+			 * list2); request.setAttribute("cvo", list3);
+			 * 
+			 * request.setAttribute("nonMemberVO", nmvo); request.setAttribute("orderVO",
+			 * ovo); request.setAttribute("orderList", list);
+			 * request.setAttribute("totalPrice", totalPrice); }
+			 */else {
 			CartDao cdao = CartDao.getInstance();
 			OrderDao odao = OrderDao.getInstance();
 			//  order_view 에서 주문번호와  로그인 아이디로 주문을 검색

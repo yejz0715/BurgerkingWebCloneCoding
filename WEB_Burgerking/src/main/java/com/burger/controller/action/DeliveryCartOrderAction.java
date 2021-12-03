@@ -47,10 +47,10 @@ public class DeliveryCartOrderAction implements Action {
 				OrderDao odao = OrderDao.getInstance();
 				// 추출한 list 와 주문자의 아디를 갖고 OrderDao 에 가서 오더 와 오더 디테일에 데이터를 추가합니다.
 				// 방금 추가한 주문의 주문번호를 리턴받습니다
-				int Oseq = odao.nonInsertOrder(list, nmvo.getId());
+				int Oseq = odao.insertOrder(list, nmvo.getId());
 				
 				// 방금 주문에 성공한 주문 번호를 갖고 오더 리스트로 이동합니다.
-				url = "burger.do?command=deliveryOrderListForm&oseq="+ Oseq;
+				url = "burger.do?command=deliveryOrderList&oseq="+ Oseq;
 			}
 		}else {
 			MyAddressDao madao = MyAddressDao.getInstance();
@@ -72,7 +72,7 @@ public class DeliveryCartOrderAction implements Action {
 				int Oseq = odao.insertOrder(list, mvo.getId());
 				
 				// 방금 주문에 성공한 주문 번호를 갖고 오더 리스트로 이동합니다.
-				url = "burger.do?command=deliveryOrderListForm&oseq="+ Oseq;
+				url = "burger.do?command=deliveryOrderList&oseq="+ Oseq;
 			}
 		}
 		response.sendRedirect(url);

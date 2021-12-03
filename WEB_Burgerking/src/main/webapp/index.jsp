@@ -2,7 +2,7 @@
 <%@ include file="header.jsp"%>
 
 <div class="clear"></div>
-<div class="mainWrap">
+<div class="mainWrap" style="background-color: #f2ebe6;">
    <div class="banner">
 	   <div class="banner">
 	      <div class="slide" id="slide">

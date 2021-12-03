@@ -53,8 +53,8 @@ create sequence oseq increment by 1 start with 1;
 create sequence pseq increment by 1 start with 1;
 create sequence spseq increment by 1 start with 1;
 create sequence eseq increment by 1 start with 1;
+create sequence odseq increment by 1 start with 1;
 create sequence sposeq increment by 1 start with 1;
-
 
 /* Create Tables */
 
@@ -139,14 +139,8 @@ CREATE TABLE non_member
 );
 
 select * from NON_MEMBER
+drop table non_member
 select * from myaddress
-
-create or replace view cart_view
-as
-select  c.cseq, c.id, m.name as mname, c.pseq, p.pname as pname, p.image, p.kind1, p.kind3,
-	c.quantity, p.price1, c.result,  c.indate 
-from cart c, product p, member m   
-where  c.pseq = p.pseq and m.id = c.id;
 
 
 CREATE TABLE orders
@@ -169,7 +163,6 @@ CREATE TABLE order_detail
    PRIMARY KEY (odseq)
 );
 
-select * from product where kind1 = 8;
 CREATE TABLE product
 (
 	pseq number(10) NOT NULL,
@@ -227,7 +220,7 @@ create table subproduct_order(
 	addprice number(5) not null,
 	primary key(sposeq)
 );
-drop table subproduct_order
+
 select * from SUB_PRODUCT;
 
 create or replace view cart_view
@@ -262,7 +255,7 @@ select * from non_cart_view
 select * from non_order_view
 
 select*from sub_product
-
+drop table sub_product
 delete from SUBPRODUCT_order
 select*from cart
 select*from sub_product
@@ -270,7 +263,8 @@ select*from orders
 select*from order_detail
 select * from cart_view;
 select * from order_view;
-delete from order_detail where odseq<100
+select * from member
+
 
 /* Create Foreign Keys */
 
@@ -313,19 +307,6 @@ ALTER TABLE order_detail
    ADD FOREIGN KEY (pseq)
    REFERENCES product (pseq)
 
-<<<<<<< HEAD
-
-
-create table shortproduct(
-   spseq number(10),
-   pname varchar2(100),
-   kind1 varchar2(5),
-   kind2 varchar2(3),
-   image varchar2(50),
-   useyn varchar2(1)
-);
-=======
->>>>>>> branch 'total' of https://github.com/Ezen-MVC-TeamProject/BurgerkingWeb
 
 select * from member;
 

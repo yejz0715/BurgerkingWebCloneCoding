@@ -44,7 +44,7 @@ public class InsertAddMeterialAction implements Action {
 					}
 					
 					CartVO Am_cvo = cdao.getPseqCart(am[0]);
-					
+					System.out.println(Am_cvo);
 					subproductOrderDao spodao = subproductOrderDao.getInstance();
 					spodao.insertSubProductOrder(Am_cvo.getCseq(), sublist, nmvo.getMseq());
 				}

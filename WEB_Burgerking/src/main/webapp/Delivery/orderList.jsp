@@ -72,24 +72,33 @@
 			</c:forEach>
 		</ul>
 		</div>
-		
-		<div class="cont">
-			<c:choose>
-				<c:when test="${empty spseqAm}">
-					<div class="cont">
-						<div class="menu_titWrap">
-							empty					
-						</div>
-					</div>
-				</c:when>
-				<c:otherwise>
-					<c:forEach items="${spseqAm}" var="spseqAm">
-						${spseqAm.odseq}번 : ${spseqAm.sname}/${spseqAm.addprice}원<br><br>
-					</c:forEach>
-				</c:otherwise>
-			</c:choose>
+		<div class="allchk01">
+			<label style="color:#000"><strong>추가메뉴</strong></label>
 		</div>
-		
+		<c:choose>
+			<c:when test="${empty spseqAm}">
+				<ul class="cart_list01">
+				<li>
+				<div class="cont">
+					<div class="menu_titWrap"><span class="tit">추가메뉴가 없습니다</span></div>
+				</div>
+				</li>
+				</ul>
+			</c:when>
+			<c:otherwise>
+				<ul class="cart_list01">
+				<li>
+				<div class="cont" style="padding: 32px 64px; font-size:2rem;font-weight: bold;">
+					<c:forEach items="${spseqAm}" var="spseqAm">
+					<div style="width:100%;">${spseqAm.cseq}번 : ${spseqAm.sname}
+					<div style="color:red; float:right;">${spseqAm.addprice}원</div>
+					</div>
+					</c:forEach>
+				</div>
+				</li>
+				</ul>
+			</c:otherwise>
+		</c:choose>
 		<h2 class="tit01 tit_ico money"><span>최종 결제금액</span></h2>
 		<div class="container02">
 			<div class="order_payment_list">
