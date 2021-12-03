@@ -19,11 +19,11 @@
 	/* 팝업창 */
 		function go_pop1() {
 			window.open("burger.do?command=popup1", "a",
-					"width=500, height=800, left=50, top=50");}
+					"width=570, height=760, left=50, top=50,resizable=no");}
 	
 		function go_pop2() {
 			window.open("burger.do?command=popup2", "a",
-					"width=500, height=700, left=50, top=50");}
+					"width=570, height=650, left=50, top=50,resizable=no");}
 		
 		
 		/* 전체체크 */

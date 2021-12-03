@@ -8,6 +8,12 @@
 </article>
  
 <article>
+<div class="location">
+	<ul>
+		<li><a href="burger.do?command=deliveryForm&kind1=1">딜리버리</a>&nbsp;>&nbsp;</li>
+		<li>주문내역</li>
+	</ul>
+</div>
 <div class="contentsBox01">
 	<div class="web_container1">
 		<div class="subtitWrap m_bg_basic">

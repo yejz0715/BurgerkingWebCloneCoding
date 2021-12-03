@@ -20,7 +20,7 @@ public class subProductDao {
 	ResultSet rs = null;
 	
 
-	public ArrayList<shortProductVO> getShortProduct(String kind1) {
+	/*public ArrayList<shortProductVO> getShortProduct(String kind1) {
 		ArrayList<shortProductVO> list = new ArrayList<shortProductVO>();
 		String sql = "select * from shortproduct where kind1 = ?";
 		con = DBman.getConnection();
@@ -93,7 +93,7 @@ public class subProductDao {
 			DBman.close(con, pstmt, rs);
 		}
 		return pvo;
-	}
+	}*/
 	
 	public ArrayList<subProductVO> getSubProduct() {
 		ArrayList<subProductVO> list = new ArrayList<subProductVO>();

@@ -4,7 +4,7 @@
 <div class="clear"></div>
 <div class="mainWrap">
    <div class="banner">
-	   <div class="banner" style="overflow: scroll">
+	   <div class="banner">
 	      <div class="slide" id="slide">
 	         <ul class="cnt" id="cnt">
 	            <li><a href="burger.do?command=eventDetailForm&eseq=4"><img
@@ -51,17 +51,17 @@
 	                  <li class="youtube"><div class="cont1">
 	                        <a
 	                           href="https://www.youtube.com/channel/UCEKRI0fipK4LEgV98nI2CQA/featured"
-	                           target="_blank" class="btn_detail"><span><img
+	                           target="_blank"><span><img
 	                              src="image/main/mainyoutube.png"></span></a>
 	                     </div></li>
 	                  <li class="facebook"><div class="cont1">
 	                        <a href="https://www.facebook.com/burgerkingkorea"
-	                           target="_blank" class="btn_detail"><span><img
+	                           target="_blank"><span><img
 	                              src="image/main/mainfacebook.png"></span></a>
 	                     </div></li>
 	                  <li class="instargram"><div class="cont1">
 	                        <a href="https://www.instagram.com/burgerkingkorea/"
-	                           target="_blank" class="btn_detail"><span><img
+	                           target="_blank"><span><img
 	                              src="image/main/maininstargram.png"></span></a>
 	                     </div></li>
 	               </ul>

@@ -107,18 +107,14 @@ function deliveryDetail(pseq){
 
 function add_or_cart(kind1, pseq){
 	var url="";
-	if(kind1.value=="1"){
-		url="burger.do?command=addCart&pseq"+pseq;
-	}else if(kind1.value=="6"){
-		url="burger.do?command=addCart&pseq"+pseq;
-	}else if(kind1.value=="7"){
-		url="burger.do?command=addCart&pseq"+pseq;
-	}else if(kind1.value=="8"){
-		url="burger.do?command=addCart&pseq"+pseq;
+	if(kind1 == "1" || kind1 == "6" || kind1 == "7" || kind1 == "8"){
+		url="burger.do?command=addCart&pseq="+pseq;
+		opener.location.href = url;
+		self.close();
 	}else{
 		url="burger.do?command=deliveryAddMaterial&pseq="+pseq;
+		window.location.href = url;
 	}
-	window.location.replace(url);
 }
 
 function go_cart(pseq, id){
@@ -127,6 +123,16 @@ function go_cart(pseq, id){
 	opener.cartForm.submit();
 	self.close();
 }
+
+/*function go_add_Meterial(){
+	var frm=document.cartForm;
+	var 
+	opener.document.cartForm.pseq.value=pseq;
+	opener.document.cartForm.id.value=id;
+	opener.cartForm.submit();
+	self.close();
+}*/
+
 function go_cart02(id){
 	document.cartForm.id.value=id;
 	document.cartForm.action="burger.do?command=deliveryCartForm";
@@ -170,6 +176,37 @@ function del_qna(){
 	} else{
 		document.frm.action = "burger.do?command=QnaDelete";
 	    document.frm.submit();
+	}
+}
+
+function selectAllDelete(selectAllDelete)  {
+  	const checkboxes = document.getElementsByName('menu');
+  	checkboxes.forEach((checkbox) => {
+    checkbox.checked = selectAllDelete.checked;
+  })
+}
+function del_cart(sad){
+	var count = 0;  //  체크된 체크박스의 갯수를 카운트 하기위한 변수
+	var checkboxes = document.getElementsByName('menu');
+	var cb = [];
+	
+	if(checkboxes.length==undefined){   // 장바구니에 물건이 하나일때, 체크박스가 하나일때
+		if(checkboxes.checked == true)   // 그 체크박스만 체크되어 있는지 확인
+			count++;
+			cb[0] = checkboxes.value;	 
+	}else{
+		for( var i=0; i<checkboxes.length; i++){
+			if( checkboxes[i].checked==true){
+				count++;
+				cb[i] = checkboxes[i].value;
+			}
+		}
+	}
+	// 지금의 스크립트 명령은 체크박스가 하나도 체크되지 않았다면 원래로 되돌아 가기위한 코드들입니다
+	if( count == 0 ){
+		alert("삭제할 항목을 선택해주세요");
+	} else{
+	    window.location.href = "burger.do?command=deliveryCartDelete&menu=" + cb;
 	}
 }
 

@@ -29,7 +29,7 @@
 		<div class="popcont nopadding">
 			<div class="prd_intro">
 				<div class="prd_img">
-					<span><img src="image/menu/${pvo.kind1 }/${pvo.image}" style="display: inline; opacity: 1;"></span>
+					<span><img src="image/menu/${pvo.kind1}/${pvo.image}" style="display: inline; opacity: 1;"></span>
 				</div>
 				<div class="intro_txt">
 					<h3 class="tit"><span>${pvo.pname }</span></h3>
@@ -41,7 +41,7 @@
 			<c:forEach var="list2" items="${list2}">
 				<li>
 					<div class="prd_img">
-						<span><img src="image/menu/${list2.kind2 }/${list2.image}" style="display: inline; opacity: 1;"></span>
+						<span><img src="image/menu/${list2.kind1}/${list2.image}" style="display: inline; opacity: 1;"></span>
 					</div>
 					<div class="cont">
 						<div class="tit"><strong>${list2.pname}</strong></div>
@@ -49,7 +49,7 @@
 						<div class="price" ><strong style="color:red;font-weight:bold">&#8361;${list2.price1}</strong></div>
 					</div>
 					<div>
-						<button type="button" class="btn_detail" onclick="add_or_cart('${list2.kind2}','${list2.pseq}')"></button>
+						<button type="button" class="btn_detail" onclick="add_or_cart('${list2.kind1}','${list2.pseq}')"></button>
 					</div>
 				</li>
 			</c:forEach>

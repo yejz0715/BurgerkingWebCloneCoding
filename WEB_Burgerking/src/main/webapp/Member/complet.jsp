@@ -6,7 +6,7 @@
 	<div class="location">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
-			<li><a href="burger.do?command=loginForm">로그인</a>&nbsp;>&nbsp;</li>
+			<li><a href="burger.do?command=loginForm&non=1">로그인</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=join">회원가입</a></li>
 		</ul>
 	</div>
@@ -16,7 +16,7 @@
 
 
 	<div class="contentsBox01 join_welcome">
-		<div class="web_container">
+		<div class="web_container1">
 			<h2 class="logo"></h2>
 			<div class="cont">
 				<p class="tit">

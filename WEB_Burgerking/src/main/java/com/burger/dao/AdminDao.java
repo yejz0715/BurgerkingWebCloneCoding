@@ -513,8 +513,19 @@ public class AdminDao {
 			
 			while(rs.next()) {
 				orderVO ovo = new orderVO();
-				
-				
+				ovo.setOseq(rs.getInt("oseq"));
+				ovo.setOdseq(rs.getInt("odseq"));
+				ovo.setId(rs.getString("id"));
+				ovo.setIndate(rs.getTimestamp("indate"));
+				ovo.setPseq(rs.getInt("pseq"));
+				ovo.setQuantity(rs.getInt("quantity"));
+				ovo.setResult(rs.getString("result"));
+				ovo.setMname(rs.getString("mname"));
+				ovo.setZip_num(rs.getString("zip_num"));
+				ovo.setAddress(rs.getString("address"));
+				ovo.setPhone(rs.getString("phone"));
+				ovo.setPname(rs.getString("pname"));
+				ovo.setPrice1(rs.getInt("price1"));
 				list.add(ovo);
 			}
 		}catch(SQLException e) {

@@ -25,7 +25,7 @@
 		</div>
 		<div class="popcont bg_basic"> 
 			<ul class="menu_sub_list check_mode">
-				<c:forEach items="${subProductVO}" var="subproductVO">
+				<c:forEach items="${subProductVO}" var="subproductVO" >
 					<li>
 						<input type="checkbox" name="Meterial" value="${subproductVO.spseq}" title="재료추가" class="check03">
 						<div class="prd_img">
@@ -37,82 +37,14 @@
 						</div>
 					</li>
 				</c:forEach>
-				<!-- <li>
-					<input type="checkbox" title="재료 추가" class="check03">
-					<div class="prd_img">
-						<img src="image/menu/plus/bacon2.png" alt="재료">
-					</div>
-					<div class="cont">
-						<p class="tit"><span>롱베이컨 2장</span></p>
-						<p class="price"><span>+1,200원</span></p>
-					</div>
-				</li>
-				<li>
-					<input type="checkbox" title="재료 추가" class="check03">
-					<div class="prd_img">
-						<img src="image/menu/plus/hallapinyo4.png" alt="재료">
-					</div>
-					<div class="cont">
-						<p class="tit"><span>할라피뇨4 추가</span></p>
-						<p class="price"><span>+800원</span></p>
-					</div>
-				</li>
-				<li>
-					<input type="checkbox" title="재료 추가" class="check03">
-					<div class="prd_img">
-						<img src="image/menu/plus/bacon1.png" alt="재료">
-					</div>
-					<div class="cont">
-						<p class="tit"><span>롱베이컨 1장</span></p>
-						<p class="price"><span>+600원</span></p>
-					</div>
-				</li>
-				<li>
-					<input type="checkbox" title="재료 추가" class="check03">
-					<div class="prd_img">
-						<img src="image/menu/plus/cheese2.png" alt="재료">
-					</div>
-					<div class="cont">
-						<p class="tit"><span>치즈 2장</span></p>
-						<p class="price"><span>+600원</span></p>
-					</div>
-				</li>
-				<li>
-					<input type="checkbox" title="재료 추가" class="check03">
-					<div class="prd_img">
-						<img src="image/menu/plus/hallapinyo2.png" alt="재료">
-					</div>
-					<div class="cont">
-						<p class="tit"><span>할라피뇨2 추가</span></p>
-						<p class="price"><span>+400원</span></p>
-					</div>
-				</li>
-				<li>
-					<input type="checkbox" title="재료 추가" class="check03">
-					<div class="prd_img">
-						<img src="image/menu/plus/cheese1.png" alt="재료">
-					</div>
-					<div class="cont">
-						<p class="tit"><span>치즈 1장</span></p>
-						<p class="price"><span>+300원</span></p>
-					</div>
-				</li>
-				<li>
-					<input type="checkbox" title="재료 추가" class="check03">
-					<div class="prd_img">
-						<img src="image/menu/plus/allextra.png" alt="재료">
-					</div>
-					<div class="cont">
-						<p class="tit"><span>올엑스트라 300원</span></p>
-						<p class="price"><span>+300원</span></p>
-					</div>
-				</li> -->
 			</ul>
 		</div>
 		<div class="pop_btn c_btn item2">
 			<button type="button" class="btn02 dark m_btn01_s"
 			onclick="go_cart('${pvo.pseq}','${loginUser}')"><span>추가안함</span></button>
-			<button type="button" class="btn02 red m_btn01_s"><span>추가함</span></button>
+			<button type="button" class="btn02 red m_btn01_s"
+			onclick="go_add_Meterial('${pvo.pseq}','${subproductVO.spseq}','${loginUser}')">
+			<span>추가함</span></button>
 		</div>
 	</div>
 </div>

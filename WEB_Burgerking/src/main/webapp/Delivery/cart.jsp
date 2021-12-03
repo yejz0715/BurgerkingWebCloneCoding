@@ -24,19 +24,19 @@
 			</div>
 		</c:when>
 		<c:otherwise>
-		
 		<div class="allchk01">
-			<label><input type="checkbox" class="check02"><span>전체선택</span></label>
+			<label><input type="checkbox" class="check02" onclick="selectAllDelete(this)" name="all">
+			<span>전체선택</span></label>
 			<div class="rcen_btn"></div>
-				<button type="button" class="btn04" ><strong>삭제</strong></button>
+				<button type="button" class="btn04" id="delete" onclick="del_cart(this)"><strong>삭제</strong></button>
 		</div>
 		<ul class="cart_list01">
-		<c:forEach var="cartList" items="${cartList}">
+		<c:forEach var="cartList" items="${cartList}" varStatus="status">
 		<li>
 			<div class="cont">
 				<div class="menu_titWrap">
 					<label class="menu_name">
-						<input type="checkbox" name="menu" title="선택" class="check02">
+						<input type="checkbox" name="menu" title="선택" class="check02" value="${cartList.cseq}">
 						<span class="tit">${cartList.pname}</span>
 						<span class="set_info"></span>
 						<span class="price">

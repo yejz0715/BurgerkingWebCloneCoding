@@ -24,6 +24,7 @@ import com.burger.controller.action.FindPwdFormAction;
 import com.burger.controller.action.AddCartAction;
 import com.burger.controller.action.CartDeleteFormAction;
 import com.burger.controller.action.DeliveryAddMaterialAction;
+import com.burger.controller.action.DeliveryCartDeleteAction;
 import com.burger.controller.action.DeliveryCartFormAction;
 import com.burger.controller.action.DeliveryCartOrderAction;
 import com.burger.controller.action.DeliveryDetailFormAction;
@@ -53,6 +54,7 @@ import com.burger.controller.action.PassCheckAction;
 import com.burger.controller.action.PassCheckFormAction;
 import com.burger.controller.action.PopUp1Action;
 import com.burger.controller.action.PopUp2Action;
+import com.burger.controller.action.PopUp3Action;
 import com.burger.controller.action.PrivacyAction;
 import com.burger.controller.action.QnaDeleteAction;
 import com.burger.controller.action.QnaFormAction;
@@ -80,6 +82,7 @@ import com.burger.controller.admin.action.AdminMemberDeleteAction;
 import com.burger.controller.admin.action.AdminMemberListAction;
 import com.burger.controller.admin.action.AdminMemberUpdateAction;
 import com.burger.controller.admin.action.AdminMemberUpdateFormAction;
+import com.burger.controller.admin.action.AdminOrderDeleteAction;
 import com.burger.controller.admin.action.AdminOrderListAction;
 import com.burger.controller.admin.action.AdminOrderSaveAction;
 import com.burger.controller.admin.action.AdminProductDeleteAction;
@@ -199,6 +202,10 @@ public class ActionFactory {
 		else if(command.equals("adminOrderList")) ac = new AdminOrderListAction();
 		else if(command.equals("adminOrderSave")) ac = new AdminOrderSaveAction();
 		else if(command.equals("deliveryOrderList")) ac = new DeliveryOrderListAction();
+		else if(command.equals("adminOrderDelete")) ac = new AdminOrderDeleteAction();
+		else if(command.equals("deliveryCartDelete")) ac = new DeliveryCartDeleteAction();
+		else if(command.equals("popup3")) ac = new PopUp3Action();
+		
 
 		return ac;
 	}

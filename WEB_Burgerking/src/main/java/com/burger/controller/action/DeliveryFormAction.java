@@ -20,25 +20,28 @@ import com.burger.dto.orderVO;
 public class DeliveryFormAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "Delivery/delivery.jsp";
+		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession(); 
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
-		
-		request.setCharacterEncoding("UTF-8");
-		String kind1 = request.getParameter("kind1");
-		
-		ProductDao pdao = ProductDao.getInstance();
-
-		ArrayList<ProductVO> list = pdao.getProductList(kind1);
-		
-
-		OrderDao odao = OrderDao.getInstance();
-		ArrayList<orderVO> list1 = odao.getOrderList(mvo.getId());
-		CartDao cdao = CartDao.getInstance();
-		ArrayList<CartVO> list2 = cdao.selectCart( mvo.getId() );	
-		
-		request.setAttribute("ovo", list1);
-		request.setAttribute("cvo", list2);
-		request.setAttribute("productList", list);
+		if(mvo == null) {
+			url = "burger.do?command=loginForm&non=1";
+		}else {
+			String kind1 = request.getParameter("kind1");
+			
+			ProductDao pdao = ProductDao.getInstance();
+	
+			ArrayList<ProductVO> list = pdao.getProductList(kind1);
+			
+	
+			OrderDao odao = OrderDao.getInstance();
+			ArrayList<orderVO> list1 = odao.getOrderList(mvo.getId());
+			CartDao cdao = CartDao.getInstance();
+			ArrayList<CartVO> list2 = cdao.selectCart( mvo.getId() );	
+			
+			request.setAttribute("ovo", list1);
+			request.setAttribute("cvo", list2);
+			request.setAttribute("productList", list);
+		}
 		request.getRequestDispatcher(url).forward(request, response);
 		
 	}

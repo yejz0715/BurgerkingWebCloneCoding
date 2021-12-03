@@ -39,8 +39,6 @@ public class DeliveryOrderListFormAction implements Action {
 				totalPrice+=ovo.getPrice1() * ovo.getQuantity();	
 			// 리퀘스트에 저장
 			orderVO ovo = list.get(0);	
-			System.out.println(list);
-			System.out.println(mvo1);
 			
 			ArrayList<orderVO> list2 = odao.getOrderList(mvo.getId());
 			ArrayList<CartVO> list3 = cdao.selectCart( mvo.getId() );

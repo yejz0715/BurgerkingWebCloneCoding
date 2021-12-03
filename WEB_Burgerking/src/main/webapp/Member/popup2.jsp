@@ -306,7 +306,7 @@
 						수 있습니다.</p>
 				</div>
 			</div>
-			<div class="pop_btn full_type c_btn item2">
+			<div class="pop_btn full_type c_btn item3">
 				<button type="button" class="btn02 dark" onclick="self.close();">
 					<span>확인</span>
 				</button>
