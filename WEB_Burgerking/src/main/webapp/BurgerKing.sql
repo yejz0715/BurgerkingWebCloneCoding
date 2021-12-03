@@ -262,16 +262,7 @@ ALTER TABLE cart
 ALTER TABLE order_detail
    ADD FOREIGN KEY (pseq)
    REFERENCES product (pseq)
-;
 
-create table shortproduct(
-   spseq number(10),
-   pname varchar2(100),
-   kind1 varchar2(5),
-   kind2 varchar2(3),
-   image varchar2(50),
-   useyn varchar2(1)
-);
 
 select * from member;
 

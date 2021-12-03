@@ -14,7 +14,6 @@ function idok(userid){
 	opener.joinpageForm.reid.value=userid;
 	self.close();
 }
-
 </script>
 </head>
 <body>
@@ -22,7 +21,7 @@ function idok(userid){
 <h1>ID 중복확인</h1>
 	<form method="post" name="idCheckFrm" action="burger.do">
 		<input type="hidden" name="command" value="idCheckForm">
-		User ID <input type=text name="id" value="${id}">
+		User ID <input type="email" name="id" value="${id}">
 		<input type="submit" value="검색" class="submit"><br>
 	
 		<div style="margin-top: 20px">

@@ -41,24 +41,5 @@
 					
 		
 
-	function go_save(){
-		if (document.joinpageForm.id.value == "") {
-			alert("아이디를 입력하여 주세요."); 	    
-		    document.joinpageForm.id.focus();
-		} else if(document.joinpageForm.name.value == "") {
-		    alert("이름을 입력해 주세요.");	    
-		    document.joinpageForm.name.focus();
-		} else if(document.joinpageForm.phone.value == "") {
-		    alert("휴대폰번호을 입력해 주세요.");	   
-		    document.joinpageForm.phone.focus();
-		} else if(document.joinpageForm.pwd.value == "") {
-		    alert("비밀번호를 입력해 주세요.");	    
-		    document.joinpageForm.pwd.focus();
-		} else if(document.joinpageForm.pwd.value != document.joinpageForm.pwdCheck.value) {
-		    alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");	    
-		    document.joinpageForm.pwd.focus();
-		} else{
-			document.joinpageForm.action ="burger.do";
-			document.joinpageForm.submit(); 
-		}
-	}
+	
+	
