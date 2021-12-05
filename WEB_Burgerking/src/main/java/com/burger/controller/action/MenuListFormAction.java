@@ -21,6 +21,7 @@ public class MenuListFormAction implements Action {
 		ArrayList<ProductVO> list = pdao.getProductList(kind1);
 
 		request.setAttribute("productList", list);
+		request.setAttribute("kind1", kind1);
 
 		request.getRequestDispatcher(url).forward(request, response);
 	}

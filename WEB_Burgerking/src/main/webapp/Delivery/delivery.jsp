@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="deli_header.jsp"%>
+<div class="clear"></div>
 
 <script>
 $(function(){
@@ -10,16 +11,17 @@ $(function(){
 });
 </script>
 
-<div class="clear"></div>
 
 <article>
 	<div class="location">
-	<div class="web_container1">
-		<ul>
-			<li><a href="burger.do?command=deliveryForm&kind1=1">딜리버리</a>&nbsp;>&nbsp;</li>
-			<li>카트</li>
-		</ul>
-	</div>
+		<div class="web_container1">
+			<div class="web_container1">
+				<ul>
+					<li><a href="burger.do?command=deliveryForm&kind1=1">딜리버리</a>&nbsp;>&nbsp;</li>
+					<li>카트</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 <div class="bg_w">
 	<div class="web_container1">
@@ -27,21 +29,21 @@ $(function(){
 			<h3 class="page_tit">메뉴</h3>
 			<div class="tab01" >
 			<ul>
-				<li><a href="burger.do?command=menuListForm&kind1=1">
+				<li><a href="burger.do?command=deliveryForm&kind1=1">
 					<button type="button" ><span id="pk1">스페셜&amp;할인팩</span></button></a></li>
-				<li><a href="burger.do?command=menuListForm&kind1=2">
+				<li><a href="burger.do?command=deliveryForm&kind1=2">
 					<button type="button"><span id="pk2">프리미엄</span></button></a></li>
-				<li><a href="burger.do?command=menuListForm&kind1=3">
+				<li><a href="burger.do?command=deliveryForm&kind1=3">
 					<button type="button"><span id="pk3">와퍼</span></button></a></li>
-				<li><a href="burger.do?command=menuListForm&kind1=4">
+				<li><a href="burger.do?command=deliveryForm&kind1=4">
 					<button type="button"><span id="pk4">주니어&amp;버거</span></button></a></li>
-				<li><a href="burger.do?command=menuListForm&kind1=5">
+				<li><a href="burger.do?command=deliveryForm&kind1=5">
 					<button type="button"><span id="pk5">올데이킹&amp;치킨버거</span></button></a></li> 
-				<li><a href="burger.do?command=menuListForm&kind1=6">
+				<li><a href="burger.do?command=deliveryForm&kind1=6">
 					<button type="button"><span id="pk6">사이드</span></button></a></li>
-				<li><a href="burger.do?command=menuListForm&kind1=7">
+				<li><a href="burger.do?command=deliveryForm&kind1=7">
 					<button type="button"><span id="pk7">음료&amp;디저트</span></button></a></li>
-				<li><a href="burger.do?command=menuListForm&kind1=8">
+				<li><a href="burger.do?command=deliveryForm&kind1=8">
 					<button type="button"><span id="pk8">독퍼</span></button></a></li>
 			</ul>
 			</div>

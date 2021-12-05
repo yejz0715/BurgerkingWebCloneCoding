@@ -42,6 +42,7 @@ public class DeliveryFormAction implements Action {
 			request.setAttribute("ovo", list1);
 			request.setAttribute("cvo", list2);
 			request.setAttribute("productList", list);
+			request.setAttribute("kind1", kind1);
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 		
