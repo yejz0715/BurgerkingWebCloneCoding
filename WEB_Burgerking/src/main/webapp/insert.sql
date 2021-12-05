@@ -411,79 +411,81 @@ values(pseq.nextVal, '치즈버거', 4100, 0, 0, '4', '11', '4', 'cheese.png',
 ' ', 1);
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, 'BBQ몬스터 라지세트', 0, 0, 0, '5', '1','3', 'all_bbqmonsterls.png',
+values(pseq.nextVal, 'BBQ몬스터 라지세트', 7600, 0, 0, '5', '1','3', 'all_bbqmonsterls.png',
 'BBQ몬스터+프렌치프라이L+콜라L', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, 'BBQ몬스터 세트', 0, 0, 0, '5', '1', '2', 'all_bbqmonsters.png',
+values(pseq.nextVal, 'BBQ몬스터 세트', 7200, 0, 0, '5', '1', '2', 'all_bbqmonsters.png',
 'BBQ몬스터+프렌치프라이R+콜라R', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, 'BBQ몬스터 세트', 0, 0, 0, '5', '1', '4', 'all_bbqmonsters.png',
+values(pseq.nextVal, 'BBQ몬스터 세트', 7200, 0, 0, '5', '1', '4', 'all_bbqmonsters.png',
 ' ', 1);
 
 
+
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '불고기몬스터 라지세트', 0, 0, 0, '5', '2','3', 'all_bggmonsterls.png',
+values(pseq.nextVal, '불고기몬스터 라지세트', 7600, 0, 0, '5', '2','3', 'all_bggmonsterls.png',
 '불고기몬스터+프렌치프라이L+콜라L', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '불고기몬스터 세트', 0, 0, 0, '5', '2', '2', 'all_bggmonsters.png',
+values(pseq.nextVal, '불고기몬스터 세트', 7200, 0, 0, '5', '2', '2', 'all_bggmonsters.png',
 '불고기몬스터+프렌치프라이R+콜라R', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '불고기몬스터 세트', 0, 0, 0, '5', '2', '4', 'all_bggmonsters.png',
+values(pseq.nextVal, '불고기몬스터 세트', 7200, 0, 0, '5', '2', '4', 'all_bggmonsters.png',
 ' ', 1);
 
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '더블오리지널치즈버거 라지세트', 0, 0, 0, '5', '3','3', 'all_dboriginerls.png',
+values(pseq.nextVal, '더블오리지널치즈버거 라지세트', 7600, 0, 0, '5', '3','3', 'all_dboriginerls.png',
 '더블오리지널치즈버거+프렌치프라이L+콜라L', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '더블오리지널치즈버거 세트', 0, 0, 0, '5', '3', '2', 'all_dboriginers.png',
+values(pseq.nextVal, '더블오리지널치즈버거 세트', 7200, 0, 0, '5', '3', '2', 'all_dboriginers.png',
 '더블오리지널치즈버거+프렌치프라이R+콜라R', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '더블오리지널치즈버거 세트', 0, 0, 0, '5', '3', '4', 'all_dboriginers.png',
+values(pseq.nextVal, '더블오리지널치즈버거 세트', 7200, 0, 0, '5', '3', '4', 'all_dboriginers.png',
 ' ', 1);
 
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '불고기롱치킨버거 라지세트', 0, 0, 0, '5', '4','3', 'all_bgglongchickenls.png',
+values(pseq.nextVal, '불고기롱치킨버거 라지세트', 7600, 0, 0, '5', '4','3', 'all_bgglongchickenls.png',
 '불고기롱치킨버거+프렌치프라이L+콜라L', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '불고기롱치킨버거 세트', 0, 0, 0, '5', '4', '2', 'all_bgglongchickens.png',
+values(pseq.nextVal, '불고기롱치킨버거 세트', 7200, 0, 0, '5', '4', '2', 'all_bgglongchickens.png',
 '불고기롱치킨버거+프렌치프라이R+콜라R', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '불고기롱치킨버거 세트', 0, 0, 0, '5', '4', '4', 'all_bgglongchickens.png',
+values(pseq.nextVal, '불고기롱치킨버거 세트', 7200, 0, 0, '5', '4', '4', 'all_bgglongchickens.png',
 ' ', 1);
 
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '직화소불고기버거 라지세트', 0, 0, 0, '5', '5','3', 'all_firebggls.png',
+values(pseq.nextVal, '직화소불고기버거 라지세트', 7600, 0, 0, '5', '5','3', 'all_firebggls.png',
 '직화소불고기버거+프렌치프라이L+콜라L', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '직화소불고기버거 세트', 0, 0, 0, '5', '5', '2', 'all_firebggs.png',
+values(pseq.nextVal, '직화소불고기버거 세트', 7200, 0, 0, '5', '5', '2', 'all_firebggs.png',
 '직화소불고기버거+프렌치프라이R+콜라R', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '직화소불고기버거 세트', 0, 0, 0, '5', '5', '4', 'all_firebggs.png',
+values(pseq.nextVal, '직화소불고기버거 세트', 7200, 0, 0, '5', '5', '4', 'all_firebggs.png',
 ' ', 1);
 
 
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '콰트로치즈와퍼주니어 라지세트', 0, 0, 0, '5', '6','3', 'all_quattrocheesewhopperjrls.png',
+values(pseq.nextVal, '콰트로치즈와퍼주니어 라지세트', 7600, 0, 0, '5', '6','3', 'all_quattrocheesewhopperjrls.png',
 '콰트로치즈와퍼주니어+프렌치프라이L+콜라L', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '콰트로치즈와퍼주니어 세트', 0, 0, 0, '5', '6', '2', 'all_quattrocheesewhopperjrs.png',
+values(pseq.nextVal, '콰트로치즈와퍼주니어 세트', 7200, 0, 0, '5', '6', '2', 'all_quattrocheesewhopperjrs.png',
 '콰트로치즈와퍼주니어+프렌치프라이R+콜라R', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '콰트로치즈와퍼주니어 세트', 0, 0, 0, '5', '6', '4', 'all_quattrocheesewhopperjrs.png',
+values(pseq.nextVal, '콰트로치즈와퍼주니어 세트', 7200, 0, 0, '5', '6', '4', 'all_quattrocheesewhopperjrs.png',
 ' ', 1);
 
 
+
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '통새우와퍼주니어 라지세트', 0, 0, 0, '5', '7','3', 'all_shrimpwhopperjrls.png',
+values(pseq.nextVal, '통새우와퍼주니어 라지세트', 7600, 0, 0, '5', '7','3', 'all_shrimpwhopperjrls.png',
 '통새우와퍼주니어+프렌치프라이L+콜라L', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '통새우와퍼주니어 세트', 0, 0, 0, '5', '7', '2', 'all_shrimpwhopperjrs.png',
+values(pseq.nextVal, '통새우와퍼주니어 세트', 7200, 0, 0, '5', '7', '2', 'all_shrimpwhopperjrs.png',
 '통새우와퍼주니어+프렌치프라이R+콜라R', 1);
 insert into product(pseq, pname, price1, price2, price3, kind1, kind2, kind3, image, content, useyn)
-values(pseq.nextVal, '통새우와퍼주니어 세트', 0, 0, 0, '5', '7', '4', 'all_shrimpwhopperjrs.png',
+values(pseq.nextVal, '통새우와퍼주니어 세트', 7200, 0, 0, '5', '7', '4', 'all_shrimpwhopperjrs.png',
 ' ', 1);
 
 
