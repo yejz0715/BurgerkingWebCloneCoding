@@ -228,6 +228,7 @@ select  c.cseq, c.id, m.name as mname, c.pseq, p.pname as pname, p.image, p.kind
 from cart c, product p, member m   
 where  c.pseq = p.pseq and m.id = c.id;
 
+drop view order_view
 create or replace view order_view
 as
 select d.odseq, o.oseq, o.id, o.indate, d.pseq, d.quantity,  d.result, 
