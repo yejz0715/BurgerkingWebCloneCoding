@@ -10,10 +10,12 @@ import javax.servlet.http.HttpSession;
 
 import com.burger.dao.CartDao;
 import com.burger.dao.MemberDao;
+import com.burger.dao.MyAddressDao;
 import com.burger.dao.OrderDao;
 import com.burger.dao.subproductOrderDao;
 import com.burger.dto.CartVO;
 import com.burger.dto.MemberVO;
+import com.burger.dto.MyAddressVO;
 import com.burger.dto.orderVO;
 import com.burger.dto.subproductOrderVO;
 
@@ -54,6 +56,10 @@ public class DeliveryOrderListAction implements Action {
 				totalPrice += spovo.get(i).getAddprice();
 			}
 			
+			MyAddressDao madao = MyAddressDao.getInstance();
+			MyAddressVO mavo = madao.getAddress(mvo.getMseq());
+			
+			request.setAttribute("Myaddress", mavo);
 			request.setAttribute("memberVO", mvo1);
 			request.setAttribute("orderList", list1);
 			request.setAttribute("ovo", list2);

@@ -2001,18 +2001,18 @@ strong {
 }
 
 .history3:after {
-	display: block;
-	content: "";
-	width: 746px;
-	height: 295px;
-	background: url(../image/main/historyback3.png) 100% no-repeat;
-	min-width: 31%;
-	position: absolute;
-	left: 70%;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-	background-size: cover;
+    display: block;
+    content: "";
+    width: 746px;
+    height: 295px;
+    background: url(../image/main/historyback3.png) 100% no-repeat;
+    min-width: 31%;
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-size: cover;
 }
 
 .history_area.alignL h4 {

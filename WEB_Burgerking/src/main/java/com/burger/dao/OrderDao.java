@@ -113,8 +113,6 @@ public class OrderDao {
 					ovo.setId(rs.getString("id"));
 					ovo.setIndate(rs.getTimestamp("indate"));
 					ovo.setMname(rs.getString("mname"));
-					ovo.setZip_num(rs.getString("zip_num"));
-					ovo.setAddress(rs.getString("address"));
 					ovo.setPhone(rs.getString("phone"));
 					ovo.setPname(rs.getString("pname"));
 					ovo.setPrice1(rs.getInt("price1"));
