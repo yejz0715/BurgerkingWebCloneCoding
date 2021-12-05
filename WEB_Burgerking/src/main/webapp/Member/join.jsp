@@ -35,17 +35,18 @@
 					<a href="burger.do?command=contract" class="btn02 st03" ><span>버거킹 회원가입</span></a>
 				</div>
 			</div>
-			<div class="simple_login">
-            	<img src="image/main/flame_grilled02.png">
-        	</div>
-			<!--  <div class="simple_login">
-				<h3 class="tit01 tit_ico lock">간편 회원가입</h3>
-				<ul class="list">
-					<li class="naver"><a><span>네이버</span></a></li>
-					<li class="kakao"><a><span>카카오톡</span></a></li>
-					<li class="apple"><a><span>애플 로그인</span></a></li>
-				</ul>
-			</div>-->
+			<div id="base">
+				<div class="imgs" id="view1"><img src="image/menu/2/doublewhitegarlic.png">
+				<div class="loginimg_name"><span>더블화이트갈릭와퍼</span></div>				</div>
+        		<div class="imgs" id="view2"><img src="image/menu/2/guinnessquattrocheese.png">
+        		<div class="loginimg_name"><span style="color:black;text-align:center;font-weight:bold;">기네스콰트로치즈와퍼</span></div></div>
+        		<div class="imgs" id="view3"><img src="image/menu/4/shrimpwhopperjr.png">
+        		<div class="loginimg_name"><span style="color:black;text-align:center;font-weight:bold;">아기상어새우버거</span></div></div>
+        		<div class="imgs" id="view4"><img src="image/menu/5/longchicken.png">
+        		<div class="loginimg_name"><span style="color:black;text-align:center;font-weight:bold;">롱치킨버거</span></div></div>
+        		<div class="imgs" id="view5"><img src="image/menu/6/crispyking8sauce.png">
+        		<div class="loginimg_name"><span style="color:black;text-align:center;font-weight:bold;">바삭킹</span></div></div>
+			</div>
 		</div>
 	</div>
 			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
