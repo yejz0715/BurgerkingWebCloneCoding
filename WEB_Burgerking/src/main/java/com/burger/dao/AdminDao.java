@@ -543,6 +543,11 @@ public class AdminDao {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, Integer.parseInt(odseq));
 			pstmt.executeUpdate();
+			
+			sql = "delete from subproduct_order where odseq = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, Integer.parseInt(odseq));
+			pstmt.executeUpdate();
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {
