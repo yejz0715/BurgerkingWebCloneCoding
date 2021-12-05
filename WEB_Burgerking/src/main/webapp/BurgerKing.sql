@@ -138,9 +138,7 @@ CREATE TABLE non_member
    PRIMARY KEY (id, password)
 );
 
-select * from NON_MEMBER
-drop table non_member
-select * from myaddress
+select * from member
 
 
 CREATE TABLE orders

@@ -3,10 +3,12 @@
 
 <article style="background-color: #f2ebe6;">
 	<div class="location">
+	<div class="web_container1">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
 			<li>법적고지</li>
 		</ul>
+	</div>
 	</div>
 	<div class="wrap">
 		<ul id="terms_wrap_ul">
