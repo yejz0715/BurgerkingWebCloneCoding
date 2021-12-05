@@ -231,8 +231,8 @@ where  c.pseq = p.pseq and m.id = c.id;
 create or replace view order_view
 as
 select d.odseq, o.oseq, o.id, o.indate, d.pseq, d.quantity,  d.result, 
-m.name as mname, a.zip_num, a.address, m.phone, p.pname as pname, p.price1
-from orders o, order_detail d, member m, product p, myaddress a
+m.name as mname, m.phone, p.pname as pname, p.price1
+from orders o, order_detail d, member m, product p
 where o.oseq = d.oseq and o.id = m.id and d.pseq = p.pseq;
 
 create or replace view non_cart_view

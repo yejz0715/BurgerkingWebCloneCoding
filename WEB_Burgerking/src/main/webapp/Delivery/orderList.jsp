@@ -33,7 +33,7 @@
 		</div>
 		<div class="container02 deli_info01">
 			<div class="addrWrap01">
-				<p class="txt_addr"><span>${orderVO.address}</span></p>
+				<p class="txt_addr"><span>${Myaddress.address}</span></p>
 				<!-- <button type="button" class="btn04 h02 rbtn"><span>변경</span></button> -->
 			</div>
 			<div class="info_list">
