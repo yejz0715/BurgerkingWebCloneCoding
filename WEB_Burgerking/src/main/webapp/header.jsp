@@ -39,7 +39,7 @@
 		
 					<div class="top_menu">
 						<ul onmouseover="sizeup()" onmouseleave="sizedown()" id="ul1">
-							<li class="menu_item"><span>메뉴소개</span>
+							<li class="menu_item"><span class="menuico">메뉴소개</span>
 						    <ul class="header_submenu">
 								<li><a href="burger.do?command=menuListForm&kind1=1"><span>스페셜&amp;할인팩</span></a></li>
 								<li><a href="burger.do?command=menuListForm&kind1=2"><span>프리미엄</span></a></li>
@@ -51,14 +51,14 @@
 								<li><a href="burger.do?command=menuListForm&kind1=8"><span>독퍼</span></a></li>
 							</ul> 
 							</li>
-							<li class="menu_item"><span>이벤트</span>
+							<li class="menu_item"><span class="menuico">이벤트</span>
 								<ul class="header_submenu">
 									<li><a href="burger.do?command=eventListForm"><span>이벤트</span></a></li>
 								</ul>
 							</li>
 							
 							<li class="menu_item">
-								<span>브랜드스토리</span>
+								<span class="menuico">브랜드스토리</span>
 								<ul class="header_submenu">
 									<li><a href="burger.do?command=brandStroyForm"><span>버거킹스토리</span></a></li>
 								</ul>

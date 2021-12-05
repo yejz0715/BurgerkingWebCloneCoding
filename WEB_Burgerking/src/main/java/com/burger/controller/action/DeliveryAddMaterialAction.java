@@ -13,7 +13,6 @@ import com.burger.dao.ProductDao;
 import com.burger.dao.subProductDao;
 import com.burger.dto.CartVO;
 import com.burger.dto.MemberVO;
-import com.burger.dto.NonMemberVO;
 import com.burger.dto.ProductVO;
 import com.burger.dto.subProductVO;
 
@@ -23,29 +22,9 @@ public class DeliveryAddMaterialAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
-		NonMemberVO nmvo = (NonMemberVO)session.getAttribute("NonloginUser");
 		String url;
-		System.out.println(nmvo);
-		if (mvo == null&&nmvo==null) {
+		if (mvo == null) {
 		    url = "burger.do?command=loginForm&non=1";
-		}else if(mvo == null&&nmvo!=null){
-			String pseq = request.getParameter("pseq");
-			
-			ProductDao pdao = ProductDao.getInstance();
-			ProductVO pvo = pdao.getProducts(pseq);
-			
-			//로그인이 되어 있다면 로그인 정보에스 id 를 추출하고  상품번호와 아이디를  CartVO 에 담아서
-			CartVO cvo = new CartVO();
-			cvo.setId( nmvo.getId() );   // 아이디 저장
-			cvo.setPseq( Integer.parseInt( request.getParameter("pseq")));  // 상품번호저장
-			CartDao cdao = CartDao.getInstance();   
-			subProductDao spdao = subProductDao.getInstance();
-			ArrayList<subProductVO> list = spdao.getSubProduct();
-			
-			cdao.NoninsertCart( cvo );   // 레코드 추가
-			url = "Delivery/addMeterial.jsp";
-			request.setAttribute("pvo", pvo);
-			request.setAttribute("subProductVO", list);
 		}else{
 			String pseq = request.getParameter("pseq");
 			

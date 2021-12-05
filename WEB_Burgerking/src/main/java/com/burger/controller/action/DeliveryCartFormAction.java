@@ -14,7 +14,6 @@ import com.burger.dao.subProductDao;
 import com.burger.dao.subproductOrderDao;
 import com.burger.dto.CartVO;
 import com.burger.dto.MemberVO;
-import com.burger.dto.NonMemberVO;
 import com.burger.dto.orderVO;
 import com.burger.dto.subProductVO;
 import com.burger.dto.subproductOrderVO;
@@ -29,35 +28,10 @@ public class DeliveryCartFormAction implements Action {
 		HttpSession session = request.getSession(); 
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
 		
-		NonMemberVO nmvo = (NonMemberVO)session.getAttribute("NonloginUser");
 		
-		if (mvo == null&&nmvo==null) {
+		if (mvo == null) {
 		    url = "burger.do?command=loginForm&non=1";
-		}else if(mvo == null&&nmvo!=null){
-			// 로그인 유저의 아이디로 카트물건들을 검색해서 리턴받습니다 
-			ArrayList<subProductVO> sublist = null;
-			CartDao cdao = CartDao.getInstance();
-			ArrayList<CartVO> list = cdao.nonSelectCart( nmvo.getId() );		
-			System.out.println(list);
-			request.setAttribute("cartList", list); // 리퀘스트에 리턴받은 리스트 저장 
-			// 리턴받은 카트 리스트에 있는 상품들의 총구매금액을 계산합니다 
-			int totalPrice = 0; 
-			for(CartVO cvo : list) totalPrice += cvo.getPrice1() * cvo.getQuantity(); // 금액*수량이 누적 -> 총금액을 추가로 계산
-			OrderDao odao = OrderDao.getInstance();
-			ArrayList<orderVO> list1 = odao.getNonOrderList(nmvo.getId());
-			ArrayList<CartVO> list2 = cdao.nonSelectCart(nmvo.getId());
-			
-			subproductOrderDao spodao = subproductOrderDao.getInstance();
-			ArrayList<subproductOrderVO> spovo = spodao.selectSubProductOrder(nmvo.getMseq());
-			request.setAttribute("spseqAm", spovo);
-			for(int i = 0; i < spovo.size(); i++) {
-				totalPrice += spovo.get(i).getAddprice();
-			}
-	
-			request.setAttribute("totalPrice", totalPrice); // 리퀘스트에 저장
-			request.setAttribute("ovo", list1);
-			request.setAttribute("cvo", list2);
-		}else {
+		}else{
 			// 로그인 유저의 아이디로 카트물건들을 검색해서 리턴받습니다 
 			ArrayList<subProductVO> sublist = null;
 			CartDao cdao = CartDao.getInstance();

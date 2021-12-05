@@ -254,6 +254,7 @@ where o.oseq = d.oseq and o.id = n.id and d.pseq = p.pseq;
 select * from non_cart_view
 select * from non_order_view
 
+
 select*from sub_product
 drop table sub_product
 delete from SUBPRODUCT_order

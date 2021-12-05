@@ -8,11 +8,13 @@
 
 <article>
 	<div class="location">
+	<div class="web_container1">
 		<ul>
 			<li><a href="burger.do?command=deliveryForm">딜리버리</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=deliveryMypageForm">MY킹</a>&nbsp;>&nbsp;</li>
 			<li>회원정보변경</li>
 		</ul>
+	</div>
 	</div>
 	<div class="web_profileUpdate">
 		<h1 class="subTit">회원정보변경</h1>

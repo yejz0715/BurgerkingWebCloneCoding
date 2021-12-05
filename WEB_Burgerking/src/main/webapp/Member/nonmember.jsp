@@ -49,11 +49,13 @@
 </script>
 <article>
 	<div class="location">
+	<div class="web_container1">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=loginForm&non=1">로그인</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=nonmemberForm">비회원주문</a></li>
 		</ul>
+	</div>
 	</div>
 
 <form method="post" name="nonmembercheckForm" >

@@ -73,7 +73,6 @@ footer #copy a {
 
 .location ul {
 	list-style: none;
-	width: 60%;
 	height: 100%;
 	margin: 0 auto;
 	padding: 0px;
@@ -288,6 +287,12 @@ ul {
 	text-align: left;
 	line-height: 120px;
 	cursor: default;
+}
+
+.menu_item>.menuico{
+	display: inline-block;
+    padding-right: 19px;
+    background: url(../image/main/bg_header_item.png) no-repeat 100%;
 }
 
 #order_btn {
@@ -1135,6 +1140,25 @@ input[type=color], input[type=date], input[type=datetime], input[type=email],
 .translo{
 	margin-left: 108px;
 }
+
+#base{
+	text-align:center;
+	position: realtive;
+	overflow: hidden;
+	width: 49%;
+    min-width: 530px;
+    border: 0px;
+    float: left;
+}
+    
+.imgs{position: absolute; opacity: 0; transition: 1.5s;top: 50%;left: 50%;margin: 123.5px 0 0 188px;}
+
+#view1{opacity: 1;}
+.loginimg_name{
+	color:black;text-align:center;font-weight:bold;	font-size:2rem;
+}
+
+
 /* index.jsp--------------------------------------------------------------------------*/
 #slide {
 	position: relative;
@@ -3225,7 +3249,6 @@ img {
 .allchk01 {
     position: relative;
     margin-bottom: 24px;
-    padding-right: 3em;
     font-weight: 700;
     font-size: 1.25rem;
     color: rgba(0,0,0,.4);

@@ -4,10 +4,12 @@
 
 <article>
 	<div class="location">
+	<div class="web_container1">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=loginForm&non=1">로그인</a></li>
 		</ul>
+	</div>
 	</div>
 
 	<div class="web_container1">
@@ -48,62 +50,18 @@
 					</div>
 				</div>
 			</form>
-
-			<c:choose>
-				<c:when test='${non=="1"}'>
-					<form class="login2" name="frm" method="post" action="burger.do">
-						<input type="hidden" name="command" value="nonmemberForm">
-						<ul id="terms_wrap_ul"
-							style="left: 0px; position: relative; margin-top: 30px;">
-							<li><span> <a
-									href="burger.do?command=loginForm&non=1"
-									style="color: red; text-decoration: underline; font-size: 1.45em;">비회원
-										주문</a>
-							</span></li>
-							<li><span><a href="burger.do?command=loginForm&non=2"
-									style="font-size: 1.45em;">비회원 주문내역</a></span></li>
-						</ul>
-
-						<div class="textarea2">회원가입 없이 비회원으로 주문 가능합니다.</div>
-
-						<div class="c_btn item2">
-							<input type="submit" class="btn01 m red translo" value="비회원주문"></input>
-						</div>
-					</form>
-				</c:when>
-				<c:otherwise>
-					<form class="login2" name="frm" method="post" action="burger.do">
-						<input type="hidden" name="command" value="nonmemberForm">
-						<ul id="terms_wrap_ul"
-							style="left: 0px; position: relative; margin-top: 30px;">
-							<li><span> <a
-									href="burger.do?command=loginForm&non=1"
-									style="font-size: 1.45em;">비회원 주문</a>
-							</span></li>
-							<li><span><a href="burger.do?command=loginForm&non=2"
-									style="color: red; text-decoration: underline; font-size: 1.45em;">비회원
-										주문내역</a></span></li>
-						</ul>
-
-						<div class="textarea2">
-							<div class="inpbox">
-								<label> <span class="hide">주문번호</span> <input
-									type="email" placeholder="주문번호" id="oseq" name="oseq">
-								</label>
-							</div>
-							<div class="inpbox">
-								<label> <span class="hide">비밀번호</span> <input
-									placeholder="비밀번호" type="password" name="pwd">
-								</label>
-							</div>
-						</div>
-
-						<div class="c_btn item2">
-							<input type="submit" class="btn01 m red translo" value="조회하기"></input>
-						</div>
-					</form>
-				</c:otherwise>
-			</c:choose>
+			<div id="base">
+				<div class="imgs" id="view1"><img src="image/menu/2/doublewhitegarlic.png">
+				<div class="loginimg_name"><span>더블화이트갈릭와퍼</span></div>				</div>
+        		<div class="imgs" id="view2"><img src="image/menu/2/guinnessquattrocheese.png">
+        		<div class="loginimg_name"><span style="color:black;text-align:center;font-weight:bold;">기네스콰트로치즈와퍼</span></div></div>
+        		<div class="imgs" id="view3"><img src="image/menu/4/shrimpwhopperjr.png">
+        		<div class="loginimg_name"><span style="color:black;text-align:center;font-weight:bold;">아기상어새우버거</span></div></div>
+        		<div class="imgs" id="view4"><img src="image/menu/5/longchicken.png">
+        		<div class="loginimg_name"><span style="color:black;text-align:center;font-weight:bold;">롱치킨버거</span></div></div>
+        		<div class="imgs" id="view5"><img src="image/menu/6/crispyking8sauce.png">
+        		<div class="loginimg_name"><span style="color:black;text-align:center;font-weight:bold;">바삭킹</span></div></div>
+			</div>
 		</div>
 	</div>
 </article>

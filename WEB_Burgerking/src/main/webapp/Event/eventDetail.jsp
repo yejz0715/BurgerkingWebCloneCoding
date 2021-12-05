@@ -5,11 +5,13 @@
 
 <article>
 	<div class="location">
+	<div class="web_container1">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=eventListForm">이벤트</a>&nbsp;>&nbsp;</li>
 			<li>상세</li>
-		</ul>		
+		</ul>
+	</div>		
 	</div>
 	<div class="event_web_container">
 	<div class="subtit">

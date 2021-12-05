@@ -9,7 +9,6 @@ import javax.servlet.http.HttpSession;
 
 import com.burger.dao.MyAddressDao;
 import com.burger.dto.MemberVO;
-import com.burger.dto.NonMemberVO;
 
 public class MyAddressUpdateAction implements Action {
 
@@ -20,24 +19,9 @@ public class MyAddressUpdateAction implements Action {
 		
 		HttpSession session =request.getSession();
 		MemberVO mvo=(MemberVO) session.getAttribute("loginUser");
-		NonMemberVO nmvo = (NonMemberVO)session.getAttribute("NonloginUser");
-		
-		if (mvo == null&&nmvo==null) {
+		if (mvo == null) {
 		    url = "burger.do?command=loginForm&non=1";
-		}else if(mvo == null&&nmvo!=null){
-			int mseq = nmvo.getMseq();
-			String zip_num=request.getParameter("zip_num");
-			String addr1=request.getParameter("addr1");
-			String addr2=request.getParameter("addr2");
-			String address=addr1 + " " + addr2;
-			
-			MyAddressDao madao=MyAddressDao.getInstance();
-			madao.updateMyAddress(mseq, address, zip_num);
-		   
-		    request.setAttribute("MemberVO", nmvo);
-		    
-		    url="burger.do?command=nonDeliveryForm&kind1=1";
-		}else {
+		}else{
 			int mseq = mvo.getMseq();
 			String zip_num=request.getParameter("zip_num");
 			String addr1=request.getParameter("addr1");

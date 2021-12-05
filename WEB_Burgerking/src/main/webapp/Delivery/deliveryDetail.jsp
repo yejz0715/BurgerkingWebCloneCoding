@@ -21,9 +21,6 @@
 		<div class="M_headerWrap">
 			<div class="titleBar">
 				<div class="page_tit w_alignL"><span>메뉴 선택</span></div>
-				<!-- <div class="title_btn">
-					<button type="button" class="btn_close btn_head_close"><span>close</span></button>
-				</div> -->
 			</div>
 		</div>
 		<div class="popcont nopadding">

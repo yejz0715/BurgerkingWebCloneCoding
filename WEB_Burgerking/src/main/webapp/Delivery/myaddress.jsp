@@ -7,11 +7,13 @@
 
 <article>
 	<div class="location">
+	<div class="web_container1">
 		<ul>
 			<li><a href="burger.do?command=deliveryForm">딜리버리</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=deliveryMypageForm">MY킹</a>&nbsp;>&nbsp;</li>
 			<li>MY배달지</li>
 		</ul>
+	</div>
 	</div>
 
 	<div class="webAddress">

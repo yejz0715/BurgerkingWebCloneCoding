@@ -3,11 +3,13 @@
 
 <article style="background-color: #f2ebe6;">
 	<div class="location">
+	<div class="web_container1">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=loginForm&non=1">로그인</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=findIdForm">아이디/비밀번호 찾기</a></li>
 		</ul>
+	</div>
 	</div>
 
 	<div class="web_container02">

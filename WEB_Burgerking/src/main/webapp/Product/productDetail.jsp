@@ -13,11 +13,13 @@ function popup3() {
 <div class="clear"></div>
 <div class="contentsWrap">
 	<div class="location" style="margin-bottom: 0px;">
+	<div class="web_container1">
 		<ul>
 			<li><a href="burger.do?command=index">HOME</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=index">메뉴소개</a>&nbsp;>&nbsp;</li>
 			<li><a href="burger.do?command=index"><${pvo.pname}</a></li>
 		</ul>
+	</div>
 	</div>
 	<div class="prd_intro">
 		<div class="web_container4">

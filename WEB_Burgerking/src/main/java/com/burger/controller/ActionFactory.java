@@ -9,7 +9,6 @@ import com.burger.controller.action.ContractFormAction;
 import com.burger.controller.action.ContractFrmAction;
 import com.burger.controller.action.DeliveryFormAction;
 import com.burger.controller.action.DeliveryMypageFormAction;
-import com.burger.controller.action.DeliveryOrderDetailAction;
 import com.burger.controller.action.DeliveryOrderListAction;
 import com.burger.controller.action.DeliveryUseFormAction;
 import com.burger.controller.action.EventDetailFormAction;
@@ -50,9 +49,6 @@ import com.burger.controller.action.PlusQuantityAction;
 import com.burger.controller.action.MyAddressAction;
 import com.burger.controller.action.MyAddressFormAction;
 import com.burger.controller.action.MyAddressUpdateAction;
-import com.burger.controller.action.NonDeliveryFormAction;
-import com.burger.controller.action.NonMemberFormAction;
-import com.burger.controller.action.NonMemberJoinFormAction;
 import com.burger.controller.action.PassCheckAction;
 import com.burger.controller.action.PassCheckFormAction;
 import com.burger.controller.action.PopUp1Action;
@@ -169,8 +165,6 @@ public class ActionFactory {
 	    else if(command.equals("findZipNum")) ac = new FindZipNumAction();
 	    else if(command.equals("myAddressForm")) ac = new MyAddressFormAction();
 	    else if(command.equals("myAddressUpdate")) ac = new MyAddressUpdateAction();
-	    else if(command.equals("deliveryOrderDetail")) ac = new DeliveryOrderDetailAction();
-	    else if(command.equals("nonmemberForm")) ac = new NonMemberFormAction(); 
 		else if(command.equals("admin")) ac = new AdminAction();
 		else if(command.equals("adminLogin")) ac = new AdminLoginAction();
 		else if(command.equals("adminLogout")) ac = new AdminLogoutAction();
@@ -207,8 +201,6 @@ public class ActionFactory {
 		else if(command.equals("deliveryOrderList")) ac = new DeliveryOrderListAction();
 		else if(command.equals("adminOrderDelete")) ac = new AdminOrderDeleteAction();
 		else if(command.equals("deliveryCartDelete")) ac = new DeliveryCartDeleteAction();
-		else if(command.equals("nonMemberJoinForm")) ac = new NonMemberJoinFormAction();
-		else if(command.equals("nonDeliveryForm")) ac = new NonDeliveryFormAction();
 		else if(command.equals("popup3")) ac = new PopUp3Action();
 		else if(command.equals("insertAddMeterial")) ac = new InsertAddMeterialAction();
 		
