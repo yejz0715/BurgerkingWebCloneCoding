@@ -115,7 +115,6 @@ public class ActionFactory {
 		else if(command.equals("menuListForm")) ac = new MenuListFormAction();
 		else if(command.equals("eventListForm")) ac = new EventListFormAction();
 		else if(command.equals("brandStroyForm")) ac = new BrandStroyFormAction();
-		else if(command.equals("deliveryForm")) ac = new DeliveryFormAction();
 		else if(command.equals("qnaForm")) ac = new QnaFormAction();
 		else if(command.equals("faqForm")) ac = new FaqFormAction();
 		else if(command.equals("appGuideForm")) ac = new AppGuideFormAction();
@@ -131,11 +130,16 @@ public class ActionFactory {
 		else if(command.equals("eventTab2")) ac = new EventTab2Action();
 		else if(command.equals("eventTab3")) ac = new EventTab3Action();
 		else if(command.equals("eventDetailForm")) ac = new EventDetailFormAction();
+		else if(command.equals("deliveryForm")) ac = new DeliveryFormAction();
+		else if(command.equals("deliveryOrderList")) ac = new DeliveryOrderListAction();
 		else if(command.equals("deliveryOrderListForm")) ac = new DeliveryOrderListFormAction();
 		else if(command.equals("deliveryCartForm")) ac = new DeliveryCartFormAction();
 		else if(command.equals("deliveryMypageForm")) ac = new DeliveryMypageFormAction();
 		else if(command.equals("deliveryDetail")) ac = new DeliveryDetailFormAction();
 		else if(command.equals("deliveryAddMaterial")) ac = new DeliveryAddMaterialAction();
+		else if(command.equals("deliveryMypageForm")) ac = new DeliveryMypageFormAction();
+		else if(command.equals("deliveryCartDelete")) ac = new DeliveryCartDeleteAction();
+		else if(command.equals("insertAddMeterial")) ac = new InsertAddMeterialAction();
 		else if(command.equals("addCart")) ac = new AddCartAction();
 		else if(command.equals("deliveryCartForm")) ac = new DeliveryCartFormAction();
 		else if(command.equals("cartDelete")) ac = new CartDeleteFormAction();
@@ -152,12 +156,12 @@ public class ActionFactory {
 		else if(command.equals("contractForm")) ac = new ContractFormAction(); 
 		else if(command.equals("popup1")) ac = new PopUp1Action(); 
 		else if(command.equals("popup2")) ac = new PopUp2Action(); 	
+		else if(command.equals("popup3")) ac = new PopUp3Action();
 		else if(command.equals("joinpage")) ac = new JoinPageAction(); 	
 		else if(command.equals("contractFrm")) ac = new ContractFrmAction(); 
 		else if(command.equals("idCheckForm")) ac = new IdCheckFormAction(); 	
 		else if(command.equals("joinpageForm")) ac = new JoinPageFormAction(); 
 		else if(command.equals("complet")) ac = new CompletAction();
-		else if(command.equals("deliveryMypageForm")) ac = new DeliveryMypageFormAction();
 	    else if(command.equals("memberUpdateForm")) ac = new MemberUpdateFormAction();
 	    else if(command.equals("myAddress")) ac = new MyAddressAction();
 	    else if(command.equals("updateMember")) ac = new MemberUpdateAction();
@@ -198,12 +202,9 @@ public class ActionFactory {
 		else if(command.equals("adminQnaRepsave")) ac = new AdminQnaRepsaveAction();
 		else if(command.equals("adminOrderList")) ac = new AdminOrderListAction();
 		else if(command.equals("adminOrderSave")) ac = new AdminOrderSaveAction();
-		else if(command.equals("deliveryOrderList")) ac = new DeliveryOrderListAction();
 		else if(command.equals("adminOrderDelete")) ac = new AdminOrderDeleteAction();
+		else if(command.equals("deliveryOrderList")) ac = new DeliveryOrderListAction();
 		else if(command.equals("deliveryCartDelete")) ac = new DeliveryCartDeleteAction();
-		else if(command.equals("popup3")) ac = new PopUp3Action();
-		else if(command.equals("insertAddMeterial")) ac = new InsertAddMeterialAction();
-		
 
 		return ac;
 	}
