@@ -249,9 +249,6 @@ n.id as nid, n.memberkind, a.zip_num, a.address, n.phone, p.pname as pname, p.pr
 from orders o, order_detail d, non_member n, product p, myaddress a
 where o.oseq = d.oseq and o.id = n.id and d.pseq = p.pseq;
 
-select * from non_cart_view
-select * from non_order_view
-
 
 select*from sub_product
 drop table sub_product
@@ -263,7 +260,7 @@ select*from order_detail
 select * from cart_view;
 select * from order_view;
 select * from member
-
+select * from myaddress
 
 /* Create Foreign Keys */
 
@@ -276,11 +273,6 @@ ALTER TABLE cart
 ALTER TABLE Myaddress
    ADD FOREIGN KEY (mseq)
    REFERENCES member (mseq)
-;
-
-ALTER TABLE Myaddress
-   ADD FOREIGN KEY (mseq)
-   REFERENCES non_member (mseq)
 ;
 
 
