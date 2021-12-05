@@ -21,8 +21,6 @@
 				<th>주문자</th>
 				<th>상품명</th>
 				<th>수량</th>
-				<th>우편번호</th>
-				<th>배송지</th>
 				<th>전화</th>
 				<th>주문일</th>
 				<th>삭제</th>
@@ -44,8 +42,6 @@
 					<td>${orderVO.mname}</td>
 					<td>${orderVO.pname}</td>
 					<td>${orderVO.quantity}</td>
-					<td>${orderVO.zip_num}</td>
-					<td>${orderVO.address}</td>
 					<td>${orderVO.phone}</td>
 					<td><fmt:formatDate value="${orderVO.indate}"/></td>
 					<td>
