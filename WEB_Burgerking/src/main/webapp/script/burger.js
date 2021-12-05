@@ -255,10 +255,12 @@ function post_zip(){
 	window.open( url, "우편번호 찾기", opt );
 }
 
-var x=0;
-setInterval(function(){
-    for(var i=1;i<=5;i++)document.getElementById("view"+i).style.opacity = '0';
-    x++;
-    document.getElementById("view"+x).style.opacity = '1';
-    if(x==5)x=0;
-}, 3000);
+function play(){
+	var x=0;
+	setInterval(function(){
+	    for(var i=1;i<=5;i++)document.getElementById("view"+i).style.opacity = '0';
+	    x++;
+	    document.getElementById("view"+x).style.opacity = '1';
+	    if(x==5)x=0;
+	}, 3000);
+}
