@@ -2,7 +2,7 @@
 <%@ include file="header.jsp"%>
 
 <div class="clear"></div>
-<div class="mainWrap" style="background-color: #f2ebe6;">
+<div class="mainWrap" style="background-color: #f2ebe6;" id="top";>
    <div class="banner">
 	   <div class="banner">
 	      <div class="slide" id="slide">
@@ -62,7 +62,7 @@
 	                  <li class="instargram"><div class="cont1">
 	                        <a href="https://www.instagram.com/burgerkingkorea/"
 	                           target="_blank"><span><img
-	                              src="image/main/maininstargram.png"></span></a>
+	                              src="image/main/maininstargram.png" style="background:#b08972;"></span></a>
 	                     </div></li>
 	               </ul>
 	            </div>
@@ -74,7 +74,7 @@
 	                     <a href="burger.do?command=appGuideForm"> <img
 	                        src="image/main/appimg.png"></a>
 	                  </div>
-	                  <div id="delivery">
+	                  <div id="delivery77">
 	                     <a href="burger.do?command=deliveryUseForm"> 
 	                     	<img src="image/main/deliveryimg.png">
 	                     </a>
@@ -96,6 +96,7 @@
 	         </div>
 		</div>
       </div>
+      <a href="#top" class="btn_top" style="display: inline; opacity: 1;">Top</a>
 </div>
 
    <div class="clear"></div>
