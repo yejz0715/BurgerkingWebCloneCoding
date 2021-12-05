@@ -49,9 +49,9 @@ public class DeliveryCartOrderAction implements Action {
 				
 				// 방금 주문에 성공한 주문 번호를 갖고 오더 리스트로 이동합니다.
 				url = "burger.do?command=deliveryOrderList&oseq="+ Oseq;
+				response.sendRedirect(url);
 			}
 		}
-		response.sendRedirect(url);
 	}
 
 }

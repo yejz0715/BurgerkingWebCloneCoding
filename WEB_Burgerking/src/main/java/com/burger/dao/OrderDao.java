@@ -179,38 +179,6 @@ public class OrderDao {
 		}
 		return oseq;
 	}
-	public ArrayList<orderVO> getNonOrderList(String id) {
-		ArrayList<orderVO> list2 = new ArrayList<orderVO>();
-		String sql = "select * from non_order_view  where id=? and result ='1'";
-		con = DBman.getConnection();
-		try {
-			  pstmt = con.prepareStatement(sql); 
-			  pstmt.setString(1, id);
-			  rs = pstmt.executeQuery();
-			  while(rs.next()) {
-				    orderVO ovo = new orderVO();
-					ovo.setOdseq(rs.getInt("odseq"));
-					ovo.setOseq(rs.getInt("oseq"));
-					ovo.setId(rs.getString("id"));
-					ovo.setPseq(rs.getInt("pseq"));
-					ovo.setIndate(rs.getTimestamp("indate"));
-					ovo.setNid(rs.getString("nid"));
-					ovo.setZip_num(rs.getString("zip_num"));
-					ovo.setAddress(rs.getString("address"));
-					ovo.setPhone(rs.getString("phone"));
-					ovo.setPname(rs.getString("pname"));
-					ovo.setPrice1(rs.getInt("price1"));
-					ovo.setPseq(rs.getInt("pseq"));
-					ovo.setQuantity(rs.getInt("quantity"));
-					ovo.setResult(rs.getString("result"));
-					ovo.setMemberkind(rs.getString("memberkind"));
-					list2.add(ovo);
-			  }
-		} catch (Exception e) { e.printStackTrace();
-	    } finally { DBman.close(con, pstmt, rs); } 
-		return list2;
-	}
-
 	
 }
 
