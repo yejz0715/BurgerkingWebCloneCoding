@@ -153,6 +153,11 @@ public class OrderDao {
 				pstmt.setInt(1, oseq);
 				pstmt.executeUpdate();
 			}
+			
+			sql = "delete from subproduct_order where odseq = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, Integer.parseInt(odseq));
+			pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
