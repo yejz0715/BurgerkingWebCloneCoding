@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 
+<script>
+$(function(){
+	$( 'document' ).ready(function() {
+		  $('#pk${kind1}').css("color", "red");
+		  $('#pk${kind1}').css("text-decoration", "underline");
+	});
+});
+</script>
+
 <div class="clear"></div>
 
 <article>
