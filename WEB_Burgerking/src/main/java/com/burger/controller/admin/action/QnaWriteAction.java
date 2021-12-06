@@ -30,6 +30,6 @@ public class QnaWriteAction implements Action {
 			QnaDao qdao = QnaDao.getInstance();
 			qdao.writeQna(qvo);
 		}
-		request.getRequestDispatcher(url).forward(request, response);
+		response.sendRedirect(url);
 	}
 }

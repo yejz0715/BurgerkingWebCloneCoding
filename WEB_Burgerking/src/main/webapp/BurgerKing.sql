@@ -221,6 +221,7 @@ create table subproduct_order(
 
 select * from SUB_PRODUCT;
 
+drop view cart_view
 create or replace view cart_view
 as
 select  c.cseq, c.id, m.name as mname, c.pseq, p.pname as pname, p.image, p.kind1, p.kind3,
@@ -292,5 +293,6 @@ select * from order_view;
 select * from orders;
 select * from cart;
 select * from cart_view;
-delete from cart_view where cseq=74
+
+
 
