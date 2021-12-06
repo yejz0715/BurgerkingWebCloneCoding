@@ -25,7 +25,7 @@ public class AdminProductDetailAction implements Action {
 			String pseq = request.getParameter("pseq"); 
 			// 이미 만들어져 있는 메소드 사용 
 			ProductDao pdao =	ProductDao.getInstance();
-			ProductVO pvo = pdao.getProduct(pseq);
+			ProductVO pvo = pdao.getshortProduct(pseq);
 		
 			// 카테고리 별 타이틀을 배열에 저장 
 			String kindList1[] = {"0", "스페셜&할인팩", "프리미엄", "와퍼", "주니어&버거", "올데이킹&치킨버거", "사이드", "음료&디저트", "독퍼"}; // 검색해온 상품에서 kind 값 추출 & 상품의 kind 값을 정수로 변환

@@ -855,6 +855,7 @@ values(pseq.nextVal, '치즈 1장', '9', '6', 'cheese1.png','600');
 insert into sub_product(spseq, sname, kind1, kind2, image, addprice)
 values(pseq.nextVal, '올엑스트라', '9', '7', 'allextra.png','300');
 
+delete from sub_product where sname = '올엑스트라'
 
 insert into event(eseq, subject, content, image, startdate, enddate, state)
 values(qseq.nextVal, 'Best WHOPPER 2개 구매시 7000원','1. 행사명 : Best WHOPPER 2개 구매시 7000원

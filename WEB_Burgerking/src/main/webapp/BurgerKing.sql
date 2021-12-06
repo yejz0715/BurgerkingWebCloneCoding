@@ -1,4 +1,4 @@
-
+select * from product
 /* Drop Triggers */
 
 DROP TRIGGER TRI_cart_cseq;
@@ -294,5 +294,5 @@ select * from orders;
 select * from cart;
 select * from cart_view;
 
-
+delete from SUBPRODUCT_ORDER
 
